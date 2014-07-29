@@ -5,7 +5,7 @@ description: "Concise is a lightweight front-end framework that provides a numbe
 author: "Keenan Payne"
 host: localhost
 port: 4000
-baseurl: "/concise.css"
+baseurl: ""
 
 # Package information
 version: "v1.1.0"
@@ -29,12 +29,12 @@ gems:
 # Main Navigation
 nav:
 - text: Welcome
-  url: /concise.css/
+  url: /
 - text: Why Concise
-  url: /concise.css/why-concise/
+  url: /why-concise/
 - text: Get Started
-  url: /concise.css/get-started/
+  url: /get-started/
 - text: Documentation
-  url: /concise.css/documentation/layout/container/
+  url: /documentation/layout/container/
 - text: Add-Ons
-  url: /concise.css/add-ons/
+  url: /add-ons/
