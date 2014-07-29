@@ -1,0 +1,54 @@
+---
+# Navigation
+nav:
+- text: Principles
+  url: /concise.css/get-started/
+- text: Getting Started
+  url: /concise.css/get-started/getting-started/
+- text: Disabling Responsiveness
+  url: /concise.css/get-started/disabling-responsiveness/
+- text: Disabling HTML5
+  url: /concise.css/get-started/disabling-html5/
+- text: Normalize
+  url: /concise.css/get-started/normalize/
+- text: Recommended JavaScript Libraries
+  url: /concise.css/get-started/recommended-javascript-libraries/
+---
+
+{% include head.html %}
+
+  {% include header.html %}
+
+  <div class="masthead">
+    <div class="container center">
+      <h1 class="kilo no-margin color-white">Getting Started</h1>
+
+      <h2 class="no-margin">Getting up-and-running with Concise is simple</h2>
+    </div><!-- .container -->
+
+    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
+  </div><!-- .masthead -->
+
+  <div class="container center">
+    <div class="row no-margin">
+      <div class="column-5 sidebar">
+        <nav class="nav-vertical pills nav-responsive-center nav-responsive-text">
+          <ul>
+            <li class="text-uppercase">Overview</li>
+
+            {% for link in page.nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav><!-- .nav-vertical -->
+      </div><!-- .column-5 -->
+
+      <div class="column-19 content">
+        {{ content }}
+      </div><!-- .column-19 -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+{% include footer.html %}

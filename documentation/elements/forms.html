@@ -1,0 +1,253 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Elements / Forms
+permalink: /forms/
+---
+
+<h1 class="no-margin">Forms</h1>
+
+<hr />
+
+<h2 class="no-margin h1">Basic</h2>
+
+<hr />
+
+<p>This is a basic form composed of the <code>&lt;form&gt;</code> tag containing various <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code> fields.</p>
+
+<p>Each label and input pair are wrapped in a <code>.form-item</code> class that adds bottom margin and keeps our respective labels and inputs in their own block so no content wraps around them.</p>
+
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$placeholder-color</code> variable in the <code>_defaults.scss</code> file to adjust the placeholder text color.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post">            
+      <div class="form-item">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="John Doe" />
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="john_doe@example.com" />
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+        <label for="website">Website:</label>
+        <input type="text" name="website" placeholder="http://example.com" disabled />
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male" /> Male <br />
+        <input type="radio" name="gender" value="Female" /> Female
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+        <label for="interest">Inquiry:</label>
+        <input type="checkbox" name="interest" value="Quote" /> Quote <br />
+        <input type="checkbox" name="interest" value="Question" /> Question
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+         <select>
+           <option name="Test">Test</option>
+         </select>
+      </div><!-- .form-item -->
+      
+      <div class="form-item">
+        <label for="message">Message:</label>
+        <textarea name="message" cols="40" rows="6"></textarea>
+      </div><!-- .form-item -->
+      
+      <input type="submit" value="Submit" class="btn btn-small border gray pill">
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;form&gt;            
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; /&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;john_doe@example.com&quot; /&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;website&quot;&gt;Website:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;website&quot; placeholder=&quot;http://example.com&quot; disabled /&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;gender&quot;&gt;Gender:&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Male&quot; /&gt; Male &lt;br /&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Female&quot; /&gt; Female
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;interest&quot;&gt;Inquiry:&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Quote&quot; /&gt; Quote &lt;br /&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Question&quot; /&gt; Question
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+     &lt;select&gt;
+       &lt;option name=&quot;Test&quot;&gt;Test&lt;/option&gt;
+     &lt;/select&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
+    &lt;textarea name=&quot;message&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;&lt;!-- .form-item --&gt;
+  
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn btn-small border gray pill&quot;&gt;
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin h1">Fieldset</h2>
+
+<hr />
+
+<p>Wrapping your form content with a <code>&lt;fieldset&gt;</code> tag allows you to group related elements inside of your form. Adding the <code>&lt;legend&gt;</code> tag allows you to denote each section with a small heading.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post">
+      <fieldset>
+        <legend>User Information</legend>
+        
+        <div class="form-item">
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="John Doe" />
+        </div><!-- .form-item -->
+        
+        <div class="form-item">
+          <label for="email">Email:</label>
+          <input type="email" name="email" placeholder="john_doe@example.com" />
+        </div><!-- .form-item -->
+      </fieldset>
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;...&lt;/legend&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin h1">Inline Form</h2>
+
+<hr />
+
+<p>Adding the class <code>.form-inline</code> to your <code>&lt;form&gt;</code> element allows you to display your form elements in an inline fashion. By default, the <code>.form-inline</code> class will give each <code>&lt;label&gt;</code> element a width of <strong>100px</strong>.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post" class="form-inline">  
+      <div class="form-item">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="John Doe" />
+      </div>
+    
+      <div class="form-item">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="john_doe@example.com" />
+      </div>
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;form class=&quot;form-inline&quot;&gt;
+  ...
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin h1">Required Fields</h2>
+
+<hr />
+
+<p>Adding the class <code>.required</code> along with the HTML5 field attribute <code>required</code> to a form element will help stylize required fields. Any field will display a red border when focused on or filled out improperly. If the field is filled out correctly, that border will become green.</p>
+
+<p class="note"><strong>Note:</strong> This example is using the <code>.screen-reader</code> class to hide the <code>&lt;label&gt;</code> tag. This is good for accessibility if you wish to not display field labels.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post" class="form-inline">              
+      <div class="form-item">
+        <label for="name" class="screen-reader">Name:</label>
+        <input type="text" class="required" name="name" placeholder="John Doe" required />
+      </div>
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;form class=&quot;form-inline&quot;&gt;              
+  &lt;div class=&quot;form-item&quot;&gt;
+    &lt;label for=&quot;name&quot; class=&quot;screen-reader&quot;&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;required&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; required /&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin h1">Rounded corners</h2>
+
+<hr />
+
+<p>Rounded corners can be added to form fields two different ways. First, you can add the class <code>.border-radius</code> to the <code>&lt;form&gt;</code> tag, which will render all form fields with rounded corners. However, you also can apply the class to individual form fields if you wish for only specific fields to have rounded corners.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post" class="form-inline border-radius">              
+      <div class="form-item">
+        <label for="name">Name:</label>
+        <input type="text" class="required" name="name" placeholder="John Doe" required />
+      </div><!-- .form-item -->
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;form class=&quot;form-inline border-radius&quot;&gt;              
+  ...
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

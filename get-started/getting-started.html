@@ -1,0 +1,137 @@
+---
+layout: get-started
+title: Get Started
+subtitle: Getting Started
+permalink: /getting-started/
+---
+
+<h1 class="no-margin">Getting Started</h1>
+
+<hr />
+            
+<p>Getting started with Concise is very simple. First, pick a package to download below. If you are unsure of which package is the right one for you, download the first, titled "<u>Concise.CSS</u>".</p>
+
+<div class="row no-margin">
+  <div class="column-8">
+    <h3>Concise.CSS</h3>
+
+    <p>Compiled files (minified and non-minified) as well JavaScript files.</p>
+    
+    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css/releases/download/{{ site.version }}/concise-{{ site.download-version }}-dist.zip">Download</a>
+  </div><!-- .column-8 -->
+  
+  <div class="column-8">
+    <h3>SASS</h3>
+
+    <p>Compiled files (minified and non-minified), source SASS files and JavaScript files.</p>
+    
+    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css/archive/{{ site.version }}.zip">Download</a>
+  </div><!-- .column-8 -->
+  
+  <div class="column-8">
+    <h3>LESS</h3>
+
+    <p>Compiled files (minified and non-minified), source LESS files and JavaScript files.</p>
+    
+    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css-less/archive/{{ site.version }}.zip">Download</a>
+  </div><!-- .column-8 -->
+</div><!-- .row -->
+
+<h2 class="h1 no-margin">What's Included</h2>
+
+<hr />
+
+<h3>Pre-Compiled Concise</h3>
+
+<p>The Concise directory is pretty simple. Here is what you are looking at for the regular download:</p>
+            
+<pre><code>/css
+  concise.css
+  concise.min.css
+/js 
+  concise.js
+  concise.min.js</code></pre>
+               
+<h3>Concise Source Code</h3>
+
+<p>If you are downloading the SASS or LESS<!--, LESS or Stylus--> packages,<!--<small>(the <code>sass</code> folder will be named either <code>less</code> or <code>stylus</code> depending on which package download, the same goes for the file extensions)</small>--> the folder structure will look like:</p>
+
+<p class="note"><strong>Note:</strong> All of the files labeled with an underscore are referred to as <em>partials</em>. A partial is a file that does not become compiled on its own, but rather, is included in a master file <small>(in this case, it's <code>concise.scss</code>)</small> to be compiled.</p>
+
+<pre><code>
+/dist
+  /css
+    concise.css
+    concise.min.css
+  /js
+    concise.js
+    concise.min.js
+/js
+  close.js
+  dropdown.js
+  naver.js
+  navigation.js
+  non-responsive.js
+/sass
+  /base
+    _blockquotes.scss
+    _container.scss
+    _forms.scss
+    _grid.scss
+    _headings.scss
+    _lists.scss
+    _main.scss
+    _selection.scss
+    _tables.scss
+    _type.scss
+  /generic
+    _clearfix.scss
+    _conditional.scss
+    _debug.scss
+    _helper.scss
+    _mixins.scss
+    _normalize.scss
+    _print.scss
+    _shared.scss
+  /objects
+    _badges.scss
+    _breadcrumbs.scss
+    _buttons.scss
+    _colors.scss
+    _dropdowns.scss
+    _groups.scss
+    _navigation.scss
+    _progress.scss
+    _wells.scss
+  _defaults.scss
+  concise.scss</code></pre>
+
+<h2 class="h1 no-margin">Including Necessary Files</h2>
+
+<hr />
+
+<p>To get started with a bare-bones responsive website using Concise, I would recommend structuring your template as such:</p>
+            
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="HandheldFriendly" content="True"&gt;
+
+  &lt;title&gt;Concise Template&lt;/title&gt;
+
+  &lt;link rel="stylesheet" type="text/css" media="screen" href="css/concise.min.css" /&gt;
+
+  &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="js/concise.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></code>
+            
+<p>Right there, you have a basic template with all included files, proper meta tags for responsiveness, and you're ready to start coding.</p>

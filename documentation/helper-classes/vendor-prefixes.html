@@ -1,0 +1,30 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Helper Classes / Vendor Prefixes Mixin
+permalink: /vendor-prefixes/
+---
+
+<h1 class="no-margin">Vendor Prefixes Mixin</h1>
+
+<hr />
+
+<p>In the <code>/generic/_mixins.scss</code>, we have a mixin that will allow you to easily write cross-browser compatible code for CSS3 features that have yet to be fully implemented. Browser prefixes included are:
+
+  <ul>
+    <li>Webkit Browsers <small>(Chrome, Safari)</small></li>
+    <li>Internet Explorer</li>
+    <li>Firefox</li>
+    <li>Opera</li>
+  </ul>
+</p>
+
+<p class="note"><strong>Note:</strong> We suggest using a CSS post-processing tool such as <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a> to add vendor prefixes to your CSS based on results from <a href="http://caniuse.com/" target="_blank">Can I Use</a>.</p>
+
+<div class="well preview">        
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+    <pre><code>@include vendor(border-radius, 4px);</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

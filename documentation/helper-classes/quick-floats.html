@@ -1,0 +1,63 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Helper Classes / Quick Floats
+permalink: /quick-floats/
+---
+
+<h1 class="no-margin">Quick Floats</h1>
+
+<hr />
+      
+<p>Floating elements are simple with Concise, with modular classes that can be applied to any element. <code>!important</code> is included to avoid specificity issues.</p>
+
+<p class="note"><strong>Note:</strong> When floating elements with either the <code>.float-left</code> or <code>.float-right</code> class, ensure that they are wrapped around a <code>.clearfix</code> class so all of the floats are cleared.<br /><br />
+
+In addition, when using the <code>.align-center</code> helper class on an element with an unknown width, additional styling may be required to properly center the element. Referring to <a href="http://css-tricks.com/centering-in-the-unknown/" target="_blank">Chris Coyier's "Centering in the Unkown"</a> article may come in handy when handling such a situation.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <div class="clearfix">
+      <div class="left">
+        <p>Float left</p>
+      </div>
+
+      <div class="right">
+        <p>Float right</p>
+      </div>
+    </div>
+    
+    <div class="center" style="width: 100px;">
+      <p>Align center</p>
+    </div>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;float-left&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;float-right&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;align-center&quot;&gt;...&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin">Removing Floats</h2>
+
+<hr />
+
+<p>Removing a float from any element is easy with the <code>.float-none</code> class. <code>!important</code> is included to avoid specificity issues.</p>
+
+<div class="well preview">        
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+    <pre><code>&lt;div class=&quot;float-none&quot;&gt;...&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

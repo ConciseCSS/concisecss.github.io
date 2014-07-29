@@ -1,0 +1,170 @@
+---
+# Navigation
+layout-nav:
+- text: Container
+  url: /concise.css/documentation/layout/container/
+- text: Grid
+  url: /concise.css/documentation/layout/grid/
+- text: Breakpoints
+  url: /concise.css/documentation/layout/breakpoints/
+
+typography-nav:
+- text: Headings
+  url: /concise.css/documentation/typography/headings/
+- text: Body
+  url: /concise.css/documentation/typography/body/
+- text: Emphasis
+  url: /concise.css/documentation/typography/emphasis/
+- text: Abbreviations
+  url: /concise.css/documentation/typography/abbreviations/
+- text: Blockquotes
+  url: /concise.css/documentation/typography/blockquotes/
+- text: Addresses
+  url: /concise.css/documentation/typography/addresses/
+- text: Positioning
+  url: /concise.css/documentation/typography/positioning/
+- text: Weights
+  url: /concise.css/documentation/typography/weights/
+- text: Colors
+  url: /concise.css/documentation/typography/colors/
+- text: Ampersand
+  url: /concise.css/documentation/typography/ampersand/
+
+navigation-nav:
+- text: Nested Dropdowns
+  url: /concise.css/documentation/navigation/nested-dropdowns/
+- text: jQuery Dropdowns
+  url: /concise.css/documentation/navigation/jquery-dropdowns/
+- text: Vertical
+  url: /concise.css/documentation/navigation/vertical/
+- text: Responsive
+  url: /concise.css/documentation/navigation/responsive/
+- text: Breadcrumbs
+  url: /concise.css/documentation/navigation/breadcrumbs/
+
+elements-nav:
+- text: Lists
+  url: /concise.css/documentation/elements/lists/
+- text: Code
+  url: /concise.css/documentation/elements/code/
+- text: Tables
+  url: /concise.css/documentation/elements/tables/
+- text: Forms
+  url: /concise.css/documentation/elements/forms/
+- text: Buttons
+  url: /concise.css/documentation/elements/buttons/
+- text: Groups
+  url: /concise.css/documentation/elements/groups/
+- text: Wells
+  url: /concise.css/documentation/elements/wells/
+- text: Badges & Labels
+  url: /concise.css/documentation/elements/badges-labels/
+- text: Progress Bars
+  url: /concise.css/documentation/elements/progress-bars/
+- text: Closeable
+  url: /concise.css/documentation/elements/closeable/
+
+helper-nav:
+- text: Background Colors
+  url: /concise.css/documentation/helper-classes/background-colors/
+- text: Border Radius
+  url: /concise.css/documentation/helper-classes/border-radius/
+- text: Pill
+  url: /concise.css/documentation/helper-classes/pill/
+- text: Full Width
+  url: /concise.css/documentation/helper-classes/full-width/
+- text: Show/Hide
+  url: /concise.css/documentation/helper-classes/show-hide/
+- text: Conditional Styling
+  url: /concise.css/documentation/helper-classes/conditional-styling/
+- text: Carets
+  url: /concise.css/documentation/helper-classes/carets/
+- text: Quick Floats
+  url: /concise.css/documentation/helper-classes/quick-floats/
+- text: Screen Reader
+  url: /concise.css/documentation/helper-classes/screen-reader/
+- text: Image Replacement
+  url: /concise.css/documentation/helper-classes/image-replacement/
+- text: Remove Margin
+  url: /concise.css/documentation/helper-classes/remove-margin/
+- text: Vendor Prefixes
+  url: /concise.css/documentation/helper-classes/vendor-prefixes/
+---
+
+{% include head.html %}
+
+  {% include header.html %}
+
+  <div class="masthead">
+    <div class="container center">
+      <h1 class="kilo no-margin color-white">Documentation</h1>
+
+      <h2 class="no-margin">Learn how to use all of great features that Concise provides.</h2>
+    </div><!-- .container -->
+
+    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
+  </div><!-- .masthead -->
+
+  <div class="container center">
+    <div class="row no-margin">
+      <div class="column-5 sidebar">
+        <nav class="nav-vertical pills nav-responsive-center nav-responsive-text">
+          <ul>
+            <li class="text-uppercase">Layout</li>
+
+            {% for link in page.layout-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <ul>
+            <li class="text-uppercase">Typography</li>
+
+            {% for link in page.typography-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <ul>
+            <li class="text-uppercase">Navigation</li>
+
+            {% for link in page.navigation-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <ul>
+            <li class="text-uppercase">Elements</li>
+
+            {% for link in page.elements-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <ul>
+            <li class="text-uppercase">Helper Classes</li>
+
+            {% for link in page.helper-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav><!-- .nav-vertical -->
+      </div><!-- .column-5 -->
+
+      <div class="column-19 content">
+        {{ content }}
+      </div><!-- .column-19 -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+{% include footer.html %}

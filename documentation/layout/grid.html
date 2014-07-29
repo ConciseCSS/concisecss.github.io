@@ -1,0 +1,467 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Grid
+permalink: /grid/
+---
+
+<style>
+	.grid-example [class*='column-'] {
+    border: 1px dashed #bbb;
+    padding: 20px 0;
+  }
+</style>
+
+<h1 class="no-margin">Grid</h1>
+
+<hr />
+
+<p>Concise comes with a fluid, mobile-first grid system. Once the viewport of a device is larger than <strong>768px</strong>, the rows of the grid display with 16 columns. Getting started with the grid system is as easy as wrapping any of the <code>.column-*</code> classes inside of a <code>.row</code> class.</p>
+
+<div class="well preview">
+<div class="preview-heading">
+  <strong>Preview</strong>
+</div><!-- .preview-heading -->
+
+<div class="preview-body">
+  <div class="row grid-example">
+    <div class="column-16"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-1"></div>
+
+    <div class="column-15"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-2"></div>
+
+    <div class="column-14"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-3"></div>
+
+    <div class="column-13"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-4"></div>
+
+    <div class="column-12"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-5"></div>
+
+    <div class="column-11"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-6"></div>
+
+    <div class="column-10"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-7"></div>
+
+    <div class="column-9"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-8"></div>
+
+    <div class="column-8"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-4"></div>
+
+    <div class="column-4"></div>
+
+    <div class="column-4"></div>
+
+    <div class="column-4"></div>
+  </div><!-- .row -->
+
+  <div class="row grid-example">
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+
+    <div class="column-2"></div>
+  </div><!-- .row -->
+</div><!-- .preview-body -->
+
+<div class="preview-footer">
+  <strong>Code</strong>
+
+<pre><code>&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-16&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-15&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-14&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-3&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-13&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-12&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-5&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-6&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-7&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-8&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Adding Gutters</h1>
+
+<hr />
+
+<p>By default, no gutters are added onto any of the grid columns. However, simply adding the class <code>.gutters</code> to your <code>.row</code> class provides a <strong>2%</strong> gutter to each of the columns, except for the first one.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <div class="row gutters grid-example">
+      <div class="column-16"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-1"></div>
+
+      <div class="column-15"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-2"></div>
+
+      <div class="column-14"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-3"></div>
+
+      <div class="column-13"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-4"></div>
+
+      <div class="column-12"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-5"></div>
+
+      <div class="column-11"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-6"></div>
+
+      <div class="column-10"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-7"></div>
+
+      <div class="column-9"></div>
+    </div><!-- .row -->
+
+    <!--<div class="row gutters grid-example">
+      <div class="column-8"></div>
+
+      <div class="column-8"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-4"></div>
+
+      <div class="column-4"></div>
+
+      <div class="column-4"></div>
+
+      <div class="column-4"></div>
+    </div><!-- .row -->
+
+    <div class="row gutters grid-example">
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+
+      <div class="column-2"></div>
+    </div><!-- .row -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<pre><code>&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-16&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-1&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-15&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-14&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-3&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-13&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-12&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-5&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-6&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-7&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-8&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row gutters&#x22;&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;column-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Nesting Grids</h1>
+
+<hr />
+
+<p>You also can nest grids inside of each other by nesting a <code>.row</code> class inside of a column.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <div class="row gutters grid-example">
+      <div class="column-16">
+        <div class="row gutters grid-example">
+          <div class="column-1"></div>
+
+          <div class="column-15"></div>
+        </div><!-- .row -->
+
+        <div class="row gutters no-margin grid-example">
+          <div class="column-2"></div>
+
+          <div class="column-14"></div>
+        </div><!-- .row -->
+      </div>
+    </div><!-- .row -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<pre><code>&lt;div class=&quot;row gutters&quot;&gt;
+  &lt;div class=&quot;column-16&quot;&gt;
+    &lt;div class=&quot;row gutters&quot;&gt;
+      &lt;div class=&quot;column-1&quot;&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;column-15&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row gutters no-margin&quot;&gt;
+      &lt;div class=&quot;column-2&quot;&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;column-14&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Grid Column Options</h1>
+
+<hr />
+
+<h3>Column Number</h3>
+
+<p>Concise comes with a 16-column grid by default. The <code>$column-number</code> variable can be changed in the <code>_defaults.scss</code> file to accommodate any number of columns you would like.</p>
+
+<p>If you do not use a preprocessor, Concise has pre-built CSS files for a 12- or 24-column grid. These files include proper styling for the grid columns with and without gutters, as well as push and pull options.</p>
+
+<div class="row">
+  <div class="column-12">
+    <a href="https://raw.githubusercontent.com/ConciseCSS/addons/master/layout/grid/12col.css" class="full btn btn-small border blue" target="_blank">Download 12-Column CSS File</a>
+  </div><!-- .column-12 -->
+
+  <div class="column-12">
+    <a href="https://raw.githubusercontent.com/ConciseCSS/addons/master/layout/grid/24col.css" class="full btn btn-small border blue" target="_blank">Download 24-Column CSS File</a>
+  </div><!-- .column-12 -->
+</div><!-- .row -->
+
+<h3>Column Prefix</h3>
+
+<p>By default, the prefix for columns is <code>.column-</code>. The <code>$column-prefix</code> variable can be changed in the <code>_defaults.scss</code> file to accommodate any prefix you would like. Many people like their column prefix to be <code>.col-</code> or <code>.span-</code>.</p>
+
+<h3>Gutter Amount</h3>
+
+<p>The default gutter size for the <code>.gutters</code> class is <strong>2%</strong>. However, the <code>$gutters</code> variable can be changed in the <code>_defaults.scss</code> to accommodate any gutter size you would like.</p>
+
+<h2 class="h1 no-margin">Push and Pull</h1>
+
+<hr />
+
+<p>By using <code>.push-*</code> and <code>.pull-*</code> classes, you can easily manage positioning of grid columns. The number you use after a push or pull class is correlated with the column size. For example, <code>.push-6</code> has the same size as <code>.column-6</code>, which is <strong>37.5%</strong>.</p>
+
+<h2>Push</h2>
+
+<p>Using the <code>.push-*</code> class allows you to push a column to the left.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <div class="row grid-example">
+      <div class="column-6 push-6"></div>
+    </div>
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;column-6 push-6&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2>Pull</h2>
+
+<p>Using the <code>.pull-*</code> class allows you to pull a column from the right.</</p>
+
+<p class="note"><strong>Note:</strong> I floated this column to the right to prevent it from laying outside of the preview box. You do not have to do that to every column that you pull.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <div class="row grid-example">
+      <div class="float-right column-6 pull-6"></div>
+    </div>
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;float-right column-6 pull-6&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

@@ -1,0 +1,538 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Elements / Tables
+permalink: /tables/
+---
+
+<h1 class="no-margin">Tables</h1>
+
+<hr />
+      
+<h2 class="h1 no-margin">Basic Table</h2>
+
+<hr />
+
+<p>A basic table with padding and borders can be created by using the <code>.table</code> class. We have isolated custom table styles into their own class because many JavaScript plugins use tables, and we wanted to avoid styling conflicts.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Full-Width Table</h2>
+
+<hr />
+
+<p>To create a table that takes up 100% the width of its parent element, simply add the class <code>.table-full</code>.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Bordered Tables</h2>
+
+<hr />
+      
+<h3>All Borders</h3>
+
+<p>Add the class <code>.table-border-all</code> to your table to add borders around all sections of your table.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full border-all">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-border-all"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h3>Outer Borders</h3>
+
+<p>Add the class <code>.table-border-outer</code> to your table to add borders around the outside of your table.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full border-outer">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-border-outer"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h3>Inner Borders</h3>
+
+<p>Add the class <code>.table-border-inner</code> to your table to add borders to the inside of your table.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full border-inner">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-border-inner"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Hovers</h2>
+
+<hr />
+      
+<h3>Row Hover</h3>
+
+<p>The <code>.table-hover-row</code> class enables a hover state on table rows inside of the <code>&lt;tbody&gt;</code> element.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full hover-row">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-hover-row"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h3>Cell Hover</h3>
+
+<p>The <code>.table-hover-cell</code> class enables a hover state on table cells inside of the <code>&lt;tbody&gt;</code> element.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full hover-cell">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-hover-cell"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Row Fills</h2>
+
+<hr />
+      
+<h3>Even Fill</h3>
+
+<p>The <code>.table-fill-even</code> class will add a light gray background to all even rows in a table.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full fill-even">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-fill-even"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h3>Odd Fill</h3>
+
+<p>The <code>.table-fill-odd</code> class will add a light gray background to all odd rows in a table.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <table class="table table-full fill-odd">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;table class="table table-full table-fill-odd"&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin h1">Responsive Container</h2>
+
+<hr />
+
+<p>When you have a table with a lot of columns, you may not want to hide columns conditionally or shrink them down to the point where they are unreadable. By wrapping a table in the <code>.table-responsive</code> class, the size of the table remains the same and a horizontal scroll bar will show up, allowing users to scroll horizontally to view all of the information.</p>
+
+<p>Try resizing the browser and see how the table below changes.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <div class="table-responsive">
+      <table class="table table-full fill-odd">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Keenan</td>
+            <td>Payne</td>
+            <td>@keenan_payne</td>
+          </tr>
+          
+          <tr>
+            <td>2</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>@johndoe</td>
+          </tr>
+          
+          <tr>
+            <td>3</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>@janedoe</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- .table-responsive -->
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;div class="table-responsive"&gt;
+  &lt;table class="table table-full table-fill-odd"&gt;
+     ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

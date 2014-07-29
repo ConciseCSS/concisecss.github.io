@@ -1,0 +1,212 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Helper Classes / Conditional Styling
+permalink: /conditional-styling/
+---
+
+<h1 class="no-margin">Conditional Styling</h1>
+
+<hr />
+      
+<p>Concise uses a set of classes for conditional styling based on browser viewport, screen resolution, if the document is currently being printed and lastly, if the document is being viewed on a high-definition screen <small>(Retina/HiDPI)</small>.</p>
+      
+<h2 class="h1 no-margin">Displaying Content</h2>
+
+<hr />
+
+<p>These classes determine if content will be shown given a certain browser viewport. If the user is not within that browser viewport, the content will be hidden.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Extra Large <small>&ge; 1280px</small></th>
+        <th scope="col">Large <small>&ge; 1100px</small></th>
+        <th scope="col">Medium <small>&ge; 768px</small></th>
+        <th scope="col">Small <small>&ge; 768px</small></th>
+        <th scope="col">Extra Small <small>&le; 480px</small></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td><code>.show-extra-small</code></td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+      <tr>
+        <td><code>.show-small</code></td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+      </tr>
+      
+       <tr>
+        <td><code>.show-medium</code></td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+      </tr>
+      
+       <tr>
+        <td><code>.show-large</code></td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+      </tr>
+      
+      <tr>
+        <td><code>.show-extra-large</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+        <td>Hidden</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
+
+<h2 class="h1 no-margin">Hiding Content</h2>
+
+<hr />
+
+<p>These classes determine if content will be hidden given a certain browser viewport. If the user is not within that browser viewport, the content will be shown.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Extra Large <small>&ge; 1280px</small></th>
+        <th scope="col">Large <small>&ge; 1100px</small></th>
+        <th scope="col">Medium <small>&ge; 768px</small></th>
+        <th scope="col">Small <small>&ge; 768px</small></th>
+        <th scope="col">Extra Small <small>&le; 480px</small></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td><code>.hide-extra-small</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+      </tr>
+    
+      <tr>
+        <td><code>.hide-small</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+       <tr>
+        <td><code>.hide-medium</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+       <tr>
+        <td><code>.hide-large</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+      <tr>
+        <td><code>.hide-extra-large</code></td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
+
+<h2 class="h1 no-margin">Print Content</h2>
+
+<hr />
+
+<p>Content also can be displayed or hidden based on whether the document is currently being printed or not.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Browser</th>
+        <th scope="col">Print</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td><code>.show-print</code></td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+       <tr>
+        <td><code>.hide-print</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
+
+<h2 class="h1 no-margin">High-Definition Content</h2>
+
+<hr />
+
+<p>Lastly, content can be displayed or hidden based on whether the document is currently being viewed on a high-definition screen <small>(Retina/HiDPI)</small>.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Regular Resolution</th>
+        <th scope="col">High-Definition</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td><code>.show-hd</code></td>
+        <td>Hidden</td>
+        <td class="bg-light-green">Visible</td>
+      </tr>
+      
+       <tr>
+        <td><code>.hide-hd</code></td>
+        <td class="bg-light-green">Visible</td>
+        <td>Hidden</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->

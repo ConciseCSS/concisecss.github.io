@@ -1,0 +1,40 @@
+# Site settings
+title: Concise
+email: contact@keenanpayne.com
+description: "Concise is a lightweight front-end framework that provides a number of great features without the bloat."
+author: "Keenan Payne"
+host: localhost
+port: 4000
+baseurl: "/concise.css"
+
+# Package information
+version: "v1.1.0"
+download-version: "1.1.0"
+package-size: "21kb"
+
+# Social networks
+twitter_username: "concisecss"
+facebook_username:  "concisecss"
+googleplus_username: "103423710089455112688"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: rouge
+
+# Gems
+gems:
+  - jekyll-redirect-from
+
+# Main Navigation
+nav:
+- text: Welcome
+  url: /concise.css/
+- text: Why Concise
+  url: /concise.css/why-concise/
+- text: Get Started
+  url: /concise.css/get-started/
+- text: Documentation
+  url: /concise.css/documentation/layout/container/
+- text: Add-Ons
+  url: /concise.css/add-ons/

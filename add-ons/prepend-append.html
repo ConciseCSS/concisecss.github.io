@@ -1,0 +1,110 @@
+---
+layout: add-ons
+title: Add-Ons
+subtitle: Prepend and Append
+permalink: /prepend-append/
+---
+
+<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/downloads/form-prepend-append.css">
+
+<h1 class="no-margin">Input Prepend and Append</h1>
+
+<hr />
+            
+<p>Content can be appended or prepended to form fields using the <code>.append</code> and <code>.prepend</code> class, respectively.</p>
+
+<p>Each form item must be wrapped in a div with either the <code>.append</code> or <code>.prepend</code> class. A <code>&lt;span&gt;</code> class with class <code>.adjoined</code> should then be added before the input or after the input, depending on if you are appending or prepending.</p>
+
+<p>Inside of the <code>.adjoined</code> class, you can add text or icons. Just be sure that if you are adding an icon, you put it inside a new <code>&lt;span&gt;</code> tag, not the one containing the <code>.adjoined</code> class.</p>
+
+<p>Lastly, if you want your appended or prepended content to not have a background color, simply add the class <code>.transparent</code> to either the <code>.append</code> or <code>.prepend</code> class.</p>
+
+<p class="note"><strong>Note:</strong> The icons used here are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <form action="" method="post" class="form-inline border-radius">                            
+      <div class="form-item prepend">
+        <label for="name">Name:</label>
+        <span class="adjoined"><span class="icon user"></span></span>
+        <input type="text" name="name" placeholder="John Doe" />
+      </div><!-- .form-item -->
+      
+      <div class="form-item append">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="john_doe@example.com" />
+        <span class="adjoined"><span class="icon envelope"></span></span>
+      </div><!-- .form-item -->
+      
+      <div class="form-item append transparent">
+        <label for="email">Website:</label>
+        <input type="website" name="website" placeholder="http://example.com" />
+        <span class="adjoined"><span class="icon globe"></span></span>
+      </div><!-- .form-item -->
+    </form>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+      <strong>Code</strong>
+                  
+<pre><code> &lt;form class=&quot;form-inline border-radius&quot;&gt;             
+&lt;div class=&quot;form-item prepend&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon user&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-item append&quot;&gt;
+  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+  &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;john_doe@example.com&quot; /&gt;
+  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon envelope&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-item append transparent&quot;&gt;
+  &lt;label for=&quot;email&quot;&gt;Website:&lt;/label&gt;
+  &lt;input type=&quot;website&quot; name=&quot;website&quot; placeholder=&quot;http://example.com&quot; /&gt;
+  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon globe&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1">Download</h2>
+
+<hr />
+
+<p>Below you can see the input prepend and append add-on in vanilla CSS, SASS, LESS and Stylus.</p>
+
+<div class="row no-margin">
+  <div class="column-6">
+    <h3>CSS</h3>
+              
+    <a class="btn border blue btn-small full" href="/downloads/form-prepend-append.css" target="_blank">Download</a>
+  </div><!-- .column-6 -->
+  
+  <div class="column-6">
+    <h3>SASS</h3>
+              
+    <a class="btn border blue btn-small full" href="/downloads/form-prepend-append.scss" target="_blank">Download SASS</a>
+  </div><!-- .column-6 -->
+  
+  <div class="column-6">
+    <h3>LESS</h3>
+              
+    <a class="btn border blue btn-small full" href="/downloads/form-prepend-append.less" target="_blank">Download LESS</a>
+  </div><!-- .column-6 -->
+  
+  <div class="column-6">
+    <h3>Stylus</h3>
+              
+    <a class="btn border blue btn-small full" href="/downloads/form-prepend-append.styl" target="_blank">Download Stylus</a>
+  </div><!-- .column-6 -->
+</div><!-- .row -->
+
+<p class="text-center">
+  <a href="https://github.com/ConciseCSS/addons" target="_blank" class="btn border-radius bg-gray btn-small">Fork on GitHub</a>
+</p>

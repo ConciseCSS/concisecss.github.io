@@ -1,0 +1,110 @@
+---
+layout: documentation
+title: Documentation
+subtitle: Typography / Headings
+permalink: /headings/
+---
+
+<style>.preview h3.no-margin.giga { margin-top: 36px; }</style>
+
+
+<h1 class="no-margin">Headings</h1>
+
+<hr />
+      
+<p>Concise includes all standard HTML headings <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. Also included are classes <code>.h1</code> through <code>.h6</code> that match the size of their respective headings, but can be used on any element.</p>
+
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$h1-size - $h6-size</code> variables in the <code>_defaults.scss</code> file to adjust font sizes.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <h1>&lt;h1&gt; Concise Heading</h1>
+    <h2>&lt;h2&gt; Concise Heading</h2>
+    <h3>&lt;h3&gt; Concise Heading</h3>
+    <h4>&lt;h4&gt; Concise Heading</h4>
+    <h5>&lt;h5&gt; Concise Heading</h5>
+    <h6>&lt;h6&gt; Concise Heading</h6>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+</div><!-- .preview-footer -->
+</div><!-- .preview -->      
+
+<h2 class="no-margin">Sub-Headings</h2>
+
+<hr />
+
+<p>You also can create sub-headings for your headings using the <code>&lt;small&gt;</code> tag or the <code>.small</code> class. <code>!important</code> is included to avoid specificity issues.</p>
+
+<div class="well preview">
+<div class="preview-heading">
+  <strong>Preview</strong>
+</div><!-- .preview-heading -->
+
+<div class="preview-body">
+  <h1>Heading 1 <small class="color-gray">This is a sub-heading</small></h1>
+
+  <h2>Heading 2 <small class="color-gray">This is a sub-heading</small></h2>
+
+  <h3>Heading 3 <small class="color-gray">This is a sub-heading</small></h3>
+
+  <h4>Heading 4 <small class="color-gray">This is a sub-heading</small></h4>
+
+  <h5>Heading 5 <small class="color-gray">This is a sub-heading</small></h5>
+
+  <h6>Heading 6 <small class="color-gray">This is a sub-heading</small></h6>
+</div><!-- .preview-body -->
+
+<div class="preview-footer">
+  <strong>Code</strong>
+  
+<pre><code>&lt;h1&gt;Heading 1 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Heading 2 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Heading 3 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Heading 4 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;Heading 5 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;Heading 6 &lt;small class=&quot;color-gray&quot;&gt;This is a sub-heading&lt;/small&gt;&lt;/h6&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->   
+      
+<h2 class="no-margin">Extra-Large Headings</h2>
+
+<hr />
+
+<p>Sometimes there is a need for headings that are larger than the standard <code>h1</code> through <code>h6</code>. Anticipating this need, Concise comes with three classes that can be used to super-size your type.</p>
+
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$giga-size - $kilo-size</code> variables in the <code>_defaults.scss</code> file to adjust font sizes.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+  
+  <div class="preview-body">
+    <h3 class="no-margin giga">Giga Concise Heading</h3>
+    
+    <h3 class="no-margin mega">Mega Concise Heading</h3>
+    
+    <h3 class="no-margin kilo">Kilo Concise Heading</h3>
+  </div><!-- .preview-body -->
+  
+  <div class="preview-footer">
+    <strong>Code</strong>
+    
+<pre><code>&lt;h1 class="giga"&gt;Giga Heading&lt;/h1&gt;
+&lt;h2 class="mega"&gt;Mega Heading&lt;/h2&gt;
+&lt;h3 class="kilo"&gt;Kilo Heading&lt;/h3&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->

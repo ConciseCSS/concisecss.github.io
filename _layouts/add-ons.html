@@ -1,0 +1,56 @@
+---
+# Navigation
+nav:
+- text: Articles
+  url: /concise.css/add-ons/articles/
+- text: Comments
+  url: /concise.css/add-ons/comments/
+- text: Gradient Styles
+  url: /concise.css/add-ons/gradient-styles/
+- text: Scrollbars
+  url: /concise.css/add-ons/scrollbars/
+- text: Social Media Buttons
+  url: /concise.css/add-ons/social-media-buttons/
+- text: Tooltips
+  url: /concise.css/add-ons/tooltips/
+- text: Circles
+  url: /concise.css/add-ons/circles/
+---
+
+{% include head.html %}
+
+  {% include header.html %}
+
+  <div class="masthead">
+    <div class="container center">
+      <h1 class="kilo no-margin color-white">Add-Ons</h1>
+
+      <h2 class="no-margin">Extend the default Concise with these pre-built add-ons</h2>
+    </div><!-- .container -->
+
+    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
+  </div><!-- .masthead -->
+
+  <div class="container center">
+    <div class="row no-margin">
+      <div class="column-5 sidebar">
+        <nav class="nav-vertical pills nav-responsive-center nav-responsive-text">
+          <ul>
+            <li class="text-uppercase">Add-Ons</li>
+
+            {% for link in page.nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav><!-- .nav-vertical -->
+      </div><!-- .column-5 -->
+
+      <div class="column-19 content">
+        {{ content }}
+      </div><!-- .column-19 -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+
+{% include footer.html %}
