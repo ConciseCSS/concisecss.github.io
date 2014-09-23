@@ -8,9 +8,9 @@ port: 4000
 baseurl: ""
 
 # Package information
-version: "v1.1.0"
-download-version: "1.1.0"
-package-size: "21kb"
+version: "v1.1.1"
+download-version: "1.1.1"
+package-size: "23kb"
 
 # Social networks
 twitter_username: "concisecss"
