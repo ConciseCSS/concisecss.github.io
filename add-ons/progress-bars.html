@@ -1,7 +1,7 @@
 ---
-layout: documentation
-title: Documentation
-subtitle: Elements / Progress Bars
+layout: add-ons
+title: Add-Ons
+subtitle: Progress Bars
 permalink: /progress-bars/
 ---
 
@@ -10,6 +10,8 @@ permalink: /progress-bars/
 <hr />
 
 <p>A progress bar can be used to display a percentage of progress out of 100. The only two things driving these progress bars are an outer element with the <code>.progress</code> class as well as an inner <code>&lt;span&gt;</code> containing an inline style <code>style="width: __%"</code> where the "__" signifies a number under 100.</p>
+
+<p>Thanks to Chris Coyier of CSS Tricks for his tutorial on <a href="http://css-tricks.com/css3-progress-bars/" title="CSS Tricks Progress Bars" target="_blank">CSS Progress Bars</a>.</p>
 
 <h2 class="h1 no-margin">Basic</h2>
 
@@ -21,16 +23,16 @@ permalink: /progress-bars/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="progress">
       <span style="width: 25%">25%</span>
     </div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;div class=&quot;progress&quot;&gt;
   &lt;span style=&quot;width: 25%&quot;&gt;25%&lt;/span&gt;
 &lt;/div&gt;</code></pre>
@@ -47,24 +49,24 @@ permalink: /progress-bars/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="progress progress-small">
       <span style="width: 50%" class="bg-blue">50%</span>
     </div>
-          
+
     <div class="progress progress-large">
       <span style="width: 75%">75%</span>
     </div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;div class=&quot;progress progress-small&quot;&gt;
   &lt;span style=&quot;width: 50%&quot; class=&quot;bg-blue&quot;&gt;50%&lt;/span&gt;
 &lt;/div&gt;
-      
+
 &lt;div class=&quot;progress progress-large&quot;&gt;
   &lt;span style=&quot;width: 75%&quot;&gt;75%&lt;/span&gt;
 &lt;/div&gt;</code></pre>
@@ -81,16 +83,16 @@ permalink: /progress-bars/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="progress progress-large border-radius">
       <span style="width: 75%" class="bg-yellow">75%</span>
     </div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;div class=&quot;progress progress-large border-radius&quot;&gt;
   &lt;span class="bg-yellow" style=&quot;width: 25%&quot;&gt;25%&lt;/span&gt;
 &lt;/div&gt;</code></pre>
@@ -107,20 +109,20 @@ permalink: /progress-bars/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="progress striped">
       <span style="width: 70%" class="bg-yellow"></span>
     </div>
-    
+
     <div class="progress striped animate">
       <span style="width: 90%" class="bg-red"></span>
     </div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;div class=&quot;progress progress-striped&quot;&gt;
   &lt;span class="bg-yellow" style=&quot;width: 70%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
@@ -141,7 +143,7 @@ permalink: /progress-bars/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="progress stacked border-radius">
       <span style="width: 25%" class="bg-red"></span>
@@ -150,10 +152,10 @@ permalink: /progress-bars/
       <span style="width: 10%" class="bg-green"></span>
     </div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;div class=&quot;progress progress-stacked border-radius&quot;&gt;
   &lt;span style=&quot;width: 25%&quot; class=&quot;bg-red&quot;&gt;&lt;/span&gt;
   &lt;span style=&quot;width: 25%&quot; class=&quot;bg-blue&quot;&gt;&lt;/span&gt;

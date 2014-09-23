@@ -8,16 +8,16 @@ permalink: /circles/
 <style>
   .circle,
   .circle-responsive { margin-bottom: 15px; }
-  
-  .circle { 
+
+  .circle {
     background: #ddd;
     border-radius: 50%;
     height: 150px;
     width: 150px;
   }
-  
+
 .circle-responsive {
-    background: #ddd; 
+    background: #ddd;
     border-radius: 50%;
     height: 0;
     padding-bottom: 100%;
@@ -38,38 +38,40 @@ permalink: /circles/
 <h1 class="no-margin">Circles</h1>
 
 <hr />
- 
+
 <p>Using CSS3, circles and other shapes are extremely easy to create without the use of images or other scripts. You can use circles as buttons, or even place icons or other content inside of them.</p>
- 
+
+<p>Big thanks to <a href="http://codeitdown.com/css-circles/" title="Codeitdown CSS3 Circles" target="_blank">Codeitdown</a> for the article that inspired this add-on.</p>
+
 <h2 class="h1 no-margin">Fixed-Width</h2>
 
 <hr />
 
 <p>Below you can see some simple CSS and HTML for a fixed-width circle:</p>
- 
+
 <div class="well preview">
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="circle"></div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>CSS</strong>
-      
-<pre><code>.circle { 
+
+<pre><code>.circle {
   background: #ddd;
   border-radius: 50%;
   height: 150px;
   width: 150px;
 }</code></pre>
     </div><!-- .preview-footer -->
-    
+
   <div class="preview-footer">
     <strong>HTML</strong>
-    
+
     <pre><code>&lt;div class="circle"&gt;&lt;/div&gt;</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -84,7 +86,7 @@ permalink: /circles/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="row">
       <div class="column-8">
@@ -92,22 +94,22 @@ permalink: /circles/
       </div><!-- .column-8 -->
     </div><!-- .row -->
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>CSS</strong>
-      
+
 <pre><code>.circle-responsive {
-  background: #ddd; 
+  background: #ddd;
   border-radius: 50%;
   height: 0;
   padding-bottom: 100%;
   width: 100%;
 }</code></pre>
     </div><!-- .preview-footer -->
-    
+
   <div class="preview-footer">
     <strong>HTML</strong>
-    
+
     <pre><code>&lt;div class="circle-responsive"&gt;&lt;/div&gt;</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -117,29 +119,29 @@ permalink: /circles/
 <hr />
 
 <p>Here is an example of the responsive circle that I created just above, except this time adding an extra class called <code>.circle-content</code> that will perfectly center any content that we choose to put in our circle, regardless of whether it is responsive or fixed-width.</p>
-        
+
 <p>Below I provide two examples of how the <code>.circle-content</code> class can be used. One with basic text, and one with an icon.</p>
 
 <div class="well preview">
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="row">
       <div class="column-6">
         <div class="circle-responsive"><div class="circle-content">I'm a Circle!</div></div>
       </div><!-- .column-6 -->
-        
+
       <div class="column-6">
         <div class="circle-responsive"><div class="circle-content mega"><span class="icon user"></span></div></div>
       </div><!-- .column-6 -->
     </div><!-- .row -->
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>CSS</strong>
-      
+
 <pre><code>.circle-content {
   color: #fff;
   float: left;
@@ -150,10 +152,10 @@ permalink: /circles/
   width: 100%;
 }</code></pre>
   </div><!-- .preview-footer -->
-  
+
   <div class="preview-footer">
     <strong>HTML</strong>
-      
+
 <pre><code>&lt;div class="circle"&gt;&lt;div class="circle-content"&gt;I'm a Circle!&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class="circle-responsive"&gt;&lt;div class="circle-content mega"&gt;&lt;span class="icon user"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
