@@ -1,0 +1,29 @@
+blockquote {
+  border-left: 1px solid #ddd;
+  color: #777;
+  font-style: italic;
+  margin: 1em 2em;
+  padding-left: 1em;
+  text-align: left;
+}
+
+blockquote cite {
+  color: #555;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+blockquote cite:before { content: "\2014 \0020"; }
+
+blockquote cite a { color: #555; }
+
+blockquote cite a:visited { color: #555; }
+
+blockquote.blockquote-reverse {
+  border-left: none;
+  border-right: 1px solid #ddd;
+  padding: 0 1em 0 0;
+  text-align: right;
+}
