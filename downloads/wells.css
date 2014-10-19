@@ -1,0 +1,29 @@
+.well {
+  background-color: #f9f9f9;
+  border-color: #ededed;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 24px;
+  padding: 0px 15px;
+}
+
+.well h1, .well h2, .well h3, .well h4, .well h5, .well h6,
+.well .h1, .well .h2, .well .h3, .well .h4, .well .h5, .well .h6,
+.well .giga, .well .mega, .well .kilo { color: inherit; }
+
+.well p { margin: 10px 0; }
+
+.well pre,
+.well .pre.well {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  padding: 10px 15px;
+}
+
+.well header h1, .well header h2, .well header h3, .well header h4, .well header h5, .well header h6,
+.well header .h1, .well header .h2, .well header .h3, .well header .h4, .well header .h5, .well header .h6,
+.well header .giga, .well header .mega, .well header .kilo { margin: 20px 0 10px; }
+
+.well header .label,
+.well header .badge { margin-top: 10px; }
