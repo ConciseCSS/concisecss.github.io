@@ -1,0 +1,27 @@
+.breadcrumbs {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+  margin: 12px 0;
+  padding: 5px 15px 5px 0;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.breadcrumbs li:last-child { margin-right: 0px; }
+
+.breadcrumbs li:after {
+  content: "/";
+  color: #ccc;
+  padding-left: 12px;
+  vertical-align: middle;
+}
+
+.breadcrumbs li:last-child { color: #999; }
+
+.breadcrumbs li:last-child a { color: #999; }
+
+.breadcrumbs li:last-child:after { content: ""; }
