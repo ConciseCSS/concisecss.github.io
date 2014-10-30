@@ -13,7 +13,7 @@ permalink: /breakpoints/
 
 <p>The media queries for Concise are based off of this great <a href="http://app.kodery.com/s/1075" title="Media Queries Boilerplate" target="_blank">media queries boilerplate</a>.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the variables in the <code>_defaults.scss</code> file to change the values for each of your breakpoints.</p>
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the values of the media queries and add your own with the <code>$breakpoint-map</code> map inside of <code>_variables.scss</code>.</p>
 
 <div class="table-responsive">
   <table class="full border-all fill-odd">
@@ -63,7 +63,7 @@ permalink: /breakpoints/
 
 <hr />
 
-<p>In the <code>/generic/_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints outlined above <small>(and respective names)</small>.</p>
+<p>In the <code>/generic/_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints in the <code>$breakpoints-map</code> map <small>(and their respective names)</small>.</p>
 
 <div class="well preview">
   <div class="preview-footer">
