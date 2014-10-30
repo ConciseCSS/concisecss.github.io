@@ -9,11 +9,63 @@ permalink: /tables/
 
 <hr />
 
-<h2 class="h1 no-margin">Basic Table</h2>
+<h2 class="h1 no-margin">Basic</h2>
 
 <hr />
 
-<p>A basic table with padding and borders can be created by using the <code>.table</code> class. We have isolated custom table styles into their own class because many JavaScript plugins use tables, and we wanted to avoid styling conflicts.</p>
+<p>A basic table without any styling can be created with just the standard <code>&lt;table&gt;</code> tag and accompanying elements.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Keenan</td>
+          <td>Payne</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>John</td>
+          <td>Doe</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Jane</td>
+          <td>Doe</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<pre><code>&lt;table&gt;
+   ...
+&lt;/table&gt;</code></pre>
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Styled</h2>
+
+<hr />
+
+<p>A styled table with padding and borders can be created by using the <code>.table</code> class. We have isolated custom table styles into their own class because many JavaScript plugins use tables, and we wanted to avoid styling conflicts.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -61,7 +113,7 @@ permalink: /tables/
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
-<h2 class="h1 no-margin">Full-Width Table</h2>
+<h2 class="h1 no-margin">Full-Width</h2>
 
 <hr />
 
