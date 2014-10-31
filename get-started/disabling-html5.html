@@ -15,18 +15,26 @@ permalink: /get-started/disabling-html5/
 <p>First, we will want to remove the <code>&lt;!doctype html&gt;</code> from the top of our <code>&lt;head&gt;</code> section, and replace it with one of the alternatives:</p>
 
 <strong>HTML 4.01 Strict:</strong>
-{% highlight css %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">{% endhighlight %}
+{% highlight html %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+{% endhighlight %}
 
 <strong>HTML 4.01 Transitional:</strong>
-{% highlight css %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">{% endhighlight %}
+{% highlight html %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% endhighlight %}
 
 <strong>XHTML 1.0 Strict:</strong>
-{% highlight css %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">{% endhighlight %}
+{% highlight html %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% endhighlight %}
 
 <strong>XHTML 1.0 Transitional:</strong>
-{% highlight css %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">{% endhighlight %}
+{% highlight html %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% endhighlight %}
 
 <strong>XHTML 1.1:</strong>
-{% highlight css %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">{% endhighlight %}
+{% highlight html %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">{% endhighlight %}
 
 <p>Other than that, all of the presentation elements present in Concise have been applied to Concise, meaning that <code>&lt;header&gt;</code> is not necessary when creating a header. Instead, you can simply have <code>&lt;div class="header"&gt;</code> in proper pre-HTML5 fashion.</p>
