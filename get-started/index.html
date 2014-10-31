@@ -19,6 +19,44 @@ title: Get Started
 
 <p>We could have <code>.col16</code> or <code>.col-16</code> class names that, with enough use, would be easy to remember and use, but isn't very meaningful in the context of our design. The goal with web semantics is to create classes that are meaningful, but not too verbose.</p>
 
+<p>Another method of writing semantic code with Concise is by naming logical sections of your layout and adding the necessary CSS using SASS mixins.</p>
+
+<p>An example of this is if we had a simple 16-column blog layout. Let's say we want our articles to take up 12 columns and our sidebar take up 4. We could write this like:</p>
+
+{% highlight html %}
+<div class="column-12">
+  Article
+</div>
+
+<div class="column-4">
+  Sidebar
+</div>
+{% endhiglight %}
+
+<p>Or, we could use an included SASS mixin to have this make a little more sense:</p>
+
+{% highlight css %}
+.article {
+  @include column(16, 12);
+}
+
+.sidebar {
+  @include column(16, 4);
+}
+{% endhighlight %}
+
+{%highlight html %}
+<div class="article">
+  Article
+</div>
+
+<div class="sidebar">
+  Sidebar
+</div>
+
+<p>That makes a lot more sense than just using the <code>.column-*</code> classes, and would be much easier to find inside of your CSS document.</p>
+
+<!--
 <h2 class="no-margin"><abbr title="Object-Oriented CSS">OOCSS</abbr></h2>
 
 <hr />
@@ -43,7 +81,7 @@ title: Get Started
 }
 {% endhighlight %}
 
-<p>Remember, there is always a fine line between too much HTML markup and too many style declarations. Thoughtful planning can help create meaningful and re-usable CSS classes without creating bloated HTML.</p>
+<p>Remember, there is always a fine line between too much HTML markup and too many style declarations. Thoughtful planning can help create meaningful and re-usable CSS classes without creating bloated HTML.</p>-->
 
 <h2 class="no-margin">Selector Organization</h2>
 
