@@ -45,12 +45,12 @@ permalink: /get-started/getting-started/
 
 <p>The Concise directory is pretty simple. Here is what you are looking at for the regular download:</p>
 
-<pre><code>/css
+{% highlight css %}/css
   concise.css
   concise.min.css
 /js
   concise.js
-  concise.min.js</code></pre>
+  concise.min.js{% endhighlight %}
 
 <h3>Concise Source Code</h3>
 
@@ -58,7 +58,7 @@ permalink: /get-started/getting-started/
 
 <p class="note"><strong>Note:</strong> All of the files labeled with an underscore are referred to as <em>partials</em>. A partial is a file that does not become compiled on its own, but rather, is included in a master file <small>(in this case, it's <code>concise.scss</code>)</small> to be compiled.</p>
 
-<pre><code>
+{% highlight css %}
 /dist
   /css
     concise.css
@@ -104,7 +104,7 @@ permalink: /get-started/getting-started/
     _progress.scss
     _wells.scss
   _defaults.scss
-  concise.scss</code></pre>
+  concise.scss{% endhighlight %}
 
 <h2 class="h1 no-margin">Including Necessary Files</h2>
 
@@ -112,25 +112,25 @@ permalink: /get-started/getting-started/
 
 <p>To get started with a bare-bones responsive website using Concise, I would recommend structuring your template as such:</p>
 
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;meta name="HandheldFriendly" content="True"&gt;
+{% highlight css %}<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
 
-  &lt;title&gt;Concise Template&lt;/title&gt;
+  <title>Concise Template</title>
 
-  &lt;link rel="stylesheet" type="text/css" media="screen" href="css/concise.min.css" /&gt;
-&lt;/head&gt;
+  <link rel="stylesheet" type="text/css" media="screen" href="css/concise.min.css" />
+</head>
 
-&lt;body&gt;
+<body>
 
-  &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
-  &lt;script type="text/javascript" src="js/concise.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/concise.min.js"></script>
+</body>
+</html>
 </pre></code>
 
 <p>Right there, you have a basic template with all included files, proper meta tags for responsiveness, and you're ready to start coding.</p>

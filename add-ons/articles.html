@@ -36,7 +36,7 @@ permalink: /add-ons/articles/
 
 <hr />
 
-<p>If your website has news of any kind, then HTML5's <code>&lt;article&gt;</code> tag and appropriate styling may come in great use.</p>
+<p>If your website has news of any kind, then HTML5's <code><article></code> tag and appropriate styling may come in great use.</p>
 
 <p>Below is an example of how you can use Concise to style articles and news for your website, as well as how it can be easily modified and expanded upon.</p>
 
@@ -62,7 +62,7 @@ permalink: /add-ons/articles/
   <div class="preview-footer">
     <strong>CSS</strong>
 
-<pre><code>.article { font-weight: 100; }
+{% highlight css %}.article { font-weight: 100; }
 
 .article .article-title {
   font-weight: 400;
@@ -83,22 +83,22 @@ permalink: /add-ons/articles/
   font-size: 1.25em;
   font-weight: 400;
   margin: 0;
-}</code></pre>
+}{% endhighlight %}
 </div><!-- .preview-footer -->
 
 <div class="preview-footer">
   <strong>HTML</strong>
-<pre><code>&lt;article class=&quot;article&quot;&gt;
-  &lt;h1 class=&quot;article-title&quot;&gt;Article Title&lt;/h1&gt;
+{% highlight css %}<article class="article">
+  <h1 class="article-title">Article Title</h1>
 
-  &lt;p class=&quot;article-meta&quot;&gt;Written by &lt;a href=&quot;http://keenanpayne.com&quot;&gt;Keenan Payne&lt;/a&gt; on April 1&lt;sup&gt;st&lt;/sup&gt; 2014. Posted in News.&lt;/p&gt;
+  <p class="article-meta">Written by <a href="http://keenanpayne.com">Keenan Payne</a> on April 1<sup>st</sup> 2014. Posted in News.</p>
 
-  &lt;p class=&quot;article-lead&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  <p class="article-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-  &lt;a class=&quot;btn btn-small border blue border-radius&quot;&gt;Read More &lt;span class=&quot;icon arrow-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-&lt;/article&gt;</code></pre>
+  <a class="btn btn-small border blue border-radius">Read More <span class="icon arrow-right"></span></a>
+</article>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 

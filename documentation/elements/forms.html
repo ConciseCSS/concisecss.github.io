@@ -13,7 +13,7 @@ permalink: /documentation/elements/forms/
 
 <hr />
 
-<p>This is a basic form composed of the <code>&lt;form&gt;</code> tag containing various <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code> fields.</p>
+<p>This is a basic form composed of the <code><form></code> tag containing various <code><label></code>, <code><input></code>, <code><select></code> and <code><textarea></code> fields.</p>
 
 <p>Each label and input pair are wrapped in a <code>.form-item</code> class that adds bottom margin and keeps our respective labels and inputs in their own block so no content wraps around them.</p>
 
@@ -71,47 +71,47 @@ permalink: /documentation/elements/forms/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;form&gt;
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; /&gt;
-  &lt;/div&gt;
+{% highlight css %}<form>
+  <div class="form-item">
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="John Doe" />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;john_doe@example.com&quot; /&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="john_doe@example.com" />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;website&quot;&gt;Website:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;website&quot; placeholder=&quot;http://example.com&quot; disabled /&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="website">Website:</label>
+    <input type="text" name="website" placeholder="http://example.com" disabled />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;gender&quot;&gt;Gender:&lt;/label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Male&quot; /&gt; Male &lt;br /&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Female&quot; /&gt; Female
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="Male" /> Male <br />
+    <input type="radio" name="gender" value="Female" /> Female
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;interest&quot;&gt;Inquiry:&lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Quote&quot; /&gt; Quote &lt;br /&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Question&quot; /&gt; Question
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="interest">Inquiry:</label>
+    <input type="checkbox" name="interest" value="Quote" /> Quote <br />
+    <input type="checkbox" name="interest" value="Question" /> Question
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-     &lt;select&gt;
-       &lt;option name=&quot;Test&quot;&gt;Test&lt;/option&gt;
-     &lt;/select&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+     <select>
+       <option name="Test">Test</option>
+     </select>
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
-    &lt;textarea name=&quot;message&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;&lt;!-- .form-item --&gt;
+  <div class="form-item">
+    <label for="message">Message:</label>
+    <textarea name="message"></textarea>
+  </div><!-- .form-item -->
 
-  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn&quot;&gt;
-&lt;/form&gt;</code></pre>
+  <input type="submit" value="Submit" class="btn">
+</form>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -173,47 +173,47 @@ permalink: /documentation/elements/forms/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;form class="form"&gt;
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; /&gt;
-  &lt;/div&gt;
+{% highlight css %}<form class="form">
+  <div class="form-item">
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="John Doe" />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-    &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;john_doe@example.com&quot; /&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="john_doe@example.com" />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;website&quot;&gt;Website:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;website&quot; placeholder=&quot;http://example.com&quot; disabled /&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="website">Website:</label>
+    <input type="text" name="website" placeholder="http://example.com" disabled />
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;gender&quot;&gt;Gender:&lt;/label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Male&quot; /&gt; Male &lt;br /&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;Female&quot; /&gt; Female
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="Male" /> Male <br />
+    <input type="radio" name="gender" value="Female" /> Female
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;interest&quot;&gt;Inquiry:&lt;/label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Quote&quot; /&gt; Quote &lt;br /&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;interest&quot; value=&quot;Question&quot; /&gt; Question
-  &lt;/div&gt;
+  <div class="form-item">
+    <label for="interest">Inquiry:</label>
+    <input type="checkbox" name="interest" value="Quote" /> Quote <br />
+    <input type="checkbox" name="interest" value="Question" /> Question
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-     &lt;select&gt;
-       &lt;option name=&quot;Test&quot;&gt;Test&lt;/option&gt;
-     &lt;/select&gt;
-  &lt;/div&gt;
+  <div class="form-item">
+     <select>
+       <option name="Test">Test</option>
+     </select>
+  </div>
 
-  &lt;div class=&quot;form-item&quot;&gt;
-    &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
-    &lt;textarea name=&quot;message&quot;&gt;&lt;/textarea&gt;
-  &lt;/div&gt;&lt;!-- .form-item --&gt;
+  <div class="form-item">
+    <label for="message">Message:</label>
+    <textarea name="message"></textarea>
+  </div><!-- .form-item -->
 
-  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; class=&quot;btn&quot;&gt;
-&lt;/form&gt;</code></pre>
+  <input type="submit" value="Submit" class="btn">
+</form>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -221,7 +221,7 @@ permalink: /documentation/elements/forms/
 
 <hr />
 
-<p>Wrapping your form content with a <code>&lt;fieldset&gt;</code> tag allows you to group related elements inside of your form. Adding the <code>&lt;legend&gt;</code> tag allows you to denote each section with a small heading.</p>
+<p>Wrapping your form content with a <code><fieldset></code> tag allows you to group related elements inside of your form. Adding the <code><legend></code> tag allows you to denote each section with a small heading.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -249,11 +249,11 @@ permalink: /documentation/elements/forms/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;...&lt;/legend&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</code></pre>
+{% highlight css %}<form>
+  <fieldset>
+    <legend>...</legend>
+  </fieldset>
+</form>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -261,7 +261,7 @@ permalink: /documentation/elements/forms/
 
 <hr />
 
-<p>Adding the class <code>.form-inline</code> to your <code>&lt;form&gt;</code> element allows you to display your form elements in an inline fashion. By default, the <code>.form-inline</code> class will give each <code>&lt;label&gt;</code> element a width of <strong>100px</strong>.</p>
+<p>Adding the class <code>.form-inline</code> to your <code><form></code> element allows you to display your form elements in an inline fashion. By default, the <code>.form-inline</code> class will give each <code><label></code> element a width of <strong>100px</strong>.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -285,8 +285,8 @@ permalink: /documentation/elements/forms/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;form class=&quot;form-inline&quot;&gt;
+{% highlight css %}<form class="form-inline">
   ...
-&lt;/form&gt;</code></pre>
+</form>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->

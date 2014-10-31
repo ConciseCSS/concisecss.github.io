@@ -13,9 +13,9 @@ permalink: /add-ons/form-styles/
 
 <p>Content can be appended or prepended to form fields using the <code>.append</code> and <code>.prepend</code> class, respectively.</p>
 
-<p>Each form item must be wrapped in a div with either the <code>.append</code> or <code>.prepend</code> class. A <code>&lt;span&gt;</code> class with class <code>.adjoined</code> should then be added before the input or after the input, depending on if you are appending or prepending.</p>
+<p>Each form item must be wrapped in a div with either the <code>.append</code> or <code>.prepend</code> class. A <code><span></code> class with class <code>.adjoined</code> should then be added before the input or after the input, depending on if you are appending or prepending.</p>
 
-<p>Inside of the <code>.adjoined</code> class, you can add text or icons. Just be sure that if you are adding an icon, you put it inside a new <code>&lt;span&gt;</code> tag, not the one containing the <code>.adjoined</code> class.</p>
+<p>Inside of the <code>.adjoined</code> class, you can add text or icons. Just be sure that if you are adding an icon, you put it inside a new <code><span></code> tag, not the one containing the <code>.adjoined</code> class.</p>
 
 <p>Lastly, if you want your appended or prepended content to not have a background color, simply add the class <code>.transparent</code> to either the <code>.append</code> or <code>.prepend</code> class.</p>
 
@@ -51,25 +51,25 @@ permalink: /add-ons/form-styles/
   <div class="preview-footer">
       <strong>Code</strong>
 
-<pre><code> &lt;form class=&quot;form-inline border-radius&quot;&gt;
-&lt;div class=&quot;form-item prepend&quot;&gt;
-  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
-  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon user&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;John Doe&quot; /&gt;
-&lt;/div&gt;
+{% highlight css %} <form class="form-inline border-radius">
+<div class="form-item prepend">
+  <label for="name">Name:</label>
+  <span class="adjoined"><span class="icon user"></span></span>
+  <input type="text" name="name" placeholder="John Doe" />
+</div>
 
-&lt;div class=&quot;form-item append&quot;&gt;
-  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-  &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;john_doe@example.com&quot; /&gt;
-  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon envelope&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/div&gt;
+<div class="form-item append">
+  <label for="email">Email:</label>
+  <input type="email" name="email" placeholder="john_doe@example.com" />
+  <span class="adjoined"><span class="icon envelope"></span></span>
+</div>
 
-&lt;div class=&quot;form-item append transparent&quot;&gt;
-  &lt;label for=&quot;email&quot;&gt;Website:&lt;/label&gt;
-  &lt;input type=&quot;website&quot; name=&quot;website&quot; placeholder=&quot;http://example.com&quot; /&gt;
-  &lt;span class=&quot;adjoined&quot;&gt;&lt;span class=&quot;icon globe&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;/form&gt;</code></pre>
+<div class="form-item append transparent">
+  <label for="email">Website:</label>
+  <input type="website" name="website" placeholder="http://example.com" />
+  <span class="adjoined"><span class="icon globe"></span></span>
+</div>
+</form>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 

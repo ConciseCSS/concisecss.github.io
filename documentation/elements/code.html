@@ -13,7 +13,7 @@ permalink: /documentation/elements/code/
 
 <hr />
 
-<p>Wrap inline snippets of code using the <code>&lt;code&gt;</code> tag.</p>
+<p>Wrap inline snippets of code using the <code><code></code> tag.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -27,7 +27,7 @@ permalink: /documentation/elements/code/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>Use the &lt;code&gt;.container&lt;/code&gt; class for containing the elements of your design.</code></pre>
+    {% highlight css %}Use the <code>.container</code> class for containing the elements of your design.{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -35,7 +35,7 @@ permalink: /documentation/elements/code/
 
 <hr />
 
-<p>Large blocks of code should be contained within the <code>&lt;pre&gt;</code> tag.</p>
+<p>Large blocks of code should be contained within the <code><pre></code> tag.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -52,10 +52,10 @@ permalink: /documentation/elements/code/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;pre&gt;.container {
+{% highlight css %}<pre>.container {
   margin: 0 auto;
   width: 1080px;
-}&lt;/pre&gt;</code></pre>
+}</pre>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -63,7 +63,7 @@ permalink: /documentation/elements/code/
 
 <hr />
 
-<p>If you would like a more stylized code block with a background, you can use a <code>&lt;code&gt;</code> tag wrapped inside of a <code>&lt;pre&gt;</code> tag.</p>
+<p>If you would like a more stylized code block with a background, you can use a <code><code></code> tag wrapped inside of a <code><pre></code> tag.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -71,19 +71,19 @@ permalink: /documentation/elements/code/
   </div><!-- .preview-heading -->
 
   <div class="preview-body">
-<pre><code>.container {
+{% highlight css %}.container {
   margin: 0 auto;
   width: 1080px;
-}</code></pre>
+}{% endhighlight %}
   </div><!-- .preview-body -->
 
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;pre&gt;&lt;code&gt;.container {
+{% highlight css %}<pre><code>.container {
   margin: 0 auto;
   width: 1080px;
-}&lt;/code&gt;&lt;/pre&gt;</code></pre>
+}</code></pre>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -91,7 +91,7 @@ permalink: /documentation/elements/code/
 
 <hr />
 
-<p>You also may wish to use the <code>&lt;kbd&gt;</code> tag to indicate content that was entered via the keyboard.
+<p>You also may wish to use the <code><kbd></code> tag to indicate content that was entered via the keyboard.
 
 <div class="well preview">
   <div class="preview-heading">
@@ -105,6 +105,6 @@ permalink: /documentation/elements/code/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>&lt;p&gt;Use the &lt;kbd&gt;ls&lt;/kbd&gt; command to list the contents of a directory on a UNIX machine.&lt;/p&gt;</code></pre>
+    {% highlight css %}<p>Use the <kbd>ls</kbd> command to list the contents of a directory on a UNIX machine.</p>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->

@@ -9,7 +9,7 @@ permalink: /add-ons/progress-bars/
 
 <hr />
 
-<p>A progress bar can be used to display a percentage of progress out of 100. The only two things driving these progress bars are an outer element with the <code>.progress</code> class as well as an inner <code>&lt;span&gt;</code> containing an inline style <code>style="width: __%"</code> where the "__" signifies a number under 100.</p>
+<p>A progress bar can be used to display a percentage of progress out of 100. The only two things driving these progress bars are an outer element with the <code>.progress</code> class as well as an inner <code><span></code> containing an inline style <code>style="width: __%"</code> where the "__" signifies a number under 100.</p>
 
 <p>Thanks to Chris Coyier of CSS Tricks for his tutorial on <a href="http://css-tricks.com/css3-progress-bars/" title="CSS Tricks Progress Bars" target="_blank">CSS Progress Bars</a>.</p>
 
@@ -33,9 +33,9 @@ permalink: /add-ons/progress-bars/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;div class=&quot;progress&quot;&gt;
-  &lt;span style=&quot;width: 25%&quot;&gt;25%&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+{% highlight css %}<div class="progress">
+  <span style="width: 25%">25%</span>
+</div>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -63,13 +63,13 @@ permalink: /add-ons/progress-bars/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;div class=&quot;progress progress-small&quot;&gt;
-  &lt;span style=&quot;width: 50%&quot; class=&quot;bg-blue&quot;&gt;50%&lt;/span&gt;
-&lt;/div&gt;
+{% highlight css %}<div class="progress progress-small">
+  <span style="width: 50%" class="bg-blue">50%</span>
+</div>
 
-&lt;div class=&quot;progress progress-large&quot;&gt;
-  &lt;span style=&quot;width: 75%&quot;&gt;75%&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+<div class="progress progress-large">
+  <span style="width: 75%">75%</span>
+</div>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -97,13 +97,13 @@ permalink: /add-ons/progress-bars/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;div class=&quot;progress progress-striped&quot;&gt;
-  &lt;span class="bg-yellow" style=&quot;width: 70%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;
+{% highlight css %}<div class="progress progress-striped">
+  <span class="bg-yellow" style="width: 70%"></span>
+</div>
 
-&lt;div class=&quot;progress progress-striped progress-animate&quot;&gt;
-  &lt;span class="bg-red" style=&quot;width: 90%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+<div class="progress progress-striped progress-animate">
+  <span class="bg-red" style="width: 90%"></span>
+</div>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -111,7 +111,7 @@ permalink: /add-ons/progress-bars/
 
 <hr />
 
-<p>You also can stack progress bars by simply adding the class <code>.progress-stacked</code> and nesting multiple <code>&lt;span&gt;</code> tags within your <code>.progress</code> class.</p>
+<p>You also can stack progress bars by simply adding the class <code>.progress-stacked</code> and nesting multiple <code><span></code> tags within your <code>.progress</code> class.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -130,12 +130,12 @@ permalink: /add-ons/progress-bars/
   <div class="preview-footer">
     <strong>Code</strong>
 
-<pre><code>&lt;div class=&quot;progress progress-stacked border-radius&quot;&gt;
-  &lt;span style=&quot;width: 25%&quot; class=&quot;bg-red&quot;&gt;&lt;/span&gt;
-  &lt;span style=&quot;width: 25%&quot; class=&quot;bg-blue&quot;&gt;&lt;/span&gt;
-  &lt;span style=&quot;width: 25%&quot; class=&quot;bg-yellow&quot;&gt;&lt;/span&gt;
-  &lt;span style=&quot;width: 10%&quot; class=&quot;bg-green&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+{% highlight css %}<div class="progress progress-stacked border-radius">
+  <span style="width: 25%" class="bg-red"></span>
+  <span style="width: 25%" class="bg-blue"></span>
+  <span style="width: 25%" class="bg-yellow"></span>
+  <span style="width: 10%" class="bg-green"></span>
+</div>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 

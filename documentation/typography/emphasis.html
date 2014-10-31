@@ -13,7 +13,7 @@ permalink: /documentation/typography/emphasis/
 
 <hr />
 
-<p>The <code>&lt;small&gt;</code> tag and <code>.small</code> class can both be used to shrink text to a font size of 12 pixels. Note that heading elements receive their own font size for nested small elements.</p>
+<p>The <code><small></code> tag and <code>.small</code> class can both be used to shrink text to a font size of 12 pixels. Note that heading elements receive their own font size for nested small elements.</p>
 
 <p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$small-size</code> variable in the <code>_variables.scss</code> file to adjust the small font size.</p>
 
@@ -29,7 +29,7 @@ permalink: /documentation/typography/emphasis/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>&lt;small&gt;This is a sentence of small text.&lt;/small&gt;</code></pre>
+    {% highlight css %}<small>This is a sentence of small text.</small>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -53,7 +53,7 @@ permalink: /documentation/typography/emphasis/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>&lt;p class="micro"&gt;This is a sentence of micro text.&lt;/p&gt;</code></pre>
+    {% highlight css %}<p class="micro">This is a sentence of micro text.</p>{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -61,7 +61,7 @@ permalink: /documentation/typography/emphasis/
 
 <hr />
 
-<p>The <code>&lt;em&gt;</code> tag is used for emphasizing text with italics.</p>
+<p>The <code><em></code> tag is used for emphasizing text with italics.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -75,17 +75,17 @@ permalink: /documentation/typography/emphasis/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>This is a sentence with &lt;em&gt;some italics&lt;/em&gt; in it.</code></pre>
+    {% highlight css %}This is a sentence with <em>some italics</em> in it.{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
-<p class="note"><strong>Note:</strong> The <code>&lt;i&gt;</code> tag also can be used for emphasizing text in an italic manner, although it is not recommended as <code>&lt;em&gt;</code> should be used. However, the <code>&lt;i&gt;</code> tag can still be used to define text in an alternative voice or mood.</p>
+<p class="note"><strong>Note:</strong> The <code><i></code> tag also can be used for emphasizing text in an italic manner, although it is not recommended as <code><em></code> should be used. However, the <code><i></code> tag can still be used to define text in an alternative voice or mood.</p>
 
 <h2 class="h1 no-margin">Bold</h2>
 
 <hr />
 
-<p>The <code>&lt;strong&gt;</code> tag is used for emphasizing text with a heavier font-weight.</p>
+<p>The <code><strong></code> tag is used for emphasizing text with a heavier font-weight.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -99,8 +99,8 @@ permalink: /documentation/typography/emphasis/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    <pre><code>This is a sentence with &lt;strong&gt;bold text&lt;/strong&gt; in it.</code></pre>
+    {% highlight css %}This is a sentence with <strong>bold text</strong> in it.{% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
-<p class="note"><strong>Note:</strong> The <code>&lt;b&gt;</code> tag also can be used for emphasizing text in a bold manner, although it is not recommended as <code>&lt;strong&gt;</code> should be used. should be used. Per the HTML5 specification, the <code>&lt;b&gt;</code> tag should be used as a <strong>last resort</strong> for formatting text as most HTML5 tags cover its potential uses.</p>
+<p class="note"><strong>Note:</strong> The <code><b></code> tag also can be used for emphasizing text in a bold manner, although it is not recommended as <code><strong></code> should be used. should be used. Per the HTML5 specification, the <code><b></code> tag should be used as a <strong>last resort</strong> for formatting text as most HTML5 tags cover its potential uses.</p>
