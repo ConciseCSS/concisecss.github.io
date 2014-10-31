@@ -33,11 +33,13 @@ title: Get Started
 
 <p>However, we do not want to get too overboard with our use of OOCSS in a way that bloats our HTML markup. For example, for every <code>&lt;code&gt;</code> tag that I have in a paragraph, I want it to have a light background, border, and a 4-pixel border-radius. Well, there are quite a few <code>&lt;code&gt;</code> tags on any given page, so here would be an appropriate place to explicitly style this element:
 
-<pre><code>.content code {
+{% highlight css %}
+.content code {
   background: #f9f9f9;
   border: 1px solid #ededed;
   border-radius: 4px;
-}</pre></code>
+}
+{% endhighlight %}
 
 <p>Remember, there is always a fine line between too much HTML markup and too many style declarations. Thoughtful planning can help create meaningful and re-usable CSS classes without creating bloated HTML.</p>
 
