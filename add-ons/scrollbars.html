@@ -2,21 +2,21 @@
 layout: add-ons
 title: Add-Ons
 subtitle: Scrollbars
-permalink: /scrollbars/
+permalink: /add-ons/scrollbars/
 ---
 
 <style>
   .simple-styling,
-  .gradient-styling { 
+  .gradient-styling {
     height: 150px;
     margin-bottom: 15px;
     overflow: auto;
     width: 100%;
   }
-  
+
   .simple-styling > div,
   .gradient-styling > div { height: 500px; }
-  
+
   .simple-styling::-webkit-scrollbar { width: 8px; }
 
   .simple-styling::-webkit-scrollbar-track {
@@ -28,7 +28,7 @@ permalink: /scrollbars/
     background: #aaa;
     border-radius: 5px;
   }
-  
+
   .gradient-styling::-webkit-scrollbar { width: 8px; }
 
   .gradient-styling::-webkit-scrollbar-track {
@@ -48,9 +48,9 @@ permalink: /scrollbars/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
     border-radius: 5px;
   }
-  
+
   .table-responsive { margin-bottom: 15px; }
-  
+
   .table-responsive::-webkit-scrollbar {
     height: 14px;
     width: 14px;
@@ -62,14 +62,14 @@ permalink: /scrollbars/
     border: 3px solid #fff;
     border-radius: 8px;
   }
-  
+
   .preview-body table { width: 800px; }
 </style>
 
 <h1 class="no-margin">Styling Scrollbars</h1>
 
 <hr />
-            
+
 <p>WebKit-based browsers have a great property that allows you to style the way scroll bars look on the site with some very flexible pseudo-elements. Since these are only pseudo-elements, you can pick and choose where you want your custom scroll bars.</p>
 
 <h2 class="h1 no-margin">Simple Styling</h2>
@@ -82,14 +82,14 @@ permalink: /scrollbars/
   <div class="preview-heading">
       <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
       <div class="simple-styling"><div></div></div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
       <strong>Code</strong>
-        
+
 <pre><code>::-webkit-scrollbar { width: 8px; }
 
 ::-webkit-scrollbar-track {
@@ -114,16 +114,16 @@ permalink: /scrollbars/
   <div class="preview-heading">
       <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
       <div class="gradient-styling"><div></div></div>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
       <strong>Code</strong>
-        
+
 <pre><code>::-webkit-scrollbar { width: 8px; }
-        
+
 ::-webkit-scrollbar-track {
   background: #f3f3f3;
   border-radius: 5px;
@@ -149,14 +149,14 @@ permalink: /scrollbars/
 <hr />
 
 <p>Do you want scroll bars only on individual elements? Some situations where this would look great are <code>&lt;pre&gt;</code> elements, the <code>.table-responsive</code> class, or anything with horizontal or vertical overflow.</p>
-  
+
 <p>Here's an example using the <code>&lt;pre&gt;</code> element <small>(resize the browser to see the scroll bars)</small>:</p>
 
 <div class="well preview">
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <div class="table-responsive">
       <table class="full border-outer fill-even">
@@ -169,7 +169,7 @@ permalink: /scrollbars/
             <th scope="col">Q4</th>
           </tr>
         </thead>
-        
+
         <tbody>
           <tr>
             <td>Microsoft</td>
@@ -178,7 +178,7 @@ permalink: /scrollbars/
             <td>23.5</td>
             <td>40.3</td>
           </tr>
-          
+
           <tr>
             <td>Google</td>
             <td>50.2</td>
@@ -186,7 +186,7 @@ permalink: /scrollbars/
             <td>45.23</td>
             <td>39.3</td>
           </tr>
-          
+
           <tr>
             <td>Apple</td>
             <td>25.4</td>
@@ -194,7 +194,7 @@ permalink: /scrollbars/
             <td>33.3</td>
             <td>36.7</td>
           </tr>
-          
+
           <tr>
             <td>IBM</td>
             <td>20.4</td>
@@ -206,14 +206,14 @@ permalink: /scrollbars/
       </table>
     </div><!-- .table-responsive -->
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-      
+
 <pre><code>pre::-webkit-scrollbar {
     height: 14px;
     width: 14px;
-    
+
     -webkit-appearance: none;
 }
 
