@@ -58,7 +58,7 @@ permalink: /get-started/getting-started/
 
 <p class="note"><strong>Note:</strong> All of the files labeled with an underscore are referred to as <em>partials</em>. A partial is a file that does not become compiled on its own, but rather, is included in a master file <small>(in this case, it's <code>concise.scss</code>)</small> to be compiled.</p>
 
-{% highlight css %}
+{% highlight %}
 /dist
   /css
     concise.css
@@ -74,36 +74,32 @@ permalink: /get-started/getting-started/
   non-responsive.js
 /sass
   /base
-    _blockquotes.scss
-    _container.scss
-    _forms.scss
-    _grid.scss
     _headings.scss
-    _lists.scss
     _main.scss
-    _selection.scss
-    _tables.scss
-    _type.scss
-  /generic
-    _clearfix.scss
-    _conditional.scss
-    _debug.scss
-    _helper.scss
-    _mixins.scss
-    _normalize.scss
     _print.scss
-    _shared.scss
-  /objects
-    _badges.scss
-    _breadcrumbs.scss
+    _grid.scss
+    _selection.scss
+    _type.scss
+    _vertical-rhythm.scss
+  /components
     _buttons.scss
     _colors.scss
     _dropdowns.scss
-    _groups.scss
     _navigation.scss
-    _progress.scss
-    _wells.scss
-  _defaults.scss
+  /helpers
+    _clearfix.scss
+    _conditional.scss
+    _functions.scss
+    _helpers.scss
+    _mixins.scss
+    _normalize.scss
+    _variables.scss
+  /layout
+    _container.scss
+    _forms.scss
+    _grid.scss
+    _lists.scss
+    _tables.scss
   concise.scss
 {% endhighlight %}
 
