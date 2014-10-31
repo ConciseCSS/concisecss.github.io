@@ -8,12 +8,10 @@ permalink: /breakpoints/
 <h1 class="no-margin">Breakpoints</h1>
 
 <hr />
-
+            
 <p>Concise is built from the ground up to be mobile friendly. This means that all mobile styles are defined first with media queries used to style for larger devices.</p>
 
-<p>The media queries for Concise are based off of this great <a href="http://app.kodery.com/s/1075" title="Media Queries Boilerplate" target="_blank">media queries boilerplate</a>.</p>
-
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the values of the media queries and add your own with the <code>$breakpoint-map</code> map inside of <code>_variables.scss</code>.</p>
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the variables in the <code>_defaults.scss</code> file to change the values for each of your breakpoints.</p>
 
 <div class="table-responsive">
   <table class="full border-all fill-odd">
@@ -24,32 +22,32 @@ permalink: /breakpoints/
         <th scope="col">Pixels</th>
       </tr>
     </thead>
-
+    
     <tbody>
       <tr>
         <td>extra-small</td>
         <td>30</td>
         <td>480</td>
       </tr>
-
+    
       <tr>
         <td>small</td>
         <td>48</td>
         <td>768</td>
       </tr>
-
+      
       <tr>
         <td>medium</td>
         <td>60</td>
         <td>960</td>
       </tr>
-
+      
       <tr>
         <td>large</td>
         <td>70</td>
         <td>1120</td>
       </tr>
-
+      
       <tr>
         <td>extra-large</td>
         <td>80</td>
@@ -63,12 +61,12 @@ permalink: /breakpoints/
 
 <hr />
 
-<p>In the <code>/generic/_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints in the <code>$breakpoints-map</code> map <small>(and their respective names)</small>.</p>
+<p>In the <code>/generic/_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints outlined above <small>(and respective names)</small>.</p>
 
-<div class="well preview">
+<div class="well preview">        
   <div class="preview-footer">
     <strong>Code</strong>
-
+    
     <pre><code>@include breakpoint(medium) { ... }</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
