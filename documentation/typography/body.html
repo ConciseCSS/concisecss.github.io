@@ -8,23 +8,23 @@ permalink: /body/
 <h1 class="no-margin">Body Text</h1>
 
 <hr />
-      
+
 <p>Concise has a global <code>font-size</code> of <strong>16px</strong> <small>(1em)</small> with a <strong>line-height</strong> of <strong>1.5</strong> <small>(24px)</small>. This is applied to all text within the <code>&lt;body&gt;</code> tag. Also, all <code>&lt;p&gt;</code> tags receive a <strong>bottom-margin</strong> of <strong>24px</strong>, the exact same size as our line height.</p>
-       
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-font-size</code> variable in the <code>_defaults.scss</code> file to adjust the base font size. In addition, the <code>$base-font-color</code> and <code>$base-link-color</code> variables will change the font color and link color, respectively.</p>
+
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-font-size</code> variable in the <code>_variables.scss</code> file to adjust the base font size. In addition, the <code>$base-font-color</code> and <code>$base-link-color</code> variables will change the font color and link color, respectively.</p>
 
 <div class="well preview">
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
     <pre><code>&lt;p&gt;...&lt;/p&gt;</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -37,7 +37,7 @@ permalink: /body/
 
 <p>By default, <a href="http://www.linotype.com/en/526/helvetica-family.html?id=526&name=helvetica&viewmode=family&site=&lang=en" target="_blank">Helvetica</a>, with <a href="http://www.fonts.com/font/monotype/arial" target="_blank">Arial</a> as a fallback, is used as the default font on non-mobile devices. However, for Android phones, <a href="https://www.google.com/fonts/specimen/Droid+Sans" target="_blank">Droid Sans</a> is used as the default font, with Helvetica and Arial as fallbacks.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-font-family</code> variable in the <code>_defaults.scss</code> file to adjust the base font families.</p>
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-font-family</code> variable in the <code>_variables.scss</code> file to adjust the base font families.</p>
 
 <h2 class="h1 no-margin">Vertical Rhythm</h2>
 
@@ -47,7 +47,7 @@ permalink: /body/
 
 <p>In order to maintain vertical rhythm in our designs, all line heights and bottom margins must be divisible by <strong>24px</strong>.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-line-height</code> variable in the <code>_defaults.scss</code> file to adjust the base line height.</p>
+<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-line-height</code> variable in the <code>_variables.scss</code> file to adjust the base line height.</p>
 
 <h2 class="h1 no-margin">Rem Sizing</h2>
 
@@ -63,12 +63,12 @@ permalink: /body/
 
 <hr />
 
-<p>In the <code>/generic/_mixins.scss</code> file, we have provided a useful mixin for determining <strong>font-size</strong> in <code>rem</code> with a <code>px</code> fallback. Also generated is a proper <strong>line-height</strong> value to maintain vertical rhythm.</p>
+<p>In <code>_mixins.scss</code>, we have provided a useful mixin for determining <strong>font-size</strong> in <code>rem</code> with a <code>px</code> fallback. Also generated is a proper <strong>line-height</strong> value to maintain vertical rhythm.</p>
 
-<div class="well preview">        
+<div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
     <pre><code>@include font-size(24px);</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -77,10 +77,10 @@ permalink: /body/
 
 <p>Included in the font size mixin is a Boolean option to enable/disable the generation of a proper <strong>line-height</strong> value. By default a <strong>line-height</strong> value is generated, but including "false" will disable this.</p>
 
-<div class="well preview">        
+<div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
     <pre><code>@include font-size(24px, false);</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
