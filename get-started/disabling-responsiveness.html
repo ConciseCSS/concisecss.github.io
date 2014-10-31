@@ -13,16 +13,18 @@ permalink: /get-started/disabling-responsiveness/
 
 <p>First, we need to ensure that the following <code>&lt;meta&gt;</code> tags are <em>not</em> present in our website's <code>&lt;head&gt;</code> section.</p>
 
-<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+{% highlight css %}
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 &lt;meta name="HandheldFriendly" content="True"&gt;
-&lt;meta name="MobileOptimized" content="320"&gt;</code></pre>
+&lt;meta name="MobileOptimized" content="320"&gt;
+{% endhighlight %}
 
 <p>In our custom CSS files, or in <code>&lt;style&gt;</code> tags, we need to set a fixed width for our container element <small>(I'm using 960 pixels as my example)</small>:</p>
 
-<pre><code>.container { width: 960px !important; }</pre></code>
+{% highlight css %}.container { width: 960px !important; }{% endhighlight %}
 
 <p>This overrides the Concise responsive container that is enabled by default. Next, we need to add a single class to our <code>&lt;body&gt;</code> tag, that will aid in disabling other responsive aspects of the site:</p>
 
-<pre><code>&lt;body class="non-responsive"&gt;</code></pre>
+{% highlight css %}&lt;body class="non-responsive"&gt;{% endhighlight %}
 
 <p>Just like that, you have a non-responsive website, and there’s an added bonus. Concise is built so that you can declare any width for your <code>.container</code> class, and the grid columns will adjust automatically. Every single column will have a correct width relative to that of the container.</p>
