@@ -23,8 +23,8 @@ permalink: pretty
 highlighter: rouge
 
 # Gems
-gems:
-  - jekyll-redirect-from
+#gems:
+#  - jekyll-redirect-from
 
 # Main Navigation
 nav:
