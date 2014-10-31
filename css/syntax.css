@@ -4,6 +4,7 @@
   display: block;
   font-size: 14px;
   font-size: 0.9rem;
+  padding: 0.75em 1em 0em;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #60a0b0; font-style: italic } /* Comment */
