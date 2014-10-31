@@ -20,11 +20,11 @@ googleplus_username: "103423710089455112688"
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+highlighter: pygments
 
 # Gems
-#gems:
-#  - jekyll-redirect-from
+gems:
+  - jekyll-redirect-from
 
 # Main Navigation
 nav:
