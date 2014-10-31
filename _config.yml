@@ -20,7 +20,7 @@ googleplus_username: "103423710089455112688"
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+highlighter: false
 
 # Gems
 gems:

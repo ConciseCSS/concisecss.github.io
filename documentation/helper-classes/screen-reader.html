@@ -8,7 +8,7 @@ permalink: /screen-reader/
 <h1 class="no-margin">Screen Reader Content</h1>
 
 <hr />
-      
+
 <p>Concise offers a simple way to <a href="show-hide.php">hide content</a>, but careful consideration needs to be taken when deciding <em>how</em> content should be hidden. For example, sometimes content needs to be hidden from users, but visible to people using screen readers.</p>
 
 <p>One common reason for doing this is if you were to use icons on your page without any supporting text. People without a screen reader could see the icons and understand the context of the icon, but people using a screen reader could not. By using the <code>.screen-reader</code> class, content is hidden from anybody viewing the website on a monitor, but can still read by a screen reader.</p>
@@ -19,15 +19,15 @@ permalink: /screen-reader/
   <div class="preview-heading">
     <strong>Preview</strong>
   </div><!-- .preview-heading -->
-  
+
   <div class="preview-body">
     <span class="icon icon-2x rss" aria-hidden="true"></span>
     <span class="screen-reader">RSS</span>
   </div><!-- .preview-body -->
-  
+
   <div class="preview-footer">
     <strong>Code</strong>
-    
+
 <pre><code>&lt;span class=&quot;icon rss&quot; aria-hidden="true"&gt;&lt;/span&gt;
 &lt;span class=&quot;screen-reader&quot;&gt;RSS&lt;/span&gt;</code></pre>
   </div><!-- .preview-footer -->

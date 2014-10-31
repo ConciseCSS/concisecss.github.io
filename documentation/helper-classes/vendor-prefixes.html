@@ -9,22 +9,22 @@ permalink: /vendor-prefixes/
 
 <hr />
 
-<p>In the <code>/generic/_mixins.scss</code>, we have a mixin that will allow you to easily write cross-browser compatible code for CSS3 features that have yet to be fully implemented. Browser prefixes included are:
+<p>In <code>_mixins.scss</code>, we have a mixin that will allow you to easily write cross-browser compatible code for CSS3 features that have yet to be fully implemented.</p>
 
-  <ul>
-    <li>Webkit Browsers <small>(Chrome, Safari)</small></li>
-    <li>Internet Explorer</li>
-    <li>Firefox</li>
-    <li>Opera</li>
-  </ul>
-</p>
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><code>$property</code>: what CSS property to generate vendor prefixes for</li>
+  <li><code>$value</code>: the value of what was defined in <code>$property</code></li>
+  <li><code>$vendors</code>: what vendor prefixes to generate <small>(default is none)</small></li>
+</ul>
 
 <p class="note"><strong>Note:</strong> We suggest using a CSS post-processing tool such as <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a> to add vendor prefixes to your CSS based on results from <a href="http://caniuse.com/" target="_blank">Can I Use</a>.</p>
 
-<div class="well preview">        
+<div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
-    
-    <pre><code>@include vendor(border-radius, 4px);</code></pre>
+
+    <pre><code>@include vendor(border-radius, 4px, webkit moz ms);</code></pre>
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
