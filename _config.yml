@@ -5,7 +5,7 @@ description: "Concise is a lightweight front-end framework that provides a numbe
 author: "Keenan Payne"
 host: localhost
 port: 4000
-baseurl: ""
+baseurl: "/"
 
 # Package information
 version: "v1.1.1"
@@ -23,8 +23,8 @@ permalink: pretty
 highlighter: false
 
 # Gems
-#gems:
-#  - jekyll-redirect-from
+gems:
+  - jekyll-redirect-from
 
 # Main Navigation
 nav:
