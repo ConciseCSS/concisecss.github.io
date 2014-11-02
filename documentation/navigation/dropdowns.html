@@ -20,9 +20,9 @@ permalink: /documentation/navigation/dropdowns/
 
 <p>Concise includes a JavaScript solution to dropdowns using the <a href="http://jquery.com/" target="_blank">jQuery framework</a>. This use of JavaScript allows for graceful transitions and a better user experience when using dropdowns.</p>
 
-<p>The key to creating dropdowns is by wrapping the <code>.dropdown-menu</code> class inside of a <code>.dropdown</code> class. Any content outside of the <code>.dropdown-menu</code> class will not be shown in the dropdown, whereas any content inside of it will be.</p>
+<p>The key to creating dropdowns is wrapping the <code>.dropdown-menu</code> class inside of a <code>.dropdown</code> class. Any content outside of the <code>.dropdown-menu</code> class will not be shown in the dropdown, whereas any content inside of it will be.</p>
 
-<p>These dropdowns are not limited to displaying list items. They also can be used to display normal paragraphs of text, images, and videos.</p>
+<p>These dropdowns are not limited to displaying list items. They also can be used to display paragraphs of text, images, and videos.</p>
 
 <p class="note"><strong>Note:</strong> All of the icons used in the examples below are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
 
@@ -129,7 +129,7 @@ permalink: /documentation/navigation/dropdowns/
 
 <hr />
 
-<p>By adding an <code>.dropdown-arrow-*</code> class to your <code>.dropdown</code> class, an arrow can be easily added to your dropdown on either the left or right side. These arrow classes can also be displayed on dropups as well.</p>
+<p>By adding a <code>.dropdown-arrow-*</code> class to your <code>.dropdown</code> class, an arrow can be easily added to your dropdown on either the left or right side. These arrow classes can also be displayed on dropups as well.</p>
 
 <h3>Left Arrow</h3>
 
@@ -283,6 +283,39 @@ permalink: /documentation/navigation/dropdowns/
     <li><a href="#">...</a></li>
   </ul>
 </span>{% endhighlight %}
+    </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h3>Collapse Full</h3>
+
+<p>Adding <code>.dropdown-collapse-full</code> to any element with a <code>.dropdown</code> class will result in the dropdown taking up 100% the width of it's parent element after the browser has reached the <code>extra-small</code> breakpoint <small>(which is <strong>30em</strong> by default)</small>.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <span class="dropdown arrow-left dropdown-full">Collapsable Dropdown
+
+      <ul class="dropdown-menu border-radius">
+        <li><a href="#">Profile <span aria-hidden="true" class="icon user right"></span></a></li>
+        <li><a href="#">Settings <span aria-hidden="true" class="icon cog right"></span></a></li>
+        <li><a href="#">Log out <span aria-hidden="true" class="icon power-off right"></span></a></li>
+      </ul>
+    </span>
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}
+<span class="dropdown dropdown-collapse-full">Dropup
+  <ul class="dropdown-menu">
+    <li><a href="#">...</a></li>
+  </ul>
+</span>
+{% endhighlight %}
     </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
