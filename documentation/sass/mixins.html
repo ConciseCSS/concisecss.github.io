@@ -17,14 +17,44 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p></p>
+<p>Uses the <code>calculate-rem()</code> function to calculate <strong>rem</strong> font-size and <strong>px</strong> fallback. Line height is calculated with <code>calculate-line-height()</code> but passing <strong>false</strong> will prevent that.</p>
+
+<h3>Parameters</h3>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$font-size</code></td>
+        <td>The font size <small>(in pixels)</small> to be converted to rem.</td>
+      </tr>
+
+      <tr>
+        <td><code>$rem-sizing</code></td>
+        <td>If you want to convert the font-size to rem or not <small>(default is true)</small>.</td>
+      </tr>
+
+       <tr>
+        <td><code>$line-height</code></td>
+        <td>Set to false if you wish not to output a calculated line-height <small>(defalt is true)</small>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-
+@include font-size(24px);
     {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -33,15 +63,37 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p>In <code>_mixins.scss</code>, we have a mixin that will allow you to easily write cross-browser compatible code for CSS3 features that have yet to be fully implemented.</p>
+<p>Proper vendor prefixes are created by passing a property, property value, and browser vendor <small>(webkit, moz, ms, o, etc)</small>.</p>
 
-<p><strong>Parameters:</strong></p>
+<h3>Parameters</h3>
 
-<ul>
-  <li><code>$property</code>: what CSS property to generate vendor prefixes for</li>
-  <li><code>$value</code>: the value of what was defined in <code>$property</code></li>
-  <li><code>$vendors</code>: what vendor prefixes to generate <small>(default is none)</small></li>
-</ul>
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$property</code></td>
+        <td>What CSS property to generate vendor prefixes for.</td>
+      </tr>
+
+      <tr>
+        <td><code>$value</code></td>
+        <td>The value of what was defined in <code>$property</code>.</td>
+      </tr>
+
+       <tr>
+        <td><code>$vendors</code></td>
+        <td>What vendor prefixes to generate <small>(default is none)</small>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
 
 <p class="note"><strong>Note:</strong> We suggest using a CSS post-processing tool such as <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a> to add vendor prefixes to your CSS based on results from <a href="http://caniuse.com/" target="_blank">Can I Use</a>.</p>
 
@@ -49,7 +101,49 @@ permalink: /documentation/sass/mixins/
   <div class="preview-footer">
     <strong>Code</strong>
 
-    {% highlight css %}@include vendor(border-radius, 4px, webkit moz ms);{% endhighlight %}
+    {% highlight css %}
+@include vendor(border-radius, 4px, webkit moz ms)
+    {% endhighlight %}
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin">Breakpoints</h2>
+
+<hr />
+
+<p>Loops through all of the values in the <code>$breakpoints</code> map and outputs conditional statements used to generate media query code.</p>
+
+<p>When calling the mixin, if the parameter matches a key from the <code>breakpoints</code> map, a media query is output with that key's value. If an explicit value is set <small>(ex: 360px)</small> then a media query is output with that value.</p>
+
+<h3>Parameters</h3>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$point</code></td>
+        <td>The breakpoint value for the media query output.</td>
+      </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
+
+<div class="well preview">
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+    {% highlight css %}
+@include breakpoint(extra-small) { ... }
+
+@include breakpoint(360px) { ... }
+    {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -57,13 +151,58 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p>In <code>_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints in the <code>$breakpoints-map</code> map <small>(and their respective names)</small>.</p>
+<p>Generates property media queries for any CSS property, value, and set of breakpoints. Allows you to easily change property values based a set of breakpoints.</p>
+
+<h3>Parameters</h3>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$properties</code></td>
+        <td>What CSS property to output inside of the media queries <small>(can have multiple)</small>.</td>
+      </tr>
+
+      <tr>
+        <td><code>$values</code></td>
+        <td>The value for each property <small>(can have multiple)</small>.</td>
+      </tr>
+
+       <tr>
+        <td><code>$responsive-values</code></td>
+        <td>What breakpoints to generate media queries for.</td>
+      </tr>
+
+      <tr>
+       <td><code>$use-available-mixins</code></td>
+       <td>Whether or not to use mixin outputs for properties like <code>font-size</code> or <code>line-height</code> <small>(default is true)</small>.</td>
+     </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
-    {% highlight css %}@include breakpoint(medium) { ... }{% endhighlight %}
+    {% highlight css %}
+@include responsive("font-size", 11px,
+  (
+    "small" : 12px,
+      450px : 13px,
+     1100px : 14px,
+    "large" : 15px,
+     1600px : 16px,
+  )
+);
+    {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
 
@@ -71,14 +210,14 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p></p>
+<p>Generates CSS to wrap semantic columns in a row.</p>
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-
+@include row();
     {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -87,14 +226,52 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p></p>
+<p>Generates CSS for semantic columns.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$column</code></td>
+        <td>The number of this particular column <small>(determines width)</small>.</td>
+      </tr>
+
+      <tr>
+        <td><code>$number-columns</code></td>
+        <td>Number of columns in the row <small>(default is <code>$column-number</code>)</small>.</td>
+      </tr>
+
+       <tr>
+        <td><code>$first-column</code></td>
+        <td>Set to <code>true</code> if it's the first column in a row <small>(default is false)</small>.</td>
+      </tr>
+
+      <tr>
+       <td><code>$use-gutters</code></td>
+       <td>Set to <code>true</code> if you want column gutters <small>(default is false)</small>.</td>
+     </tr>
+
+     <tr>
+      <td><code>$gutter-value</code></td>
+      <td>Percentage value of the gutters to be applied <small>(default is <code>$gutters</code> variable)</small>.</td>
+    </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-
+@include column(16, 4, false, true, 4);
     {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -103,14 +280,52 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p></p>
+<p>Generates CSS for pushing a semantic column left or right.</p>
+
+<div class="table-responsive">
+  <table class="full border-all fill-odd">
+    <thead>
+      <tr>
+        <th scope="col">Parameter</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>$option</code></td>
+        <td>Set to <code>push</code> or <code>pull</code> to generate proper styles.</td>
+      </tr>
+
+      <tr>
+        <td><code>$column</code></td>
+        <td>THe column number.</td>
+      </tr>
+
+       <tr>
+        <td><code>$number-columns</code></td>
+        <td>The number of columns in the row <small>(default is <code>$column-number</code>)</small>.</td>
+      </tr>
+
+      <tr>
+       <td><code>$use-gutters</code></td>
+       <td>Set to <code>true</code> if your column has gutters <small>(default is false)</small>.</td>
+     </tr>
+
+     <tr>
+      <td><code>$gutter-value</code></td>
+      <td>Percentage value of the gutters to be applied <small>(default is <code>$gutters</code> variable)</small>.</td>
+    </tr>
+    </tbody>
+  </table>
+</div><!-- .table-responsive -->
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-
+@include push-pull(push, 4, 16, true);
     {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
@@ -119,14 +334,14 @@ permalink: /documentation/sass/mixins/
 
 <hr />
 
-<p></p>
+<p>Generates CSS that will clear both left and right floats.</p>
 
 <div class="well preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-
+include clearfix();
     {% endhighlight %}
   </div><!-- .preview-footer -->
 </div><!-- .preview -->
