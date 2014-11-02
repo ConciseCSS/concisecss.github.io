@@ -61,6 +61,12 @@ helper-nav:
   url: /documentation/helper-classes/vendor-prefixes/
 - text: Silent Classes
   url: /documentation/helper-classes/silent-classes/
+
+sass-nav:
+- text: Mixins
+  url: /documentation/sass/mixins/
+- text: Silent Classes
+  url: /documentation/sass/silent-classes/
 ---
 
 {% include head.html %}
@@ -125,6 +131,16 @@ helper-nav:
             <li class="text-uppercase">Helper Classes</li>
 
             {% for link in page.helper-nav %}
+              <li>
+                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <ul>
+            <li class="text-uppercase">SASS</li>
+
+            {% for link in page.sass-nav %}
               <li>
                 <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
               </li>
