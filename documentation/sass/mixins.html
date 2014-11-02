@@ -1,11 +1,31 @@
 ---
 layout: documentation
 title: Documentation
-subtitle: Helper Classes / Vendor Prefixes Mixin
-permalink: /documentation/helper-classes/vendor-prefixes/
+subtitle: Mixins
+permalink: /documentation/sass/mixins/
 ---
 
-<h1 class="no-margin">Vendor Prefixes Mixin</h1>
+<h1 class="no-margin">Mixins</h1>
+
+<hr />
+
+<p></p>
+
+<h2 class="no-margin">Breakpoints</h2>
+
+<hr />
+
+<p>In <code>_mixins.scss</code>, we have a mixin for handling media queries using the breakpoints in the <code>$breakpoints-map</code> map <small>(and their respective names)</small>.</p>
+
+<div class="well preview">
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+    {% highlight css %}@include breakpoint(medium) { ... }{% endhighlight %}
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin">Vendor Prefixes Mixin</h1>
 
 <hr />
 
