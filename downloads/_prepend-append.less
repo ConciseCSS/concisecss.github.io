@@ -2,14 +2,7 @@
 .prepend,
 .append { white-space: nowrap; }
 
-.prepend {
-  input,
-  select {
-    display: inline-block;
-    width: 90%;
-  }
-}
-
+.prepend,
 .append {
   input,
   select {
@@ -19,11 +12,7 @@
 }
 
 @media @small {
-  .prepend {
-    input,
-    select { width: 300px; }
-  }
-
+  .prepend,
   .append {
     input,
     select { width: 300px; }
@@ -39,12 +28,7 @@
   position: relative;
 }
 
-.prepend .btn {
-  a,
-  input,
-  button { padding: 0 12px; }
-}
-
+.prepend .btn,
 .append .btn {
   a,
   input,
@@ -82,11 +66,7 @@
   select { border-right: none; }
 }
 
-.prepend {
-  input:focus:invalid,
-  textarea:focus:invalid { border: 1px solid #e74c3c; }
-}
-
+.prepend,
 .append {
   input:focus:invalid,
   textarea:focus:invalid { border: 1px solid #e74c3c; }
@@ -105,19 +85,3 @@
   .adjoined,
   .btn { margin-left: -4px; }
 }
-
-form.border-radius .prepend input,
-.border-radius.prepend input,
-form.border-radius .prepend select,
-.border-radius.prepend select { border-radius: 0px @border-radius @border-radius 0; }
-
-form.border-radius .append input,
-.border-radius.append input,
-form.border-radius .append select,
-.border-radius.append select { border-radius: @border-radius 0 0 @border-radius; }
-
-form.border-radius .append .adjoined,
-.border-radius.append .adjoined { border-radius: 0px @border-radius @border-radius 0; }
-
-form.border-radius .prepend .adjoined,
-.border-radius.prepend .adjoined { border-radius: @border-radius 0 0 @border-radius; }
