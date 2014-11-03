@@ -1,0 +1,280 @@
+---
+layout: add-ons
+title: Add-Ons
+subtitle: Navigation Styles
+permalink: /add-ons/navigation-styles/
+---
+
+<style>.preview nav { margin: 12px 0; }</style>
+
+<h1 class="no-margin">Navigation Styles</h1>
+
+<hr />
+
+<h2 class="h1 no-margin">Dropdown</h2>
+
+<hr />
+
+<p>Adding <code>.nav-dropdown</code> automatically turns a nested navigation list into a dropdown.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <nav class="nav-dropdown nav-hover">
+      <ul class="list-inline">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Profile <span class="caret"></span></a>
+          <ul>
+            <li><a href="">Help</a></li>
+            <li><a href="">Settings &nbsp; <span class="icon caret-right"></span></a>
+              <ul>
+                <li>Security</li>
+              </ul>
+            </li>
+            <li><a href="">Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-dropdown">
+  <ul class="list-inline">
+    <li>...</li>
+  </ul>
+</nav>{% endhighlight %}
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin">Download</h2>
+
+<hr />
+
+<div class="row no-margin text-center">
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/navigation-styles.css" target="_blank">Download CSS</a>
+  </div><!-- .column-8 -->
+
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/_navigation-styles.scss" target="_blank">Download SASS</a>
+  </div><!-- .column-8 -->
+
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/_navigation-styles.less" target="_blank">Download LESS</a>
+  </div><!-- .column-8 -->
+</div><!-- .row -->
+
+<h1 class="no-margin">Vertical Navigation</h1>
+
+<hr />
+
+<h2 class="h1 no-margin">Default</h2>
+
+<hr />
+
+<p>The <code>.nav-vertical</code> class allows you to stack navigation list items in a vertical manner.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <nav class="nav-vertical">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav><!-- .vertical -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-vertical">
+  <ul>
+    <li><a href="#">...</a></li>
+  </ul>
+</nav>{% endhighlight %}
+    </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Adding a border</h2>
+
+<hr />
+
+<p>Simply adding the class <code>.nav-bordered</code> to your vertical navigation will add a border around the entire element as well as a hover effect for each list item.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <nav class="nav-vertical bordered">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav><!-- .vertical -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-vertical nav-bordered">
+  <ul>
+    <li><a href="#">...</a></li>
+  </ul>
+</nav>{% endhighlight %}
+    </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Adding a line</h2>
+
+<hr />
+
+<p>In the preview, <code>.nav-line</code> and <code>.border-radius</code> have both been added to our vertical navigation to add a border beneath our list items and add rounded corners, respectively.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <nav class="nav-vertical bordered line border-radius">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav><!-- .vertical -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+  <ul>
+    <li><a href="#">...</a></li>
+  </ul>
+</nav>{% endhighlight %}
+    </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Floating content</h2>
+
+<hr />
+
+<p>You can easily float content to either side of a vertical navigation by using the <code>.left</code> or <code>.right</code> class.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+    <div class="preview-body">
+      <div class="row">
+        <div class="column-8">
+          <nav class="nav-vertical bordered line border-radius">
+            <ul>
+              <li><a href="#">Feed</a> <span class="right badge">20</span></li>
+              <li><a href="#">Friends</a></li>
+              <li><a href="#">Messages</a> <span class="right badge bg-red">5</span></li>
+              <li class="dropdown"><a href="#">Profile</a> <span class="icon chevron-right right"></span></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </nav><!-- .vertical -->
+        </div><!-- .column-8 -->
+      </div><!-- .row -->
+    </div><!-- .preview-body -->
+
+    <div class="preview-footer">
+      <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+  <ul>
+    <li><a href="#">...</a> <span class="right badge">20</span></li>
+    <li><a href="#">...</a> <span class="right badge bg-red">5</span></li>
+    <li><a href="#">...</a> <span class="right icon chevron-right"></span></li>
+  </ul>
+</nav>{% endhighlight %}
+    </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="h1 no-margin">Dropdowns</h2>
+
+<hr />
+
+<p><a href="{{ site.baseurl }}/documentation/navigation/jquery-navigation.php">jQuery dropdowns</a> can be easily added to vertical navigation to display content. Dropdowns will display to the right of the vertical navigation menu by default.</p>
+
+<p class="note"><strong>Note:</strong> The icons used here are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
+
+<div class="well preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div><!-- .preview-heading -->
+
+  <div class="preview-body">
+    <div class="row">
+      <div class="column-8">
+        <nav class="nav-vertical bordered line border-radius">
+          <ul>
+            <li><a href="#"><span class="icon th-list"></span> Feed</a></li>
+            <li class="dropdown"><span class="icon user"></span> <a href="#">Profile</a> <span class="icon chevron-right right"></span>
+              <ul class="dropdown-menu">
+                <li>Settings</li>
+                <li>Privacy</li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="icon power-off"></span> Log Out</a></li>
+          </ul>
+        </nav><!-- .vertical -->
+      </div><!-- .column-8 -->
+    </div><!-- .row -->
+  </div><!-- .preview-body -->
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+  <ul>
+    <li><a href="#"><span class="icon th-list"></span> Feed</a></li>
+    <li class="dropdown"><span class="icon user"></span> <a href="#">Profile</a> <span class="icon chevron-right right"></span>
+    <ul class="dropdown-menu">
+    <li>Settings</li>
+    <li>Privacy</li>
+    </ul>
+    </li>
+    <li><a href="#"><span class="icon power-off"></span> Log Out</a></li>
+  </ul>
+</nav>{% endhighlight %}
+  </div><!-- .preview-footer -->
+</div><!-- .preview -->
+
+<h2 class="no-margin">Download</h2>
+
+<hr />
+
+<div class="row no-margin text-center">
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/vertical-navigation.css" target="_blank">Download CSS</a>
+  </div><!-- .column-8 -->
+
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/_vertical-navigation.scss" target="_blank">Download SASS</a>
+  </div><!-- .column-8 -->
+
+  <div class="column-8">
+    <a class="btn border blue btn-small full" href="/downloads/_vertical-navigation.less" target="_blank">Download LESS</a>
+  </div><!-- .column-8 -->
+</div><!-- .row -->
