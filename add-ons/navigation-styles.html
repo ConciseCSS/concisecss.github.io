@@ -143,7 +143,7 @@ permalink: /add-ons/navigation-styles/
 
 <hr />
 
-<p>In the preview, <code>.nav-line</code> and <code>.border-radius</code> have both been added to our vertical navigation to add a border beneath our list items and add rounded corners, respectively.</p>
+<p>In the preview, <code>.nav-line</code> has been added to our vertical navigation to add a border beneath our list items.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -151,7 +151,7 @@ permalink: /add-ons/navigation-styles/
   </div><!-- .preview-heading -->
 
   <div class="preview-body">
-    <nav class="nav-vertical bordered line border-radius">
+    <nav class="nav-vertical bordered line">
       <ul>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Settings</a></li>
@@ -163,7 +163,7 @@ permalink: /add-ons/navigation-styles/
   <div class="preview-footer">
     <strong>Code</strong>
 
-{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line">
   <ul>
     <li><a href="#">...</a></li>
   </ul>
@@ -175,7 +175,7 @@ permalink: /add-ons/navigation-styles/
 
 <hr />
 
-<p>You can easily float content to either side of a vertical navigation by using the <code>.left</code> or <code>.right</code> class.</p>
+<p>You can easily float content to either side of a vertical navigation by using the <code>.float-left</code> or <code>.float-right</code> class.</p>
 
 <div class="well preview">
   <div class="preview-heading">
@@ -201,11 +201,11 @@ permalink: /add-ons/navigation-styles/
     <div class="preview-footer">
       <strong>Code</strong>
 
-{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line">
   <ul>
-    <li><a href="#">...</a> <span class="right badge">20</span></li>
-    <li><a href="#">...</a> <span class="right badge bg-red">5</span></li>
-    <li><a href="#">...</a> <span class="right icon chevron-right"></span></li>
+    <li><a href="#">...</a> <span class="float-right badge">20</span></li>
+    <li><a href="#">...</a> <span class="float-right badge bg-red">5</span></li>
+    <li><a href="#">...</a> <span class="float-right icon chevron-right"></span></li>
   </ul>
 </nav>{% endhighlight %}
     </div><!-- .preview-footer -->
@@ -215,7 +215,7 @@ permalink: /add-ons/navigation-styles/
 
 <hr />
 
-<p><a href="{{ site.baseurl }}/documentation/navigation/jquery-navigation.php">jQuery dropdowns</a> can be easily added to vertical navigation to display content. Dropdowns will display to the right of the vertical navigation menu by default.</p>
+<p><a href="{{ site.baseurl }}/documentation/navigation/jquery-navigation">jQuery dropdowns</a> can be easily added to vertical navigation to display content. Dropdowns will display to the right of the vertical navigation menu by default.</p>
 
 <p class="note"><strong>Note:</strong> The icons used here are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
 
@@ -246,7 +246,7 @@ permalink: /add-ons/navigation-styles/
   <div class="preview-footer">
     <strong>Code</strong>
 
-{% highlight css %}<nav class="nav-vertical nav-bordered nav-line border-radius">
+{% highlight css %}<nav class="nav-vertical nav-bordered nav-line">
   <ul>
     <li><a href="#"><span class="icon th-list"></span> Feed</a></li>
     <li class="dropdown"><span class="icon user"></span> <a href="#">Profile</a> <span class="icon chevron-right right"></span>
