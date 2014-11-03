@@ -73,3 +73,33 @@
     }
   }
 }
+
+
+// Vertical Navigation
+.nav-vertical {
+  li {
+    display: block;
+    margin-right: 0px;
+    padding: 10px;
+  }
+
+  &.nav-bordered {
+    border: 1px solid #eee;
+
+    li:hover { background-color: #f6f6f6; }
+  }
+
+  &.nav-line li:hover { background-color: #f6f6f6; }
+
+  .badge,
+  .label { margin-top: 5px; }
+
+  .dropdown .dropdown-menu { top: 100%; }
+}
+
+@include breakpoint(small) {
+  .nav-vertical .dropdown .dropdown-menu {
+    left: 100%;
+    top: 0;
+  }
+}
