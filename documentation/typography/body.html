@@ -58,29 +58,3 @@ permalink: /documentation/typography/body/
 <p>Basically, styling fonts in <code>rems</code> instead of <code>ems</code> allows all of our font sizes to be based off of the "root em", or the font size that was declared in the <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> element. This differs from traditional <code>ems</code> as <code>ems</code> are relative to parent elements. This means that the font size compounds the deeper you get into the HTML inheritance.</p>
 
 <p>However, for the sake of supporting legacy browsers, a <code>px</code> fallback has been added to each and every font size in Concise.</p>
-
-<h2 class="h1 no-margin">Mixin</h2>
-
-<hr />
-
-<p>In <code>_mixins.scss</code>, we have provided a useful mixin for determining <strong>font-size</strong> in <code>rem</code> with a <code>px</code> fallback. Also generated is a proper <strong>line-height</strong> value to maintain vertical rhythm.</p>
-
-<div class="well preview">
-  <div class="preview-footer">
-    <strong>Code</strong>
-
-    {% highlight css %}@include font-size(24px);{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
-
-<h3>Disabling line-height</h3>
-
-<p>Included in the font size mixin is a Boolean option to enable/disable the generation of a proper <strong>line-height</strong> value. By default a <strong>line-height</strong> value is generated, but including "false" will disable this.</p>
-
-<div class="well preview">
-  <div class="preview-footer">
-    <strong>Code</strong>
-
-    {% highlight css %}@include font-size(24px, false);{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
