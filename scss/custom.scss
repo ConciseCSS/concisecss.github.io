@@ -159,9 +159,10 @@ a.btn--borderBlue {
   nav {
     font-size: 14px;
     font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
 
-    @include breakpoint(small) {
+    @include breakpoint(extra-small) {
       float: right;
       margin-top: 18px;
       text-align: right;
