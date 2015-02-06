@@ -5,27 +5,32 @@ subtitle: Closeable
 permalink: /add-ons/closeable/
 ---
 
-<h1 class="no-margin">Closeable</h1>
-
-<hr />
+<script>
+jQuery(document).ready(function() {
+  $(document).on('click', '.close', function () {
+    // Get .close parent div, fade out
+    $(this).parents('.close-this').fadeOut('slow');
+  });
+});
+</script>
 
 <p>Using a combination of two classes, any element can be closed via another element. All that needs to be done is to have the <code>.close</code> class wrapped inside of an element containing the <code>.close-this</code> class.</p>
 
-<p class="note"><strong>Note:</strong> There is no limit to what classes can be closed using the <code>.close-this</code> class, and absolutely any content can be put inside of the <code>.close</code> class.</p>
+<p class="note">There is no limit to what classes can be closed using the <code>.close-this</code> class, and absolutely any content can be put inside of the <code>.close</code> class.</p>
 
-<p class="note"><strong>Note:</strong> This add-on requires the <code>font-size()</code> mixin in order for the SASS or LESS files to compile without modification, as well as the <a href="http://jquery.com/" target="_blank">jQuery</a> JavaScript library.</p>
+<p class="note">This add-on requires the <code>font-size()</code> mixin in order for the SASS or LESS files to compile without modification, as as the <a href="http://jquery.com/" target="_blank">jQuery</a> JavaScript library.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <div class="well close-this">
       <button type="button" class="close">&times;</button>
       <p>You can close this element.</p>
-    </div><!-- .well .bg-green -->
-  </div><!-- .preview-body -->
+    </div>
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -33,27 +38,21 @@ permalink: /add-ons/closeable/
 {% highlight css %}<div class="close-this">
   <button type="button" class="close">&amp;times;</button>
 </div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Download</h2>
+<h2>Download</h2>
 
-<hr />
+<div class="row gutters">
+  <div class="column-5">
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/closeable.css" target="_blank">Download CSS</a>
+  </div>
 
-<div class="row no-margin text-center">
-  <div class="column-6">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/closeable.css" target="_blank">Download CSS</a>
-  </div><!-- .column-8 -->
+  <div class="column-5">
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/_closeable.scss" target="_blank">Download SASS</a>
+  </div>
 
-  <div class="column-6">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/_closeable.scss" target="_blank">Download SASS</a>
-  </div><!-- .column-6 -->
-
-  <div class="column-6">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/_closeable.less" target="_blank">Download LESS</a>
-  </div><!-- .column-6 -->
-
-  <div class="column-6">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/close.js" target="_blank">Download JavaScript</a>
-  </div><!-- .column-6 -->
-</div><!-- .row -->
+  <div class="column-5">
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/closeable/close.js" target="_blank">Download JavaScript</a>
+  </div>
+</div>

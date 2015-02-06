@@ -1,21 +1,16 @@
 ---
 layout: get-started
 title: Get Started
+subtitle: Principles
 ---
-
-<h1 class="no-margin">Principles</h1>
-
-<hr />
 
 <p>Concise is built on a set of simple but important principles that aid in effective and manageable web design. By understanding these principles, Concise can be used to its full potential, and we can create a better paradigm for using HTML and CSS to build websites.</p>
 
-<h2 class="no-margin">Semantics</h2>
-
-<hr />
+<h2>Semantics</h2>
 
 <p>Concise was built with semantics in mind. Semantics in regard to web design, for those unfamiliar with the term, describes the use of readable and meaningful HTML tags and CSS class names used in any given website.</p>
 
-<p>Meaningful names are those such as <code>.column-16</code>. This class name easily explains that the section is a column and that it is the widest column (in a 16-column row). This class name is not too verbose, and provides <em>meaning</em> and <em>context</em> for our code.</p>
+<p>Meaningful names are those such as <code>.column-16</code>. This class name easily explains that the section is a column and that it is the widest column <small>(in a 16-column row)</small>. This class name is not too verbose, and provides <em>meaning</em> and <em>context</em> for our code.</p>
 
 <p>We could have <code>.col16</code> or <code>.col-16</code> class names that, with enough use, would be easy to remember and use, but isn't very meaningful in the context of our design. The goal with web semantics is to create classes that are meaningful, but not too verbose.</p>
 
@@ -45,7 +40,7 @@ title: Get Started
 }
 {% endhighlight %}
 
-{%highlight html %}
+{% highlight html %}
 <div class="article">
   Article
 </div>
@@ -57,43 +52,10 @@ title: Get Started
 
 <p>While this does add some CSS overhead to your project, it makes a lot more sense than just using the <code>.column-*</code> classes, and would be much easier to find inside of your CSS document.</p>
 
-<!--
-<h2 class="no-margin"><abbr title="Object-Oriented CSS">OOCSS</abbr></h2>
-
-<hr />
-
-<p>Object-Oriented CSS <small>(OOCSS)</small> is a driving principle behind Concise. What the OOCSS paradigm attempts to enforce is the use and creation of modular CSS classes <small>(not IDs)</small><a href="#footnote-1"><sup>1</sup></a> that can be used and extended throughout any given project.</p>
-
-<p>For example, Concise comes with the following class:</p>
-
-{% highlight css %}
-.border-radius { border-radius: 4px; }
-{% endhighlight %}
-
-<p>By creating this generic styling class, we avoid having to add a border-radius declaration to every single element that we want to have it. We have a trade-off of more HTML markup by adding the class <code>.border-radius</code>, but make up for it in clean, object-oriented CSS.</p>
-
-<p>However, we do not want to get too overboard with our use of OOCSS in a way that bloats our HTML markup. For example, for every <code>&lt;code&gt;</code> tag that I have in a paragraph, I want it to have a light background, border, and a 4-pixel border-radius. Well, there are quite a few <code>&lt;code&gt;</code> tags on any given page, so here would be an appropriate place to explicitly style this element:
-
-{% highlight css %}
-.content code {
-  background: #f9f9f9;
-  border: 1px solid #ededed;
-  border-radius: 4px;
-}
-{% endhighlight %}
-
-<p>Remember, there is always a fine line between too much HTML markup and too many style declarations. Thoughtful planning can help create meaningful and re-usable CSS classes without creating bloated HTML.</p>-->
-
-<h2 class="no-margin">Selector Organization</h2>
-
-<hr />
+<h2>Selector Organization</h2>
 
 <p>As you will notice when you open up the uncompressed <code>concise.css</code> file, all of the declarations are organized alphabetically for their given selector. I understand that a lot of people preach organization by <em>relevance</em>. That is, organizing an selector's declarations by which is most relevant. However, I find organizing by relevance to be rather arbitrary and relevance often varies from person to person. One person's idea of declaration relevance may be completely different than someone else's.</p>
 
 <p>When faced with this problem, I opted for the completely non-arbitrary method of organizing declarations alphabetically. Of course, you do not get the cleanliness of having all of your borders grouped together, or your height and width right next to each other, but it makes every single element in your CSS file immediately readable by anyone. Everybody knows that if declarations are organized alphabetically, that <code>background</code> is going to be near the top, and <code>width</code> is going to be towards the bottom. I found this to be the ideal method when working with my CSS.</p>
 
 <p>Of course, this is just how Concise is organized. By all means use whatever form of declaration organization that works best for you.</p>
-
-<hr />
-
-<p class="small"><strong><sup><a id="footnote-1">1</a></sup></strong> As I am sure most people reading this will know, classes in a HTML can be reused multiple times while IDs can be used only once. This is why classes are such an integral part of OOCSS.</p>

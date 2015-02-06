@@ -1,72 +1,66 @@
 ---
 layout: documentation
 title: Documentation
-subtitle: Elements / Forms
+subtitle: Forms
 permalink: /documentation/elements/forms/
 ---
 
-<h1 class="no-margin">Forms</h1>
-
-<hr />
-
-<h2 class="no-margin h1">Basic</h2>
-
-<hr />
+<h2>Basic</h2>
 
 <p>This is a basic form composed of the <code>&lt;form&gt;</code> tag containing various <code>&lt;label></code>, <code>&lt;input></code>, <code>&lt;select&gt;</code> and <code>&lt;textarea&gt;</code> fields.</p>
 
 <p>Each label and input pair are wrapped in a <code>.form-item</code> class that adds bottom margin and keeps our respective labels and inputs in their own block so no content wraps around them.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$placeholder-color</code> variable in the <code>/helpers/_variables.scss</code> file to adjust the placeholder text color.</p>
+<p class="note note--preprocessor">You can change the <code>$placeholder-color</code> variable in the <code>/helpers/_variables.scss</code> file to adjust the placeholder text color.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <form action="" method="post">
+    <form method="post">
       <div class="form-item">
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="John Doe" />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="email">Email:</label>
         <input type="email" name="email" placeholder="john_doe@example.com" />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="website">Website:</label>
         <input type="text" name="website" placeholder="http://example.com" disabled />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="gender">Gender:</label>
         <input type="radio" name="gender" value="Male" /> Male <br />
         <input type="radio" name="gender" value="Female" /> Female
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="interest">Inquiry:</label>
         <input type="checkbox" name="interest" value="Quote" /> Quote <br />
         <input type="checkbox" name="interest" value="Question" /> Question
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
          <select>
            <option name="Test">Test</option>
          </select>
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="message">Message:</label>
         <textarea name="message" cols="40" rows="6"></textarea>
-      </div><!-- .form-item -->
+      </div>
 
       <input type="submit" value="Submit" class="btn">
     </form>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -108,67 +102,65 @@ permalink: /documentation/elements/forms/
   <div class="form-item">
     <label for="message">Message:</label>
     <textarea name="message"></textarea>
-  </div><!-- .form-item -->
+  </div>
 
   <input type="submit" value="Submit" class="btn">
 </form>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin h1">Styled</h2>
-
-<hr />
+<h2>Styled</h2>
 
 <p>A styled form can be created by using the <code>.form</code> class. We have isolated custom form styles into their own class because many JavaScript plugins use forms, and we wanted to avoid styling conflicts.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <form action="" method="post" class="form">
+    <form method="post" class="form">
       <div class="form-item">
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="John Doe" />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="email">Email:</label>
         <input type="email" name="email" placeholder="john_doe@example.com" />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="website">Website:</label>
         <input type="text" name="website" placeholder="http://example.com" disabled />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="gender">Gender:</label>
         <input type="radio" name="gender" value="Male" /> Male <br />
         <input type="radio" name="gender" value="Female" /> Female
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="interest">Inquiry:</label>
         <input type="checkbox" name="interest" value="Quote" /> Quote <br />
         <input type="checkbox" name="interest" value="Question" /> Question
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
          <select>
            <option name="Test">Test</option>
          </select>
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item">
         <label for="message">Message:</label>
         <textarea name="message" cols="40" rows="6"></textarea>
-      </div><!-- .form-item -->
+      </div>
 
       <input type="submit" value="Submit" class="btn">
     </form>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -210,41 +202,39 @@ permalink: /documentation/elements/forms/
   <div class="form-item">
     <label for="message">Message:</label>
     <textarea name="message"></textarea>
-  </div><!-- .form-item -->
+  </div>
 
   <input type="submit" value="Submit" class="btn">
 </form>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin h1">Fieldset</h2>
-
-<hr />
+<h2>Fieldset</h2>
 
 <p>Wrapping your form content with a <code>&lt;fieldset&gt;</code> tag allows you to group related elements inside of your form. Adding the <code>&lt;legend&gt;</code> tag allows you to denote each section with a small heading.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <form action="" method="post">
+    <form method="post">
       <fieldset>
         <legend>User Information</legend>
 
         <div class="form-item">
           <label for="name">Name:</label>
           <input type="text" name="name" placeholder="John Doe" />
-        </div><!-- .form-item -->
+        </div>
 
         <div class="form-item">
           <label for="email">Email:</label>
           <input type="email" name="email" placeholder="john_doe@example.com" />
-        </div><!-- .form-item -->
+        </div>
       </fieldset>
     </form>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -254,22 +244,20 @@ permalink: /documentation/elements/forms/
     <legend>...</legend>
   </fieldset>
 </form>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin h1">Inline</h2>
-
-<hr />
+<h2>Inline</h2>
 
 <p>Adding the class <code>.form-inline</code> to your <code>&lt;form&gt;</code> element allows you to display your form elements in an inline fashion. By default, the <code>.form-inline</code> class will give each <code>&lt;label&gt;</code> element a width of <strong>100px</strong>.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <form action="" method="post" class="form-inline">
+    <form method="post" class="form-inline">
       <div class="form-item">
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="John Doe" />
@@ -280,7 +268,7 @@ permalink: /documentation/elements/forms/
         <input type="email" name="email" placeholder="john_doe@example.com" />
       </div>
     </form>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -288,5 +276,5 @@ permalink: /documentation/elements/forms/
 {% highlight css %}<form class="form-inline">
   ...
 </form>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>

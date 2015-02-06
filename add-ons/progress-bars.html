@@ -5,32 +5,118 @@ subtitle: Progress Bars
 permalink: /add-ons/progress-bars/
 ---
 
-<h1 class="no-margin">Progress Bars</h1>
+<style>
+  .progress {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    height: 12px;
+    line-height: 1.182;
+    margin: 6px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+    -moz-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+    -ms-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+    -o-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+    box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    -ms-box-sizing: initial;
+    -o-box-sizing: initial;
+    box-sizing: initial;
+  }
 
-<hr />
+  .progress-small {
+    font-size: 9px;
+    font-size: 0.5625rem;
+    height: 6px;
+    line-height: 0.875;
+  }
 
-<p>A progress bar can be used to display a percentage of progress out of 100. The only two things driving these progress bars are an outer element with the <code>.progress</code> class as well as an inner <code>&lt;span&gt;</code> containing an inline style <code>style="width: __%"</code> where the "__" signifies a number under 100.</p>
+  .progress-large {
+    font-size: 16px;
+    font-size: 1rem;
+    height: 25px;
+    line-height: 1.7;
+  }
+
+  .progress > span {
+    background-color: #2bc253;
+    border-radius: 4px;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+  }
+
+  .progress.progress-stacked > span {
+    border-radius: 0;
+    display: inline-block;
+    float: left;
+  }
+
+  .progress.progress-stacked > span:first-of-type { border-radius: 4px 0 0 4px; }
+
+  .progress.progress-stacked > span:last-of-type { border-radius: 0 4px 4px 0; }
+
+  .progress-striped > span:after, .progress-striped > span > span {
+    bottom: 0;
+    content: "";
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -ms-background-size: 50px 50px;
+    -o-background-size: 50px 50px;
+    background-size: 50px 50px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(255, 255, 255, 0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.75, rgba(255, 255, 255, 0.2)), color-stop(0.75, transparent), to(transparent));
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  }
+
+  .progress-striped.progress-animate > span:after, .progress-striped.progress-animate > span > span {
+    -webkit-animation: move 2s linear infinite;
+    -moz-animation: move 2s linear infinite;
+    -ms-animation: move 2s linear infinite;
+    -o-animation: move 2s linear infinite;
+    animation: move 2s linear infinite;
+  }
+
+  @-webkit-keyframes move {
+    0% { background-position: 0 0; }
+
+    100% { background-position: 50px 50px; }
+  }
+</style>
+
+<p>A progress bar can be used to display a percentage of progress out of 100. The only two things driving these progress bars are an outer element with the <code>.progress</code> class as as an inner <code>&lt;span&gt;</code> containing an inline style <code>style="width: __%"</code> where the "__" signifies a number under 100.</p>
 
 <p>Thanks to Chris Coyier of CSS Tricks for his tutorial on <a href="http://css-tricks.com/css3-progress-bars/" title="CSS Tricks Progress Bars" target="_blank">CSS Progress Bars</a>.</p>
 
-<p class="note"><strong>Note:</strong> This add-on requires the <code>font-size()</code> and <code>vendor</code> mixins, and the <code>$base-font-size</code> variable in order for the SASS or LESS files to compile without modification.</p>
+<p class="note">This add-on requires the <code>font-size()</code> and <code>vendor</code> mixins, and the <code>$base-font-size</code> variable in order for the SASS or LESS files to compile without modification.</p>
 
-<h2 class="h1 no-margin">Basic</h2>
-
-<hr />
+<h2>Basic</h2>
 
 <p>A basic progress bar contains a green background with optional text.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <div class="progress">
       <span style="width: 25%">25%</span>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -38,19 +124,17 @@ permalink: /add-ons/progress-bars/
 {% highlight css %}<div class="progress">
   <span style="width: 25%">25%</span>
 </div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="h1 no-margin">Sizes</h2>
-
-<hr />
+<h2>Sizes</h2>
 
 <p>There are both a small and large version of the <code>.progress</code> class.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <div class="progress progress-small">
@@ -60,7 +144,7 @@ permalink: /add-ons/progress-bars/
     <div class="progress progress-large">
       <span style="width: 75%">75%</span>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -72,29 +156,27 @@ permalink: /add-ons/progress-bars/
 <div class="progress progress-large">
   <span style="width: 75%">75%</span>
 </div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="h1 no-margin">Striped &amp; Animated</h2>
-
-<hr />
+<h2>Striped &amp; Animated</h2>
 
 <p>You can add the class <code>.progress-striped</code> to any progress bar to make it striped. In addition, adding the class <code>.progress-animate</code> will animate the stripes in the progress bar.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <div class="progress striped">
+    <div class="progress progress-striped">
       <span style="width: 70%" class="bg-yellow"></span>
     </div>
 
-    <div class="progress striped animate">
+    <div class="progress progress-striped progress-animate">
       <span style="width: 90%" class="bg-red"></span>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -106,55 +188,47 @@ permalink: /add-ons/progress-bars/
 <div class="progress progress-striped progress-animate">
   <span class="bg-red" style="width: 90%"></span>
 </div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="h1 no-margin">Stacked</h2>
-
-<hr />
+<h2>Stacked</h2>
 
 <p>You also can stack progress bars by simply adding the class <code>.progress-stacked</code> and nesting multiple <code>&lt;span&gt;</code> tags within your <code>.progress</code> class.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <div class="progress stacked border-radius">
+    <div class="progress progress-stacked">
       <span style="width: 25%" class="bg-red"></span>
       <span style="width: 25%" class="bg-blue"></span>
       <span style="width: 25%" class="bg-yellow"></span>
       <span style="width: 10%" class="bg-green"></span>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
 
-{% highlight css %}<div class="progress progress-stacked border-radius">
+{% highlight css %}<div class="progress progress-stacked">
   <span style="width: 25%" class="bg-red"></span>
   <span style="width: 25%" class="bg-blue"></span>
   <span style="width: 25%" class="bg-yellow"></span>
   <span style="width: 10%" class="bg-green"></span>
 </div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Download</h2>
+<h2>Download</h2>
 
-<hr />
-
-<div class="row no-margin text-center">
+<div class="row gutters">
   <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/progress/progress-bars.css" target="_blank">Download CSS</a>
-  </div><!-- .column-8 -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/progress/progress-bars.css" target="_blank">Download CSS</a>
+  </div>
 
   <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/progress/_progress-bars.scss" target="_blank">Download SASS</a>
-  </div><!-- .column-8 -->
-
-  <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/progress/_progress-bars.less" target="_blank">Download LESS</a>
-  </div><!-- .column-8 -->
-</div><!-- .row -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/progress/_progress-bars.scss" target="_blank">Download SASS</a>
+  </div>
+</div>

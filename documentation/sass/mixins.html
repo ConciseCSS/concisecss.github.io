@@ -3,26 +3,22 @@ layout: documentation
 title: Documentation
 subtitle: Mixins
 permalink: /documentation/sass/mixins/
+redirect_from:
+  - /documentation/sass/
 ---
 
-<h1 class="no-margin">Mixins</h1>
-
-<hr />
-
-<p>Concise uses Sass mixins to help generate various features in the framework as well as provide extra functionality when working on projects.</p>
+<p>Concise uses Sass mixins to help generate various features in the framework as as provide extra functionality when working on projects.</p>
 
 <p>All of these mixins can be found inside of the <code>/helpers/_mixins.scss</code> file.</p>
 
-<h2 class="no-margin">Font Size</h2>
-
-<hr />
+<h2>Font Size</h2>
 
 <p>Uses the <code>calculate-rem()</code> function to calculate <strong>rem</strong> font-size and <strong>px</strong> fallback. Line height is calculated with <code>calculate-line-height()</code> but passing <strong>false</strong> will prevent that.</p>
 
 <h3>Parameters</h3>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -47,28 +43,26 @@ permalink: /documentation/sass/mixins/
       </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
 @include font-size(24px);
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Vendor Prefixes</h1>
-
-<hr />
+<h2>Vendor Prefixes</h1>
 
 <p>Proper vendor prefixes are created by passing a property, property value, and browser vendor <small>(webkit, moz, ms, o, etc)</small>.</p>
 
 <h3>Parameters</h3>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -93,23 +87,21 @@ permalink: /documentation/sass/mixins/
       </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<p class="note"><strong>Note:</strong> We suggest using a CSS post-processing tool such as <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a> to add vendor prefixes to your CSS based on results from <a href="http://caniuse.com/" target="_blank">Can I Use</a>.</p>
+<p class="note">We suggest using a CSS post-processing tool such as <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a> to add vendor prefixes to your CSS based on results from <a href="http://caniuse.com/" target="_blank">Can I Use</a>.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
 @include vendor(border-radius, 4px, webkit moz ms)
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Breakpoints</h2>
-
-<hr />
+<h2>Breakpoints</h2>
 
 <p>Loops through all of the values in the <code>$breakpoints</code> map and outputs conditional statements used to generate media query code.</p>
 
@@ -118,7 +110,7 @@ permalink: /documentation/sass/mixins/
 <h3>Parameters</h3>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -133,9 +125,9 @@ permalink: /documentation/sass/mixins/
       </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
@@ -144,19 +136,17 @@ permalink: /documentation/sass/mixins/
 
 @include breakpoint(360px) { ... }
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Responsive Styles</h2>
-
-<hr />
+<h2>Responsive Styles</h2>
 
 <p>Generates property media queries for any CSS property, value, and set of breakpoints. Allows you to easily change property values based a set of breakpoints.</p>
 
 <h3>Parameters</h3>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -186,9 +176,9 @@ permalink: /documentation/sass/mixins/
      </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
@@ -203,33 +193,29 @@ permalink: /documentation/sass/mixins/
   )
 );
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Row</h2>
-
-<hr />
+<h2>Row</h2>
 
 <p>Generates CSS to wrap semantic columns in a row.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
 @include row();
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Column</h2>
-
-<hr />
+<h2>Column</h2>
 
 <p>Generates CSS for semantic columns.</p>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -264,26 +250,24 @@ permalink: /documentation/sass/mixins/
     </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
 @include column(16, 4, false, true, 4);
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Push &amp; Pull</h2>
-
-<hr />
+<h2>Push &amp; Pull</h2>
 
 <p>Generates CSS for pushing a semantic column left or right.</p>
 
 <div class="table-responsive">
-  <table class="full border-all fill-odd">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Parameter</th>
@@ -318,30 +302,28 @@ permalink: /documentation/sass/mixins/
     </tr>
     </tbody>
   </table>
-</div><!-- .table-responsive -->
+</div>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
 @include push-pull(push, 4, 16, true);
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Clearfix</h2>
-
-<hr />
+<h2>Clearfix</h2>
 
 <p>Generates CSS that will clear both left and right floats.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}
-include clearfix();
+@include clearfix();
     {% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>

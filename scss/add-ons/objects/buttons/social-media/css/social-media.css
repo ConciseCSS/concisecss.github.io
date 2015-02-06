@@ -1,0 +1,76 @@
+/* Icon Buttons */
+.btn.icon { 
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.btn.icon:before { 
+    font-family: FontAwesome;
+    font-weight: normal;
+    margin-right: 10px; 
+}
+
+/* Dribbble */
+.btn.icon.dribbble { background-color: #f36798; }
+.btn.icon.dribbble:hover { background-color: #f6558d; }
+.btn.icon.dribbble:before { content: "\F17D"; }
+
+/* Dropbox */
+.btn.icon.dropbox { background-color: #82c0f1; }
+.btn.icon.dropbox:hover { background-color: #72b9f2; }
+.btn.icon.dropbox:before { content: "\F16B"; }
+
+/* Facebook */
+.btn.icon.facebook { background-color: #3b559f; }
+.btn.icon.facebook:hover { background-color: #4362ba; }
+.btn.icon.facebook:before { content: "\F09A"; }
+
+/* Flickr */
+.btn.icon.flickr { background-color: #ff0084; }
+.btn.icon.flickr:hover { background-color: #ff2d9a; }
+.btn.icon.flickr:before { content: "\F16E"; }
+
+/* GitHub */
+.btn.icon.github { background-color: #b14239; }
+.btn.icon.github:hover { background-color: #c74a40; }
+.btn.icon.github:before { content: "\F09B"; }
+
+/* Google+ */
+.btn.icon.googleplus { background-color: #dd4c39; }
+.btn.icon.googleplus:hover { background-color: #ec4631; }
+.btn.icon.googleplus:before { content: "\F0D5"; }
+
+/* Instagram */
+.btn.icon.instagram { background-color: #d0c3ae; }
+.btn.icon.instagram:hover { background-color: #c7b8a1; }
+.btn.icon.instagram:before { content: "\F16D"; }
+
+/* LinkedIn */
+.btn.icon.linkedin { background-color: #007bb6; }
+.btn.icon.linkedin:hover { background-color: #0083c1; }
+.btn.icon.linkedin:before { content: "\F0E1"; }
+
+/* Pinterest */
+.btn.icon.pinterest { background-color: #cc2127; }
+.btn.icon.pinterest:hover { background-color: #dd2229; }
+.btn.icon.pinterest:before { content: "\F0D2"; }
+
+/* Skype */
+.btn.icon.skype { background-color: #01aef0; }
+.btn.icon.skype:hover { background-color: #00b9ff; }
+.btn.icon.skype:before { content: "\F17E"; }
+
+/* Tumblr */
+.btn.icon.tumblr { background-color: #44546b; }
+.btn.icon.tumblr:hover { background-color: #546681; }
+.btn.icon.tumblr:before { content: "\F173"; }
+
+/* Twitter */
+.btn.icon.twitter { background-color: #00acee; }
+.btn.icon.twitter:hover { background-color: #00b7fd; }
+.btn.icon.twitter:before { content: "\F099"; }
+
+/* YouTube */
+.btn.icon.youtube { background-color: #de3434; }
+.btn.icon.youtube:hover { background-color: #ec3636; }
+.btn.icon.youtube:before { content: "\F167"; }

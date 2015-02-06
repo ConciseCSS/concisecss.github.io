@@ -1,9 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,31 +11,36 @@
 
 	<title>
     {% if page.title %}
-      {{ site.title }} / {{ page.title }}
-    {% else if page.subtitle %}
-      {{ site.title }} / {{ page.title }} / {{ page.subtitle }}
+      {{ site.title }} / {% if page.subtitle %} {{ page.subtitle }} {% else %} {{ page.title }} {% endif %}
     {% else %}
       {{ site.title }}
     {% endif %}
   </title>
 
+
+	<!-- SEO & Favicon -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
   <link rel="icon" href="{{ "/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/site.min.css" | prepend: site.baseurl }}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/syntax.css" | prepend: site.baseurl }}" />
 
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/site.css" | prepend: site.baseurl }}" />
+
+
+	<!-- iPhone Icons -->
   <link href="{{ "/images/icons/iPhone.png" | prepend: site.baseurl }}" rel="apple-touch-icon" />
   <link href="{{ "/images/icons/iPad.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="76x76" />
   <link href="{{ "/images/icons/iPhone@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="120x120" />
   <link href="{{ "/images/icons/iPad@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="152x152" />
 
+
+	<!-- JavaScript -->
 	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="{{ "/js/concise.min.js" | prepend: site.baseurl }}"></script>
 	<script type="text/javascript" src="{{ "/js/libraries.js" | prepend: site.baseurl }}"></script>
-	<script type="text/javascript" src="{{ "/js/site.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="//use.typekit.net/cmd8adw.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="//use.typekit.net/cmd8adw.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>

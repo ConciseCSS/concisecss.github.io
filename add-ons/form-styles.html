@@ -7,13 +7,7 @@ permalink: /add-ons/form-styles/
 
 <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/downloads/form-prepend-append.css">
 
-<h1 class="no-margin">Form Styles</h1>
-
-<hr />
-
-<h2 class="no-margin">Prepend &amp; Append</h1>
-
-<hr />
+<h2>Prepend &amp; Append</h1>
 
 <p>Content can be appended or prepended to form fields using the <code>.append</code> and <code>.prepend</code> class, respectively.</p>
 
@@ -23,76 +17,70 @@ permalink: /add-ons/form-styles/
 
 <p>Lastly, if you want your appended or prepended content to not have a background color, simply add the class <code>.transparent</code> to either the <code>.append</code> or <code>.prepend</code> class.</p>
 
-<p class="note"><strong>Note:</strong> This add-on requires the <code>breakpoint()</code> mixin in order for the SASS or LESS files to compile without modification.</p>
+<p class="note">This add-on requires the <code>breakpoint()</code> mixin in order for the SASS or LESS files to compile without modification.</p>
 
-<p class="note"><strong>Note:</strong> The icons used here are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
+<p class="note">The icons used here are from a modified version of the <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome icon font library</a>.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <form action="" method="post" class="form-inline border-radius">
+    <form action="" method="post" class="form form-inline">
       <div class="form-item prepend">
         <label for="name">Name:</label>
         <span class="adjoined"><span class="icon user"></span></span>
         <input type="text" name="name" placeholder="John Doe" />
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item append">
         <label for="email">Email:</label>
         <input type="email" name="email" placeholder="john_doe@example.com" />
         <span class="adjoined"><span class="icon envelope"></span></span>
-      </div><!-- .form-item -->
+      </div>
 
       <div class="form-item append transparent">
         <label for="email">Website:</label>
         <input type="website" name="website" placeholder="http://example.com" />
         <span class="adjoined"><span class="icon globe"></span></span>
-      </div><!-- .form-item -->
+      </div>
     </form>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
       <strong>Code</strong>
 
 {% highlight css %} <form class="form-inline border-radius">
-<div class="form-item prepend">
-  <label for="name">Name:</label>
-  <span class="adjoined"><span class="icon user"></span></span>
-  <input type="text" name="name" placeholder="John Doe" />
-</div>
+  <div class="form-item prepend">
+    <label for="name">Name:</label>
+    <span class="adjoined"><span class="icon user"></span></span>
+    <input type="text" name="name" placeholder="John Doe" />
+  </div>
 
-<div class="form-item append">
-  <label for="email">Email:</label>
-  <input type="email" name="email" placeholder="john_doe@example.com" />
-  <span class="adjoined"><span class="icon envelope"></span></span>
-</div>
+  <div class="form-item append">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="john_doe@example.com" />
+    <span class="adjoined"><span class="icon envelope"></span></span>
+  </div>
 
-<div class="form-item append transparent">
-  <label for="email">Website:</label>
-  <input type="website" name="website" placeholder="http://example.com" />
-  <span class="adjoined"><span class="icon globe"></span></span>
-</div>
+  <div class="form-item append transparent">
+    <label for="email">Website:</label>
+    <input type="website" name="website" placeholder="http://example.com" />
+    <span class="adjoined"><span class="icon globe"></span></span>
+  </div>
 </form>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Download</h2>
+<h2>Download</h2>
 
-<hr />
-
-<div class="row no-margin text-center">
+<div class="row gutters">
   <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/forms/prepend-append.css" target="_blank">Download CSS</a>
-  </div><!-- .column-8 -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/forms/prepend-append.css" target="_blank">Download CSS</a>
+  </div>
 
   <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/forms/_prepend-append.scss" target="_blank">Download SASS</a>
-  </div><!-- .column-8 -->
-
-  <div class="column-8">
-    <a class="btn border blue btn-small full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/forms/_prepend-append.less" target="_blank">Download LESS</a>
-  </div><!-- .column-8 -->
-</div><!-- .row -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://raw.githubusercontent.com/ConciseCSS/addons/master/objects/forms/_prepend-append.scss" target="_blank">Download SASS</a>
+  </div>
+</div>

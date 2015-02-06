@@ -5,41 +5,27 @@ subtitle: Getting Started
 permalink: /get-started/getting-started/
 ---
 
-<h1 class="no-margin">Getting Started</h1>
-
-<hr />
-
 <p>Getting started with Concise is very simple. First, pick a package to download below. If you are unsure of which package is the right one for you, download the first, titled "<u>Concise.CSS</u>".</p>
 
-<div class="row no-margin">
+<div class="row gutters">
   <div class="column-8">
     <h3>Concise.CSS</h3>
 
-    <p>Compiled files (minified and non-minified) as well JavaScript files.</p>
+    <p>Compiled files (minified and non-minified) as JavaScript files.</p>
 
-    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css/releases/download/{{ site.version }}/concise-{{ site.download-version }}-dist.zip">Download</a>
-  </div><!-- .column-8 -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://github.com/ConciseCSS/concise.css/releases/download/{{ site.version }}/concise-{{ site.download-version }}-dist.zip">Download</a>
+  </div>
 
   <div class="column-8">
     <h3>SASS</h3>
 
     <p>Compiled files (minified and non-minified), source SASS files and JavaScript files.</p>
 
-    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css/archive/{{ site.version }}.zip">Download</a>
-  </div><!-- .column-8 -->
+    <a class="btn btn--borderBlue btn-small btn--full" href="https://github.com/ConciseCSS/concise.css/archive/{{ site.version }}.zip">Download</a>
+  </div>
+</div>
 
-  <div class="column-8">
-    <h3>LESS</h3>
-
-    <p>Compiled files (minified and non-minified), source LESS files and JavaScript files.</p>
-
-    <a class="btn border blue btn-small full" href="https://github.com/ConciseCSS/concise.css-less/archive/{{ site.version }}.zip">Download</a>
-  </div><!-- .column-8 -->
-</div><!-- .row -->
-
-<h2 class="h1 no-margin">What's Included</h2>
-
-<hr />
+<h2>What's Included</h2>
 
 <h3>Pre-Compiled Concise</h3>
 
@@ -56,7 +42,7 @@ permalink: /get-started/getting-started/
 
 <p>If you are downloading the SASS package, the folder structure will look like:</p>
 
-<p class="note"><strong>Note:</strong> All of the files labeled with an underscore are referred to as <em>partials</em>. A partial is a file that does not become compiled on its own, but rather, is included in a master file <small>(in this case, it's <code>concise.scss</code>)</small> to be compiled.</p>
+<p class="note">All of the files labeled with an underscore are referred to as <em>partials</em>. A partial is a file that does not become compiled on its own, but rather, is included in a master file <small>(in this case, it's <code>concise.scss</code>)</small> to be compiled.</p>
 
 {% highlight css %}
 /dist
@@ -103,9 +89,7 @@ permalink: /get-started/getting-started/
   concise.scss
 {% endhighlight %}
 
-<h2 class="h1 no-margin">Including Necessary Files</h2>
-
-<hr />
+<h2>Including Necessary Files</h2>
 
 <p>To get started with a bare-bones responsive website using Concise, I would recommend structuring your template as such:</p>
 
@@ -124,8 +108,8 @@ permalink: /get-started/getting-started/
 
 <body>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/concise.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/concise.min.js"></script>
 </body>
 </html>
 {% endhighlight %}

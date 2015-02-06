@@ -28,13 +28,9 @@ gems:
 
 # Main Navigation
 nav:
-- text: Welcome
-  url: /
-- text: Why Concise
-  url: /why-concise/
 - text: Get Started
   url: /get-started/
 - text: Documentation
-  url: /documentation/layout/container/
+  url: /documentation/
 - text: Add-Ons
   url: /add-ons/

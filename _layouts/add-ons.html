@@ -1,4 +1,7 @@
 ---
+# Masthead
+masthead-subtitle: Extend Concise with these pre-built add-ons.
+
 # Navigation
 nav:
 - text: Articles
@@ -19,8 +22,6 @@ nav:
   url: /add-ons/comments/
 - text: Form Styles
   url: /add-ons/form-styles/
-- text: Gradient Styles
-  url: /add-ons/gradient-styles/
 - text: Icon Groups
   url: /add-ons/icon-groups/
 - text: Navigation Styles
@@ -37,38 +38,32 @@ nav:
 
 {% include head.html %}
 
-  {% include header.html %}
+  {% include navigation.html %}
 
-  <div class="masthead">
-    <div class="container center">
-      <h1 class="kilo no-margin color-white">Add-Ons</h1>
+  {% include masthead.html %}
 
-      <h2 class="no-margin">Extend the default Concise with these pre-built add-ons</h2>
-    </div><!-- .container -->
-
-    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
-  </div><!-- .masthead -->
-
-  <div class="container center">
-    <div class="row no-margin">
-      <div class="column-5 sidebar">
-        <nav class="nav-vertical pills nav-responsive-center nav-responsive-text">
+  <div class="container">
+    <main class="documentation">
+      <div class="documentation-sidebar">
+        <nav class="nav-responsive-center nav-responsive-text">
           <ul>
-            <li class="text-uppercase">Add-Ons</li>
+            <li class="header">Add-Ons</li>
 
             {% for link in page.nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
-        </nav><!-- .nav-vertical -->
-      </div><!-- .column-5 -->
+        </nav>
+      </div>
 
-      <div class="column-19 content">
+      <div class="documentation-content">
+        <h1>{{ page.subtitle }}</h1>
+
         {{ content }}
-      </div><!-- .column-19 -->
-    </div><!-- .row -->
-  </div><!-- .container -->
+      </div>
+    </div>
+  </div>
 
 {% include footer.html %}

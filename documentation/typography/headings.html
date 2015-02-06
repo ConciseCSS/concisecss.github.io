@@ -1,25 +1,22 @@
 ---
 layout: documentation
 title: Documentation
-subtitle: Typography / Headings
+subtitle: Headings
 permalink: /documentation/typography/headings/
+redirect_from:
+  - /documentation/typography/
 ---
 
 <style>.preview h3.no-margin.giga { margin-top: 36px; }</style>
 
-
-<h1 class="no-margin">Headings</h1>
-
-<hr />
-
 <p>Concise includes all standard HTML headings <code>&lt;h1&gt;</code> through <code>&lt;h6></code>. Also included are classes <code>.h1</code> through <code>.h6</code> that match the size of their respective headings, but can be used on any element.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> A SASS map has been created for each of the various heading sizes to make scaling as simple as possible. You can find these maps at the top of the <code>/base/_headings.scss</code> file.</p>
+<p class="note note--preprocessor">A SASS map has been created for each of the various heading sizes to make scaling as simple as possible. You can find these maps at the top of the <code>/base/_headings.scss</code> file.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <h1><h1> Concise Heading</h1>
@@ -28,7 +25,7 @@ permalink: /documentation/typography/headings/
     <h4><h4> Concise Heading</h4>
     <h5><h5> Concise Heading</h5>
     <h6><h6> Concise Heading</h6>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -39,29 +36,25 @@ permalink: /documentation/typography/headings/
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>{% endhighlight %}
-</div><!-- .preview-footer -->
-</div><!-- .preview -->
+</div>
+</div>
 
-<h2 class="no-margin">Font Families</h2>
-
-<hr />
+<h2>Font Families</h2>
 
 <p>Typography is a key to effective design, so Concise makes it simple to control in your project.</p>
 
 <p>By default, <a href="http://www.linotype.com/en/526/helvetica-family.html?id=526&name=helvetica&viewmode=family&site=&lang=en" target="_blank">Helvetica</a>, with <a href="http://www.fonts.com/font/monotype/arial" target="_blank">Arial</a> as a fallback, is used as the default font for headings on non-mobile devices. However, for Android phones, <a href="https://www.google.com/fonts/specimen/Droid+Sans" target="_blank">Droid Sans</a> is used as the default font, with Helvetica and Arial as fallbacks.</p>
 
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$base-heading-font-family</code> variable in the <code>/helpers/_variables.scss</code> file to adjust the base font families.</p>
+<p class="note note--preprocessor">You can change the <code>$base-heading-font-family</code> variable in the <code>/helpers/_variables.scss</code> file to adjust the base font families.</p>
 
-<h2 class="no-margin">Sub-Headings</h2>
-
-<hr />
+<h2>Sub-Headings</h2>
 
 <p>You also can create sub-headings for your headings using the <code>&lt;small&gt;</code> tag or the <code>.small</code> class. <code>!important</code> is included to avoid specificity issues.</p>
 
-<div class="well preview">
+<div class="preview">
 <div class="preview-heading">
   <strong>Preview</strong>
-</div><!-- .preview-heading -->
+</div>
 
 <div class="preview-body">
   <h1>Heading 1 <small class="color-gray">This is a sub-heading</small></h1>
@@ -75,7 +68,7 @@ permalink: /documentation/typography/headings/
   <h5>Heading 5 <small class="color-gray">This is a sub-heading</small></h5>
 
   <h6>Heading 6 <small class="color-gray">This is a sub-heading</small></h6>
-</div><!-- .preview-body -->
+</div>
 
 <div class="preview-footer">
   <strong>Code</strong>
@@ -86,19 +79,17 @@ permalink: /documentation/typography/headings/
 <h4>Heading 4 <small class="color-gray">This is a sub-heading</small></h4>
 <h5>Heading 5 <small class="color-gray">This is a sub-heading</small></h5>
 <h6>Heading 6 <small class="color-gray">This is a sub-heading</small></h6>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Extra-Large</h2>
-
-<hr />
+<h2>Extra-Large</h2>
 
 <p>Sometimes there is a need for headings that are larger than the standard <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. Anticipating this need, Concise comes with three classes that can be used to super-size your type.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <h3 class="no-margin giga">Giga Concise Heading</h3>
@@ -106,7 +97,7 @@ permalink: /documentation/typography/headings/
     <h3 class="no-margin mega">Mega Concise Heading</h3>
 
     <h3 class="no-margin kilo">Kilo Concise Heading</h3>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -114,5 +105,5 @@ permalink: /documentation/typography/headings/
 {% highlight css %}<h1 class="giga">Giga Heading</h1>
 <h2 class="mega">Mega Heading</h2>
 <h3 class="kilo">Kilo Heading</h3>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>

@@ -1,72 +1,70 @@
 ---
 layout: documentation
 title: Documentation
-subtitle: Helper Classes / Background Colors
+subtitle: Background Colors
 permalink: /documentation/helper-classes/background-colors/
+redirect_from:
+  - /documentation/helper-classes/
 ---
 
 <style>
-  .preview-body .well { margin-bottom: 12px; }
+  .preview-body .{ margin-bottom: 12px; }
 </style>
 
-<h1 class="no-margin">Background Colors</h1>
+<p>If you want to change the <strong>background</strong> of an element, you can do so by using one of the <code>.bg-*</code> classes provided by Concise. These classes can be used on any element or with any class provided by Concise <small>(eg: buttons, tables, etc)</small>.</p>
 
-<hr />
+<p class="note note--preprocessor">You can change the <code>$bg-colors</code> map in the <code>/helpers/_variables.scss</code> file to adjust any of the colors, or add new ones.</p>
 
-<p>If you want to change the <strong>background</strong> of an element, you can do so by using one of the <code>.bg-*</code> -* classes provided by Concise. These classes can be used on any element or with any class provided by Concise <small>(eg: buttons, tables, etc)</small>.</p>
-
-<p class="note preprocessor"><strong>Preprocessor Note:</strong> You can change the <code>$bg-colors</code> map in the <code>/helpers/_variables.scss</code> file to adjust any of the colors, or add new ones.</p>
-
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
-    <div class="well bg-black">
+    <div class="bg-black">
       <p>Black background</p>
     </div>
 
-    <div class="well bg-light-gray">
+    <div class="bg-light-gray">
       <p class="color-black">Light gray background</p>
     </div>
 
-    <div class="well bg-gray">
+    <div class="bg-gray">
       <p>Gray background</p>
     </div>
 
-    <div class="well bg-light-green">
+    <div class="bg-light-green">
       <p>Light green background</p>
     </div>
 
-    <div class="well bg-green">
+    <div class="bg-green">
       <p>Green background</p>
     </div>
 
-    <div class="well bg-light-red">
+    <div class="bg-light-red">
       <p>Light red background</p>
     </div>
 
-    <div class="well bg-red">
+    <div class="bg-red">
       <p>Red background</p>
     </div>
 
-    <div class="well bg-light-yellow">
+    <div class="bg-light-yellow">
       <p>Light yellow background</p>
     </div>
 
-    <div class="well bg-yellow">
+    <div class="bg-yellow">
       <p>Yellow background</p>
     </div>
 
-    <div class="well bg-light-blue">
+    <div class="bg-light-blue">
       <p>Light blue background</p>
     </div>
 
-    <div class="well bg-blue">
+    <div class="bg-blue">
       <p>Blue background</p>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -83,5 +81,5 @@ permalink: /documentation/helper-classes/background-colors/
 <div class="bg-yellow">...</div>
 <div class="bg-light-blue">...</div>
 <div class="bg-blue">...</div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>

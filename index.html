@@ -4,82 +4,110 @@ title: Welcome
 permalink: /
 ---
 
-<div class="pane bg-light-gray">
-  <div class="container center text-center">
-    <h2 class="kilo no-margin weight-light">Lean, mean and clean.</h2>
+<section class="homeBanner">
+  <div class="container">
+    <h1>A better front-end framework.</h1>
 
-    <p class="h3 tagline">Give up the bloat. Accomplish more with less. Welcome to Concise.</p>
+    <h3 class="weight-light">Give up the bloat. Stop tripping over your classes. Be Concise.</h3>
 
-    <div class="row features no-margin">
-      <div class="column-8">
-        <img src="{{ site.baseurl }}/images/mobile.png" alt="Perfect for all Devices">
+    <div class="homeBanner-buttons">
+      <a href="https://github.com/ConciseCSS/concise.css/releases/download/{{ site.version }}/concise-{{ site.download-version }}-dist.zip" class="btn btn-large btn--borderWhite">Download</a>
 
-        <h3 class="h2">Perfect for all Devices</h3>
+      <a href="/get-started" class="btn btn-large btn--borderWhite">Get Started</a>
+    </div>
 
-        <p>Concise is built from the ground up for mobile devices. This means it will look great on all devices.</p>
-      </div><!-- .column-8 -->
+    <p class="small">{{ site.version }} &mdash; {{ site.package-size }}</p>
 
-      <div class="column-8">
-        <img src="{{ site.baseurl }}/images/preprocessors.png" alt="Supports SASS, LESS and Stylus">
+    <div class="hide-extra-small">
+      <iframe src="http://ghbtns.com/github-btn.html?user=ConciseCSS&repo=concise.css&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="99" height="20" class="star"></iframe>
 
-        <h3 class="h2">Preprocessor-built</h3>
+      <iframe src="https://ghbtns.com/github-btn.html?user=ConciseCSS&repo=concise.css&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="105px" height="20px"></iframe>
 
-        <p>Concise includes support for Vanilla CSS, as well as SASS. There are currently unsupported LESS and Stylus versions of the framework.</p>
-      </div><!-- .column-8 -->
+      <iframe src="http://ghbtns.com/github-btn.html?user=ConciseCSS&repo=concise.css&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90" height="20"></iframe>
+    </div>
+  </div>
+</section>
 
-      <div class="column-8">
-        <img src="{{ site.baseurl }}/images/components.png" alt="Lots of Components">
+{% include navigation.html %}
 
-        <h3 class="h2">Highly Expandable</h3>
+<section class="homeFeatures">
+  <div class="container">
+    <h2 class="homeHeading">Lean, mean and clean.</h2>
 
-        <p>Concise includes great base styling, as well as many <a href="{{ site.baseurl }}/add-ons">add-ons</a> that make it highly expandable.</p>
-      </div><!-- .column-8 -->
-    </div><!-- .row -->
-  </div><!-- .container -->
-</div><!-- .pane -->
-
-<div class="pane who-uses-it">
-  <div class="container center text-center">
-    <h2 class="kilo no-margin weight-light">Who uses it?</h2>
-
-    <p class="h3">There are some truly beautiful websites that have been created with Concise.</p>
+    <p class="homeSubheading">Give up the bloat. Accomplish more with less. Welcome to Concise.</p>
 
     <div class="row features">
-      <div class="column-6">
+      <div class="feature">
+        <img src="/images/mobile.png" alt="Perfect for all Devices">
+
+        <h3>Perfect for all Devices</h3>
+
+        <p>Concise is built from the ground up for mobile devices. This means it will look great on all devices.</p>
+      </div>
+
+      <div class="feature">
+        <img src="/images/sass.png" alt="SASS Logo">
+
+        <h3>Preprocessor-built</h3>
+
+        <p>Concise includes support for Vanilla CSS, as well as SASS. There are currently unsupported LESS and Stylus versions of the framework.</p>
+      </div>
+
+      <div class="feature">
+        <img src="/images/components.png" alt="Lots of Components">
+
+        <h3>Highly Expandable</h3>
+
+        <p>Concise includes great base styling, as well as many <a href="/add-ons">add-ons</a> that make it highly expandable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="homeShowcase">
+  <div class="container">
+    <h2 class="homeHeading">Who uses it?</h2>
+
+    <p class="homeSubheading">There are some truly beautiful websites that have been created with Concise.</p>
+
+    <div class="row gutters">
+      <div class="showcase-item">
         <a href="http://keenanpayne.com" target="_blank">
-            <img src="{{ site.baseurl }}/images/keenanpayne.png" alt="Keenan Payne Portfolio">
+          <img src="/images/keenanpayne.png" alt="Keenan Payne Portfolio">
         </a>
-      </div><!-- .column-6 -->
+      </div>
 
-      <div class="column-6">
+      <div class="showcase-item">
         <a href="http://northriveroutfitting.com/" target="_blank">
-            <img src="{{ site.baseurl }}/images/north-river-outfitting.png" alt="North River Outfitting">
+          <img src="/images/north-river-outfitting.png" alt="North River Outfitting">
         </a>
-      </div><!-- .column-6 -->
+      </div>
 
-      <div class="column-6">
+      <div class="showcase-item">
         <a href="http://clasipar.paraguay.com/app/descarga/" target="_blank">
-            <img src="{{ site.baseurl }}/images/clasipar.png" alt="Clasipar">
+          <img src="/images/clasipar.png" alt="Clasipar">
         </a>
-      </div><!-- .column-6 -->
+      </div>
 
-      <div class="column-6">
+      <div class="showcase-item">
         <a href="https://www.behance.net/gallery/14583965/HalfPast-Luxury-Watches" target="_blank">
-            <img src="{{ site.baseurl }}/images/halfpast.png" alt="HalfPast Luxury Watches">
+          <img src="/images/halfpast.png" alt="HalfPast Luxury Watches">
         </a>
-      </div><!-- .column-6 -->
-    </div><!-- .row -->
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!--<a class="btn border black text-uppercase" target="_blank">View More</a>-->
-  </div><!-- .container -->
-</div><!-- .pane -->
+<section class="homeDownload">
+  <div class="container">
+    <h2 class="homeHeading">Heard enough already?</h2>
 
-<div class="pane bg-purple">
-  <div class="container center text-center">
-    <h2 class="kilo color-white weight-light">Heard enough already?</h2>
+    <p class="homeSubheading">Just give Concise a try, we think you'll like it.</p>
 
-    <p class="h3 color-white">Just give Concise a try, we think you'll like it.</p>
+    <div class="homeBanner-buttons">
+      <a href="https://github.com/ConciseCSS/concise.css/releases/download/v2.0.0/concise-2.0.0-dist.zip" class="btn btn-large btn--borderWhite">Download</a>
 
-    {% include home-buttons.html %}
-  </div><!-- .container -->
-</div><!-- .pane -->
+      <a href="/get-started" class="btn btn-large btn--borderWhite">Get Started</a>
+    </div>
+  </div>
+</section>

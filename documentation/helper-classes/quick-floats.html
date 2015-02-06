@@ -1,40 +1,36 @@
 ---
 layout: documentation
 title: Documentation
-subtitle: Helper Classes / Quick Floats
+subtitle: Quick Floats
 permalink: /documentation/helper-classes/quick-floats/
 ---
 
-<h1 class="no-margin">Quick Floats</h1>
-
-<hr />
-
 <p>Floating elements are simple with Concise, with classes that can be applied to any element.</p>
 
-<p class="note"><strong>Note:</strong> When floating elements with either the <code>.float-left</code> or <code>.float-right</code> class, ensure they are wrapped around a <code>.clearfix</code> class so all of the floats are cleared.<br /><br />
+<p class="note">When floating elements with either the <code>.float-left</code> or <code>.float-right</code> class, ensure they are wrapped around a <code>.clearfix</code> class so all of the floats are cleared.<br /><br />
 
 In addition, when using the <code>.align-center</code> helper class on an element with an unknown width, additional styling may be required to properly center the element. Referring to <a href="http://css-tricks.com/centering-in-the-unknown/" target="_blank">Chris Coyier's "Centering in the Unkown"</a> article may come in handy when handling such a situation.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-heading">
     <strong>Preview</strong>
-  </div><!-- .preview-heading -->
+  </div>
 
   <div class="preview-body">
     <div class="clearfix">
-      <div class="left">
+      <div class="float-left">
         <p>Float left</p>
       </div>
 
-      <div class="right">
+      <div class="float-right">
         <p>Float right</p>
       </div>
     </div>
 
-    <div class="center" style="width: 100px;">
+    <div class="align-center" style="width: 100px;">
       <p>Align center</p>
     </div>
-  </div><!-- .preview-body -->
+  </div>
 
   <div class="preview-footer">
     <strong>Code</strong>
@@ -45,19 +41,17 @@ In addition, when using the <code>.align-center</code> helper class on an elemen
 </div>
 
 <div class="align-center">...</div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>
 
-<h2 class="no-margin">Removing Floats</h2>
-
-<hr />
+<h2>Removing Floats</h2>
 
 <p>Removing a float from any element is easy with the <code>.float-none</code> class.</p>
 
-<div class="well preview">
+<div class="preview">
   <div class="preview-footer">
     <strong>Code</strong>
 
     {% highlight css %}<div class="float-none">...</div>{% endhighlight %}
-  </div><!-- .preview-footer -->
-</div><!-- .preview -->
+  </div>
+</div>

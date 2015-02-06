@@ -1,4 +1,7 @@
 ---
+# Masthead
+masthead-subtitle: Learn how to use all of great features that Concise provides.
+
 # Navigation
 layout-nav:
 - text: Container
@@ -67,88 +70,82 @@ sass-nav:
 
 {% include head.html %}
 
-  {% include header.html %}
+  {% include navigation.html %}
 
-  <div class="masthead">
-    <div class="container center">
-      <h1 class="kilo no-margin color-white">Documentation</h1>
+  {% include masthead.html %}
 
-      <h2 class="no-margin">Learn how to use all of great features that Concise provides.</h2>
-    </div><!-- .container -->
-
-    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
-  </div><!-- .masthead -->
-
-  <div class="container center">
-    <div class="row no-margin">
-      <div class="column-5 sidebar">
-        <nav class="nav-vertical pills nav-responsive-center nav-responsive-text">
+  <div class="container">
+    <div class="documentation">
+      <div class="documentation-sidebar">
+        <nav class="nav-responsive-center nav-responsive-text">
           <ul>
-            <li class="text-uppercase">Layout</li>
+            <li class="header">Layout</li>
 
             {% for link in page.layout-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
 
           <ul>
-            <li class="text-uppercase">Typography</li>
+            <li class="header">Typography</li>
 
             {% for link in page.typography-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
 
           <ul>
-            <li class="text-uppercase">Navigation</li>
+            <li class="header">Navigation</li>
 
             {% for link in page.navigation-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
 
           <ul>
-            <li class="text-uppercase">Elements</li>
+            <li class="header">Elements</li>
 
             {% for link in page.elements-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
 
           <ul>
-            <li class="text-uppercase">Helper Classes</li>
+            <li class="header">Helper Classes</li>
 
             {% for link in page.helper-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
 
           <ul>
-            <li class="text-uppercase">SASS</li>
+            <li class="header">SASS</li>
 
             {% for link in page.sass-nav %}
-              <li>
-                <a {% if link.url == page.url %}class="active"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
-              </li>
+              <a href="{{ link.url }}">
+                <li {% if link.url == page.url %}class="active"{% endif %}>{{ link.text }}</li>
+              </a>
             {% endfor %}
           </ul>
-        </nav><!-- .nav-vertical -->
-      </div><!-- .column-5 -->
+        </nav>
+      </div>
 
-      <div class="column-19 content">
+      <main class="documentation-content">
+        <h1>{{ page.subtitle }}</h1>
+
         {{ content }}
-      </div><!-- .column-19 -->
-    </div><!-- .row -->
-  </div><!-- .container -->
+      </main>
+    </div>
+  </div>
 
 {% include footer.html %}
