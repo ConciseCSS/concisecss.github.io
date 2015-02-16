@@ -1,0 +1,78 @@
+//
+// Object Styling
+//
+.btn {
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+
+//
+// Header
+//
+.siteHeader { border-bottom: 1px solid #eee; }
+
+// Logo
+.logo {
+  font-size: 22px;
+  margin-bottom: 0;
+
+  @media (min-width: 48em) {
+    float: left;
+  }
+}
+
+// Navigation
+.nav {
+  @media (min-width: 48em) {
+    float: right;
+  }
+
+  li {
+    display: inline;
+    line-height: 3.5;
+    margin-left: 25px;
+
+    &:first-of-type { margin-left: 0; }
+  }
+}
+
+
+//
+// Masthead
+//
+.masthead {
+  background-color: #eee;
+  padding: 50px 0;
+
+  @media (min-width: 48em) {
+    padding: 75px 0;
+  }
+}
+
+.masthead-title { margin-top: 0; }
+
+
+//
+// Site Content
+//
+.siteContent {
+  padding: 50px 0;
+
+  .btn {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #666;
+
+    &:hover { background-color: #eee; }
+  }
+}
+
+
+//
+// Footer
+//
+.siteFooter {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
