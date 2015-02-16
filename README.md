@@ -1,7 +1,5 @@
 # [<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
 
-[![Gitter chat](https://badges.gitter.im/concisecss.png)](https://gitter.im/concisecss)
-
 Concise is a lightweight, front-end framework that provides a number of great features without the bloat. Concise is built based on Object-Oriented CSS principles and keeps semantics in mind to provide a small learning curve, but a high level of customization.
 
 ## Contributing
