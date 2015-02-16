@@ -19,20 +19,25 @@
 
 
 	<!-- SEO & Favicon -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="icon" href="{{ "/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
+	<link rel="icon" href="{{ "/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
 
 
-	<!-- Stylesheets -->
+	<!-- Default Concise Styles -->
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/concise.min.css" | prepend: site.baseurl }}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/libs.min.css" | prepend: site.baseurl }}" />
+
+
+	<!-- Custom concisecss.com Styles (feel free to look, copy, and play with) -->
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/css/site.css" | prepend: site.baseurl }}" />
 
 
 	<!-- iPhone Icons -->
-  <link href="{{ "/images/icons/iPhone.png" | prepend: site.baseurl }}" rel="apple-touch-icon" />
-  <link href="{{ "/images/icons/iPad.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="76x76" />
-  <link href="{{ "/images/icons/iPhone@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="120x120" />
-  <link href="{{ "/images/icons/iPad@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="152x152" />
+	<link href="{{ "/images/icons/iPhone.png" | prepend: site.baseurl }}" rel="apple-touch-icon" />
+	<link href="{{ "/images/icons/iPad.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="76x76" />
+	<link href="{{ "/images/icons/iPhone@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="120x120" />
+	<link href="{{ "/images/icons/iPad@2x.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="152x152" />
 
 
 	<!-- JavaScript -->
