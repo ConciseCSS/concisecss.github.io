@@ -614,6 +614,32 @@ a.btn--borderBlue {
 
 .table-responsive + .preview { margin-top: 24px; }
 
+// Concise examples
+.conciseExamples {
+  @include row();
+
+  .example-item {
+    @include column(6, 18, false, true);
+
+    border: 6px solid #fff;
+    border-bottom: none;
+    box-shadow:0 1px 3px rgba(0,0,0,.2);
+
+    &:first-of-type { margin-left: 0; }
+
+    img { width: 100%; }
+  }
+
+  @include breakpoint(small) {
+    .example-item img {
+      opacity: .8;
+      transition: opacity .3s;
+
+      &:hover { opacity: 1; }
+    }
+  }
+}
+
 
 
 
