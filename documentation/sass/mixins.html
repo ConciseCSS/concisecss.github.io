@@ -123,6 +123,10 @@ redirect_from:
         <td><code>$point</code></td>
         <td>The breakpoint value for the media query output.</td>
       </tr>
+
+      <tr>
+        <td><code>$min-max</code></td>
+        <td>Set whether <strong>min-width</strong> or <strong>max-width</strong> is used (default is <strong>min</strong>)</td>
     </tbody>
   </table>
 </div>
@@ -134,7 +138,7 @@ redirect_from:
     {% highlight css %}
 @include breakpoint(extra-small) { ... }
 
-@include breakpoint(360px) { ... }
+@include breakpoint(360px, max) { ... }
     {% endhighlight %}
   </div>
 </div>
