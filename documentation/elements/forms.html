@@ -22,29 +22,29 @@ permalink: /documentation/elements/forms/
     <form method="post">
       <div class="form-item">
         <label for="name">Name:</label>
-        <input type="text" name="name" placeholder="John Doe" />
+        <input id="name" type="text" name="name" placeholder="John Doe" />
       </div>
 
       <div class="form-item">
         <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="john_doe@example.com" />
+        <input id="email" type="email" name="email" placeholder="john_doe@example.com" />
       </div>
 
       <div class="form-item">
         <label for="website">Website:</label>
-        <input type="text" name="website" placeholder="http://example.com" disabled />
+        <input id="website" type="text" name="website" placeholder="http://example.com" disabled />
       </div>
 
       <div class="form-item">
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="Male" /> Male <br />
-        <input type="radio" name="gender" value="Female" /> Female
+        <label>Gender:</label>
+        <input id="male" type="radio" name="gender" value="Male" /> <label for="male">Male</label> <br />
+        <input id="female" type="radio" name="gender" value="Female" /> <label for="female">Female</label>
       </div>
 
       <div class="form-item">
-        <label for="interest">Inquiry:</label>
-        <input type="checkbox" name="interest" value="Quote" /> Quote <br />
-        <input type="checkbox" name="interest" value="Question" /> Question
+        <label>Gender:</label>
+        <input id="quote" type="checkbox" name="gender" value="Male" /> <label for="quote">Quote</label> <br />
+        <input id="question" type="checkbox" name="gender" value="Female" /> <label for="question">Question</label>
       </div>
 
       <div class="form-item">
@@ -55,7 +55,7 @@ permalink: /documentation/elements/forms/
 
       <div class="form-item">
         <label for="message">Message:</label>
-        <textarea name="message" cols="40" rows="6"></textarea>
+        <textarea id="message" name="message" cols="40" rows="6"></textarea>
       </div>
 
       <input type="submit" value="Submit" class="btn">
@@ -66,45 +66,45 @@ permalink: /documentation/elements/forms/
     <strong>Code</strong>
 
 {% highlight css %}<form>
-  <div class="form-item">
-    <label for="name">Name:</label>
-    <input type="text" name="name" placeholder="John Doe" />
-  </div>
+    <div class="form-item">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" placeholder="John Doe" />
+    </div>
 
-  <div class="form-item">
-    <label for="email">Email:</label>
-    <input type="email" name="email" placeholder="john_doe@example.com" />
-  </div>
+    <div class="form-item">
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" placeholder="john_doe@example.com" />
+    </div>
 
-  <div class="form-item">
-    <label for="website">Website:</label>
-    <input type="text" name="website" placeholder="http://example.com" disabled />
-  </div>
+    <div class="form-item">
+      <label for="website">Website:</label>
+      <input id="website" type="text" name="website" placeholder="http://example.com" disabled />
+    </div>
 
-  <div class="form-item">
-    <label for="gender">Gender:</label>
-    <input type="radio" name="gender" value="Male" /> Male <br />
-    <input type="radio" name="gender" value="Female" /> Female
-  </div>
+    <div class="form-item">
+      <label>Gender:</label>
+      <input id="male" type="radio" name="gender" value="Male" /> <label for="male">Male</label> <br />
+      <input id="female" type="radio" name="gender" value="Female" /> <label for="female">Female</label>
+    </div>
 
-  <div class="form-item">
-    <label for="interest">Inquiry:</label>
-    <input type="checkbox" name="interest" value="Quote" /> Quote <br />
-    <input type="checkbox" name="interest" value="Question" /> Question
-  </div>
+    <div class="form-item">
+      <label>Inquiry:</label>
+      <input id="quote" type="checkbox" name="gender" value="Male" /> <label for="quote">Quote</label> <br />
+      <input id="question" type="checkbox" name="gender" value="Female" /> <label for="question">Question</label>
+    </div>
 
-  <div class="form-item">
-     <select>
-       <option name="Test">Test</option>
-     </select>
-  </div>
+    <div class="form-item">
+      <select>
+        <option name="Test">Test</option>
+      </select>
+    </div>
 
-  <div class="form-item">
-    <label for="message">Message:</label>
-    <textarea name="message"></textarea>
-  </div>
+    <div class="form-item">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" cols="40" rows="6"></textarea>
+    </div>
 
-  <input type="submit" value="Submit" class="btn">
+    <input type="submit" value="Submit" class="btn">
 </form>{% endhighlight %}
   </div>
 </div>
@@ -121,30 +121,30 @@ permalink: /documentation/elements/forms/
   <div class="preview-body">
     <form method="post" class="form">
       <div class="form-item">
-        <label for="name">Name:</label>
-        <input type="text" name="name" placeholder="John Doe" />
+        <label for="name-2">Name:</label>
+        <input id="name-2" type="text" name="name" placeholder="John Doe" />
       </div>
 
       <div class="form-item">
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="john_doe@example.com" />
+        <label for="email-2">Email:</label>
+        <input id="email-2" type="email" name="email" placeholder="john_doe@example.com" />
       </div>
 
       <div class="form-item">
-        <label for="website">Website:</label>
-        <input type="text" name="website" placeholder="http://example.com" disabled />
+        <label for="website-2">Website:</label>
+        <input id="website-2" type="text" name="website" placeholder="http://example.com" disabled />
       </div>
 
       <div class="form-item">
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="Male" /> Male <br />
-        <input type="radio" name="gender" value="Female" /> Female
+        <label>Gender:</label>
+        <input id="male-2" type="radio" name="gender" value="Male" /> <label for="male-2">Male</label> <br />
+        <input id="female-2" type="radio" name="gender" value="Female" /> <label for="female-2">Female</label>
       </div>
 
       <div class="form-item">
-        <label for="interest">Inquiry:</label>
-        <input type="checkbox" name="interest" value="Quote" /> Quote <br />
-        <input type="checkbox" name="interest" value="Question" /> Question
+        <label>Inquiry:</label>
+        <input id="quote-2" type="checkbox" name="gender" value="Male" /> <label for="quote-2">Quote</label> <br />
+        <input id="question-2" type="checkbox" name="gender" value="Female" /> <label for="question-2">Question</label>
       </div>
 
       <div class="form-item">
@@ -154,8 +154,8 @@ permalink: /documentation/elements/forms/
       </div>
 
       <div class="form-item">
-        <label for="message">Message:</label>
-        <textarea name="message" cols="40" rows="6"></textarea>
+        <label for="message-2">Message:</label>
+        <textarea id="message-2" name="message" cols="40" rows="6"></textarea>
       </div>
 
       <input type="submit" value="Submit" class="btn">
@@ -166,45 +166,45 @@ permalink: /documentation/elements/forms/
     <strong>Code</strong>
 
 {% highlight css %}<form class="form">
-  <div class="form-item">
-    <label for="name">Name:</label>
-    <input type="text" name="name" placeholder="John Doe" />
-  </div>
+    <div class="form-item">
+      <label for="name-2">Name:</label>
+      <input id="name-2" type="text" name="name" placeholder="John Doe" />
+    </div>
 
-  <div class="form-item">
-    <label for="email">Email:</label>
-    <input type="email" name="email" placeholder="john_doe@example.com" />
-  </div>
+    <div class="form-item">
+      <label for="email-2">Email:</label>
+      <input id="email-2" type="email" name="email" placeholder="john_doe@example.com" />
+    </div>
 
-  <div class="form-item">
-    <label for="website">Website:</label>
-    <input type="text" name="website" placeholder="http://example.com" disabled />
-  </div>
+    <div class="form-item">
+      <label for="website-2">Website:</label>
+      <input id="website-2" type="text" name="website" placeholder="http://example.com" disabled />
+    </div>
 
-  <div class="form-item">
-    <label for="gender">Gender:</label>
-    <input type="radio" name="gender" value="Male" /> Male <br />
-    <input type="radio" name="gender" value="Female" /> Female
-  </div>
+    <div class="form-item">
+      <label>Gender:</label>
+      <input id="male-2" type="radio" name="gender" value="Male" /> <label for="male-2">Male</label> <br />
+      <input id="female-2" type="radio" name="gender" value="Female" /> <label for="female-2">Female</label>
+    </div>
 
-  <div class="form-item">
-    <label for="interest">Inquiry:</label>
-    <input type="checkbox" name="interest" value="Quote" /> Quote <br />
-    <input type="checkbox" name="interest" value="Question" /> Question
-  </div>
+    <div class="form-item">
+      <label>Inquiry:</label>
+      <input id="quote-2" type="checkbox" name="gender" value="Male" /> <label for="quote-2">Quote</label> <br />
+      <input id="question-2" type="checkbox" name="gender" value="Female" /> <label for="question-2">Question</label>
+    </div>
 
-  <div class="form-item">
-     <select>
-       <option name="Test">Test</option>
-     </select>
-  </div>
+    <div class="form-item">
+      <select>
+        <option name="Test">Test</option>
+      </select>
+    </div>
 
-  <div class="form-item">
-    <label for="message">Message:</label>
-    <textarea name="message"></textarea>
-  </div>
+    <div class="form-item">
+      <label for="message-2">Message:</label>
+      <textarea id="message-2" name="message" cols="40" rows="6"></textarea>
+    </div>
 
-  <input type="submit" value="Submit" class="btn">
+    <input type="submit" value="Submit" class="btn">
 </form>{% endhighlight %}
   </div>
 </div>
