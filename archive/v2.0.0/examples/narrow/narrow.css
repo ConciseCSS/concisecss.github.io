@@ -1,0 +1,66 @@
+.container {
+  width: 90%;
+}
+@media (min-width: 48em) {
+  .container {
+    width: 726px;
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+.siteHeader {
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+@media (min-width: 48em) {
+  .logo {
+    float: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .nav {
+    float: right;
+  }
+}
+.nav li {
+  display: inline;
+  line-height: 3.5;
+  margin-left: 25px;
+}
+.nav li:first-of-type {
+  margin-left: 0;
+}
+
+.feature {
+  background-color: #eee;
+  margin-top: 50px;
+  padding: 35px;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .feature {
+    padding: 50px;
+  }
+}
+
+.feature-title {
+  margin-top: 0;
+}
+
+.siteContent {
+  padding: 50px 0;
+}
+
+.siteFooter {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}

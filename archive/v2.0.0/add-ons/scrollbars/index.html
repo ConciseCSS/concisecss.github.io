@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#d67751">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat." />
+	<meta name="author" content="Keenan Payne" />
+
+	<title>
+    
+      Concise /  Scrollbars 
+    
+  </title>
+
+
+	<!-- SEO & Favicon -->
+	<link rel="canonical" href="/archive/v2.0.0//add-ons/scrollbars/">
+	<link rel="shortcut icon" href="/archive/v2.0.0//archive/v2.0.0/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/archive/v2.0.0//archive/v2.0.0/favicon.png" type="image/x-icon">
+
+
+	<!-- Default Concise Styles -->
+	<link rel="stylesheet" type="text/css" media="screen" href="/archive/v2.0.0//archive/v2.0.0/css/concise.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/archive/v2.0.0//archive/v2.0.0/css/libs.min.css" />
+
+
+	<!-- Custom concisecss.com Styles (feel free to look, copy, and play with) -->
+	<link rel="stylesheet" type="text/css" media="screen" href="/archive/v2.0.0//archive/v2.0.0/css/site.css" />
+
+
+	<!-- iPhone Icons -->
+	<link href="/archive/v2.0.0//images/icons/iPhone.png" rel="apple-touch-icon" />
+	<link href="/archive/v2.0.0//images/icons/iPad.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="/archive/v2.0.0//images/icons/iPhone@2x.png" rel="apple-touch-icon" sizes="120x120" />
+	<link href="/archive/v2.0.0//images/icons/iPad@2x.png" rel="apple-touch-icon" sizes="152x152" />
+
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/archive/v2.0.0//js/concise.min.js"></script>
+	<script type="text/javascript" src="/archive/v2.0.0//js/libraries.js"></script>
+</head>
+
+<body>
+
+
+  <header class="siteHeader">
+  <div class="container">
+    <div class="logo">
+      <a href="http://concisecss.com/">
+        <img src="/archive/v2.0.0//images/logo.svg" alt="Concise Logo" />
+      </a>
+    </div>
+
+    <nav class="nav-reponsive">
+      <ul class="list-inline">
+        
+          <li>
+            <a  href="/archive/v2.0.0/get-started/">Get Started</a>
+          </li>
+        
+          <li>
+            <a  href="/archive/v2.0.0/documentation/layout/container/">Documentation</a>
+          </li>
+        
+          <li>
+            <a  href="/archive/v2.0.0/add-ons/">Add-Ons</a>
+          </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <div class="masthead">
+  <div class="container">
+    <h1 class="masthead-title">Add-Ons</h1>
+
+    <h2 class="masthead-subtitle">Extend Concise with these pre-built add-ons.</h2>
+
+    <script type="text/javascript" src="//cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=concisecss" id="_fusionads_js"></script>
+  </div>
+</div>
+
+
+  <div class="container">
+    <main class="documentation">
+      <div class="documentation-sidebar">
+        <nav class="nav-responsive-center nav-responsive-text">
+          <ul>
+            <li class="header">Add-Ons</li>
+
+            
+              <a href="/add-ons/articles/">
+                <li >Articles</li>
+              </a>
+            
+              <a href="/add-ons/badges-labels/">
+                <li >Badges & Labels</li>
+              </a>
+            
+              <a href="/add-ons/blockquotes/">
+                <li >Blockquotes</li>
+              </a>
+            
+              <a href="/add-ons/breadcrumbs/">
+                <li >Breadcrumbs</li>
+              </a>
+            
+              <a href="/add-ons/button-styles/">
+                <li >Button Styles</li>
+              </a>
+            
+              <a href="/add-ons/circles/">
+                <li >Circles</li>
+              </a>
+            
+              <a href="/add-ons/closeable/">
+                <li >Closeable</li>
+              </a>
+            
+              <a href="/add-ons/comments/">
+                <li >Comments</li>
+              </a>
+            
+              <a href="/add-ons/form-styles/">
+                <li >Form Styles</li>
+              </a>
+            
+              <a href="/add-ons/icon-groups/">
+                <li >Icon Groups</li>
+              </a>
+            
+              <a href="/add-ons/navigation-styles/">
+                <li >Navigation Styles</li>
+              </a>
+            
+              <a href="/add-ons/progress-bars/">
+                <li >Progress Bars</li>
+              </a>
+            
+              <a href="/add-ons/scrollbars/">
+                <li class="active">Scrollbars</li>
+              </a>
+            
+              <a href="/add-ons/tooltips/">
+                <li >Tooltips</li>
+              </a>
+            
+              <a href="/add-ons/wells/">
+                <li >Wells</li>
+              </a>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <div class="documentation-content">
+        <h1>Scrollbars</h1>
+
+        <style>
+  .simple-styling,
+  .gradient-styling {
+    height: 150px;
+    margin-bottom: 15px;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .simple-styling > div,
+  .gradient-styling > div { height: 500px; }
+
+  .simple-styling::-webkit-scrollbar { width: 8px; }
+
+  .simple-styling::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 5px;
+  }
+
+  .simple-styling::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 5px;
+  }
+
+  .gradient-styling::-webkit-scrollbar { width: 8px; }
+
+  .gradient-styling::-webkit-scrollbar-track {
+    background: #f3f3f3;
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  }
+
+  .gradient-styling::-webkit-scrollbar-thumb {
+    background: #b3dced;
+    background: -moz-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #b3dced), color-stop(50%, #29b8e5), color-stop(100%, #bce0ee));
+    background: -webkit-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+    background: -o-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+    background: -ms-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+    background: linear-gradient(to right, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+    border-radius: 5px;
+  }
+
+  .table-responsive { margin-bottom: 15px; }
+
+  .table-responsive::-webkit-scrollbar {
+    height: 14px;
+    width: 14px;
+    -webkit-appearance: none;
+  }
+
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, 0.2);
+    border: 3px solid #fff;
+    border-radius: 8px;
+  }
+
+  .preview-body table { width: 800px; }
+</style>
+
+<p>WebKit-based browsers have a great property that allows you to style the way scroll bars look on the site with some very flexible pseudo-elements. Since these are only pseudo-elements, you can pick and choose on what element you want the custom scrollbars.</p>
+
+<h2>Simple Styling</h2>
+
+<p>By using these new pseudo-elements and some simple styling, you can create beautiful scrollbars for the body of your website.</p>
+
+<div class="preview">
+  <div class="preview-heading">
+      <strong>Preview</strong>
+  </div>
+
+  <div class="preview-body">
+      <div class="simple-styling"><div></div></div>
+  </div>
+
+  <div class="preview-footer">
+      <strong>Code</strong>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">:</span><span class="nd">:-webkit-scrollbar</span> <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="o">:</span><span class="nd">:-webkit-scrollbar-track</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="m">#eee</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">:</span><span class="nd">:-webkit-scrollbar-thumb</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="m">#aaa</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+  </div>
+</div>
+
+<h2>Gradient Styling</h2>
+
+<p>Perhaps the flat, simple scroll bars aren't your style? here's a sample scrollbar that has a slight gradient.</p>
+
+<div class="preview">
+  <div class="preview-heading">
+      <strong>Preview</strong>
+  </div>
+
+  <div class="preview-body">
+      <div class="gradient-styling"><div></div></div>
+  </div>
+
+  <div class="preview-footer">
+      <strong>Code</strong>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">:</span><span class="nd">:-webkit-scrollbar</span> <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="o">:</span><span class="nd">:-webkit-scrollbar-track</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="m">#f3f3f3</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">inset</span> <span class="m">0</span> <span class="m">0</span> <span class="m">6px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">:</span><span class="nd">:-webkit-scrollbar-thumb</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="m">#b3dced</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">left</span><span class="o">,</span> <span class="m">#b3dced</span> <span class="m">0%</span><span class="o">,</span> <span class="m">#29b8e5</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#bce0ee</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">linear</span><span class="o">,</span> <span class="k">left</span> <span class="k">top</span><span class="o">,</span> <span class="k">right</span> <span class="k">top</span><span class="o">,</span> <span class="k">color</span><span class="o">-</span><span class="n">stop</span><span class="p">(</span><span class="m">0%</span><span class="o">,</span> <span class="m">#b3dced</span><span class="p">)</span><span class="o">,</span> <span class="k">color</span><span class="o">-</span><span class="n">stop</span><span class="p">(</span><span class="m">50%</span><span class="o">,</span> <span class="m">#29b8e5</span><span class="p">)</span><span class="o">,</span> <span class="k">color</span><span class="o">-</span><span class="n">stop</span><span class="p">(</span><span class="m">100%</span><span class="o">,</span> <span class="m">#bce0ee</span><span class="p">));</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">left</span><span class="o">,</span> <span class="m">#b3dced</span> <span class="m">0%</span><span class="o">,</span> <span class="m">#29b8e5</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#bce0ee</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">left</span><span class="o">,</span> <span class="m">#b3dced</span> <span class="m">0%</span><span class="o">,</span> <span class="m">#29b8e5</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#bce0ee</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">left</span><span class="o">,</span> <span class="m">#b3dced</span> <span class="m">0%</span><span class="o">,</span> <span class="m">#29b8e5</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#bce0ee</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">to</span> <span class="k">right</span><span class="o">,</span> <span class="m">#b3dced</span> <span class="m">0%</span><span class="o">,</span> <span class="m">#29b8e5</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#bce0ee</span> <span class="m">100%</span><span class="p">);</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="n">filter</span><span class="o">:</span> <span class="n">progid</span><span class="o">:</span><span class="n">DXImageTransform</span><span class="o">.</span><span class="n">Microsoft</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">startColorstr</span><span class="o">=</span><span class="s1">&#39;#b3dced&#39;</span><span class="o">,</span> <span class="n">endColorstr</span><span class="o">=</span><span class="s1">&#39;#bce0ee&#39;</span><span class="o">,</span> <span class="n">GradientType</span><span class="o">=</span><span class="m">1</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+  </div>
+</div>
+
+<h2>Individual Elements</h2>
+
+<p>Do you want scrollbars only on individual elements? Some situations where this would look great are <code>&lt;pre&gt;</code> elements, the <code>.table-responsive</code> class, or anything with horizontal or vertical overflow.</p>
+
+<p>Here's an example using the <code>&lt;pre&gt;</code> element <small>(resize the browser to see the scrollbars)</small>:</p>
+
+<div class="preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div>
+
+  <div class="preview-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Q1</th>
+            <th scope="col">Q2</th>
+            <th scope="col">Q3</th>
+            <th scope="col">Q4</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Microsoft</td>
+            <td>20.3</td>
+            <td>30.5</td>
+            <td>23.5</td>
+            <td>40.3</td>
+          </tr>
+
+          <tr>
+            <td>Google</td>
+            <td>50.2</td>
+            <td>40.63</td>
+            <td>45.23</td>
+            <td>39.3</td>
+          </tr>
+
+          <tr>
+            <td>Apple</td>
+            <td>25.4</td>
+            <td>30.2</td>
+            <td>33.3</td>
+            <td>36.7</td>
+          </tr>
+
+          <tr>
+            <td>IBM</td>
+            <td>20.4</td>
+            <td>15.6</td>
+            <td>22.3</td>
+            <td>29.3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">pre</span><span class="o">:</span><span class="nd">:-webkit-scrollbar</span> <span class="p">{</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">14px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">14px</span><span class="p">;</span>
+
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">appearance</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">pre</span><span class="o">:</span><span class="nd">:-webkit-scrollbar-thumb</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">50</span><span class="o">,</span> <span class="m">50</span><span class="o">,</span> <span class="m">50</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">3px</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">8px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="siteFooter">
+    <div class="container">
+      <ul class="list-inline list-unstyled">
+        <a href="https://github.com/ConciseCSS/concise.css/blob/master/CONTRIBUTING.md"><li>Contributing</li></a>
+        <a href="https://github.com/ConciseCSS/concise.css/issues" target="_blank"><li>Issues</li></a>
+        <a href="https://github.com/ConciseCSS/concise.css/releases" target="_blank"><li>Changelog</li></a>
+        <a href="https://www.gittip.com/keenanpayne/" target="_blank"><li>Gittip</li></a>
+        <a href="http://twitter.com/concisecss" target="_blank"><li>Twitter</li></a>
+        <a href="http://facebook.com/concisecss" target="_blank"><li>Facebook</li></a>
+        <a href="https://plus.google.com/103423710089455112688" target="_blank" rel="publisher"><li>G+</li></a>
+      </ul>
+
+      <p>Created and Maintained with <span class="icon heart color-red"></span> by <a href="http://keenanpayne.com" title="Keenan Payne" target="_blank">Keenan Payne</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23449205-5', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+
