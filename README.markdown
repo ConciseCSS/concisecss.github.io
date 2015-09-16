@@ -1,1 +1,0 @@
-<!-- IMPORTANT: This file must have a .markdown extension otherwise it would be compiled to HTML by the Harp compiler -->

@@ -1,5 +1,7 @@
-_site
-.DS_Store
-*.cfg
-*.psd
-.idea/
+# Logs
+logs
+*.log
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules

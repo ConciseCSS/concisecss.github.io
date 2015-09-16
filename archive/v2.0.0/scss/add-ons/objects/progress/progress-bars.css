@@ -1,0 +1,82 @@
+.progress {
+  background-color: #f9f9f9;
+  color: #fff;
+  font-size: 11px;
+  font-size: 0.6875rem;
+  height: 12px;
+  line-height: 1.182;
+  margin: 6px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  -webkit-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+  -moz-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+  -ms-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+  -o-box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+  box-shadow: inset 0 1px 1px rgba(100, 100, 100, 0.1);
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  -ms-box-sizing: initial;
+  -o-box-sizing: initial;
+  box-sizing: initial;
+}
+
+.progress-small {
+  font-size: 9px;
+  font-size: 0.5625rem;
+  height: 6px;
+  line-height: 0.875;
+}
+
+.progress-large {
+  font-size: 16px;
+  font-size: 1rem;
+  height: 25px;
+  line-height: 1.7;
+}
+
+.progress > span {
+  background-color: #2bc253;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.progress.progress-stacked > span {
+  display: inline-block;
+  float: left;
+}
+
+.progress-striped > span:after, .progress-striped > span > span {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-background-size: 50px 50px;
+  -moz-background-size: 50px 50px;
+  -ms-background-size: 50px 50px;
+  -o-background-size: 50px 50px;
+  background-size: 50px 50px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(255, 255, 255, 0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.75, rgba(255, 255, 255, 0.2)), color-stop(0.75, transparent), to(transparent));
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+}
+
+.progress-striped.progress-animate > span:after, .progress-striped.progress-animate > span > span {
+  -webkit-animation: move 2s linear infinite;
+  -moz-animation: move 2s linear infinite;
+  -ms-animation: move 2s linear infinite;
+  -o-animation: move 2s linear infinite;
+  animation: move 2s linear infinite;
+}
+
+@-webkit-keyframes move {
+  0% { background-position: 0 0; }
+
+  100% { background-position: 50px 50px; }
+}

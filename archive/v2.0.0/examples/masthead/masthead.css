@@ -1,0 +1,63 @@
+.btn {
+  border-radius: 4px;
+  transition: all .3s;
+}
+
+.siteHeader {
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+@media (min-width: 48em) {
+  .logo {
+    float: left;
+  }
+}
+
+@media (min-width: 48em) {
+  .nav {
+    float: right;
+  }
+}
+.nav li {
+  display: inline;
+  line-height: 3.5;
+  margin-left: 25px;
+}
+.nav li:first-of-type {
+  margin-left: 0;
+}
+
+.masthead {
+  background-color: #eee;
+  padding: 50px 0;
+}
+@media (min-width: 48em) {
+  .masthead {
+    padding: 75px 0;
+  }
+}
+
+.masthead-title {
+  margin-top: 0;
+}
+
+.siteContent {
+  padding: 50px 0;
+}
+.siteContent .btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #666;
+}
+.siteContent .btn:hover {
+  background-color: #eee;
+}
+
+.siteFooter {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
