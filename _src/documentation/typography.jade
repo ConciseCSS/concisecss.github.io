@@ -1,0 +1,121 @@
+h1 Typography
+
+p
+  | Concise has a global font-size of <b>16px</b> (1em) with a line-height of
+  | <b>1.5</b> (24px). This is applied to all text within the <code>&lt;body&gt;</code>
+  | tag. Also, all <code>&lt;p&gt;</code> tags receive a top margin of <b>24px</b>,
+  | the exact same size as our line height.
+
+p.note
+  | You can change the <code>$font-size-base</code> variable in the
+  | </code>/custom/_globals.scss</code> file to adjust the base font size.
+  | In addition, you can change the the <code>text</code> array inside of the
+  | <code>$colors</code> map inside of <code>/custom/_globals.scss</code>
+  | to change the font colors.
+
+
+h2.heading--docs Font Families
+
+p
+  | Typography is a key to effective design, so Concise makes it simple to
+  | control in your project.
+
+p
+  | By default, <a href="http://www.linotype.com/en/526/helvetica-family.html?id=526&name=helvetica&viewmode=family&site=&lang=en" target="_blank">Helvetica</a>,
+  | with <a href="http://www.fonts.com/font/monotype/arial" target="_blank">Arial</a>
+  | as a fallback, is used as the default font for devices.
+
+p.note
+  | You can change the <code>$font-family</code> variable in the
+  | <code>/custom/_globals.scss</code> file to adjust the base font family.
+
+h2.heading--docs Emphasis
+
+h3 Small
+
+p
+  | The <code>&lt;small&gt;</code> tag and <code>.small</code> class can both be
+  | used to shrink text to <b>75%</b> of the base font-size. Note that heading
+  | elements receive their own font size for nested small elements.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/doBJdL/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/doBJdL/'>Small text - Concise Framework</a> on <a href='http://codepen.io'>CodePen</a>.
+
+
+h3 Italics
+
+p
+  | The <code>&lt;em&gt;</code> tag, or <code>.italic</code> class can be used
+  | for emphasizing text with italics.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/MwMrVO/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/MwMrVO/'>Italics - Concise Framework</a> on <a href='http://codepen.io'>CodePen</a>.
+
+
+p.note
+  | The <code>&lt;i&gt;</code> tag also can be used for emphasizing text in an
+  | italic manner, although it is not recommended as <code>&lt;em&gt;</code>
+  | should be used. However, the <code>&lt;i&gt;</code> tag can still be used to
+  | define text in an alternative voice or mood.
+
+h3 Bold
+
+p
+  | The <code>&lt;strong&gt;</code> tag  and <code>.bold</code> class can be used
+  | for emphasizing text with a heavier font-weight.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/doBJmL/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/doBJmL/'>Bold text - Concise Framework</a> on <a href='http://codepen.io'>CodePen</a>.
+
+
+p.note
+  | The <code>&lt;b&gt;</code> tag also can be used for emphasizing text in a
+  | bold manner, although it is not recommended as <code>&lt;strong&gt;</code>
+  | should be used. Per the HTML5 specification, the <code>&lt;b&gt;</code> tag
+  | should be used as a last resort for formatting text as most HTML5 tags cover
+  | its potential uses.
+
+h2.heading--docs Abbreviations
+
+p
+  | Using the <code>&lt;abbr&gt;</code> tag in HTML, you can denote an abbreviation
+  | or acronym. Using proper HTML markup for your abbreviations helps with the
+  | understanding of acronyms, spell checkers, text translators, and search engine
+  | indexing.
+
+p
+  | Items that are marked up with the <code>&lt;abbr&gt;</code> tag are styled
+  | with a dashed underline, a cursor with a question mark and whatever content
+  | is used in the <code>title</code> attribute is shown in a browser tooltip.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/gpNozp/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/gpNozp/'>Abbreviations - Concise Framework</a> on <a href='http://codepen.io'>CodePen</a>.
+
+
+h2.heading--docs Type Positioning
+
+p
+  | Positioning text is easy with a few helper classes that can be used on almost
+  | any element containing text.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/QbXarp/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/QbXarp/'>Type positioning - Concise Framework</a> on <a href='http://codepen.io'>CodePen</a>.
+
+
+h2.heading--docs Type Colors
+
+p
+  | Nobody constantly wants black text on a white background, do they? Of course not.
+  | That's why Concise comes with various classes that can be used to change the
+  | color of text.
+
+p.note
+  | You can change the <code>$colors</code> map in the
+  | <code>/custom/_globals.scss</code> file to adjust any of the base
+  | colors or add your own colors. Any color added will automatically have an
+  | appropriate <code>.text--*</code> and <code>.bg--*</code> class created for it.
+  | <br><br>
+  | We have also given the white text a black background just for the purpose of demonstration.
+
+iframe(height='268' scrolling='no' src='//codepen.io/jameskolce/embed/MwMrGO/?height=268&theme-id=18044&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
+  | See the Pen <a href='http://codepen.io/jameskolce/pen/MwMrGO/'>Type colors</a> on <a href='http://codepen.io'>CodePen</a>.

@@ -1,0 +1,187 @@
+h1 Conditional Styling
+
+p
+  | Concise uses a set of classes for conditional styling based on browser
+  | viewport, screen resolution, if the document is currently being printed and
+  | lastly, if the document is being viewed on a high-definition screen
+  | (Retina/HiDPI).
+
+h2.heading--docs Displaying Content
+
+p
+  | These classes determine if content will be shown given a certain browser
+  | viewport. If the user is not within that browser viewport, the content
+  | will be hidden.
+
+.table--responsive
+  table
+    thead
+      tr
+        th(scope='col') Class
+        th(scope='col') Extra Large <br>
+          | <small>&ge; 1280px</small>
+        th(scope='col') Large <br>
+          | <small>&ge; 1100px</small>
+        th(scope='col') Medium <br>
+          | <small>&ge; 960px</small>
+        th(scope='col') Small <br>
+          | <small>&ge; 768px</small>
+        th(scope='col') Extra Small <br>
+          | <small>&le; 480px</small>
+
+    tbody
+      tr
+        td <code>.show--xsm</code>
+        td Hidden
+        td Hidden
+        td Hidden
+        td Hidden
+        td.bg--success Visible
+
+      tr
+        td <code>.show--sm</code>
+        td Hidden
+        td Hidden
+        td Hidden
+        td.bg--success Visible
+        td Hidden
+
+      tr
+        td <code>.show--md</code>
+        td Hidden
+        td Hidden
+        td.bg--success Visible
+        td Hidden
+        td Hidden
+
+      tr
+        td <code>.show--lg</code>
+        td Hidden
+        td.bg--success Visible
+        td Hidden
+        td Hidden
+        td Hidden
+
+      tr
+        td <code>.show--xlg</code>
+        td.bg--success Visible
+        td Hidden
+        td Hidden
+        td Hidden
+        td Hidden
+
+h2.heading--docs Hiding Content
+
+p
+  | These classes determine if content will be hidden given a certain browser
+  | viewport. If the user is not within that browser viewport, the content will
+  | be shown.
+
+.table--responsive
+  table
+    thead
+      tr
+        th(scope='col') Class
+        th(scope='col') Extra Large <br>
+          | <small>&ge; 1280px</small>
+        th(scope='col') Large <br>
+          | <small>&ge; 1100px</small>
+        th(scope='col') Medium <br>
+          | <small>&ge; 960px</small>
+        th(scope='col') Small <br>
+          | <small>&ge; 768px</small>
+        th(scope='col') Extra Small <br>
+          | <small>&le; 480px</small>
+
+    tbody
+      tr
+        td <code>.hide--xsm</code>
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+        td Hidden
+
+      tr
+        td <code>.hide--sm</code>
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+        td Hidden
+        td.bg--success Visible
+
+      tr
+        td <code>.hide--md</code>
+        td.bg--success Visible
+        td.bg--success Visible
+        td Hidden
+        td.bg--success Visible
+        td.bg--success Visible
+
+      tr
+        td <code>.hide--lg</code>
+        td.bg--success Visible
+        td Hidden
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+
+      tr
+        td <code>.hide--xlg</code>
+        td Hidden
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+        td.bg--success Visible
+
+
+h2.heading--docs Print Content
+
+p
+  | Content also can be displayed or hidden based on whether the document is
+  | currently being printed or not.
+
+table
+  thead
+    tr
+      th(scope='col') Class
+      th(scope='col') Browser
+      th(scope='col') Print
+
+  tbody
+    tr
+      td <code>.show--print</code>
+      td Hidden
+      td.bg--success Visible
+
+    tr
+      td <code>.hide--print</code>
+      td.bg--success Visible
+      td Hidden
+
+
+h2.heading--docs High-Definition Content
+
+p
+  | Lastly, content can be displayed or hidden based on whether the document is
+  | currently being viewed on a high-definition screen (Retina/HiDPI).
+
+.table--responsive
+  table
+    thead
+      tr
+        th(scope='col') Class
+        th(scope='col') Regular Resolution
+        th(scope='col') High-Definition
+
+    tbody
+      tr
+        td <code>.show--hd</code>
+        td Hidden
+        td.bg--success Visible
+
+
+      tr
+        td <code>.hide--hd</code>
+        td.bg--success Visible
+        td Hidden

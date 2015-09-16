@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "version": "3.0.0",
+    "size": "44kb",
+    "download": "http://github.com",
+    "googleAnalytics": "UA-23449205-5"
+  }
+}

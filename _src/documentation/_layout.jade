@@ -1,0 +1,61 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    title Documentation - Concise Framework
+    meta(name='description' content='Concise is a lightweight front-end framework that provides a number of great features without the bloat.')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    script(src='//use.typekit.net/qxv5yfg.js')
+    script try{Typekit.load({ async: true });}catch(e){}
+
+    link(rel='stylesheet' href='/styles/concise.css')
+
+  body
+    header(container)
+      nav.main-nav
+        a(href='/'): img(src='/images/logo2.svg' alt='Concise Logo' height='75px')
+        ul
+          li: a(href='/documentation' class=current.path[0] === 'documentation' ? 'active' : '') Documentation
+          li: a(href='/concise-ui' class=current.path[0] === 'concise-ui' ? 'active' : '') Concise UI
+
+    section(container)
+      div(row)
+        div(column='8')
+          != yield
+
+        nav(column='3 +1').docs-nav
+          ul
+            li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
+            li: a(href='/documentation/typography' class=current.source === 'typography' ? 'active' : '') Typography
+            li: a(href='/documentation/headings' class=current.source === 'headings' ? 'active' : '') Headings
+            li: a(href='/documentation/lists' class=current.source === 'lists' ? 'active' : '') Lists
+            li: a(href='/documentation/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
+            li: a(href='/documentation/code' class=current.source === 'code' ? 'active' : '') Code
+            li: a(href='/documentation/forms' class=current.source === 'forms' ? 'active' : '') Forms
+            li: a(href='/documentation/tables' class=current.source === 'tables' ? 'active' : '') Tables
+            li: a(href='/documentation/grid' class=current.source === 'grid' ? 'active' : '') Grid System
+            li: a(href='/documentation/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment
+            li: a(href='/documentation/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints
+            li: a(href='/documentation/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media
+            li: a(href='/documentation/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling
+            li: a(href='/documentation/colors' class=current.source === 'colors' ? 'active' : '') Colors
+            li: a(href='/documentation/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader
+            li: a(href='/documentation/misc' class=current.source === 'misc' ? 'active' : '') Misc
+
+    include ../includes/_footer
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script
+      | window.jQuery || document.write('<script src="../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
+    script(src='../scripts/plugins.js')
+    script(src='../scripts/main.js')
+
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','#{googleAnalytics}','auto');ga('send','pageview');

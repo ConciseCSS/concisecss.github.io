@@ -1,0 +1,502 @@
+//
+// Concise
+// =============================================================================
+
+body {
+  border: 1em solid white;
+  min-height: 100vh;
+}
+
+
+
+//
+// Typography
+// ----------
+
+h1, h2, h3 {
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: unitSize(3) 0;
+
+  @media (min-width: $bp-small) {
+    margin: unitSize(6) 0;
+  }
+
+  small {
+    display: block;
+    font-size: pxToEm(20, $h1-size);
+  }
+}
+
+h2 {
+  margin-top: unitSize(6);
+  padding-bottom: unitSize(3);
+
+  @media (min-width: $bp-small) {
+    margin-top: unitSize(9);
+  }
+}
+
+h3 {
+  margin-top: unitSize(3);
+  text-transform: none;
+
+  @media (min-width: $bp-small) {
+    margin-top: unitSize(6);
+  }
+}
+
+h4 { margin-top: unitSize(3); }
+
+h1 + h2,
+h2 + h3,
+h3 + h4 { margin-top: 0; }
+
+p a:hover {
+  background-color: getColor(red, base);
+  color: white;
+}
+
+p {
+  margin-bottom: unitSize(1);
+
+  @media (min-width: $bp-small) {
+    margin-bottom: unitSize(3, -4);
+  }
+}
+
+// Modifiers
+.text--secondary {
+  color: getColor(text, secondary);
+  font-family: $font-family-headings;
+  font-size: pxToEm(14);
+  margin-top: unitSize(3);
+}
+
+.heading--docs {
+  border-bottom: 1px solid getColor(base, lines);
+  margin-bottom: unitSize(3);
+  padding-bottom: unitSize(1);
+}
+
+
+
+//
+// Elements
+// --------
+
+// Tables
+table {
+  font-size: pxToEm(16);
+  font-family: $font-family-headings;
+  text-align: center;
+  width: 100%;
+
+  th {
+    line-height: 1;
+    padding: 1em;
+    text-align: center;
+  }
+
+  td {
+    line-height: 1.75;
+    padding-bottom: unitSize(1);
+    padding-top: unitSize(1);
+  }
+}
+
+// Typography
+pre {
+  margin: unitSize(2) 0;
+
+  @media (min-width: $bp-small) {
+    margin: unitSize(3, -4) 0;
+  }
+
+  code { white-space: pre; }
+}
+
+pre,
+code { font-family: Hack, monospace; }
+
+// Misc
+iframe { margin-top: unitSize(3); }
+
+
+
+//
+// Main Navigation
+// ---------------
+
+.main-nav {
+  @include clearfix();
+
+  font-family: $font-family-headings;
+  padding: unitSize(4) 0;
+
+  & > a { float: left; }
+
+  ul {
+    float: right;
+    margin-top: unitSize(1);
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 1.5em;
+
+      @media (min-width: $bp-small) {
+        margin-right: 2em;
+      }
+    }
+  }
+
+  a {
+    color: getColor(text, primary);
+    font-size: pxToEm(14);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &.active,
+    &:hover,
+    &:focus { color: getColor(base, primary); }
+  }
+
+  .logo {
+    height: 50px;
+
+    @media (min-width: $bp-small) {
+      height: 75px;
+    }
+
+    &:hover { animation-name: logo-pulse; }
+  }
+}
+
+
+
+//
+// Main Footer
+// -----------
+
+.main-footer {
+  @include clearfix();
+
+  background-color: white;
+  font-family: $font-family-headings;
+  font-size: pxToEm(14);
+  margin-top: unitSize(6);
+  padding-top: unitSize(3);
+  text-align: center;
+
+  @media (min-width: $bp-medium) {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+
+  a {
+    color: getColor(text, primary);
+    font-size: pxToEm(12);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &.active,
+    &:hover,
+    &:focus { color: getColor(base, primary); }
+  }
+
+  p {
+    color: getColor(text, secondary);
+    margin-bottom: 0;
+
+    @media (min-width: $bp-medium) {
+      float: left;
+      line-height: 3;
+    }
+  }
+
+  ul {
+    margin-top: 0;
+
+    @media (min-width: $bp-medium) {
+      float: right;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1.5em;
+    padding: 0;
+
+    @media (min-width: $bp-medium) {
+      margin-right: 2em;
+    }
+
+    &:last-child { margin-right: 0; }
+  }
+}
+
+
+
+//
+// Docs Navigation
+// ---------------
+
+.docs-nav {
+  font-size: pxToEm(16);
+  margin-top: unitSize(6);
+
+  li { list-style: none; }
+
+  a {
+    color: getColor(text, secondary);
+
+    &.active,
+    &:hover,
+    &:focus { color: getColor(base, primary); }
+  }
+}
+
+
+
+//
+// Intro
+// -----
+
+.intro {
+  @media (min-width: $bp-small) {
+    margin-bottom: unitSize(9);
+    margin-top: unitSize(6);
+  }
+
+  h1 {
+    border-bottom: none;
+    color: getColor(text, secondary);
+    font-size: pxToEm($giga-size * .5);
+    letter-spacing: 2px;
+    margin-bottom: unitSize(3);
+    margin-left: -8px;
+    position: relative;
+
+    @media (min-width: $bp-small) {
+      font-size: pxToEm($giga-size * .75);
+    }
+
+    @media (min-width: $bp-medium) {
+      font-size: pxToEm($giga-size);
+    }
+  }
+
+  p {
+    font-size: pxToEm($h4-size);
+    color: getColor(text, secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: unitSize(4);
+
+    strong { color: getColor(red); }
+  }
+}
+
+.intro-buttons { margin-top: unitSize(6); }
+
+
+
+//
+// Documentation
+// -------------
+
+.note {
+  border-top: 1px dashed getColor(base, lines);
+  border-bottom: 1px dashed getColor(base, lines);
+  margin-top: unitSize(3);
+  padding: unitSize(2) 0;
+  font-size: pxToEm(16);
+
+  &:before {
+    color: getColor(base, primary);
+    content: "Note:";
+    font-weight: bold;
+    margin-right: .25em;
+  }
+
+  small { font-size: 85%; }
+}
+
+
+
+//
+// Color Palette
+// -------------
+
+.colorPalette {
+  @include row();
+
+  p {
+    height: 75px;
+    margin-bottom: 0;
+  }
+
+  span {
+    color: white;
+    display: block;
+    font-family: $font-family-mono;
+    font-size: pxToEm(12);
+    margin-left: 1em;
+    padding-top: unitSize(1);
+
+    &.text--dark { color: getColor(text, secondary); }
+  }
+}
+
+.colorPalette-third {
+  @include column(1/3);
+}
+
+.colorPalette-fifth {
+  @include column(1/5);
+}
+
+// Base colors
+.colorPalette-basePrimary { background-color: getColor(base, primary); }
+
+.colorPalette-baseSelection { background-color: getColor(base, selection); }
+
+.colorPalette-baseLines { background-color: getColor(base, lines); }
+
+// Text colors
+.colorPalette-textPrimary { background-color: getColor(text, primary); }
+
+.colorPalette-textSecondary { background-color: getColor(text, secondary); }
+
+.colorPalette-textHeading { background-color: getColor(text, heading); }
+
+// Background colors
+.colorPalette-backgroundDark { background-color: getColor(background, dark); }
+
+.colorPalette-backgroundLight {
+  border: 1px solid getColor(base, lines);
+  background-color: getColor(background, light);
+}
+
+.colorPalette-backgroundBody {
+  border: 1px solid getColor(base, lines);
+  background-color: getColor(background, body);
+}
+
+// State colors
+.colorPalette-stateMuted { background-color: getColor(state, muted); }
+
+.colorPalette-statePrimary { background-color: getColor(state, primary); }
+
+.colorPalette-stateSuccess { background-color: getColor(state, success); }
+
+.colorPalette-stateWarning { background-color: getColor(state, warning); }
+
+.colorPalette-stateError { background-color: getColor(state, error); }
+
+// Blue colors
+.colorPalette-blueDarker { background-color: getColor(blue, darker); }
+
+.colorPalette-blueDark { background-color: getColor(blue, dark); }
+
+.colorPalette-blue { background-color: getColor(blue); }
+
+.colorPalette-blueLight { background-color: getColor(blue, light); }
+
+.colorPalette-blueLighter { background-color: getColor(blue, lighter); }
+
+// Green colors
+.colorPalette-greenDarker { background-color: getColor(green, darker); }
+
+.colorPalette-greenDark { background-color: getColor(green, dark); }
+
+.colorPalette-green { background-color: getColor(green); }
+
+.colorPalette-greenLight { background-color: getColor(green, light); }
+
+.colorPalette-greenLighter { background-color: getColor(green, lighter); }
+
+// Cream colors
+.colorPalette-creamDarker { background-color: getColor(cream, darker); }
+
+.colorPalette-creamDark { background-color: getColor(cream, dark); }
+
+.colorPalette-cream { background-color: getColor(cream); }
+
+.colorPalette-creamLight { background-color: getColor(cream, light); }
+
+.colorPalette-creamLighter { background-color: getColor(cream, lighter); }
+
+// Red colors
+.colorPalette-redDarker { background-color: getColor(red, darker); }
+
+.colorPalette-redDark { background-color: getColor(red, dark); }
+
+.colorPalette-red { background-color: getColor(red); }
+
+.colorPalette-redLight { background-color: getColor(red, light); }
+
+.colorPalette-redLighter { background-color: getColor(red, lighter); }
+
+// Gray colors
+.colorPalette-grayDarker { background-color: getColor(gray, darker); }
+
+.colorPalette-grayDark { background-color: getColor(gray, dark); }
+
+.colorPalette-gray { background-color: getColor(gray); }
+
+.colorPalette-grayLight { background-color: getColor(gray, light); }
+
+.colorPalette-grayLighter { background-color: getColor(gray, lighter); }
+
+
+
+//
+// Components
+// ----------
+
+// Backgrounds
+[class^='bg--'] { color: white; }
+
+// Buttons
+.button {
+  font-size: pxToEm(16);
+  transition-property: background-color;
+
+  &:hover,
+  &:focus { background-color: lighten(getColor(base, primary), 10%); }
+}
+
+.button + .button { margin-left: 1em; }
+
+.button--secondary {
+  background-color: getColor(base, secondary);
+
+  &:hover,
+  &:focus { background-color: lighten(getColor(base, secondary), 5%); }
+}
+
+// Animations
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes logo-pulse {
+  from { transform: scale3d(1, 1, 1); }
+
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+
+  to { transform: scale3d(1, 1, 1); }
+}

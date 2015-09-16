@@ -1,0 +1,25 @@
+header(container)
+  nav.main-nav
+    a(href='/'): img(class='logo animated' src='/images/logo2.svg' alt='Concise Logo')
+    ul
+      li: a(href='/documentation') Documentation
+      li: a(href='/concise-ui') Concise UI
+
+
+  div.intro
+    h1.giga Concise CSS
+    hr
+    p A framework written in SASS that's lightweight, and easy-to-use.<br><strong>Build great websites.</strong>
+
+
+  p.intro-buttons
+    a(href='#{download}' title='Download').button Download
+    a(href='/documentation' title='Get started').button.button--secondary Get Started
+
+  p.text--secondary
+    | <strong>Current version:</strong> v#{version}
+    | <br>
+    | <strong>Size:</strong> #{size}
+
+
+//- include includes/_footer

@@ -1,0 +1,154 @@
+//
+// Custom Global Variables
+// =============================================================================
+
+
+//
+// Base
+// ----
+
+// Transition duration
+// $transition-duration: 150ms;
+
+// Breakpoints
+// $bp-extra-small: 30em;
+// $bp-small:       48em;
+// $bp-medium:      60em;
+// $bp-large:       70em;
+// $bp-extra-large: 80em;
+
+// Spacing
+// $spacing-xs: unitSize(1);
+// $spacing-s:  unitSize(2);
+// $spacing-m:  unitSize(3);
+// $spacing-l:  unitSize(4);
+// $spacing-xl: unitSize(5);
+
+
+//
+// Base Size
+// ---------
+// Allows sizes in proportions
+
+$base-unit: 10;
+
+
+//
+// Grid
+// ----
+
+// Prefix for the attributes, you can use 'data-' to make your markup valid
+// $prefix: "";
+
+// Max width for container
+$container-width: 95%;
+
+// Gutter size in pixels (without the unit we can do math easily)
+$gutter: 15;
+
+// Number of columns in a row
+// $num-columns: 12;
+
+// If you only want to use the mixins for "semantic grids" set this to true
+// $only-semantic: false;
+
+
+//
+// Typography
+// ----------
+
+$font-family:            "aktiv-grotesk", sans-serif;
+$font-family-headings:   "aktiv-grotesk", sans-serif;
+// $font-family-print:    "Georgia", "Times New Roman", "Times", serif;
+// $font-family-mono:     "Consolas", monospace;
+$font-base-size:       18;
+
+
+//
+// Heading sizes
+// ----------
+
+$h1-size: 42;
+$h2-size: 32;
+$h3-size: 23;
+$h4-size: 18;
+$h5-size: 14;
+$h6-size: 12;
+$giga-size: 120;
+$mega-size: 64;
+// $kilo-size: 52;
+
+
+//
+// Color Palette
+// -------------
+
+// Colors
+$colors: (
+  base: (
+    "primary":   #D34A28,
+    "secondary": #404040,
+    "selection": #f9c2ab,
+    "lines":     #e0e0e0
+  ),
+
+  text: (
+    "primary":   #666,
+    "secondary": #999,
+    "heading":   #444
+  ),
+
+  background: (
+    "dark":  #2e2e2e,
+    "light": #fdfdfd,
+    "body":  #f9f9f9
+  ),
+
+  state: (
+    "muted":   #aaa,
+    "primary": #E35D32,
+    "success": #45ca69,
+    "warning": #ffb800,
+    "error":   #ca4829
+  ),
+
+  blue: (
+    "darker":  #495b61,
+    "dark":    #447281,
+    "base":    #4591aa,
+    "light":   #5ab0cc,
+    "lighter": #74cbe8
+  ),
+
+  green: (
+    "darker":  #3b6e6e,
+    "dark":    #3b8686,
+    "base":    #37a1a1,
+    "light":   #2dbaba,
+    "lighter": #69d1d1
+  ),
+
+  cream: (
+    "darker":  #c47858,
+    "dark":    #e29372,
+    "base":    #ecac91,
+    "light":   #f9c2ab,
+    "lighter": #fdd5c3
+  ),
+
+  red: (
+    "darker":  #653131,
+    "dark":    #b73333,
+    "base":    #da3c3c,
+    "light":   #f25a5a,
+    "lighter": #fa8181
+  ),
+
+  gray: (
+    "darker":  #333333,
+    "dark":    #4d4d4d,
+    "base":    #666666,
+    "light":   #808080,
+    "lighter": #999999
+  )
+);
