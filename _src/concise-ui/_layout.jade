@@ -15,10 +15,11 @@ html(lang='en')
   body
     header(container)
       nav.main-nav
-        a(href='/'): img(src='/images/logo2.svg' alt='Concise Logo' height='75px')
+        a(href='/'): img(class='logo animated' src='/images/logo2.svg' alt='Concise Logo')
         ul
           li: a(href='/documentation' class=current.path[0] === 'documentation' ? 'active' : '') Documentation
           li: a(href='/concise-ui' class=current.path[0] === 'concise-ui' ? 'active' : '') Concise UI
+          li: a(href='/archive/v2.0.0') v2 Docs
 
     section(container)
       div(row)

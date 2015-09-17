@@ -4,6 +4,7 @@ header(container)
     ul
       li: a(href='/documentation') Documentation
       li: a(href='/concise-ui') Concise UI
+      li: a(href='/archive/v2.0.0') v2 Docs
 
 
   div.intro
@@ -12,14 +13,24 @@ header(container)
     p A framework written in SASS that's lightweight, and easy-to-use.<br><strong>Build great websites.</strong>
 
 
-  p.intro-buttons
-    a(href='#{download}' title='Download').button Download
+  div.intro-buttons
+    div.dropdown.dropdown--top.button(tabindex='0')
+      | Download
+      ul.dropdown-content
+        li
+          a(href='') Compiled CSS
+          span (32kb)
+        li
+          a(href='') Compiled CSS with UI
+          span (32kb)
+        li
+          a(href='') Source SASS
+          span (32kb)
+
     a(href='/documentation' title='Get started').button.button--secondary Get Started
+
 
   p.text--secondary
     | <strong>Current version:</strong> v#{version}
     | <br>
     | <strong>Size:</strong> #{size}
-
-
-//- include includes/_footer
