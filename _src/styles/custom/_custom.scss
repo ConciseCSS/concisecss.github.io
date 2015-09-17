@@ -315,11 +315,11 @@ iframe { margin-top: unitSize(3); }
     cursor: pointer;
 
     li {
-      line-height: 1;
+      line-height: 1.5;
 
       span {
+        color: getColor(text, secondary);
         font-size: .875em;
-        line-height: 2;
         margin-left: .75em;
       }
     }

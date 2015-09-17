@@ -450,7 +450,7 @@ a.btn--borderBlue:active, a.btn--borderBlue:visited {
 }
 
 .homeBanner {
-  background: url("/images/bg.jpg") no-repeat center center fixed;
+  background: url("/archive/v2.0.0/images/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   padding-bottom: 60px;
@@ -650,7 +650,7 @@ a.btn--borderBlue:active, a.btn--borderBlue:visited {
 }
 
 .masthead {
-  background: url("/images/bg.jpg") no-repeat center center fixed;
+  background: url("/archive/v2.0.0/images/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   padding-bottom: 36px;
   padding-top: 36px;
