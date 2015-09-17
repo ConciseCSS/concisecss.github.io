@@ -2,7 +2,7 @@
 // Concise
 // =============================================================================
 
-body {
+html {
   border: 1em solid white;
   min-height: 100vh;
 }
@@ -308,7 +308,23 @@ iframe { margin-top: unitSize(3); }
   }
 }
 
-.intro-buttons { margin-top: unitSize(6); }
+.intro-buttons {
+  margin-top: unitSize(6);
+
+  .button {
+    cursor: pointer;
+
+    li {
+      line-height: 1;
+
+      span {
+        font-size: .875em;
+        line-height: 2;
+        margin-left: .75em;
+      }
+    }
+  }
+}
 
 
 
