@@ -13,7 +13,7 @@
     "harp": "^0.17.0"
   },
   "scripts": {
-    "start": "harp server _src ./",
+    "start": "harp server _src",
     "compile": "harp compile _src ./"
   }
 }
