@@ -161,6 +161,33 @@ iframe { margin-top: unitSize(3); }
 
 
 //
+// Home page
+// -------------
+
+.intro {
+  text-align: center;
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    margin-top: unitSize(3);
+    margin-bottom: unitSize(3);
+  }
+
+  p {
+    color: getColor(text, secondary);
+  }
+}
+
+.intro-buttons {
+  margin-top: unitSize(6);
+  margin-bottom: unitSize(3);
+}
+
+
+//
 // Documentation
 // -------------
 
@@ -174,15 +201,6 @@ iframe { margin-top: unitSize(3); }
   background-color: getColor(background, dark);
   overflow-y: auto;
   padding: unitSize(3) pxToEm($gutter);
-
-  .logo {
-    text-align: center;
-    display: inline-block;
-    height: unitSize(9);
-    margin-bottom: unitSize(6);
-
-    img { height: 100%; }
-  }
 
   h2 {
     margin-top: unitSize(3);
@@ -221,6 +239,90 @@ iframe { margin-top: unitSize(3); }
   max-width: 900px;
   margin: 0 auto;
   padding: pxToEm($gutter);
+}
+
+
+
+//
+// Components
+// ----------
+
+.dropdown {
+  cursor: pointer;
+}
+
+.logo {
+  text-align: center;
+  display: inline-block;
+  height: unitSize(9);
+  margin-bottom: unitSize(6);
+
+  img { height: 100%; }
+}
+
+// Notes
+.note {
+  border-top: 1px dashed getColor(base, lines);
+  border-bottom: 1px dashed getColor(base, lines);
+  margin-top: unitSize(3);
+  padding: unitSize(2) 0;
+  font-size: pxToEm(16);
+
+  &:before {
+    color: getColor(base, primary);
+    content: "Note:";
+    font-weight: bold;
+    margin-right: .25em;
+  }
+
+  small { font-size: 85%; }
+}
+
+// Backgrounds
+[class^='bg--'] { color: white; }
+
+// Buttons
+.button {
+  font-size: pxToEm(16);
+  transition-property: background-color;
+
+  &:hover,
+  &:focus { background-color: lighten(getColor(base, primary), 10%); }
+}
+
+.button + .button {
+  margin-left: 1em;
+
+  &.button--collapse {
+    margin-left: 0;
+    margin-top: 1em;
+
+    @media (min-width: $bp-extra-small) {
+      margin-left: 1em;
+      margin-top: 0;
+    }
+  }
+}
+
+.button--secondary {
+  background-color: getColor(base, secondary);
+
+  &:hover,
+  &:focus { background-color: lighten(getColor(base, secondary), 5%); }
+}
+
+// Animations
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes logo-pulse {
+  from { transform: scale3d(1, 1, 1); }
+
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+
+  to { transform: scale3d(1, 1, 1); }
 }
 
 
@@ -345,74 +447,3 @@ iframe { margin-top: unitSize(3); }
 .colorPalette-grayLight { background-color: getColor(gray, light); }
 
 .colorPalette-grayLighter { background-color: getColor(gray, lighter); }
-
-
-
-//
-// Components
-// ----------
-
-// Notes
-.note {
-  border-top: 1px dashed getColor(base, lines);
-  border-bottom: 1px dashed getColor(base, lines);
-  margin-top: unitSize(3);
-  padding: unitSize(2) 0;
-  font-size: pxToEm(16);
-
-  &:before {
-    color: getColor(base, primary);
-    content: "Note:";
-    font-weight: bold;
-    margin-right: .25em;
-  }
-
-  small { font-size: 85%; }
-}
-
-// Backgrounds
-[class^='bg--'] { color: white; }
-
-// Buttons
-.button {
-  font-size: pxToEm(16);
-  transition-property: background-color;
-
-  &:hover,
-  &:focus { background-color: lighten(getColor(base, primary), 10%); }
-}
-
-.button + .button {
-  margin-left: 1em;
-
-  &.button--collapse {
-    margin-left: 0;
-    margin-top: 1em;
-
-    @media (min-width: $bp-extra-small) {
-      margin-left: 1em;
-      margin-top: 0;
-    }
-  }
-}
-
-.button--secondary {
-  background-color: getColor(base, secondary);
-
-  &:hover,
-  &:focus { background-color: lighten(getColor(base, secondary), 5%); }
-}
-
-// Animations
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes logo-pulse {
-  from { transform: scale3d(1, 1, 1); }
-
-  50% { transform: scale3d(1.05, 1.05, 1.05); }
-
-  to { transform: scale3d(1, 1, 1); }
-}
