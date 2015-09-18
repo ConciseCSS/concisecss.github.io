@@ -200,7 +200,7 @@ iframe { margin-top: unitSize(3); }
   width: pxToEm(300);
   background-color: getColor(background, dark);
   overflow-y: auto;
-  padding: unitSize(3) pxToEm($gutter);
+  padding: unitSize(4) pxToEm($gutter);
 
   h2 {
     margin-top: unitSize(3);
@@ -209,19 +209,22 @@ iframe { margin-top: unitSize(3); }
 
   ul { padding: 0; }
 
-  li { list-style: none; }
+  li {
+    list-style: none;
 
-  a {
-    color: getColor(text, secondary);
-    height: unitSize(4);
-    display: inline-block;
-    width: 100%;
-    font-size: pxToEm(16);
+    a {
+      color: getColor(text, secondary);
+      height: unitSize(4);
+      display: inline-block;
+      width: 100%;
+      font-size: pxToEm(16);
 
-    &.active,
-    &:hover,
-    &:focus { color: white; }
+      &.active,
+      &:hover,
+      &:focus { color: white; }
+    }
   }
+
 }
 
 // Main wrapper
@@ -256,6 +259,7 @@ iframe { margin-top: unitSize(3); }
   display: inline-block;
   height: unitSize(9);
   margin-bottom: unitSize(6);
+  width: 100%;
 
   img { height: 100%; }
 }
