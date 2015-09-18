@@ -3,7 +3,6 @@
 // =============================================================================
 
 html {
-  border: 1em solid white;
   min-height: 100vh;
 }
 
@@ -14,9 +13,7 @@ html {
 // ----------
 
 h1, h2, h3 {
-  letter-spacing: 1px;
   line-height: 1.1;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -203,7 +200,7 @@ iframe { margin-top: unitSize(3); }
   font-family: $font-family-headings;
   font-size: pxToEm(14);
   margin-top: unitSize(6);
-  padding-top: unitSize(3);
+  padding: unitSize(3) pxToEm($gutter);
   text-align: center;
 
   @media (min-width: $bp-medium) {
@@ -229,12 +226,12 @@ iframe { margin-top: unitSize(3); }
 
     @media (min-width: $bp-medium) {
       float: left;
-      line-height: 3;
+      line-height: 2;
     }
   }
 
   ul {
-    margin-top: 0;
+    margin: 0;
 
     @media (min-width: $bp-medium) {
       float: right;
@@ -253,28 +250,6 @@ iframe { margin-top: unitSize(3); }
     &:last-child { margin-right: 0; }
   }
 }
-
-
-
-//
-// Docs Navigation
-// ---------------
-
-.docs-nav {
-  font-size: pxToEm(16);
-  margin-top: unitSize(6);
-
-  li { list-style: none; }
-
-  a {
-    color: getColor(text, secondary);
-
-    &.active,
-    &:hover,
-    &:focus { color: getColor(base, primary); }
-  }
-}
-
 
 
 //
@@ -340,6 +315,89 @@ iframe { margin-top: unitSize(3); }
 //
 // Documentation
 // -------------
+
+html {
+  overflow-y: hidden !important;
+}
+
+.docs-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: pxToEm(300);
+  background-color: getColor(background, dark);
+  overflow-y: auto;
+  padding: unitSize(3) pxToEm($gutter);
+
+  .logo {
+    text-align: center;
+    display: inline-block;
+    height: unitSize(9);
+    margin-bottom: unitSize(6);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  h2 {
+    margin-top: unitSize(3);
+    padding-bottom: unitSize(1);
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: getColor(text, secondary);
+    height: unitSize(4);
+    display: inline-block;
+    width: 100%;
+    font-size: pxToEm(16);
+
+    &.active,
+    &:hover,
+    &:focus { color: white; }
+  }
+}
+
+.docs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: pxToEm(300);
+  overflow-y: auto;
+}
+
+.docs-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: pxToEm($gutter);
+
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: unitSize(12);
+    margin-top: unitSize(9);
+  }
+
+  h2 {
+    padding-bottom: unitSize(2);
+    margin-bottom: unitSize(3);
+  }
+
+  h3 {
+    margin-bottom: unitSize(2);
+    margin-top: unitSize(6);
+  }
+}
 
 .note {
   border-top: 1px dashed getColor(base, lines);

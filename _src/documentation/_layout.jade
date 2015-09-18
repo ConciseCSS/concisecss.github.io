@@ -13,45 +13,70 @@ html(lang='en')
     link(rel='stylesheet' href='/styles/concise.css')
 
   body
-    header(container)
-      nav.main-nav
-        a(href='/'): img(class='logo animated' src='/images/logo2.svg' alt='Concise Logo')
-        ul
-          li: a(href='/documentation' class=current.path[0] === 'documentation' ? 'active' : '') Documentation
-          li: a(href='/concise-ui' class=current.path[0] === 'concise-ui' ? 'active' : '') Concise UI
-          li: a(href='/archive/v2.0.0') v2 Docs
+    //- header(container)
+    //-   nav.main-nav
+    //-     a(href='/'): img(class='logo animated' src='/images/logo2.svg' alt='Concise Logo')
+    //-     ul
+    //-       li: a(href='/documentation' class=current.path[0] === 'documentation' ? 'active' : '') Documentation
+    //-       li: a(href='/concise-ui' class=current.path[0] === 'concise-ui' ? 'active' : '') Concise UI
+    //-       li: a(href='/archive/v2.0.0') v2 Docs
 
-    section(container)
-      div(row)
-        div(column='8')
-          != yield
+    nav.docs-nav
+      a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
+      
+      ul
+        li: a(href='/') Home
+        li: a(href='/archive/v2.0.0/') Concise v2 (Legacy)
+        li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
+      
+      h2 Core
+      ul
+        li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') Typography
+        li: a(href='/documentation/core/headings' class=current.source === 'headings' ? 'active' : '') Headings
+        li: a(href='/documentation/core/lists' class=current.source === 'lists' ? 'active' : '') Lists
+        li: a(href='/documentation/core/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
+        li: a(href='/documentation/core/code' class=current.source === 'code' ? 'active' : '') Code
+        li: a(href='/documentation/core/forms' class=current.source === 'forms' ? 'active' : '') Forms
+        li: a(href='/documentation/core/tables' class=current.source === 'tables' ? 'active' : '') Tables
+        li: a(href='/documentation/core/grid' class=current.source === 'grid' ? 'active' : '') Grid System
+        li: a(href='/documentation/core/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment
+        li: a(href='/documentation/core/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints
+        li: a(href='/documentation/core/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media
+        li: a(href='/documentation/core/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling
+        li: a(href='/documentation/core/colors' class=current.source === 'colors' ? 'active' : '') Colors
+        li: a(href='/documentation/core/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader
+        li: a(href='/documentation/core/misc' class=current.source === 'misc' ? 'active' : '') Misc
+        
+      h2 Concise UI
+      ul
+        li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') Alerts
+        li: a(href='/documentation/concise-ui/badges-labels' class=current.source === 'badges-labels' ? 'active' : '') Badges & Labels
+        li: a(href='/documentation/concise-ui/breadcrumbs' class=current.source === 'breadcrumbs' ? 'active' : '') Breadcrumbs
+        li: a(href='/documentation/concise-ui/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
+        li: a(href='/documentation/concise-ui/cards' class=current.source === 'cards' ? 'active' : '') Cards
+        li: a(href='/documentation/concise-ui/collections' class=current.source === 'collections' ? 'active' : '') Collections
+        li: a(href='/documentation/concise-ui/dropdowns' class=current.source === 'dropdowns' ? 'active' : '') Dropdowns
+        li: a(href='/documentation/concise-ui/groups' class=current.source === 'groups' ? 'active' : '') Groups
+        li: a(href='/documentation/concise-ui/modals' class=current.source === 'modals' ? 'active' : '') Modals
+        li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') Progress
+        li: a(href='/documentation/concise-ui/spinner' class=current.source === 'spinner' ? 'active' : '') Spinner
+        li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') Tooltips
 
-        nav(column='3 +1').docs-nav
-          ul
-            li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
-            li: a(href='/documentation/typography' class=current.source === 'typography' ? 'active' : '') Typography
-            li: a(href='/documentation/headings' class=current.source === 'headings' ? 'active' : '') Headings
-            li: a(href='/documentation/lists' class=current.source === 'lists' ? 'active' : '') Lists
-            li: a(href='/documentation/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
-            li: a(href='/documentation/code' class=current.source === 'code' ? 'active' : '') Code
-            li: a(href='/documentation/forms' class=current.source === 'forms' ? 'active' : '') Forms
-            li: a(href='/documentation/tables' class=current.source === 'tables' ? 'active' : '') Tables
-            li: a(href='/documentation/grid' class=current.source === 'grid' ? 'active' : '') Grid System
-            li: a(href='/documentation/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment
-            li: a(href='/documentation/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints
-            li: a(href='/documentation/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media
-            li: a(href='/documentation/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling
-            li: a(href='/documentation/colors' class=current.source === 'colors' ? 'active' : '') Colors
-            li: a(href='/documentation/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader
-            li: a(href='/documentation/misc' class=current.source === 'misc' ? 'active' : '') Misc
+    
+    main.docs
+      section.docs-content
+        != yield
 
-    include ../includes/_footer
+  
+
+      include ../includes/_footer
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script
-      | window.jQuery || document.write('<script src="../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
-    script(src='../scripts/plugins.js')
-    script(src='../scripts/main.js')
+      | window.jQuery || document.write('<script src="../../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
+      
+    script(src='../../scripts/plugins.js')
+    script(src='../../scripts/main.js')
 
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
