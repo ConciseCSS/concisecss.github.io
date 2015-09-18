@@ -262,6 +262,8 @@ iframe { margin-top: unitSize(3); }
   width: 100%;
 
   img { height: 100%; }
+
+  &:hover { animation-name: logo-pulse; }
 }
 
 // Notes
