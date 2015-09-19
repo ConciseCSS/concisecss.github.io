@@ -2,14 +2,10 @@
 // Concise
 // =============================================================================
 
-html {
-  min-height: 100vh;
-}
+html { min-height: 100vh; }
 
 // <html> in the documentation pages
-.docs-root {
-  overflow-y: hidden !important;
-}
+.docs-root { overflow-y: hidden; }
 
 //
 // Typography & Native elements
