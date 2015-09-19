@@ -4,10 +4,12 @@
 
 html {
   min-height: 100vh;
-  overflow-y: hidden !important;
 }
 
-
+// <html> in the documentation pages
+.docs-root {
+  overflow-y: hidden !important;
+}
 
 //
 // Typography & Native elements
