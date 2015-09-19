@@ -88,6 +88,8 @@ table {
 iframe { margin-top: unitSize(3); }
 
 // Modifiers
+.text--callout { color: getColor(base, primary); }
+
 .text--secondary {
   color: getColor(text, secondary);
   font-size: pxToEm(14);
@@ -176,14 +178,20 @@ iframe { margin-top: unitSize(3); }
     margin-bottom: unitSize(3);
   }
 
-  p {
-    color: getColor(text, secondary);
-  }
+  p { color: getColor(text, secondary); }
 }
 
 .intro-buttons {
   margin-top: unitSize(6);
   margin-bottom: unitSize(3);
+
+  span {
+    color: getColor(text, secondary);
+    font-size: pxToEm(14);
+    font-weight: bold;
+    margin-left: .5em;
+    vertical-align: baseline;
+  }
 }
 
 

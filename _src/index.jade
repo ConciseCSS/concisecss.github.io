@@ -1,7 +1,9 @@
 main(container).center--all.intro
   a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
   h1 Concise CSS
-  p A framework written in SASS that's lightweight, and easy-to-use.<br><strong>Build great websites.</strong>
+  p A framework written in SASS that's lightweight, and easy-to-use.
+    br
+    strong.text--callout Build great websites.
 
 
   div.intro-buttons
@@ -9,11 +11,14 @@ main(container).center--all.intro
       | Download
       ul.dropdown-content
         a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-dist.zip')
-          li Compiled CSS - <strong>20kb</strong>
+          li Compiled CSS
+            span (20kb)
         a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-UI-dist.zip')
-          li Compiled CSS with UI - <strong>37kb</strong>
+          li Compiled CSS with UI
+            span (37kb)
         a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-source.zip')
-          li Source SASS - <strong>64kb</strong>
+          li Source SASS
+            span (64kb)
 
     a(href='/documentation' title='Get started').button.button--collapse.button--secondary Get Started
 
