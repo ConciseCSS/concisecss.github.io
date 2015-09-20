@@ -3,4 +3,8 @@ $(document).ready(function(){
     e.preventDefault();
     $('.docs').toggleClass('docs--nav-hidden');
   });
+
+  $('.docs-nav').perfectScrollbar();
+
+  $('.docs').perfectScrollbar();
 });
