@@ -280,11 +280,23 @@ iframe { margin-top: unitSize(3); }
 // Main wrapper
 .docs {
   bottom: 0;
-  left: pxToEm(300);
+  left: pxToEm(225);
   overflow-y: auto;
   position: absolute;
   right: 0;
   top: 0;
+
+  @media (min-width: $bp-small) {
+    left: pxToEm(250);
+  }
+
+  @media (min-width: $bp-medium) {
+    left: pxToEm(275);
+  }
+
+  @media (min-width: $bp-large) {
+    left: pxToEm(300);
+  }
 }
 
 // Content wrapper
