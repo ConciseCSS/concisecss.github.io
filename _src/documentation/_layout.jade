@@ -62,9 +62,10 @@ html(lang='en').docs-root
 
 
     main.docs
+      a(href='#').menu-toggle Menu
+      
       section.docs-content
         != yield
-
 
 
       include ../includes/_footer
@@ -73,7 +74,6 @@ html(lang='en').docs-root
     script
       | window.jQuery || document.write('<script src="../../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
 
-    script(src='../../scripts/plugins.js')
     script(src='../../scripts/main.js')
 
     script.

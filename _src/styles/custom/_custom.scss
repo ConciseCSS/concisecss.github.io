@@ -208,19 +208,8 @@ iframe { margin-top: unitSize(3); }
   position: absolute;
   top: 0;
   transition: width $transition-duration;
-  width: pxToEm(225);
-
-  @media (min-width: $bp-small) {
-    width: pxToEm(250);
-  }
-
-  @media (min-width: $bp-medium) {
-    width: pxToEm(275);
-  }
-
-  @media (min-width: $bp-large) {
-    width: pxToEm(300);
-  }
+  width: pxToEm(300);
+  z-index: -1;
 
   h2 {
     color: rgba(white, .75);
@@ -247,6 +236,7 @@ iframe { margin-top: unitSize(3); }
   }
 }
 
+// Scroll message
 .docs-nav-scroll {
   background: rgba(getColor(background, dark), .65);
   bottom: 0;
@@ -255,19 +245,7 @@ iframe { margin-top: unitSize(3); }
   padding: unitSize(1) 0;
   position: fixed;
   text-align: center;
-  width: pxToEm(225);
-
-  @media (min-width: $bp-small) {
-    width: pxToEm(250);
-  }
-
-  @media (min-width: $bp-medium) {
-    width: pxToEm(275);
-  }
-
-  @media (min-width: $bp-large) {
-    width: pxToEm(300);
-  }
+  width: pxToEm(300);
 
   p {
     font-size: pxToEm(10);
@@ -280,22 +258,34 @@ iframe { margin-top: unitSize(3); }
 // Main wrapper
 .docs {
   bottom: 0;
-  left: pxToEm(225);
+  left: pxToEm(300);
   overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 1;
+  background-color: getColor(background, body );
+  transition: 0.5s left;
+}
 
-  @media (min-width: $bp-small) {
-    left: pxToEm(250);
-  }
+// Hide sidebar (via JS)
+.docs--nav-hidden {
+  left: 0 !important;
+}
 
-  @media (min-width: $bp-medium) {
-    left: pxToEm(275);
-  }
+// Button to show/hide the sidebar
+.menu-toggle {
+  color: getColor(text, secondary);
+  left: pxToEm($gutter);
+  top: unitSize(2);
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
 
-  @media (min-width: $bp-large) {
-    left: pxToEm(300);
+  &:hover,
+  &:focus {
+    color: getColor(base, primary);
   }
 }
 
@@ -303,7 +293,7 @@ iframe { margin-top: unitSize(3); }
 .docs-content {
   margin: 0 auto;
   max-width: 900px;
-  padding: pxToEm(($gutter / 2));
+  padding: pxToEm(($gutter));
 
   @media (min-width: $bp-small) {
     padding: pxToEm($gutter);
