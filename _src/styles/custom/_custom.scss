@@ -219,7 +219,13 @@ iframe { margin-top: unitSize(3); }
     padding-bottom: 0;
   }
 
-  ul { padding: 0; }
+  ul {
+    padding: 0;
+
+    &:last-of-type {
+      margin-bottom: unitSize(3)
+    }
+  }
 
   li {
     list-style: none;
