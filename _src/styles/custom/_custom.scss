@@ -7,6 +7,8 @@ html { min-height: 100vh; }
 // <html> in the documentation pages
 .docs-root { overflow-y: hidden; }
 
+
+
 //
 // Typography & Native elements
 // ----------------------------
@@ -231,7 +233,10 @@ iframe { margin-top: unitSize(3); }
 
       &.active,
       &:hover,
-      &:focus { color: white; }
+      &:focus {
+        color: white;
+        outline: 0;
+      }
     }
   }
 }
@@ -286,6 +291,7 @@ iframe { margin-top: unitSize(3); }
   &:hover,
   &:focus {
     color: getColor(base, primary);
+    outline: 0;
   }
 }
 
