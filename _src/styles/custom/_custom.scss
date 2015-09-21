@@ -184,7 +184,11 @@ iframe { margin-top: unitSize(3); }
 
 .intro-buttons {
   margin-bottom: unitSize(3);
-  margin-top: unitSize(6);
+  margin-top: unitSize(3);
+
+  @media (min-width: $bp-small) {
+    margin-top: unitSize(6);
+  }
 
   span {
     color: getColor(text, secondary);
