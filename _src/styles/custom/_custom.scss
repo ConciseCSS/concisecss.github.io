@@ -210,7 +210,7 @@ iframe { margin-top: unitSize(3); }
   position: absolute;
   top: 0;
   transition: width $transition-duration;
-  width: pxToEm(300);
+  width: pxToEm(275);
   z-index: -1;
 
   h2 {
@@ -256,7 +256,7 @@ iframe { margin-top: unitSize(3); }
   padding: unitSize(1) 0;
   position: fixed;
   text-align: center;
-  width: pxToEm(300);
+  width: pxToEm(275);
 
   p {
     font-size: pxToEm(10);
@@ -268,45 +268,39 @@ iframe { margin-top: unitSize(3); }
 
 // Main wrapper
 .docs {
+  background-color: getColor(background, body);
   bottom: 0;
-  left: pxToEm(300);
-  overflow-y: auto;
+  left: pxToEm(275);
   overflow-x: hidden;
+  overflow-y: auto;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1;
-  background-color: getColor(background, body );
   transition: left $transition-duration;
+  z-index: 1;
 }
 
 // Hide sidebar (via JS)
-.docs--nav-hidden {
-  left: 0 !important;
-}
+.docs--nav-hidden { left: 0 !important; }
 
 // Button to show/hide the sidebar
 .menu-toggle {
   left: unitSize(3);
-  top: unitSize(3);
   position: absolute;
+  top: unitSize(3);
 
-  &:focus {
-    outline: 0;
-  }
+  &:focus { outline: 0; }
 
   &:hover,
   &:focus {
     path,
     polygon,
-    rect {
-      fill: getColor(base, primary);
-    }
+    rect { fill: getColor(base, primary); }
   }
 
   svg {
-    width: unitSize(3);
     height: unitSize(3);
+    width: unitSize(3);
   }
 
   path,
