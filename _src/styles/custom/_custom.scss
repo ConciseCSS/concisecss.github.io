@@ -247,25 +247,6 @@ iframe { margin-top: unitSize(3); }
   }
 }
 
-// Scroll message
-.docs-nav-scroll {
-  background: rgba(getColor(background, dark), .65);
-  bottom: 0;
-  color: white;
-  left: 0;
-  padding: unitSize(1) 0;
-  position: fixed;
-  text-align: center;
-  width: pxToEm(275);
-
-  p {
-    font-size: pxToEm(10);
-    letter-spacing: .15em;
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-}
-
 // Main wrapper
 .docs {
   background-color: getColor(background, body);
