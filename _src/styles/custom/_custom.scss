@@ -287,17 +287,33 @@ iframe { margin-top: unitSize(3); }
 
 // Button to show/hide the sidebar
 .menu-toggle {
-  color: getColor(text, secondary);
-  left: pxToEm($gutter);
-  top: unitSize(2);
-  display: block;
+  left: unitSize(3);
+  top: unitSize(3);
   position: absolute;
-  text-transform: uppercase;
+
+  &:focus {
+    outline: 0;
+  }
 
   &:hover,
   &:focus {
-    color: getColor(base, primary);
-    outline: 0;
+    path,
+    polygon,
+    rect {
+      fill: getColor(base, primary);
+    }
+  }
+
+  svg {
+    width: unitSize(3);
+    height: unitSize(3);
+  }
+
+  path,
+  polygon,
+  rect {
+    fill: getColor(text, secondary);
+    transition: $transition-duration;
   }
 }
 
