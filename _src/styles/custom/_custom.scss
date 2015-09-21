@@ -15,9 +15,14 @@ html { min-height: 100vh; }
 
 h1 {
   font-weight: 300;
-  margin-bottom: unitSize(12);
-  margin-top: unitSize(9);
+  margin-bottom: unitSize(6);
+  margin-top: unitSize(6);
   text-align: center;
+
+  @media (min-width: $bp-small) {
+    margin-bottom: unitSize(12);
+    margin-top: unitSize(9);
+  }
 
   small {
     display: block;
@@ -32,7 +37,11 @@ h2 {
 
 h3 {
   margin-bottom: unitSize(2);
-  margin-top: unitSize(6);
+  margin-top: unitSize(4);
+
+  @media (min-width: $bp-small) {
+    margin-top: unitSize(6);
+  }
 }
 
 h4 { margin-top: unitSize(3); }
@@ -152,7 +161,7 @@ iframe { margin-top: unitSize(3); }
 
   li {
     display: inline-block;
-    margin-right: 1.5em;
+    margin-right: 1em;
     padding: 0;
 
     @media (min-width: $bp-medium) {
