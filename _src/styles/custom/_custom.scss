@@ -32,15 +32,16 @@ h1 {
 
 h2 {
   margin-bottom: unitSize(3);
-  padding-bottom: unitSize(2);
+  margin-top: unitSize(6);
+  padding-bottom: unitSize(1);
 }
 
 h3 {
   margin-bottom: unitSize(2);
-  margin-top: unitSize(4);
+  margin-top: unitSize(3);
 
   @media (min-width: $bp-small) {
-    margin-top: unitSize(6);
+    margin-top: unitSize(5);
   }
 }
 
