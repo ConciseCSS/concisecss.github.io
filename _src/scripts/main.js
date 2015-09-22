@@ -24,3 +24,20 @@ $(document).ready(function(){
      $('.docs').addClass('docs--nav-hidden');
    }
 });
+
+
+/**
+ * On window resize
+ */
+$(window).resize(function() {
+  /**
+   * Show/hide nav on window resize
+   */
+  var winWidth = $(window).width();
+
+  if (winWidth <= 726) {
+    $('.docs').addClass('docs--nav-hidden');
+  } else {
+    $('.docs').removeClass('docs--nav-hidden');
+  }
+})
