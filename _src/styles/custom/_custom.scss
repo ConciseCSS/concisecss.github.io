@@ -271,8 +271,11 @@ iframe { margin-top: unitSize(3); }
   position: absolute;
   right: 0;
   top: 0;
-  transition: left $transition-duration;
   z-index: 1;
+
+  @media (min-width: $bp-small) {
+    transition: left $transition-duration;
+  }
 }
 
 // Hide sidebar (via JS)

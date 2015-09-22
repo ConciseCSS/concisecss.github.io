@@ -35,7 +35,7 @@ $(window).resize(function() {
    */
   var winWidth = $(window).width();
 
-  if (winWidth <= 726) {
+  if (winWidth <= 768) {
     $('.docs').addClass('docs--nav-hidden');
   } else {
     $('.docs').removeClass('docs--nav-hidden');
