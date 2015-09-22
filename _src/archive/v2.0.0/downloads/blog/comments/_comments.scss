@@ -1,0 +1,26 @@
+.comment {
+  .comment-header {
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+
+  .comment-avatar {
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .comment-author {
+    font-weight: 400;
+    margin: 5px 0 0;
+  }
+
+  .comment-meta {
+    color: #aaa;
+    font-size: 12px;
+    font-size: 0.8em;
+    margin: 0px;
+  }
+
+  .comment-content { padding: 0 10px; }
+}

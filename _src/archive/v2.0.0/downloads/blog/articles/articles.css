@@ -1,0 +1,22 @@
+.article {
+  font-weight: 100;
+}
+.article .article-title {
+  font-weight: 400;
+  margin: 0;
+}
+.article .article-meta {
+  color: #aaa;
+  font-size: 13px;
+  font-size: 0.85em;
+  margin: 5px 0 15px;
+}
+.article .article-meta a {
+  color: #777;
+}
+.article .article-lead {
+  font-size: 20px;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0;
+}

@@ -1,0 +1,142 @@
+/* Icon Buttons */
+.btn.icon {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+
+  &:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    margin-right: 10px;
+  }
+}
+
+.btn.icon {
+  /* Dribbble */
+  &.dribbble {
+    background-color: #f36798;
+
+    &:before { background-color: #f6558d; }
+
+    &:hover { content: "\F17D"; }
+  }
+
+
+  /* Dropbox */
+  &.dropbox {
+    background-color: #82c0f1;
+
+    &:before { background-color: #72b9f2; }
+
+    &:hover { content: "\F16B"; }
+  }
+
+
+  /* Facebook */
+  &.facebook {
+    background-color: #3b559f;
+
+    &:before { background-color: #4362ba; }
+
+    &:hover { content: "\F09A"; }
+  }
+
+
+  /* Flickr */
+  &.flickr {
+    background-color: #ff0084;
+
+    &:before { background-color: #ff2d9a; }
+
+    &:hover { content: "\F16E"; }
+  }
+
+
+  /* GitHub */
+  &.github {
+    background-color: #b14239;
+
+    &:before { background-color: #c74a40; }
+
+    &:hover { content: "\F09B"; }
+  }
+
+
+  /* Google+ */
+  &.googleplus {
+    background-color: #dd4c39;
+
+    &:before { background-color: #ec4631; }
+
+    &:hover { content: "\F0D5"; }
+  }
+
+
+  /* Instagram */
+  &.instagram {
+    background-color: #d0c3ae;
+
+    &:before { background-color: #c7b8a1; }
+
+    &:hover { content: "\F16D"; }
+  }
+
+
+  /* LinkedIn */
+  &.linkedin {
+    background-color: #007bb6;
+
+    &:before { background-color: #0083c1; }
+
+    &:hover { content: "\F0E1"; }
+  }
+
+
+  /* Pinterest */
+  &.pinterest {
+    background-color: #cc2127;
+
+    &:before { background-color: #dd2229; }
+
+    &:hover { content: "\F0D2"; }
+  }
+
+
+  /* Skype */
+  &.skype {
+    background-color: #01aef0;
+
+    &:before { background-color: #00b9ff; }
+
+    &:hover { content: "\F17E"; }
+  }
+
+
+  /* Tumblr */
+  &.tumblr {
+    background-color: #44546b;
+
+    &:before { background-color: #546681; }
+
+    &:hover { content: "\F173"; }
+  }
+
+
+  /* Twitter */
+  &.twitter {
+    background-color: #00acee;
+
+    &:before { background-color: #00b7fd; }
+
+    &:hover { content: "\F099"; }
+  }
+
+
+  /* YouTube */
+  &.youtube {
+    background-color: #de3434;
+
+    &:before { background-color: #ec3636; }
+
+    &:hover { content: "\F167"; }
+  }
+}

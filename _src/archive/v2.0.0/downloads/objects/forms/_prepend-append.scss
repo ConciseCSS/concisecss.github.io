@@ -1,0 +1,87 @@
+// Prepend and append
+.prepend,
+.append { white-space: nowrap; }
+
+.prepend,
+.append {
+  input,
+  select {
+    display: inline-block;
+    width: 90%;
+  }
+}
+
+@media (min-width: 48em) {
+  .prepend,
+  .append {
+    input,
+    select { width: 300px; }
+  }
+}
+
+.prepend .adjoined,
+.append .adjoined,
+.prepend .btn,
+.append .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.prepend .btn,
+.append .btn {
+  a,
+  input,
+  button { padding: 0 12px; }
+}
+
+.prepend .adjoined,
+.append .adjoined,
+.prepend.transparent .adjoined,
+.append.transparent .adjoined {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  color: #666;
+  height: 37px;
+  padding: 6px 11px;
+}
+
+.prepend.transparent .adjoined {
+  background: transparent;
+  border-right: none;
+}
+
+.append.transparent .adjoined {
+  background: transparent;
+  border-left: none;
+}
+
+.prepend.transparent {
+  input,
+  select { border-left: none; }
+}
+
+.append.transparent {
+  input,
+  select { border-right: none; }
+}
+
+.prepend,
+.append {
+  input:focus:invalid,
+  textarea:focus:invalid { border: 1px solid #e74c3c; }
+}
+
+.prepend .adjoined { border-right: 0px; }
+
+.append .adjoined { border-left: 0px; }
+
+.prepend {
+  .adjoined,
+  .btn { margin-right: -4px; }
+}
+
+.append {
+  .adjoined,
+  .btn { margin-left: -4px; }
+}

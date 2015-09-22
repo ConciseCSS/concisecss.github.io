@@ -1,0 +1,143 @@
+/* Icon Buttons */
+.btn.icon {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.btn.icon:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.btn.icon {
+  /* Dribbble */
+  /* Dropbox */
+  /* Facebook */
+  /* Flickr */
+  /* GitHub */
+  /* Google+ */
+  /* Instagram */
+  /* LinkedIn */
+  /* Pinterest */
+  /* Skype */
+  /* Tumblr */
+  /* Twitter */
+  /* YouTube */
+}
+.btn.icon.dribbble {
+  background-color: #f36798;
+}
+.btn.icon.dribbble:before {
+  background-color: #f6558d;
+}
+.btn.icon.dribbble:hover {
+  content: "\F17D";
+}
+.btn.icon.dropbox {
+  background-color: #82c0f1;
+}
+.btn.icon.dropbox:before {
+  background-color: #72b9f2;
+}
+.btn.icon.dropbox:hover {
+  content: "\F16B";
+}
+.btn.icon.facebook {
+  background-color: #3b559f;
+}
+.btn.icon.facebook:before {
+  background-color: #4362ba;
+}
+.btn.icon.facebook:hover {
+  content: "\F09A";
+}
+.btn.icon.flickr {
+  background-color: #ff0084;
+}
+.btn.icon.flickr:before {
+  background-color: #ff2d9a;
+}
+.btn.icon.flickr:hover {
+  content: "\F16E";
+}
+.btn.icon.github {
+  background-color: #b14239;
+}
+.btn.icon.github:before {
+  background-color: #c74a40;
+}
+.btn.icon.github:hover {
+  content: "\F09B";
+}
+.btn.icon.googleplus {
+  background-color: #dd4c39;
+}
+.btn.icon.googleplus:before {
+  background-color: #ec4631;
+}
+.btn.icon.googleplus:hover {
+  content: "\F0D5";
+}
+.btn.icon.instagram {
+  background-color: #d0c3ae;
+}
+.btn.icon.instagram:before {
+  background-color: #c7b8a1;
+}
+.btn.icon.instagram:hover {
+  content: "\F16D";
+}
+.btn.icon.linkedin {
+  background-color: #007bb6;
+}
+.btn.icon.linkedin:before {
+  background-color: #0083c1;
+}
+.btn.icon.linkedin:hover {
+  content: "\F0E1";
+}
+.btn.icon.pinterest {
+  background-color: #cc2127;
+}
+.btn.icon.pinterest:before {
+  background-color: #dd2229;
+}
+.btn.icon.pinterest:hover {
+  content: "\F0D2";
+}
+.btn.icon.skype {
+  background-color: #01aef0;
+}
+.btn.icon.skype:before {
+  background-color: #00b9ff;
+}
+.btn.icon.skype:hover {
+  content: "\F17E";
+}
+.btn.icon.tumblr {
+  background-color: #44546b;
+}
+.btn.icon.tumblr:before {
+  background-color: #546681;
+}
+.btn.icon.tumblr:hover {
+  content: "\F173";
+}
+.btn.icon.twitter {
+  background-color: #00acee;
+}
+.btn.icon.twitter:before {
+  background-color: #00b7fd;
+}
+.btn.icon.twitter:hover {
+  content: "\F099";
+}
+.btn.icon.youtube {
+  background-color: #de3434;
+}
+.btn.icon.youtube:before {
+  background-color: #ec3636;
+}
+.btn.icon.youtube:hover {
+  content: "\F167";
+}

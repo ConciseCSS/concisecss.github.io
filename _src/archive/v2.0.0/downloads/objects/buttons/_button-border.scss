@@ -1,0 +1,114 @@
+// Button styles
+.btn {
+  &.btn-rounded { border-radius: 4px; }
+
+  &.btn-pill { border-radius: 25px; }
+}
+
+
+// Bordered buttons
+.btn {
+  &.bg-white { color: #333; }
+
+
+  // Bordered
+  &.btn-border {
+    background: transparent;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    color: #aaa;
+
+    &:hover {
+      background: #ddd;
+      color: #fff !important;
+    }
+
+
+    // Bordered white
+    &.white {
+      border-color: #fff;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: #222222 !important;
+      }
+
+      &:active,
+      &:focus { background-color: #ddd; }
+    }
+
+
+    // Bordered black
+    &.black {
+      border-color: #222;
+      color: #222;
+
+      &:hover { background-color: #222; }
+
+      &:active,
+      &:focus { background-color: #222; }
+    }
+
+
+    // Bordered gray
+    &.gray {
+      border-color: #999999;
+      color: #999999;
+
+      &:hover { background-color: #999999; }
+
+      &:active,
+      &:focus { background-color: #737373; }
+    }
+
+
+    // Bordered green
+    &.green {
+      border-color: #5cb85c;
+      color: #468847;
+
+      &:hover { background-color: #5cb85c; }
+
+      &:active,
+      &:focus { background-color: #3d8b3d; }
+    }
+
+
+    // Bordered blue
+    &.blue {
+      border-color: #5bc0de;
+      color: #3a87ad;
+
+      &:hover { background-color: #5bc0de; }
+
+      &:active,
+      &:focus { background-color: #28a1c5; }
+    }
+
+
+    // Bordered yellow
+    &.yellow {
+      border-color: #ed9c28;
+      color: #c09853;
+
+      &:hover { background-color: #ed9c28; }
+
+      &:active,
+      &:focus { background-color: #b9730f; }
+    }
+
+
+    // Bordered red
+    &.red {
+      border-color: #d9534f;
+      color: #d2322d;
+
+      &:hover { background-color: #d9534f; }
+
+      &:active,
+      &:focus { background-color: #b52b27; }
+    }
+  }
+}
