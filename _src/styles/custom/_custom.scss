@@ -216,7 +216,7 @@ iframe { margin-top: unitSize(3); }
 
 .docs {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -224,7 +224,6 @@ iframe { margin-top: unitSize(3); }
   transform: translateZ(0);
   backface-visibility: hidden;
   transition: transform 0.7s;
-  transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   padding-bottom: unitSize(12);
   padding-top: unitSize(3);
 }
@@ -247,6 +246,7 @@ iframe { margin-top: unitSize(3); }
   text-indent: 100%;
   white-space: nowrap;
   transition: transform 0.5s, background-color $transition-duration;
+  border-radius: 0 0 50%;
 
   &:focus {
     outline: 0;
@@ -268,13 +268,14 @@ iframe { margin-top: unitSize(3); }
     width: 22px;
     height: 2px;
     background-color: white;
+    transition: 0.5s;
 
     &::before,
     &::after {
       content: '';
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background-color: inherit;
@@ -284,12 +285,12 @@ iframe { margin-top: unitSize(3); }
     }
 
     &::before {
-      transform-origin: right top;
+      transform-origin: left top;
       transform: translateY(-6px);
     }
 
     &::after {
-      transform-origin: right bottom;
+      transform-origin: left bottom;
       transform: translateY(6px);
     }
   }
@@ -302,14 +303,14 @@ iframe { margin-top: unitSize(3); }
 // -------------
 
 .nav {
-  text-align: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
-  background-color: getColor(background, dark);
+  width: 270px;
+  font-size: pxToEm(16);
+
   visibility: hidden;
   transition: visibility 0s 0.7s;
 
@@ -337,27 +338,7 @@ iframe { margin-top: unitSize(3); }
 
   h2 {
     color: white;
-  }
-
-  // Top navigation
-  .nav-main {
-    text-transform: uppercase;
-
-    @media (min-width: $bp-small) {
-      li {
-        display: inline-block;
-
-        &:not(:last-of-type) {
-          margin-right: 1.5em;
-        }
-      }
-    }
-
-    a {
-      font-weight: bold;
-      letter-spacing: 0.05em;
-      font-size: pxToEm(16);
-    }
+    margin-bottom: unitSize(1);
   }
 
   .nav-wrapper {
@@ -366,9 +347,9 @@ iframe { margin-top: unitSize(3); }
     padding: unitSize(6) pxToEm($gutter);
     transform: translateZ(0);
     backface-visibility: hidden;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
     transition: transform 0.7s;
-    transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+    background-color: getColor(background, dark);
   }
 }
 
@@ -385,29 +366,31 @@ iframe { margin-top: unitSize(3); }
     .nav-wrapper {
       transform: translateX(0);
       transition: transform 0.5s;
-      transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
     }
   }
 
   // Animate icon
-  .nav-icon::after,
-  .nav-icon::before {
-    width: 50%;
-    transition: transform 0.5s, width 0.5s;
-  }
+  .nav-icon {
 
-  .nav-icon::before {
-    transform: rotate(45deg);
-  }
+    &::after,
+    &::before {
+      width: 50%;
+      transition: transform 0.5s, width 0.5s;
+    }
 
-  .nav-icon::after {
-    transform: rotate(-45deg);
-  }
+    &::before {
+      transform: rotate(-45deg);
+    }
 
-  // Move docs section
-  .docs {
-    transform: translateX(100%);
+    &::after {
+      transform: rotate(45deg);
+    }
   }
+  //
+  // // Move docs section
+  // .docs {
+  //   transform: translateX(270px);
+  // }
 }
 
 

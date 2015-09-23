@@ -27,54 +27,51 @@ html(lang='en').docs-root
 
     // === Navigation section
     .nav
-      .nav-wrapper(row)
-        div(column)
-          a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
+      .nav-wrapper
+        a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
 
-          nav
-            ul.nav-main
-              li: a(href='/') Home
-              li: a(href='/archive/v2.0.0/') Concise v2 (Legacy)
-              li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
+        nav
+          ul
+            li: a(href='/') Home
+            li: a(href='/archive/v2.0.0/') Concise v2 (Legacy)
+            li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
 
-        div(column=6)
-          h2 Core
+        h2 Core
 
-          nav
-            ul
-              li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') Typography
-              li: a(href='/documentation/core/headings' class=current.source === 'headings' ? 'active' : '') Headings
-              li: a(href='/documentation/core/lists' class=current.source === 'lists' ? 'active' : '') Lists
-              li: a(href='/documentation/core/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
-              li: a(href='/documentation/core/code' class=current.source === 'code' ? 'active' : '') Code
-              li: a(href='/documentation/core/forms' class=current.source === 'forms' ? 'active' : '') Forms
-              li: a(href='/documentation/core/tables' class=current.source === 'tables' ? 'active' : '') Tables
-              li: a(href='/documentation/core/grid' class=current.source === 'grid' ? 'active' : '') Grid System
-              li: a(href='/documentation/core/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment
-              li: a(href='/documentation/core/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints
-              li: a(href='/documentation/core/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media
-              li: a(href='/documentation/core/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling
-              li: a(href='/documentation/core/colors' class=current.source === 'colors' ? 'active' : '') Colors
-              li: a(href='/documentation/core/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader
-              li: a(href='/documentation/core/misc' class=current.source === 'misc' ? 'active' : '') Misc
+        nav
+          ul
+            li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') Typography
+            li: a(href='/documentation/core/headings' class=current.source === 'headings' ? 'active' : '') Headings
+            li: a(href='/documentation/core/lists' class=current.source === 'lists' ? 'active' : '') Lists
+            li: a(href='/documentation/core/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
+            li: a(href='/documentation/core/code' class=current.source === 'code' ? 'active' : '') Code
+            li: a(href='/documentation/core/forms' class=current.source === 'forms' ? 'active' : '') Forms
+            li: a(href='/documentation/core/tables' class=current.source === 'tables' ? 'active' : '') Tables
+            li: a(href='/documentation/core/grid' class=current.source === 'grid' ? 'active' : '') Grid System
+            li: a(href='/documentation/core/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment
+            li: a(href='/documentation/core/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints
+            li: a(href='/documentation/core/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media
+            li: a(href='/documentation/core/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling
+            li: a(href='/documentation/core/colors' class=current.source === 'colors' ? 'active' : '') Colors
+            li: a(href='/documentation/core/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader
+            li: a(href='/documentation/core/misc' class=current.source === 'misc' ? 'active' : '') Misc
 
-        div(column=6)
-          h2 Concise UI
+        h2 Concise UI
 
-          nav
-            ul
-              li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') Alerts
-              li: a(href='/documentation/concise-ui/badges-labels' class=current.source === 'badges-labels' ? 'active' : '') Badges & Labels
-              li: a(href='/documentation/concise-ui/breadcrumbs' class=current.source === 'breadcrumbs' ? 'active' : '') Breadcrumbs
-              li: a(href='/documentation/concise-ui/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
-              li: a(href='/documentation/concise-ui/cards' class=current.source === 'cards' ? 'active' : '') Cards
-              li: a(href='/documentation/concise-ui/collections' class=current.source === 'collections' ? 'active' : '') Collections
-              li: a(href='/documentation/concise-ui/dropdowns' class=current.source === 'dropdowns' ? 'active' : '') Dropdowns
-              li: a(href='/documentation/concise-ui/groups' class=current.source === 'groups' ? 'active' : '') Groups
-              li: a(href='/documentation/concise-ui/modals' class=current.source === 'modals' ? 'active' : '') Modals
-              li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') Progress
-              li: a(href='/documentation/concise-ui/s pinner' class=current.source === 'spinner' ? 'active' : '') Spinner
-              li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') Tooltips
+        nav
+          ul
+            li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') Alerts
+            li: a(href='/documentation/concise-ui/badges-labels' class=current.source === 'badges-labels' ? 'active' : '') Badges & Labels
+            li: a(href='/documentation/concise-ui/breadcrumbs' class=current.source === 'breadcrumbs' ? 'active' : '') Breadcrumbs
+            li: a(href='/documentation/concise-ui/buttons' class=current.source === 'buttons' ? 'active' : '') Buttons
+            li: a(href='/documentation/concise-ui/cards' class=current.source === 'cards' ? 'active' : '') Cards
+            li: a(href='/documentation/concise-ui/collections' class=current.source === 'collections' ? 'active' : '') Collections
+            li: a(href='/documentation/concise-ui/dropdowns' class=current.source === 'dropdowns' ? 'active' : '') Dropdowns
+            li: a(href='/documentation/concise-ui/groups' class=current.source === 'groups' ? 'active' : '') Groups
+            li: a(href='/documentation/concise-ui/modals' class=current.source === 'modals' ? 'active' : '') Modals
+            li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') Progress
+            li: a(href='/documentation/concise-ui/s pinner' class=current.source === 'spinner' ? 'active' : '') Spinner
+            li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') Tooltips
 
 
     
