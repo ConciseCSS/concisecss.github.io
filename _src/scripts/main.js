@@ -1,43 +1,25 @@
 /**
  * On document ready
  */
-$(document).ready(function(){
-  /**
-   * Toggle navigation visibility on click
-   */
-  $('.menu-toggle').click(function(e){
-    e.preventDefault();
-    $('.docs').toggleClass('docs--nav-hidden');
-  });
+ jQuery(document).ready(function($){
+ 	var isNavAnimating = false;
 
-  $('.docs-nav').perfectScrollbar();
+ 	// open/close lateral navigation
+ 	$('.nav-button').on('click', function(e){
+ 		e.preventDefault();
 
-  $('.docs').perfectScrollbar();
+ 		// stop if nav animation is running
+ 		if( !isNavAnimating ) {
+ 			if($(this).parents('.csstransitions').length > 0 ) {
+        isNavAnimating = true;
+      }
 
+ 			$('body').toggleClass('nav--open');
 
-  /**
-   * Hide navigation by default on small screens
-   */
-   var winWidth = $(window).width();
-
-   if (winWidth <= 726) {
-     $('.docs').addClass('docs--nav-hidden');
-   }
-});
-
-
-/**
- * On window resize
- */
-$(window).resize(function() {
-  /**
-   * Show/hide nav on window resize
-   */
-  var winWidth = $(window).width();
-
-  if (winWidth <= 768) {
-    $('.docs').addClass('docs--nav-hidden');
-  } else {
-    $('.docs').removeClass('docs--nav-hidden');
-  }
-})
+ 			$('.nav-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+ 				// animation is over
+ 				isNavAnimating = false;
+ 			});
+ 		}
+ 	});
+ });
