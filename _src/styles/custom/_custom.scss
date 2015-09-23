@@ -232,6 +232,72 @@ iframe { margin-top: unitSize(3); }
 
 
 //
+// Nav button
+// -------------
+
+.nav-button {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  height: unitSize(5);
+  width: unitSize(5);
+  background-color: getColor(background, dark);
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  transition: transform 0.5s, background-color $transition-duration;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: getColor(base, primary);
+  }
+
+  // Burger menu icon
+  .nav-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    width: 22px;
+    height: 2px;
+    background-color: white;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      transition: transform 0.5s, width 0.5s, top 0.3s;
+    }
+
+    &::before {
+      transform-origin: right top;
+      transform: translateY(-6px);
+    }
+
+    &::after {
+      transform-origin: right bottom;
+      transform: translateY(6px);
+    }
+  }
+}
+
+
+
+//
 // Navigation
 // -------------
 
@@ -341,72 +407,6 @@ iframe { margin-top: unitSize(3); }
   // Move docs section
   .docs {
     transform: translateX(100%);
-  }
-}
-
-
-
-//
-// Nav button
-// -------------
-
-.nav-button {
-  position: fixed;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  height: unitSize(5);
-  width: unitSize(5);
-  background-color: getColor(background, dark);
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  transition: transform 0.5s, background-color $transition-duration;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:focus,
-  &:hover {
-    background-color: getColor(base, primary);
-  }
-
-  // Burger menu icon
-  .nav-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    transform: translateX(-50%) translateY(-50%);
-    width: 22px;
-    height: 2px;
-    background-color: white;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: inherit;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      transition: transform 0.5s, width 0.5s, top 0.3s;
-    }
-
-    &::before {
-      transform-origin: right top;
-      transform: translateY(-6px);
-    }
-
-    &::after {
-      transform-origin: right bottom;
-      transform: translateY(6px);
-    }
   }
 }
 
