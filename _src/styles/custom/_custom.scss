@@ -5,7 +5,7 @@
 html { min-height: 100vh; }
 
 // <html> in the documentation pages
-.docs-root { overflow-y: hidden; }
+.docs-root { overflow: hidden; }
 
 
 
@@ -309,7 +309,6 @@ iframe { margin-top: unitSize(3); }
 
 // When the navigation is open
 .nav--open {
-  overflow-x: hidden;
 
   // Make the navigation visible
   .nav {
