@@ -220,17 +220,17 @@ iframe { margin-top: unitSize(3); }
 // -------------
 
 .docs {
-  position: relative;
-  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
+  background-color: getColor(background, body);
   height: 100vh;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: getColor(background, body);
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  transition: transform 0.7s;
   padding-bottom: unitSize(12);
   padding-top: unitSize(3);
+  position: relative;
+  transform: translateZ(0);
+  transition: transform 0.7s;
+  z-index: 1;
 }
 
 
@@ -240,53 +240,49 @@ iframe { margin-top: unitSize(3); }
 // -------------
 
 .nav-button {
-  position: fixed;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  height: unitSize(5);
-  width: unitSize(5);
   background-color: getColor(background, dark);
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  transition: transform 0.5s, background-color $transition-duration;
   border-radius: 0 0 50%;
+  height: unitSize(5);
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  text-indent: 100%;
+  top: 0;
+  transition: transform 0.5s, background-color $transition-duration;
+  white-space: nowrap;
+  width: unitSize(5);
+  z-index: 3;
 
-  &:focus {
-    outline: 0;
-  }
+  &:focus { outline: 0; }
 
   &:focus,
-  &:hover {
-    background-color: getColor(base, primary);
-  }
+  &:hover { background-color: getColor(base, primary); }
 
   // Burger menu icon
   .nav-icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    transform: translateX(-50%) translateY(-50%);
-    width: 22px;
-    height: 2px;
     background-color: white;
+    bottom: auto;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     transition: 0.5s;
+    width: 22px;
 
     &::before,
     &::after {
+      backface-visibility: hidden;
+      background-color: inherit;
       content: '';
+      height: 100%;
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: inherit;
       transform: translateZ(0);
-      backface-visibility: hidden;
       transition: transform 0.5s, width 0.5s, top 0.3s;
+      width: 100%;
     }
 
     &::before {
@@ -308,37 +304,30 @@ iframe { margin-top: unitSize(3); }
 // -------------
 
 .nav {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 270px;
   font-size: pxToEm(16);
-
-  visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
   transition: visibility 0s 0.7s;
+  visibility: hidden;
+  width: 270px;
+  z-index: 2;
 
   a {
     color: getColor(text, secondary);
 
     &.active,
     &:hover,
-    &:focus {
-      color: white;
-    }
+    &:focus { color: white; }
   }
 
-  li {
-    list-style: none;
-  }
+  li { list-style: none; }
 
   ul {
     padding-left: 0;
 
-    &:last-of-type {
-      margin-bottom: unitSize(6);
-    }
+    &:last-of-type { margin-bottom: unitSize(6); }
   }
 
   h2 {
@@ -347,14 +336,12 @@ iframe { margin-top: unitSize(3); }
   }
 
   .nav-wrapper {
+    background-color: getColor(background, dark);
     height: 100%;
     overflow-y: auto;
     padding: unitSize(6) pxToEm($gutter);
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transform: translateX(-100%);
+    transform: translate(-100%, 0);
     transition: transform 0.7s;
-    background-color: getColor(background, dark);
   }
 }
 
@@ -364,8 +351,8 @@ iframe { margin-top: unitSize(3); }
 
   // Make the navigation visible
   .nav {
-    visibility: visible;
     transition: visibility 0s 0s;
+    visibility: visible;
 
     // Move the navigation
     .nav-wrapper {
@@ -379,23 +366,14 @@ iframe { margin-top: unitSize(3); }
 
     &::after,
     &::before {
-      width: 50%;
       transition: transform 0.5s, width 0.5s;
+      width: 50%;
     }
 
-    &::before {
-      transform: rotate(-45deg);
-    }
+    &::before { transform: rotate(-45deg); }
 
-    &::after {
-      transform: rotate(45deg);
-    }
+    &::after { transform: rotate(45deg); }
   }
-  //
-  // // Move docs section
-  // .docs {
-  //   transform: translateX(270px);
-  // }
 }
 
 

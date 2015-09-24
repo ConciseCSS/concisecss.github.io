@@ -18,7 +18,7 @@ html(lang='en').docs-root
     main.docs
       div(container)
         != yield
-        
+
         include ../includes/_footer
 
     // === Navigation button
@@ -37,7 +37,6 @@ html(lang='en').docs-root
             li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
 
         h2 1. Core
-
         nav
           ul
             li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') 1.1 Typography
@@ -57,7 +56,6 @@ html(lang='en').docs-root
             li: a(href='/documentation/core/misc' class=current.source === 'misc' ? 'active' : '') 1.15 Misc
 
         h2 2. Concise UI
-
         nav
           ul
             li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') 2.1 Alerts
@@ -73,8 +71,6 @@ html(lang='en').docs-root
             li: a(href='/documentation/concise-ui/s pinner' class=current.source === 'spinner' ? 'active' : '') 2.12 Spinner
             li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') 2.13 Tooltips
 
-
-    
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script
