@@ -1,25 +1,21 @@
-/**
-* On document ready
-*/
-jQuery(document).ready(function($){
-  var isNavAnimating = false;
+var element = document.getElementById('nav-button');
+var body = document.body;
+var className = 'nav--open';
 
-  // Open/close navigation
-  $('.nav-button').on('click', function(e){
-    e.preventDefault();
+element.addEventListener('click', function(e){
+  e.preventDefault();
 
-    // Stop if nav animation is running
-    if( !isNavAnimating ) {
-      if($(this).parents('.csstransitions').length > 0 ) {
-        isNavAnimating = true;
-      }
+  if (body.classList) {
+    body.classList.toggle(className);
+  } else {
+    var classes = body.className.split(' ');
+    var existingIndex = classes.indexOf(className);
 
-      $('body').toggleClass('nav--open');
+    if (existingIndex >= 0)
+      classes.splice(existingIndex, 1);
+    else
+      classes.push(className);
 
-      $('.nav-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-        // Animation is over
-        isNavAnimating = false;
-      });
-    }
-  });
+    body.className = classes.join(' ');
+  }
 });

@@ -22,7 +22,7 @@ html(lang='en').docs-root
         include ../includes/_footer
 
     // === Navigation button
-    a(href="#").nav-button Menu
+    a(href="#")#nav-button.nav-button Menu
       span.nav-icon
 
     // === Navigation section
@@ -70,11 +70,6 @@ html(lang='en').docs-root
             li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') 2.10 Progress Bars
             li: a(href='/documentation/concise-ui/s pinner' class=current.source === 'spinner' ? 'active' : '') 2.12 Spinner
             li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') 2.13 Tooltips
-
-
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
-    script
-      | window.jQuery || document.write('<script src="../../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
 
     script(src='../../scripts/main.js')
 
