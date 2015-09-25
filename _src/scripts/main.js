@@ -4,10 +4,6 @@
 jQuery(document).ready(function($){
   var isNavAnimating = false;
 
-  // Initialize custom Scrollbars
-  $('.nav-wrapper').perfectScrollbar();
-  $('.docs').perfectScrollbar();
-
   // Open/close navigation
   $('.nav-button').on('click', function(e){
     e.preventDefault();
