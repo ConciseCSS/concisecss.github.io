@@ -126,13 +126,8 @@ iframe { margin-top: unitSize(3); }
 
   font-size: pxToEm(14);
   margin-top: unitSize(6);
-  padding: unitSize(3) pxToEm($gutter);
+  padding: unitSize(3) 0;
   text-align: center;
-
-  @media (min-width: $bp-medium) {
-    padding-right: 3em;
-    padding-left: 3em;
-  }
 
   a {
     color: getColor(text, primary);
