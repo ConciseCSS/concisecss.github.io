@@ -1,27 +1,78 @@
-main(container).center--all.intro
+header(container).mainHeader
   a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
-  h1 Concise CSS
-  p A framework written in SASS that's lightweight, and easy-to-use.
-    br
-    strong.text--callout Build great websites.
-
-
-  div.intro-buttons
-    div.dropdown.dropdown--top.button.button--collapse(tabindex='0')
-      | Download
-      ul.dropdown-content
-        a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-dist.zip')
-          li Compiled CSS
-            span (20kb)
-        a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-UI-dist.zip')
-          li Compiled CSS with UI
-            span (37kb)
-        a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-source.zip')
-          li Source SASS
-            span (64kb)
-
-    a(href='/documentation' title='Get started').button.button--collapse.button--secondary Get Started
-
-
-  p.text--secondary
-    | <strong>Current version:</strong> #{version}
+  
+  nav.mainNav
+    ul
+      li: a(href='/documentation' title='Documentation') Docs
+      
+  div(row)
+    section(column='6 +6').mainHeader-intro
+      h1 
+        | <strong>Concise CSS</strong>, a framework written in SASS that&rsquo;s
+        | lightwheight and easy-to-use.
+        
+      .mainHeader-buttons
+        .dropdown.dropdown--top.button.button--collapse(tabindex='0')
+          | Download
+          ul.dropdown-content
+            a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-dist.zip')
+              li Compiled CSS
+                span (20kb)
+            a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-UI-dist.zip')
+              li Compiled CSS with UI
+                span (37kb)
+            a(href='https://github.com/ConciseCSS/concise.css/releases/download/v3.0.0/concise-v3.0.0-source.zip')
+              li Source SASS
+                span (64kb)
+        a(href='/documentation').button.button--collapse.button--secondary Get Started
+      
+  p.mainHeader-version <strong>Current version:</strong> #{version}
+    
+main.mainSection
+  section(container).introSection
+    h2 Introduction
+    
+    div(row)
+      p(column='4')
+        | <strong>Concise CSS</strong> is a framework written in SASS carefully crafted by 
+        | <a href='http://keenanpayne.com/'>Keenan Payne</a> and 
+        | <a href='http://jameskolce.com/'>James Kolce</a>, it provides all the basics
+        | without the bloat.
+    
+  section(container).featuresSection
+    div(row)
+      div(column='4') 
+        h3 Bloat-free
+        p No extra styles more than needed; you don&rsquo;t need to rewrite everything
+          | like in other frameworks.
+        
+      div(column='4')
+        h3 Add-ons
+        p Do you need more components? You can easily extend the framework using pre-made 
+          | add-ons.
+        
+      div(column='4')
+        h3 Easy to use
+        p Concise CSS has a small learning curve, the simplicity of the components 
+          | helps to get started faster.  
+      
+      div(column='4')
+        h3 Written in SASS
+        p The most mature, stable, and powerful professional grade CSS extension 
+          | language in the world. 
+        
+      div(column='4') 
+        h3 Easy to update
+        p Just replace the core folder, your custom styles are separated and safe 
+          | from this operation.
+        
+      div(column='4')
+        h3 Dedicated support
+        p Do you need help with your project? Contact us and we&rsquo;ll help you to solve 
+          | your problems with Concise.
+        
+  
+        
+footer.main-footer
+  div(container)
+    include includes/_footer
