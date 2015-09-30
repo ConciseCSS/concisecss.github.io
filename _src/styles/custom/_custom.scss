@@ -35,17 +35,34 @@ h2 {
   }
 }
 
-pre {
-  font-size: pxToEm(18);
+pre { font-size: pxToEm(18); }
+
+table {
+  td,
+  th {
+    line-height: inherit;
+    padding-top: unitSize(2);
+    padding-bottom: unitSize(2);
+  }
+
+  th {
+    font-family: $font-family-headings;
+    text-transform: uppercase;
+    font-size: pxToEm(16);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  td { font-size: pxToEm(18); }
 }
+
+
 
 //
 // Home page
 // -------------
 
-.homePage .mainHeader {
-  min-height: 100vh;
-}
+.homePage .mainHeader { min-height: 100vh; }
 
 .mainHeader {
   padding-top: unitSize(5);
