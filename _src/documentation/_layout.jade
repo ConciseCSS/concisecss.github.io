@@ -13,30 +13,32 @@ html(lang='en').docs-root
     link(rel='stylesheet' href='/styles/concise.css')
 
   body
-
-    // == Main content
-    main.docs
+    div.docs
       div.docs-container
+        //- Page header
         header(container).mainHeader
           a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
-          
+
           nav.mainNav
             ul
               li: a(href='/documentation' title='Documentation').active Docs
-        div(container)
+
+        //- Content
+        main(container)
           div(row)
             div(column='6 +3')
               != yield
-          
+
+        //- Page footer
         footer.main-footer
           div(container)
             include ../includes/_footer
 
-    // === Navigation button
+    //- Navigation button
     a(href="#")#nav-button.nav-button Menu
       span.nav-icon
 
-    // === Navigation section
+    //- Sidebar
     .nav
       .nav-wrapper
         a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
@@ -81,6 +83,7 @@ html(lang='en').docs-root
             li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') 2.10 &nbsp; Progress Bars
             li: a(href='/documentation/concise-ui/spinner' class=current.source === 'spinner' ? 'active' : '') 2.12 &nbsp; Spinner
             li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') 2.13 &nbsp; Tooltips
+
 
     script(src='../../scripts/main.js')
 

@@ -2,6 +2,10 @@
 // Concise
 // =============================================================================
 
+//
+// Roots
+// ----------------------------
+
 html { min-height: 100vh; }
 
 // <html> in the documentation pages
@@ -17,21 +21,21 @@ html { min-height: 100vh; }
 // ----------------------------
 
 h2 {
-  margin-top: unitSize(9);
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: unitSize(3, -5);
-  margin-bottom: unitSize(6);
   letter-spacing: 0.05em;
+  margin-bottom: unitSize(6);
+  margin-top: unitSize(9);
+  padding-bottom: unitSize(3, -5);
+  position: relative;
+  text-transform: uppercase;
 
   &::after {
-    content: '';
-    width: 75px;
-    height: 5px;
     background-color: getColor(base, primary);
-    position: absolute;
     bottom: 0;
+    content: '';
+    height: 5px;
     left: 0;
+    position: absolute;
+    width: 75px;
   }
 }
 
@@ -41,16 +45,16 @@ table {
   td,
   th {
     line-height: inherit;
-    padding-top: unitSize(2);
     padding-bottom: unitSize(2);
+    padding-top: unitSize(2);
   }
 
   th {
     font-family: $font-family-headings;
-    text-transform: uppercase;
     font-size: pxToEm(16);
     letter-spacing: 0.05em;
     text-align: center;
+    text-transform: uppercase;
   }
 
   td { font-size: pxToEm(18); }
@@ -66,16 +70,16 @@ table {
 
 .mainHeader {
   font-family: $font-family-headings;
-  position: relative;
   padding-top: unitSize(2);
+  position: relative;
 
   @media (min-width: $bp-medium) {
     padding-top: unitSize(5);
   }
 
   .logo {
-    height: unitSize(9);
     display: inline-block;
+    height: unitSize(9);
   }
 }
 
@@ -84,8 +88,8 @@ table {
   margin-top: unitSize(3);
 
   ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {
@@ -97,23 +101,21 @@ table {
   }
 
   a {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: pxToEm(16);
     color: getColor(text, primary);
+    font-size: pxToEm(16);
+    font-weight: bold;
     letter-spacing: 2px;
+    text-transform: uppercase;
 
     &.active,
     &:hover,
-    &:focus {
-      color: getColor(base, primary);
-    }
+    &:focus { color: getColor(base, primary); }
   }
 }
 
 .mainHeader-intro {
-  position: absolute;
   bottom: 10%;
+  position: absolute;
   text-align: center;
 
   @media (min-width: $bp-medium) {
@@ -121,26 +123,22 @@ table {
   }
 
   h1 {
-    margin: 0 0 unitSize(6);
-    font-weight: normal;
-    text-transform: none;
     border-bottom: 0;
-    text-align: inherit;
-    letter-spacing: normal;
     font-size: pxToEm($h2-size);
+    font-weight: normal;
+    letter-spacing: normal;
+    margin: 0 0 unitSize(6);
+    text-align: inherit;
+    text-transform: none;
 
     @media (min-width: $bp-medium) {
       font-size: pxToEm($h1-size);
     }
 
-    &::after {
-      content: none;
-    }
+    &::after { content: none; }
   }
 
-  p {
-    margin-bottom: 0;
-  }
+  p { margin-bottom: 0; }
 }
 
 .mainHeader-buttons span {
@@ -151,38 +149,33 @@ table {
 }
 
 .mainHeader-version {
-  position: absolute;
-  left: pxToEm($gutter/2);
-  text-transform: uppercase;
-  font-size: pxToEm(16);
-  color: getColor(text, secondary);
-  font-weight: bold;
-  margin-bottom: 0;
   bottom: unitSize(2);
+  color: getColor(text, secondary);
+  font-size: pxToEm(16);
+  font-weight: bold;
+  left: pxToEm($gutter/2);
+  margin-bottom: 0;
+  position: absolute;
   right: pxToEm($gutter/2);
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $bp-medium) {
     bottom: 10%;
     text-align: left;
   }
 
-  strong {
-    color: getColor(text, primary);
-  }
+  strong { color: getColor(text, primary); }
 }
 
 .mainSection {
-  padding-top: unitSize(3);
   border-top: 1px solid getColor(base, lines);
+  padding-top: unitSize(3);
 }
 
 @media (min-width: $bp-medium) {
-  .introSection {
-    padding-top: unitSize(6);
-  }
+  .introSection { padding-top: unitSize(6); }
 }
-
 
 .featuresSection {
   margin-top: unitSize(6);
@@ -209,13 +202,13 @@ table {
 .main-footer {
   @include clearfix();
 
-  font-family: $font-family-headings;
-  text-transform: uppercase;
-  font-size: pxToEm(12);
-  padding: unitSize(3) 0;
   border-top: 1px solid getColor(base, lines);
+  font-family: $font-family-headings;
+  font-size: pxToEm(12);
   margin-top: unitSize(9);
+  padding: unitSize(3) 0;
   text-align: center;
+  text-transform: uppercase;
 
   a {
     color: getColor(text, primary);
@@ -505,11 +498,12 @@ table {
 
 // Buttons
 .button {
+  font-family: $font-family-headings;
   font-size: pxToEm(14);
-  transition-property: background-color;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  transition-property: background-color;
 
   &:hover,
   &:focus { background-color: lighten(getColor(base, primary), 10%); }
