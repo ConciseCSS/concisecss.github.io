@@ -65,9 +65,13 @@ table {
 .homePage .mainHeader { min-height: 100vh; }
 
 .mainHeader {
-  padding-top: unitSize(5);
   font-family: $font-family-headings;
   position: relative;
+  padding-top: unitSize(2);
+
+  @media (min-width: $bp-medium) {
+    padding-top: unitSize(5);
+  }
 
   .logo {
     height: unitSize(9);
@@ -116,7 +120,6 @@ table {
     text-align: right;
   }
 
-
   h1 {
     margin: 0 0 unitSize(6);
     font-weight: normal;
@@ -124,6 +127,11 @@ table {
     border-bottom: 0;
     text-align: inherit;
     letter-spacing: normal;
+    font-size: pxToEm($h2-size);
+
+    @media (min-width: $bp-medium) {
+      font-size: pxToEm($h1-size);
+    }
 
     &::after {
       content: none;
