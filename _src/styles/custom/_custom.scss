@@ -571,6 +571,7 @@ table {
 }
 
 .colorPalette-third { @include column(1/3); }
+.colorPalette-fourth { @include column(1/4); }
 
 .colorPalette-fifth { @include column(1/5); }
 
@@ -587,6 +588,13 @@ table {
 .colorPalette-textSecondary { background-color: getColor(text, secondary); }
 
 .colorPalette-textHeading { background-color: getColor(text, heading); }
+
+.colorPalette-textUI {
+  background-color: getColor(text, ui);
+  border: 1px solid getColor(base, lines);
+
+  span { color: getColor(text, secondary); }
+}
 
 // Background colors
 .colorPalette-backgroundDark { background-color: getColor(background, dark); }
