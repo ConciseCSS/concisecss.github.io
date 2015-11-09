@@ -2,9 +2,10 @@
 // Concise
 // =============================================================================
 
+
 //
 // Roots
-// ----------------------------
+// -----
 
 html { min-height: 100vh; }
 
@@ -16,8 +17,9 @@ html { min-height: 100vh; }
   border: pxToEm($gutter/4) solid getColor(background, dark);
 }
 
+
 //
-// Typography & Native elements
+// Typography & Native Elements
 // ----------------------------
 
 h2 {
@@ -61,10 +63,9 @@ table {
 }
 
 
-
 //
-// Home page
-// -------------
+// Homepage
+// --------
 
 .homePage .mainHeader { min-height: 100vh; }
 
@@ -78,7 +79,7 @@ table {
   }
 
   .logo {
-    display: inline-block;
+    float: left;
     height: unitSize(9);
   }
 }
@@ -95,9 +96,7 @@ table {
   li {
     display: inline-block;
 
-    &:not(:first-of-type) {
-      margin-left: 2em;
-    }
+    &:not(:first-of-type) { margin-left: 2em; }
   }
 
   a {
@@ -114,11 +113,13 @@ table {
 }
 
 .mainHeader-intro {
-  bottom: 10%;
-  position: absolute;
+  margin-top: $spacing-xl;
   text-align: center;
 
-  @media (min-width: $bp-medium) {
+  @media (min-width: $bp-small) {
+    bottom: 10%;
+    margin-top: 0;
+    position: absolute;
     text-align: right;
   }
 
@@ -142,10 +143,10 @@ table {
 }
 
 .mainHeader-buttons span {
-    color: getColor(text, secondary);
-    font-weight: bold;
-    margin-left: .5em;
-    vertical-align: baseline;
+  color: getColor(text, secondary);
+  font-weight: bold;
+  margin-left: .5em;
+  vertical-align: baseline;
 }
 
 .mainHeader-version {
@@ -192,7 +193,6 @@ table {
     }
   }
 }
-
 
 
 //
@@ -253,10 +253,9 @@ table {
 }
 
 
-
 //
-// Docs content
-// -------------
+// Docs Content
+// ------------
 
 .docs {
   -webkit-overflow-scrolling: touch;
@@ -270,11 +269,11 @@ table {
   z-index: 1;
 
   h1 {
-    text-align: center;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin-bottom: unitSize(6);
     margin-top: unitSize(6);
-    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
 
     @media (min-width: $bp-medium) {
       margin-bottom: unitSize(9);
@@ -288,13 +287,9 @@ table {
     }
   }
 
-  h3 {
-    margin-top: unitSize(5);
-  }
+  h3 { margin-top: unitSize(5);}
 
-  h2 + h3 {
-    margin-top: 0;
-  }
+  h2 + h3 { margin-top: 0; }
 
   h4 {
     margin-top: unitSize(3);
@@ -303,10 +298,9 @@ table {
 }
 
 
-
 //
-// Nav button
-// -------------
+// Nav Button
+// -----------
 
 .nav-button {
   background-color: getColor(background, dark);
@@ -367,10 +361,9 @@ table {
 }
 
 
-
 //
 // Navigation
-// -------------
+// ----------
 
 .nav {
   font-family: $font-family-headings;
@@ -461,7 +454,7 @@ table {
 
 //
 // Other Components
-// ----------
+// ----------------
 
 .toc h3 { margin-top: 0; }
 
@@ -473,6 +466,45 @@ table {
   img { height: 100%; }
 
   &:hover { animation-name: logo-pulse; }
+}
+
+// Advertisement
+#carbonads {
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  display: block;
+  font-size: .875em;
+  margin: 0 auto $spacing-l;
+  padding: 5px;
+  position: relative;
+  width: 310px;
+
+  @media (min-width: $bp-small) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.carbon-wrap {
+  @include clearfix;
+
+  text-transform: none;
+}
+
+.carbon-img,
+.carbon-text { float: left; }
+
+.carbon-text {
+  margin-left: 1em;
+  width: 150px;
+}
+
+.carbon-poweredby {
+  color: getColor(text, secondary);
+  display: block;
+  font-weight: 100;
+  margin-top: $spacing-xs;
+  text-transform: capitalize;
 }
 
 // Notes
