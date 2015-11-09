@@ -150,20 +150,23 @@ table {
 }
 
 .mainHeader-version {
-  bottom: unitSize(2);
   color: getColor(text, secondary);
   font-size: pxToEm(16);
   font-weight: bold;
-  left: pxToEm($gutter/2);
   margin-bottom: 0;
-  position: absolute;
-  right: pxToEm($gutter/2);
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $bp-medium) {
     bottom: 10%;
     text-align: left;
+  }
+
+  @media (min-height: $bp-small) {
+    bottom: unitSize(2);
+    position: absolute;
+    left: pxToEm($gutter/2);
+    right: pxToEm($gutter/2);
   }
 
   strong { color: getColor(text, primary); }
@@ -474,14 +477,13 @@ table {
   border-radius: 3px;
   display: block;
   font-size: .875em;
-  margin: 0 auto $spacing-l;
+  margin: $spacing-m auto $spacing-l;
   padding: 5px;
   position: relative;
   width: 310px;
 
   @media (min-width: $bp-small) {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 $spacing-l;
   }
 }
 
