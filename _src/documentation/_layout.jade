@@ -56,7 +56,7 @@ html(lang='en').docs-root
             li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') 1.1 &nbsp; Typography
             li: a(href='/documentation/core/headings' class=current.source === 'headings' ? 'active' : '') 1.2 &nbsp; Headings
             li: a(href='/documentation/core/lists' class=current.source === 'lists' ? 'active' : '') 1.3 &nbsp; Lists
-            li: a(href='/documentation/core/buttons' class=current.source === 'buttons' ? 'active' : '') 1.4 &nbsp; Buttons
+            li: a(href='/documentation/core/buttons' class=(current.source === 'buttons' && current.path[1] === 'core') ? 'active' : '') 1.4 &nbsp; Buttons
             li: a(href='/documentation/core/code' class=current.source === 'code' ? 'active' : '') 1.5 &nbsp; Code
             li: a(href='/documentation/core/forms' class=current.source === 'forms' ? 'active' : '') 1.6 &nbsp; Forms
             li: a(href='/documentation/core/tables' class=current.source === 'tables' ? 'active' : '') 1.7 &nbsp; Tables
@@ -76,7 +76,7 @@ html(lang='en').docs-root
             li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') 2.1 &nbsp; Alerts
             li: a(href='/documentation/concise-ui/badges-labels' class=current.source === 'badges-labels' ? 'active' : '') 2.2 &nbsp; Badges & Labels
             li: a(href='/documentation/concise-ui/breadcrumbs' class=current.source === 'breadcrumbs' ? 'active' : '') 2.3 &nbsp; Breadcrumbs
-            li: a(href='/documentation/concise-ui/buttons' class=current.source === 'buttons' ? 'active' : '') 2.4 &nbsp; Buttons
+            li: a(href='/documentation/concise-ui/buttons' class=(current.source === 'buttons' && current.path[1] === 'concise-ui') ? 'active' : '') 2.4 &nbsp; Buttons
             li: a(href='/documentation/concise-ui/cards' class=current.source === 'cards' ? 'active' : '') 2.5 &nbsp; Cards
             li: a(href='/documentation/concise-ui/collections' class=current.source === 'collections' ? 'active' : '') 2.6 &nbsp; Collections
             li: a(href='/documentation/concise-ui/dropdowns' class=current.source === 'dropdowns' ? 'active' : '') 2.7 &nbsp; Dropdowns
