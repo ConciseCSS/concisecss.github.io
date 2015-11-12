@@ -14,7 +14,12 @@ html { min-height: 100vh; }
 
 .homePage,
 .docs-container {
-  border: pxToEm($gutter/4) solid getColor(background, dark);
+  border: pxToEm($gutter / 5) solid getColor(background, dark);
+  transition: border $transition-duration;
+
+  @media (min-width: $bp-small) {
+    border-width: pxToEm($gutter / 4)
+  }
 }
 
 
@@ -154,6 +159,7 @@ table {
   font-size: pxToEm(16);
   font-weight: bold;
   margin-bottom: 0;
+  margin-top: $spacing-xl;
   text-align: center;
   text-transform: uppercase;
 
@@ -162,8 +168,9 @@ table {
     text-align: left;
   }
 
-  @media (min-height: $bp-small) {
+  @media (min-width: $bp-small) and (min-height: $bp-extra-small) {
     bottom: unitSize(2);
+    margin-top: 0;
     position: absolute;
     left: pxToEm($gutter/2);
     right: pxToEm($gutter/2);
@@ -243,15 +250,16 @@ table {
   }
 
   li {
-    display: inline-block;
+    display: block;
     padding: 0;
     line-height: 2;
 
     @media (min-width: $bp-medium) {
+      display: inline-block;
       line-height: inherit;
-    }
 
-    &:not(:last-of-type) { margin-right: 2em; }
+      &:not(:last-of-type) { margin-right: 2em; }
+    }
   }
 }
 
@@ -390,12 +398,14 @@ table {
 
   a {
     color: getColor(text, secondary);
+    letter-spacing: .75px;
     text-transform: uppercase;
-    font-weight: bold;
 
     &.active,
     &:hover,
     &:focus { color: white; }
+
+    &.active { font-weight: bold; }
   }
 
   li { list-style: none; }
@@ -480,10 +490,12 @@ table {
   margin: $spacing-m auto $spacing-l;
   padding: 5px;
   position: relative;
-  width: 310px;
+  text-align: left;
+  width: 100%;
 
   @media (min-width: $bp-small) {
     margin: 0 0 $spacing-l;
+    width: 310px;
   }
 }
 
@@ -498,7 +510,11 @@ table {
 
 .carbon-text {
   margin-left: 1em;
-  width: 150px;
+  width: 100px;
+
+  @media (min-width: $bp-small) {
+    width: 150px;
+  }
 }
 
 .carbon-poweredby {
