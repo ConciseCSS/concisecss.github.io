@@ -162,6 +162,11 @@ table {
   margin-top: $spacing-xl;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+
+  @media (min-width: $bp-small) {
+    max-width: 315px;
+  }
 
   @media (min-width: $bp-medium) {
     bottom: 10%;
