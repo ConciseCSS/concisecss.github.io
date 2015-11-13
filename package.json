@@ -9,8 +9,11 @@
     "type": "git",
     "url": "https://github.com/ConciseCSS/concisecss.github.io"
   },
+  "engines": {
+    "node": "<=4.2.1"
+  },
   "dependencies": {
-    "harp": "^0.17.0"
+    "harp": "^0.19.0"
   },
   "scripts": {
     "start": "harp server _src",
