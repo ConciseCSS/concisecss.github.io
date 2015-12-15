@@ -8,19 +8,19 @@ p
 
 h2 Mixins
 
-h3 clearfix()
+h3.heading--monospace clearfix()
 
 p
   | This mixin takes no parameters, and is only used to generate CSS that will
   | clear both left and right floats.
 
-h3 container()
+h3.heading--monospace container()
 
 p
   | This mixin takes no parameters, and is only used to generate a container for
   | content that is the width of the <code>$container-width</code> variable.
 
-h3 row()
+h3.heading--monospace row()
 
 p
   | This mixin generates CSS for a row that is used to contain columns.
@@ -39,7 +39,7 @@ div.table--responsive
         td Boolean
         td Set false to contain columns without gutter (Default is <code>true</code>)
 
-h3 column()
+h3.heading--monospace column()
 
 p
   | Use this mixin to generate CSS for a column.
@@ -65,7 +65,7 @@ div.table--responsive
 
 h2 Functions
 
-h3 unitSize()
+h3.heading--monospace unitSize()
 
 p
   | Use this function to set sizes with proportions. This can help maintain
@@ -92,7 +92,7 @@ div.table--responsive
         td A value in pixels which will be added to the result. This can be positive for addition or negative for subtraction (default is 0)
 
 
-h3 pxToEm()
+h3.heading--monospace pxToEm()
 
 p
   | This function converts <code>px</code> units to <code>em</code> units based
@@ -118,7 +118,7 @@ p
         td Number
         td The base font-size used to calculate <code>em</code> units (Default is <code>$font-base-size</code>)
 
-h3 getColor()
+h3.heading--monospace getColor()
 
 p
   | Using this function, you can easily retrieve colors from the <code>$colors</code>

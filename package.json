@@ -1,6 +1,6 @@
 {
   "name": "concisecss.github.io",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "The website for the Concise CSS front-end framework.",
   "license": "MIT",
   "homepage": "http://concisecss.com",
@@ -10,10 +10,10 @@
     "url": "https://github.com/ConciseCSS/concisecss.github.io"
   },
   "engines": {
-    "node": "<=4.2.1"
+    "node": "<=4.2.3"
   },
   "dependencies": {
-    "harp": "^0.19.0"
+    "harp": "^0.20.1"
   },
   "scripts": {
     "start": "harp server _src",
