@@ -17,7 +17,8 @@ are <em>not</em> present in our website's <code>&lt;head&gt;</code> section.</p>
 &lt;meta name="HandheldFriendly" content="True"&gt;
 &lt;meta name="MobileOptimized" content="320"&gt;
 </code></pre><p>In your custom CSS files, or in <code>&lt;style&gt;</code> tags, you need to
-set a fixed width for your container element (I'm using 960 pixels as example):</p><pre><code>[container] { width: 960px !important; }</code></pre><p>This overrides the Concise responsive container that is enabled by default.</p><h2>Examples</h2><p>We have a couple of pre-built templates that take advantage of the core Concise
+set a fixed width for your container element (I'm using 960 pixels as example):</p><pre><code>[container] { width: 960px !important; }</code></pre><p>This overrides the Concise responsive container that is enabled by default.</p><p>Lastly, you need to apply the <code>.nonresponsive</code> class to the
+<code>&lt;body&gt;</code> element to properly disable responsiveness. </p><h2>Examples</h2><p>We have a couple of pre-built templates that take advantage of the core Concise
 styles that should help you get started working on your own projects.</p><h3>Bare Bones</h3><p>To get started with a bare-bones responsive website using Concise, we recommend
 structuring your template as such:</p><pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
