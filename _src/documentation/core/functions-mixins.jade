@@ -63,6 +63,26 @@ div.table--responsive
         td Boolean
         td Set this to false if you want to create a column without gutter (Default is <code>true</code>)
 
+h3.heading--monospace columnOffset()
+
+p
+  | Use this mixin to generate CSS for a column.
+
+div.table--responsive
+  table.table
+    thead
+      tr
+        th(scope='col') Parameter
+        th(scope='col') Type
+        th(scope='col') Description
+
+    tbody
+      tr
+        td: code $offset
+        td Fraction
+        td The size of the offset, should be a number between 0-1. (Example: <code>1/2</code>)
+
+
 h2 Functions
 
 h3.heading--monospace unitSize()
