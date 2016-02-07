@@ -1,0 +1,48 @@
+.nav
+  .nav-wrapper
+    a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
+
+    nav.text--center
+      ul
+        li: a(href='/') Home
+        li: a(href='/archive/v2.0.0/') Concise v2 (Legacy)
+        li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
+
+    div(row)
+      div(column='6').text--right
+        h2.-reverse Core
+        nav
+          ul
+            li: a(href='/documentation/core/typography' class=current.source === 'typography' ? 'active' : '') Typography &nbsp; 1.1
+            li: a(href='/documentation/core/headings' class=current.source === 'headings' ? 'active' : '') Headings &nbsp; 1.2
+            li: a(href='/documentation/core/lists' class=current.source === 'lists' ? 'active' : '') Lists &nbsp; 1.3
+            li: a(href='/documentation/core/buttons' class=(current.source === 'buttons' && current.path[1] === 'core') ? 'active' : '') Buttons &nbsp; 1.4
+            li: a(href='/documentation/core/code' class=current.source === 'code' ? 'active' : '') Code &nbsp; 1.5
+            li: a(href='/documentation/core/forms' class=current.source === 'forms' ? 'active' : '') Forms &nbsp; 1.6
+            li: a(href='/documentation/core/tables' class=current.source === 'tables' ? 'active' : '') Tables &nbsp; 1.7
+            li: a(href='/documentation/core/grid' class=current.source === 'grid' ? 'active' : '') Grid System &nbsp; 1.8
+            li: a(href='/documentation/core/alignment' class=current.source === 'alignment' ? 'active' : '') Alignment &nbsp; 1.9
+            li: a(href='/documentation/core/breakpoints' class=current.source === 'breakpoints' ? 'active' : '') Breakpoints &nbsp; 1.10
+            li: a(href='/documentation/core/fluid-media' class=current.source === 'fluid-media' ? 'active' : '') Fluid Media &nbsp; 1.11
+            li: a(href='/documentation/core/conditional' class=current.source === 'conditional' ? 'active' : '') Conditional Styling &nbsp; 1.12
+            li: a(href='/documentation/core/colors' class=current.source === 'colors' ? 'active' : '') Colors &nbsp; 1.13
+            li: a(href='/documentation/core/screen-reader' class=current.source === 'screen-reader' ? 'active' : '') Screen Reader &nbsp; 1.14
+            li: a(href='/documentation/core/misc' class=current.source === 'misc' ? 'active' : '') Misc &nbsp; 1.15
+            li: a(href='/documentation/core/functions-mixins' class=current.source === 'functions-mixins' ? 'active' : '') Functions &amp; Mixins &nbsp; 1.16
+
+      div(column='6')
+        h2 Concise UI
+        nav
+          ul
+            li: a(href='/documentation/concise-ui/alerts' class=current.source === 'alerts' ? 'active' : '') 2.1 &nbsp; Alerts
+            li: a(href='/documentation/concise-ui/badges-labels' class=current.source === 'badges-labels' ? 'active' : '') 2.2 &nbsp; Badges & Labels
+            li: a(href='/documentation/concise-ui/breadcrumbs' class=current.source === 'breadcrumbs' ? 'active' : '') 2.3 &nbsp; Breadcrumbs
+            li: a(href='/documentation/concise-ui/buttons' class=(current.source === 'buttons' && current.path[1] === 'concise-ui') ? 'active' : '') 2.4 &nbsp; Buttons
+            li: a(href='/documentation/concise-ui/cards' class=current.source === 'cards' ? 'active' : '') 2.5 &nbsp; Cards
+            li: a(href='/documentation/concise-ui/collections' class=current.source === 'collections' ? 'active' : '') 2.6 &nbsp; Collections
+            li: a(href='/documentation/concise-ui/dropdowns' class=current.source === 'dropdowns' ? 'active' : '') 2.7 &nbsp; Dropdowns
+            li: a(href='/documentation/concise-ui/groups' class=current.source === 'groups' ? 'active' : '') 2.8 &nbsp; Groups
+            li: a(href='/documentation/concise-ui/modals' class=current.source === 'modals' ? 'active' : '') 2.9 &nbsp; Modals
+            li: a(href='/documentation/concise-ui/progress' class=current.source === 'progress' ? 'active' : '') 2.10 &nbsp; Progress Bars
+            li: a(href='/documentation/concise-ui/spinner' class=current.source === 'spinner' ? 'active' : '') 2.12 &nbsp; Spinner
+            li: a(href='/documentation/concise-ui/tooltips' class=current.source === 'tooltips' ? 'active' : '') 2.13 &nbsp; Tooltips

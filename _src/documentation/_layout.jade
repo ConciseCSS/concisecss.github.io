@@ -20,9 +20,9 @@ html(lang='en').docs-root
         header(container).mainHeader
           a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
 
-          nav.mainNav
-            ul
-              li: a(href='/documentation' title='Documentation').active Docs
+          //- Navigation button
+          a(href="#")#nav-button.nav-button Menu
+            span.nav-icon
 
         //- Content
         main(container)
@@ -35,12 +35,8 @@ html(lang='en').docs-root
           div(container)
             include ../includes/footer
 
-    //- Navigation button
-    a(href="#")#nav-button.nav-button Menu
-      span.nav-icon
-
     //- Sidebar
-    include ../includes/sidebar
+    include ../includes/navigation
 
 
     script(src='../../scripts/main.js')

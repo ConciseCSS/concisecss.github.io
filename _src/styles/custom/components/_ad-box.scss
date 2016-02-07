@@ -1,0 +1,46 @@
+//
+// Advertisement box
+// =============================================================================
+
+#carbonads {
+  border: 1px solid getColor(base, lines);
+  border-radius: 3px;
+  display: block;
+  font-size: .875em;
+  margin: $spacing-m auto $spacing-l;
+  padding: 5px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  @media (min-width: $bp-small) {
+    margin: 0 0 $spacing-l;
+    width: 310px;
+  }
+}
+
+.carbon-wrap {
+  @include clearfix;
+
+  text-transform: none;
+}
+
+.carbon-img,
+.carbon-text { float: left; }
+
+.carbon-text {
+  margin-left: 1em;
+  width: 100px;
+
+  @media (min-width: $bp-small) {
+    width: 150px;
+  }
+}
+
+.carbon-poweredby {
+  color: getColor(text, secondary);
+  display: block;
+  font-weight: 100;
+  margin-top: $spacing-xs;
+  text-transform: capitalize;
+}

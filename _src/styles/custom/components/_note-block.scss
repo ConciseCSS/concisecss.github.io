@@ -1,0 +1,20 @@
+//
+// Note block
+// =============================================================================
+
+.note {
+  border-top: 1px dashed getColor(base, lines);
+  border-bottom: 1px dashed getColor(base, lines);
+  font-size: pxToEm(16);
+  margin-top: unitSize(3);
+  padding: unitSize(2) 0;
+
+  &:before {
+    color: getColor(base, primary);
+    content: "Note:";
+    font-weight: bold;
+    margin-right: .25em;
+  }
+
+  small { font-size: 85%; }
+}
