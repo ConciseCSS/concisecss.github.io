@@ -145,7 +145,7 @@ table {
     font-size: pxToEm($h2-size);
     font-weight: normal;
     letter-spacing: normal;
-    margin: 0 0 unitSize(6);
+    margin: 0;
     text-align: inherit;
     text-transform: none;
 
@@ -159,6 +159,15 @@ table {
   p { margin-bottom: 0; }
 }
 
+.version {
+  margin-top: $spacing-xs;
+  color: getColor(text, secondary);
+}
+
+.mainHeader-buttons {
+  margin-top: $spacing-xl;
+}
+
 .mainHeader-buttons span {
   color: getColor(text, secondary);
   font-weight: bold;
@@ -166,7 +175,7 @@ table {
   vertical-align: baseline;
 }
 
-.mainHeader-version {
+.mainHeader-ad {
   color: getColor(text, secondary);
   font-size: pxToEm(16);
   font-weight: bold;

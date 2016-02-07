@@ -11,6 +11,8 @@ header(container).mainHeader
         | <strong>Concise CSS</strong>, a framework written in SASS that&rsquo;s
         | lightweight and easy-to-use.
 
+      p.version #[strong Current version:] #{version}
+
       .mainHeader-buttons
         .dropdown.dropdown--top.button.button--collapse(tabindex='0')
           | Download
@@ -26,10 +28,8 @@ header(container).mainHeader
                 span (50kb)
         a(href='/documentation').button.button--collapse.button--secondary Get Started
 
-  p.mainHeader-version
+  .mainHeader-ad
     <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=concisecss" id="_carbonads_js"></script>
-
-    <strong>Current version:</strong> #{version}
 
 main.mainSection
   section(container).introSection
