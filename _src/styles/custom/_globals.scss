@@ -41,7 +41,7 @@ $base-unit: 10;
 // $prefix: "";
 
 // Max width for container
-$container-width: 92%;
+$container-width: 1200px;
 
 // Gutter size in pixels (without the unit we can do math easily)
 $gutter: 40;
@@ -58,10 +58,10 @@ $gutter: 40;
 // ----------
 
 $font-family:            "ff-tisa-web-pro", serif;
-$font-family-headings:   "brandon-grotesque", sans-serif;
+$font-family-headings:   "sofia-pro", sans-serif;
 // $font-family-print:    "Georgia", "Times New Roman", "Times", serif;
 $font-family-mono:     "Consolas", monospace;
-$font-base-size:       21;
+$font-base-size:       20;
 
 
 //
@@ -101,7 +101,7 @@ $colors: (
   background: (
     "dark":  #2e2e2e,
     "light": #fafafa,
-    "body":  #fff
+    "body":  #f0f0f0
   ),
 
   state: (

@@ -9,20 +9,30 @@
 
 html { min-height: 100vh; }
 
+body {
+  line-height: 1.6;
+}
+
 // <html> in the documentation pages
 .docs-root { overflow: hidden; }
 
 .homePage,
 .docs-container {
-  border: pxToEm($gutter / 5) solid getColor(background, dark);
+  border: pxToEm($gutter / 5) solid white;
   transition: border $transition-duration;
 
   @media (min-width: $bp-small) {
-    border-width: pxToEm($gutter / 4)
+    border-width: 1em
   }
 }
 
-.docs-container { min-height: 100%; }
+.docs-container {
+  min-height: 100%;
+
+  p {
+    text-align: justify;
+  }
+}
 
 
 //
@@ -31,9 +41,9 @@ html { min-height: 100vh; }
 
 h2 {
   letter-spacing: 0.05em;
-  margin-bottom: unitSize(6);
+  margin-bottom: unitSize(3);
   margin-top: unitSize(9);
-  padding-bottom: unitSize(3, -5);
+  padding-bottom: unitSize(2);
   position: relative;
   text-transform: uppercase;
 
@@ -41,7 +51,7 @@ h2 {
     background-color: getColor(base, primary);
     bottom: 0;
     content: '';
-    height: 5px;
+    height: 4px;
     left: 0;
     position: absolute;
     width: 75px;
@@ -84,9 +94,6 @@ table {
   padding-top: unitSize(2);
   position: relative;
 
-  @media (min-width: $bp-medium) {
-    padding-top: unitSize(5);
-  }
 
   .logo {
     float: left;
@@ -143,7 +150,7 @@ table {
     text-transform: none;
 
     @media (min-width: $bp-medium) {
-      font-size: pxToEm($h1-size);
+      font-size: pxToEm($h2-size);
     }
 
     &::after { content: none; }
@@ -202,14 +209,14 @@ table {
   margin-top: unitSize(6);
 
   @media (min-width: $bp-medium) {
-    margin-top: unitSize(15);
+    margin-top: unitSize(8);
   }
 
   p {
-    margin-bottom: unitSize(3);
+    margin-bottom: unitSize(2);
 
     @media (min-width: $bp-medium) {
-      margin-bottom: unitSize(6);
+      margin-bottom: unitSize(4);
     }
   }
 }
@@ -222,7 +229,6 @@ table {
 .main-footer {
   @include clearfix();
 
-  border-top: 1px solid getColor(base, lines);
   font-family: $font-family-headings;
   font-size: pxToEm(12);
   margin-top: unitSize(9);
@@ -309,8 +315,6 @@ table {
   }
 
   h3 { margin-top: unitSize(5);}
-
-  h2 + h3 { margin-top: 0; }
 
   h4 {
     margin-top: unitSize(3);
