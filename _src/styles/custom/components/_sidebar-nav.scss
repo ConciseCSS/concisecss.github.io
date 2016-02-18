@@ -39,6 +39,7 @@
 
   ul {
     padding-left: 0;
+    margin-bottom: $spacing-s;
 
     &:last-of-type { margin-bottom: unitSize(6); }
   }
@@ -46,11 +47,12 @@
   h2 {
     color: white;
     margin-bottom: unitSize(2);
+    margin-top: 0;
     font-size: pxToEm($h3-size);
 
-    &.-reverse::after {
-      left: auto;
-      right: 0;
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
