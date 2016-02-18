@@ -15,8 +15,8 @@
   z-index: 3;
 
   @media (min-width: $bp-small) {
-    top: unitSize(2);
-    right: unitSize(2);
+    top: unitSize(3);
+    right: unitSize(3);
   }
 
   &:focus { outline: 0; }

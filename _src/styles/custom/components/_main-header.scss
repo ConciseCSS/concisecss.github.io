@@ -9,10 +9,11 @@
   padding-top: unitSize(2);
   position: relative;
 
-
   .logo {
     float: left;
-    height: unitSize(9);
+    height: unitSize(6);
+
+    @media (min-width: $bp-small) { height: unitSize(9); }
   }
 }
 
