@@ -1,9 +1,9 @@
 header(container).mainHeader
   a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
 
-  nav.mainNav
-    ul
-      li: a(href='/documentation' title='Documentation') Docs
+  //- Navigation button
+  a(href="#")#nav-button.nav-button Menu
+    span.nav-icon
 
   div(row)
     section(column='7 +5').mainHeader-intro
@@ -32,7 +32,7 @@ header(container).mainHeader
     <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=concisecss" id="_carbonads_js"></script>
 
 main.mainSection
-  section(container).introSection
+  section(container).intro-section
     h2 Introduction
 
     div(row)
@@ -77,4 +77,7 @@ main.mainSection
 
 footer.main-footer
   div(container)
-    include includes/_footer
+    include includes/footer
+
+//- Sidebar
+include includes/navigation

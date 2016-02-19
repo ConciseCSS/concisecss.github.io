@@ -1,0 +1,11 @@
+//
+// Logo image
+// =============================================================================
+
+.logo {
+  height: unitSize(9);
+
+  img { height: 100%; }
+
+  &:hover { animation-name: logo-pulse; }
+}

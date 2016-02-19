@@ -1,0 +1,23 @@
+//
+// colorpalette-section
+// =============================================================================
+
+.colorPalette {
+  @include row();
+
+  p {
+    height: 75px;
+    margin-bottom: 0;
+  }
+
+  span {
+    color: white;
+    display: block;
+    font-family: $font-family-mono;
+    font-size: pxToEm(12);
+    margin-left: 1em;
+    padding-top: unitSize(1);
+
+    &.text--dark { color: getColor(text, secondary); }
+  }
+}
