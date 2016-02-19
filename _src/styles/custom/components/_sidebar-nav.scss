@@ -10,9 +10,9 @@
   right: 0;
   top: 0;
   bottom: 0;
-  left: 0;
   transition: visibility 0s 0.7s;
   visibility: hidden;
+  width: 20em;
   z-index: 2;
 
   .logo {
@@ -49,11 +49,6 @@
     margin-bottom: unitSize(2);
     margin-top: 0;
     font-size: pxToEm($h3-size);
-
-    &::after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   .nav-wrapper {
