@@ -4,9 +4,9 @@
 
     nav.text--center
       ul
-        li: a(href='/') Home
+        li: a(href='/' class=current.path[0] === 'index' ? 'active' : '') Home
         li: a(href='/archive/v2.0.0/') Concise v2 (Legacy)
-        li: a(href='/documentation' class=current.source === 'index' ? 'active' : '') Getting Started
+        li: a(href='/documentation' class=current.path[0] === 'documentation' && current.path[1] === 'index' ? 'active' : '') Getting Started
 
 
       h2 Core
