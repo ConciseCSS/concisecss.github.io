@@ -1,6 +1,10 @@
 header(container).mainHeader
   a(href='/').logo.animated: img(src='/images/logo2.svg' alt='Concise Logo')
 
+  //- Navigation button
+  a(href="#")#nav-button.nav-button Menu
+    span.nav-icon
+
   div(row)
     section(column='7 +5').mainHeader-intro
       h1
@@ -74,3 +78,6 @@ main.mainSection
 footer.main-footer
   div(container)
     include includes/footer
+
+//- Sidebar
+include includes/navigation
