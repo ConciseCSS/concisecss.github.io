@@ -6,16 +6,15 @@
   @include clearfix();
 
   font-family: $font-family-headings;
-  font-size: pxToEm(12);
+  font-size: pxToEm(14);
   margin-top: unitSize(9);
   padding: unitSize(3) 0;
-  text-align: center;
-  text-transform: uppercase;
+
+  @media (max-width: $bp-small) { text-align: center; }
 
   a {
     color: getColor(text, primary);
     font-weight: bold;
-    letter-spacing: 1px;
 
     &:hover,
     &:focus { color: getColor(base, primary); }
@@ -27,6 +26,10 @@
 
     @media (min-width: $bp-medium) {
       float: left;
+    }
+
+    a {
+      color: getColor(text, secondary);
     }
   }
 
@@ -45,6 +48,8 @@
     display: block;
     padding: 0;
     line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     @media (min-width: $bp-medium) {
       display: inline-block;
