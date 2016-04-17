@@ -40,6 +40,13 @@ h2 {
   }
 }
 
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+}
+
 pre { font-size: pxToEm(18); }
 
 table {
