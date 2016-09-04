@@ -4,9 +4,13 @@
 
 .error-404 {
   h1 {
-    margin-bottom: unitSize(6);
+    margin-bottom: unitSize(3);
     margin-top: 0;
-  }
 
-  small { display: block; }
+    small {
+      display: block;
+      font-size: 40%;
+      line-height: 1.25;
+    }
+  }
 }
