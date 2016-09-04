@@ -2,11 +2,13 @@
  * @function nav
  *
  * Interaction for slide-out navigation
+ *
+ * @param {string} element that triggers the navigation open
+ * @param {string} class name to add when navigation is open
  */
-function nav() {
-  var element = document.getElementById('nav-button');
+function nav(el, className) {
+  var element = document.getElementById(el);
   var body = document.body;
-  var className = 'nav--open';
 
   element.addEventListener('click', function(e) {
     e.preventDefault();
@@ -17,10 +19,11 @@ function nav() {
       var classes = body.className.split(' ');
       var existingIndex = classes.indexOf(className);
 
-      if (existingIndex >= 0)
+      if (existingIndex >= 0) {
         classes.splice(existingIndex, 1);
-      else
+      } else {
         classes.push(className);
+      }
 
       body.className = classes.join(' ');
     }
@@ -50,11 +53,13 @@ function notificationRequest() {
  * Construct a notification to send to the user
  *
  * @param {string} body text for notification
- * @param {string} path for notification image
+ * @param {string} icon path for notification image
  * @param {string} title text for notification
- *
+ * @param {string} link when clicking on notification (optional)
  */
 function notificationMessage(body, icon, title, link) {
+  link = link || 0;
+
   var options = {
     body: body,
     icon: icon
@@ -68,7 +73,7 @@ function notificationMessage(body, icon, title, link) {
     };
   }
 
-  setTimeout(n.close.bind(n), 4500);
+  setTimeout(n.close.bind(n), 5000);
 }
 
 
@@ -76,9 +81,11 @@ function notificationMessage(body, icon, title, link) {
  * @function returnCurrentVersion
  *
  * Returns the current version for Concise from a hidden element on the page
+ *
+ * @param {string} element name that stores the hidden version
  */
-function returnCurrentVersion() {
-  var currentVersion = document.getElementsByClassName("js-currentVersion")[0].textContent;
+function returnCurrentVersion(el) {
+  var currentVersion = el[0].textContent;
 
   return currentVersion;
 }
@@ -88,11 +95,12 @@ function returnCurrentVersion() {
  * @function returnVersionDifference
  *
  * Use localStorage to store and retrieve the current version of Concise so we
- * can determine if there's a version difference to notify of
+ * can determine if there's a version difference
+ *
+ * @param {string} current version of Concise
  */
-function returnVersionDifference() {
-  var currentVersion = returnCurrentVersion(),
-      storedVersion,
+function returnVersionDifference(currentVersion) {
+  var storedVersion,
       versionDifference;
 
   // If we've stored a version
@@ -122,15 +130,16 @@ function returnVersionDifference() {
 function notificationUpdate() {
   if (("Notification" in window)) {
     var permission = Notification.permission;
-    var currentVersion = "v" + returnCurrentVersion();
+    var currentVersion = returnCurrentVersion(document.getElementsByClassName("js-currentVersion"));
+    var currentVersionText = "v" + currentVersion;
 
-    if (returnVersionDifference() === true) {
+    if (returnVersionDifference(currentVersion) === true) {
       if (permission === "granted") {
         notificationMessage(
-          "Click to see what's new in " + currentVersion + "",
+          "Click to see what's new in " + currentVersionText + "",
           "/images/logo.png",
           "A new version of Concise is available",
-          "https://github.com/ConciseCSS/concise.css/releases/" + currentVersion + ""
+          "https://github.com/ConciseCSS/concise.css/releases/" + currentVersionText + ""
         );
       }
     }
@@ -142,7 +151,7 @@ function notificationUpdate() {
  * Run functions
  */
 (function() {
-  nav();
+  nav('nav-button', 'nav--open');
   notificationRequest();
   notificationUpdate();
 })();
