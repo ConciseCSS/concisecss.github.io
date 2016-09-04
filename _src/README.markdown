@@ -25,7 +25,7 @@ npm install harp -g
 **Start a server to view pages:**
 
 ```
-npm run start
+npm start
 ```
 
 **Compile static assets:**
