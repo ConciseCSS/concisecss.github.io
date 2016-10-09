@@ -1,6 +1,6 @@
 {
   "name": "concisecss.github.io",
-  "version": "3.3.2",
+  "version": "4.0.0",
   "description": "The website for the Concise CSS front-end framework.",
   "license": "MIT",
   "homepage": "http://concisecss.com",
@@ -10,13 +10,19 @@
     "url": "https://github.com/ConciseCSS/concisecss.github.io"
   },
   "engines": {
-    "node": "<=4.2.3"
+    "node": "^6.6.0"
   },
-  "dependencies": {
-    "harp": "^0.20.3"
-  },
+  "dependencies": {},
   "scripts": {
-    "start": "harp server _src",
-    "compile": "harp compile _src ./"
+    "dev": "jake default"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "concise-cli": "^0.3.0",
+    "concise.css": "github:concisecss/concise.css#master",
+    "http-server": "^0.9.0",
+    "jake": "^8.0.14",
+    "livereload": "^0.5.0",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
