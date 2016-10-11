@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    title Concise Framework
+    meta(name='description' content='Concise is a lightweight front-end framework that provides a number of great features without the bloat.')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    script(src='//use.typekit.net/glq4bcp.js')
+    script try{Typekit.load({ async: true });}catch(e){}
+
+    link(rel='stylesheet' href='/styles/main.css')
+    link(rel='icon' href='/favicon.png')
+  body
+    div(container)
+      block content
+
+    script.
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-23449205-5','auto');ga('send','pageview')
+
+    script(src='https://www.google-analytics.com/analytics.js' async defer)
