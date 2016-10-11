@@ -10,9 +10,9 @@ $font-size: 18;
 $font-size-secondary: 22;
 
 // Font families
-$font-primary:   "Helvetica Neue", sans-serif;
-$font-secondary: "Helvetica Neue", sans-serif;
-$font-print:     "Helvetica Neue", sans-serif;
+$font-primary:   "ff-tisa-web-pro", serif;
+$font-secondary: "sofia-pro", sans-serif;
+$font-print:     "ff-tisa-web-pro", serif;
 
 // Automatic margins
 $automargin: true;
