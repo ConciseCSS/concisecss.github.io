@@ -1,6 +1,6 @@
 desc('Compile Pug files.')
 task('pug', () => {
-  jake.exec('pug src --out . -w', {
+  jake.exec('pug src/ --out . -w --obj src/_data.json', {
     printStdout: true,
     printStderr: true
   }, () => {
