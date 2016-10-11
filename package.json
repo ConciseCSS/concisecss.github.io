@@ -14,7 +14,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "dev": "jake default"
+    "start:dev": "jake default"
   },
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
