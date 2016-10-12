@@ -44,3 +44,38 @@
   margin-top: $spacing-xs;
   text-transform: capitalize;
 }
+
+
+//
+// Modifiers
+// ---------
+
+.docs {
+  #carbonads {
+    margin: 100px auto 0;
+    max-width: 310px;
+
+    @media (min-width: $bp-medium) {
+      margin-top: 0;
+      float: right;
+      width: 143px;
+    }
+
+    .carbon-img {
+      @media (min-width: $bp-medium) {
+        float: none;
+      }
+    }
+
+    .carbon-text {
+      width: 150px;
+
+      @media (min-width: $bp-medium) {
+        display: block;
+        float: none;
+        margin: 5px 0;
+        width: auto;
+      }
+    }
+  }
+}
