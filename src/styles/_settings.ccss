@@ -9,10 +9,15 @@
 $font-size: 18;
 $font-size-secondary: 22;
 
+// Tracking
+$letter-spacing: 0.05em;
+
 // Font families
 $font-primary:   "ff-tisa-web-pro", serif;
 $font-secondary: "sofia-pro", sans-serif;
-$font-print:     "ff-tisa-web-pro", serif;
+$font-mono: "Consolas", monospace;
+$font-print-primary: "Georgia", "Times New Roman", "Times", serif;
+$font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
 
 // Automatic margins
 $automargin: true;
@@ -63,6 +68,9 @@ $scale-ratio-secondary: $major-third;
 //
 // Grid
 // ----
+
+// Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
+$full-grid: false;
 
 // Max width for container
 $container-width: 1000px;
