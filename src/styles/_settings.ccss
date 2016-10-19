@@ -73,7 +73,7 @@ $scale-ratio-secondary: $_major-second;
 $full-grid: false;
 
 // Max width for container
-$container-width: 1000px;
+$container-width: 1200px;
 
 // Gutter size
 $gutter: 2em;
