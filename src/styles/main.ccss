@@ -10,3 +10,9 @@ h3 {
   font-size: typeScale(2);
   margin-bottom: 0.1lh;
 }
+
+a {
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  color: getColor(text, primary);
+  letter-spacing: 0.05em;
+}
