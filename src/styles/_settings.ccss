@@ -15,7 +15,7 @@ $letter-spacing: 0.05em;
 // Font families
 $font-primary:   "ff-tisa-web-pro", serif;
 $font-secondary: "sofia-pro", sans-serif;
-$font-mono: "Consolas", monospace;
+$font-mono: "Fira Code", monospace;
 $font-print-primary: "Georgia", "Times New Roman", "Times", serif;
 $font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
 
@@ -101,7 +101,7 @@ $colors: (
 
   text: (
     "primary":   #222,
-    "secondary": #999,
+    "secondary": #777,
     "tertiary":  #eee,
     "heading":   #1a1a1a,
     "ui":        white
