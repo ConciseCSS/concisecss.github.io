@@ -940,6 +940,9 @@ table {
   ol li {
     content: "&raquo; "; } }
 
+h1 {
+  margin-top: 4.5rem; }
+
 h2 {
   margin-top: 3rem; }
 

@@ -1,6 +1,10 @@
 @import 'settings.ccss';
 @import '../../node_modules/concise.css/concise';
 
+h1 {
+  margin-top: 3lh;
+}
+
 h2 {
   margin-top: 2lh;
 }
