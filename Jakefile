@@ -10,7 +10,7 @@ task('pug', () => {
 
 desc('Compile the files of Concise Framework.')
 task('concise', () => {
-  jake.exec('concisecss compile src/styles/main.ccss styles/main.css', {
+  jake.exec('concisecss compile src/styles/main.scss styles/main.css', {
     printStdout: true,
     printStderr: true
   }, () => {
@@ -20,7 +20,7 @@ task('concise', () => {
 
 desc('Compile styles on file changes')
 task('concise:watch', () => {
-  jake.exec('chokidar "src/styles/**/*.ccss" -c "jake concise"', {
+  jake.exec('chokidar "src/styles/**/*.scss" -c "jake concise"', {
     printStdout: true,
     printStderr: true
   }, () => {
