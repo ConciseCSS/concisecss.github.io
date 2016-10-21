@@ -1092,16 +1092,15 @@ a {
 
 pre {
   background-color: transparent;
-  border-radius: 0; }
-  pre code {
-    color: #777; }
-
-code,
-pre {
-  background-color: transparent; }
-
-pre {
+  border-radius: 0;
   border-left: 0;
   border-right: 0;
   padding-left: 0;
   padding-right: 0; }
+  pre code {
+    color: #777;
+    font-size: 88.88889%; }
+
+code,
+pre {
+  background-color: transparent; }

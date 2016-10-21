@@ -1,45 +1,12 @@
+// Concise
 @import 'settings';
 @import '../../node_modules/concise.css/concise';
 
+// Fonts
 @import 'fira-code';
 
+// Third Parties
 @import 'components/prism';
 
-h1 {
-  margin-top: 3lh;
-}
-
-h2 {
-  margin-top: 2lh;
-}
-
-h3 {
-  text-transform: uppercase;
-  font-size: typeScale(2);
-  margin-bottom: 0.1lh;
-}
-
-a {
-  font-feature-settings: "smcp" 1, "c2sc" 1;
-  color: getColor(text, primary);
-  letter-spacing: 0.05em;
-}
-
-pre {
-  background-color: transparent;
-  border-radius: 0;
-
-  code { color: getColor(text, secondary); }
-}
-
-code,
-pre {
-  background-color: transparent;
-}
-
-pre {
-  border-left: 0;
-  border-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
+// Main
+@import 'base';

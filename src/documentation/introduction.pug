@@ -36,7 +36,7 @@ block content
     p Then you can include the main file inside your project:
 
     pre.language-scss: code.
-      // main.ccss
+      // main.scss
       // ---------
 
       // Concise Core
@@ -50,7 +50,8 @@ block content
 
     h2 Building the Source Files
 
-    p Concise CSS files have a #[code .ccss] extension, although this is not mandatory and #[code .scss] can be used, the #[code .ccss] is recommended to let other people know that is not plain Sass—but a Concise CSS file—since we also have other features available.
+    <!-- TODO: Update this paragraph, since is no longer true -->
+    p Concise CSS files have a #[code .scss] extension, although this is not mandatory and #[code .scss] can be used, the #[code .scss] is recommended to let other people know that is not plain Sass—but a Concise CSS file—since we also have other features available.
 
     p To build those source files, you need to install the Concise CLI globally:
 
@@ -60,7 +61,7 @@ block content
     p Once it is installed, you can compile source files with the #[code concisecss compile] command:
 
     pre: code.
-      concisecss compile input.ccss output.css
+      concisecss compile input.scss output.css
 
     h2 Configuration
 
@@ -71,7 +72,7 @@ block content
     pre.language-scss: code.
       //
       // Base
-      // ----
+      // --------------------------------------------------
 
       $font-size: 16;
       $font-size-secondary: 18;
@@ -112,7 +113,7 @@ block content
 
       //
       // Type Scale
-      // -------------
+      // --------------------------------------------------
 
       // Suggested ratios
       // Source: http://type-scale.com/
@@ -133,7 +134,7 @@ block content
 
       //
       // Grid
-      // ----
+      // --------------------------------------------------
 
       // Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
       $full-grid: false;
@@ -155,7 +156,7 @@ block content
 
       //
       // Color Palette
-      // -------------
+      // --------------------------------------------------
 
       // Colors
       $colors: (
@@ -227,14 +228,15 @@ block content
         )
       );
 
-    p You can just copy the previous code block in a #[code _settings.ccss] file and include it in your project
+    p You can just copy the previous code block in a #[code _settings.scss] file and include it in your project
 
-    pre: code.
-      // main.ccss
+    pre.language-scss: code.
+      //
+      // main.scss
       // ---------
 
       // Concise Settings
-      @import "settings.ccss";
+      @import "settings.scss";
 
       // Concise Core
       @import "node_modules/concise.css/concise";

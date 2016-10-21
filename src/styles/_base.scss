@@ -1,0 +1,38 @@
+h1 {
+  margin-top: 3lh;
+}
+
+h2 {
+  margin-top: 2lh;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: typeScale(2);
+  margin-bottom: 0.1lh;
+}
+
+a {
+  font-feature-settings: "smcp" 1, "c2sc" 1;
+  color: getColor(text, primary);
+  letter-spacing: 0.05em;
+}
+
+pre {
+  background-color: transparent;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  code { 
+    color: getColor(text, secondary);
+    font-size: 100% / $scale-ratio;
+  }
+}
+
+code,
+pre {
+  background-color: transparent;
+}
