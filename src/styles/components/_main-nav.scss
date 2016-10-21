@@ -1,0 +1,37 @@
+.main-nav {
+  padding-top: 2lh;
+  font-family: $font-secondary;
+  font-size: typeScale(1);
+
+  a {
+    font-weight: bold;
+    font-feature-settings: "smcp" 1, "c2sc" 1;
+    letter-spacing: $letter-spacing;
+  }
+
+  .-active {
+    color: getColor(base, primary);
+  }
+
+  .logo {
+    height: 3lh;
+    margin-bottom: 1lh;
+  }
+
+  ol ol a {
+    font-weight: normal;
+    font-feature-settings: initial;
+    letter-spacing: 0;
+  }
+
+  ol {
+    counter-reset: item;
+  }
+
+  li:before { 
+    content: counters(item, ".") " "; 
+    counter-increment: item;
+    margin-right: 0.25em;
+    color: getColor(base, primary);
+  }
+}

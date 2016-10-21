@@ -12,10 +12,18 @@ h3 {
   margin-bottom: 0.1lh;
 }
 
-a {
+p a {
   font-feature-settings: "smcp" 1, "c2sc" 1;
-  color: getColor(text, primary);
   letter-spacing: 0.05em;
+}
+
+a {
+  color: getColor(text, primary);
+
+  &:hover,
+  &:focus {
+    color: getColor(base, primary);
+  }
 }
 
 pre {
@@ -35,4 +43,17 @@ pre {
 code,
 pre {
   background-color: transparent;
+}
+
+ol {
+  padding: 0;
+}
+
+ol ol {
+  margin-top: 0;
+  margin-left: 1em;
+  
+  a {
+    text-transform: capitalize;
+  }
 }
