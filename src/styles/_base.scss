@@ -18,9 +18,19 @@ h3 {
   margin-bottom: 0.1lh;
 }
 
-p a {
+main a {
   font-feature-settings: "smcp" 1, "c2sc" 1;
   letter-spacing: 0.05em;
+
+  &[href*="//"]:not([href*="concisecss.com"]):after,
+  &[href*="//"]:not([href*="localhost"]):after {
+    content: "°";
+    color: getColor(base, primary);
+    font-size: 0.9em;
+    top: -0.1em;
+    right: 0.05em;
+    position: relative;
+  }
 }
 
 a {

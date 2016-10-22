@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * ConciseCSS v4.0.0
  * https://github.com/ConciseCSS/concise.css
@@ -1089,10 +1090,17 @@ h3 {
   font-size: 1rem;
   margin-bottom: 0.15rem; }
 
-p a {
+main a {
   -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
           font-feature-settings: "smcp" 1, "c2sc" 1;
   letter-spacing: 0.05em; }
+  main a[href*="//"]:not([href*="concisecss.com"]):after, main a[href*="//"]:not([href*="localhost"]):after {
+    content: "°";
+    color: #D34A28;
+    font-size: 0.9em;
+    top: -0.1em;
+    right: 0.05em;
+    position: relative; }
 
 a {
   color: #222; }
