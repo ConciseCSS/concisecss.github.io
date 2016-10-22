@@ -11,8 +11,6 @@ Prism.languages.scss=Prism.languages.extend("css",{comment:{pattern:/(^|[^\\])(?
 $(function() {
   var page = window.location.href.substr(window.location.href.indexOf("/documentation/"));
 
-  console.log(page);
-
   $(".main-nav a").each(function(){
     if($(this).attr("href") == page) {
       $(this).addClass("-active");
