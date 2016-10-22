@@ -1,0 +1,19 @@
+.main-footer {
+  text-align: center;
+  padding: 1lh $gutter/2;
+  margin-top: 3lh;
+  font-size: typeScale(1);
+  color: getColor(text, secondary);
+  font-style: italic;
+
+  a {
+    color: inherit;
+    font-feature-settings: "smcp" 0, "c2sc" 0;
+    letter-spacing: 0;
+
+    &:hover,
+    &:focus {
+      color: getColor(text, primary);
+    }
+  }
+}

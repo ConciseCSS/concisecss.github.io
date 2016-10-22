@@ -1077,7 +1077,9 @@ pre[class*="language-"] {
   max-width: 800px; }
 
 h1 {
-  margin-top: 4.5rem; }
+  margin-top: 4.5rem;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 0.375rem; }
 
 h2 {
   margin-top: 3rem; }
@@ -1184,3 +1186,18 @@ ol ol {
   border-right: 1px solid #dcdcdc; }
   .sidebar-container:hover {
     opacity: 1; }
+
+.main-footer {
+  text-align: center;
+  padding: 1.5rem 1em;
+  margin-top: 4.5rem;
+  font-size: 0.88889rem;
+  color: #777;
+  font-style: italic; }
+  .main-footer a {
+    color: inherit;
+    -webkit-font-feature-settings: "smcp" 0, "c2sc" 0;
+            font-feature-settings: "smcp" 0, "c2sc" 0;
+    letter-spacing: 0; }
+    .main-footer a:hover, .main-footer a:focus {
+      color: #222; }
