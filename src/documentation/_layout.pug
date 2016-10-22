@@ -13,40 +13,11 @@ html(lang='en')
     link(rel='stylesheet' href='/styles/main.css')
     link(rel='icon' href='/favicon.png')
   body
-    div(container)
-      div(grid)
-        nav(column='4').main-nav
-          img(src='/images/logo.svg' title="Concise CSS Logo").logo
+    .sidebar-container
+      include _includes/_index-nav
 
-          ol
-            li: a(href='/') Home
-            li
-              a(href='/documentation/') Introduction
-              ol
-                li: a(href='/documentation/#installation') Installation
-                li: a(href='/documentation/#building-source') Building the source
-                li: a(href='/documentation/#configuration') Configuration
-                li: a(href='/documentation/#add-ons') Using add-ons
-                li: a(href='/documentation/#coding-conventions') Coding conventions
-
-            li: a(href='/documentation/core') Core
-            li
-              a(href='/documentation/utils') Utils
-              ol
-                li: a(href='/documentation/utils#borders') Borders
-                li: a(href='/documentation/utils#colors') Colors
-                li: a(href='/documentation/utils#hide-show') Hide/Show
-                li: a(href='/documentation/utils#display') Display
-                li: a(href='/documentation/utils#margins') Margins
-                li: a(href='/documentation/utils#paddings') Paddings
-                li: a(href='/documentation/utils#position') Position
-                li: a(href='/documentation/utils#type-scale') Type scale
-                li: a(href='/documentation/utils#typography') Typograhy
-
-            li: a(href='/documentation/ui') UI
-
-        div(column='8')
-          block content
+    .main-container
+      block content
 
     script(src='https://code.jquery.com/jquery-3.1.1.slim.js' integrity='sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA=' crossorigin='anonymous')
     script(src='/scripts/main.js')

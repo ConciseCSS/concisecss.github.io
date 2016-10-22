@@ -11,14 +11,14 @@ Prism.languages.scss=Prism.languages.extend("css",{comment:{pattern:/(^|[^\\])(?
 $(function() {
   var page = window.location.href.substr(window.location.href.indexOf("/documentation/"));
 
-  $(".main-nav a").each(function(){
+  $(".index-nav a").each(function(){
     if($(this).attr("href") == page) {
       $(this).addClass("-active");
     }
   })
 
-  $(".main-nav a").click(function(){
-    $(".main-nav  .-active").removeClass();
+  $(".index-nav a").click(function(){
+    $(".index-nav  .-active").removeClass();
     $(this).addClass("-active");
   });
 });

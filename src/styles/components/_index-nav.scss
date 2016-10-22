@@ -1,5 +1,4 @@
-.main-nav {
-  padding-top: 2lh;
+.index-nav {
   font-family: $font-secondary;
   font-size: typeScale(1);
 
@@ -7,6 +6,7 @@
     font-weight: bold;
     font-feature-settings: "smcp" 1, "c2sc" 1;
     letter-spacing: $letter-spacing;
+    line-height: 2;
   }
 
   .-active {
@@ -14,18 +14,30 @@
   }
 
   .logo {
-    height: 3lh;
-    margin-bottom: 1lh;
+    text-align: center;
+    padding-top: 1lh;
+    padding-bottom: 0.5lh;
+    display: block;
+
+    img {
+      height: 2lh;
+    }  
   }
 
   ol ol a {
     font-weight: normal;
     font-feature-settings: initial;
     letter-spacing: 0;
+    line-height: 1.5;
   }
 
   ol {
     counter-reset: item;
+  }
+
+  & > ol {
+    padding: 0.5lh 2em;
+    margin-top: 0;
   }
 
   li:before { 
@@ -33,5 +45,14 @@
     counter-increment: item;
     margin-right: 0.25em;
     color: getColor(base, primary);
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0.5lh;
+    font-size: typeScale(2);
+    border-bottom: 1px solid getColor(base, lines);
+    padding-bottom: 0.7lh;
+    text-transform: uppercase;
   }
 }

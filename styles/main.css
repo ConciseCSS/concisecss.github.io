@@ -1073,6 +1073,9 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help; }
 
+[container="small"] {
+  max-width: 800px; }
+
 h1 {
   margin-top: 4.5rem; }
 
@@ -1118,29 +1121,66 @@ ol ol {
   ol ol a {
     text-transform: capitalize; }
 
-.main-nav {
-  padding-top: 3rem;
+.index-nav {
   font-family: "sofia-pro", sans-serif;
   font-size: 0.88889rem; }
-  .main-nav a {
+  .index-nav a {
     font-weight: bold;
     -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
             font-feature-settings: "smcp" 1, "c2sc" 1;
-    letter-spacing: 0.05em; }
-  .main-nav .-active {
+    letter-spacing: 0.05em;
+    line-height: 2; }
+  .index-nav .-active {
     color: #D34A28; }
-  .main-nav .logo {
-    height: 4.5rem;
-    margin-bottom: 1.5rem; }
-  .main-nav ol ol a {
+  .index-nav .logo {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+    display: block; }
+    .index-nav .logo img {
+      height: 3rem; }
+  .index-nav ol ol a {
     font-weight: normal;
     -webkit-font-feature-settings: initial;
             font-feature-settings: initial;
-    letter-spacing: 0; }
-  .main-nav ol {
+    letter-spacing: 0;
+    line-height: 1.5; }
+  .index-nav ol {
     counter-reset: item; }
-  .main-nav li:before {
+  .index-nav > ol {
+    padding: 0.75rem 2em;
+    margin-top: 0; }
+  .index-nav li:before {
     content: counters(item, ".") " ";
     counter-increment: item;
     margin-right: 0.25em;
     color: #D34A28; }
+  .index-nav h1 {
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 1.05rem;
+    text-transform: uppercase; }
+
+.main-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 15em;
+  overflow-y: auto; }
+
+.sidebar-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15em;
+  overflow-y: auto;
+  opacity: 0.3;
+  -webkit-transition: opacity 700ms;
+  transition: opacity 700ms;
+  border-right: 1px solid #dcdcdc; }
+  .sidebar-container:hover {
+    opacity: 1; }
