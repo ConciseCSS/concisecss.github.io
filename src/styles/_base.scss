@@ -14,7 +14,8 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  font-size: typeScale(2);
+  letter-spacing: $letter-spacing;
+  font-size: typeScale(1);
   margin-bottom: 0.1lh;
 }
 
