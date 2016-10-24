@@ -7,6 +7,12 @@ block content
   p The core of the framework only includes styles for native HTML elements. Components and utilities are provided as optional add-ons, Concise UI and Concise Utils, respectively.
   p Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the `lh` unit provided to handle vertical rhythm.
 
+  h2#why Why Concise CSS
+
+
+
+  h2#language-additions Language additions
+
 
 
   h2#installation Installation
@@ -37,6 +43,7 @@ block content
   p Then you can include the main file inside your project:
 
   pre.language-scss: code.
+    //
     // main.scss
     // ---------
 
@@ -52,20 +59,18 @@ block content
 
 
 
-  h2#building-source Building the Source Files
+  h2#concise-cli The Concise CLI
 
   <!-- TODO: Update this paragraph, since is no longer true -->
   p Concise CSS files have a #[code .scss] extension, although this is not mandatory and #[code .scss] can be used, the #[code .scss] is recommended to let other people know that is not plain Sass—but a Concise CSS file—since we also have other features available.
 
   p To build those source files, you need to install the Concise CLI globally:
 
-  pre: code.
-    npm install -g concise-cli
+  pre: code npm install -g concise-cli
 
   p Once it is installed, you can compile source files with the #[code concisecss compile] command:
 
-  pre: code.
-    concisecss compile input.scss output.css
+  pre: code concisecss compile input.scss output.css
 
 
 
