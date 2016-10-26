@@ -19,7 +19,8 @@ h3 {
   margin-bottom: 0.1lh;
 }
 
-main a {
+main a,
+article a {
   font-feature-settings: "smcp" 1, "c2sc" 1;
   letter-spacing: 0.05em;
 
@@ -51,7 +52,7 @@ pre {
   padding-left: 0;
   padding-right: 0;
 
-  code { 
+  code {
     color: getColor(text, secondary);
     font-size: 100% / $scale-ratio;
   }
@@ -69,7 +70,7 @@ ol {
 ol ol {
   margin-top: 0;
   margin-left: 1em;
-  
+
   a {
     text-transform: capitalize;
   }

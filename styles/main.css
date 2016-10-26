@@ -1091,11 +1091,14 @@ h3 {
   font-size: 0.88889rem;
   margin-bottom: 0.15rem; }
 
-main a {
+main a,
+article a {
   -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
           font-feature-settings: "smcp" 1, "c2sc" 1;
   letter-spacing: 0.05em; }
-  main a[href*="//"]:not([href*="concisecss.com"]):after, main a[href*="//"]:not([href*="localhost"]):after {
+  main a[href*="//"]:not([href*="concisecss.com"]):after, main a[href*="//"]:not([href*="localhost"]):after,
+  article a[href*="//"]:not([href*="concisecss.com"]):after,
+  article a[href*="//"]:not([href*="localhost"]):after {
     content: "°";
     color: #D34A28;
     font-size: 0.9em;
