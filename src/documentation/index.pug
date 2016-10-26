@@ -9,7 +9,13 @@ block content
 
   h2#why Why Concise CSS
 
+  p Concise CSS is a hybrid of the most common practices in web development. The small core allows the inclusion of custom styles and add-ons without the bloat or excessive overwrites. The UI add-on provides pre-made components as the other well-known frameworks, and the Utils add-on provides utility classes in the same style as #[a(href='http://basscss.com/') BassCSS] or #[a(href='http://tachyons.io/') Tachyons].
 
+  p Also, we have adapted the framework to work with the #[a(href='http://rscss.io/') RSCSS] coding convention which provides a solid foundation to write website styles, separating them into components, elements, variants, and helpers. Both Concise UI and Concise Utils work well with RSCSS.
+
+  p The core of the framework doesn't include any classes; it only provides normalization styles and the grid system—which unlike other grid systems—uses attributes instead of classes, providing a cleaner syntax and avoids conflicts in case you need to use a different one.
+
+  p Because the current features of CSS are sometimes not enough, we have added some extra features. A worth mentioning addition is the <code>lh</code> unit that is translated to rems using the root line-height as the base value.
 
   h2#language-additions Language additions
 
@@ -61,10 +67,7 @@ block content
 
   h2#concise-cli The Concise CLI
 
-  <!-- TODO: Update this paragraph, since is no longer true -->
-  p Concise CSS files have a #[code .scss] extension, although this is not mandatory and #[code .scss] can be used, the #[code .scss] is recommended to let other people know that is not plain Sass—but a Concise CSS file—since we also have other features available.
-
-  p To build those source files, you need to install the Concise CLI globally:
+  p To build the source files, you need to install the Concise CLI globally:
 
   pre: code npm install -g concise-cli
 
