@@ -96,13 +96,12 @@ block content
       /* Normal */
       &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.css">
 
-  pre.language-markup: code.
       /* Minified */
       &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
 
   h3 Install with NPM
 
-  p Execute the following command to install Concise CSS from NPM, in this case. If you are new to NPM, you can check the #[a(href='https://docs.npmjs.com/') official documentation].
+  p Execute the following command to install Concise CSS from NPM, in this case. If you are new to NPM, you can check their #[a(href='https://docs.npmjs.com/') documentation].
 
   pre: code.
     npm install concise.css
@@ -135,186 +134,6 @@ block content
 
   p When compiling the source code, Autoprefixer will automatically add the required browser prefixers.
 
-  h2#configuration Configuration
-
-  p Concise CSS provides a series of configuration variables that are used in the core and all of the Concise add-ons.
-
-  p Here is the complete file with the default settings:
-
-  pre.language-scss: code.
-    //
-    // Base
-    // --------------------------------------------------
-
-    $font-size: 16;
-    $font-size-secondary: 18;
-
-    // Tracking
-    $letter-spacing: 0.05em;
-
-    // Font families
-    $font-primary: "Helvetica", "Arial", sans-serif;
-    $font-secondary: "Helvetica", "Arial", sans-serif;
-    $font-mono: "Consolas", monospace;
-    $font-print-primary: "Georgia", "Times New Roman", "Times", serif;
-    $font-print-secondary: "Georgia", "Times New Roman", "Times", serif;
-
-    // Automatic margins
-    $automargin:   true;
-    $block-margin: 1lh;
-
-    // Transition duration
-    $transition-duration: 150ms;
-
-    // Custom media queries
-    @custom-media --extra-small (width <= 480px);
-    @custom-media --small (width >= 480px);
-    @custom-media --medium (width >= 768px);
-    @custom-media --large (width >= 960px);
-    @custom-media --extra-large (width >= 1100px);
-    @custom-media --only-small (480px < width <= 768px);
-    @custom-media --only-medium (768px < width <= 980px);
-    @custom-media --only-large (980px < width <= 1100px);
-
-    // Spacing
-    $spacing-xs: 0.5lh;
-    $spacing-s:  1lh;
-    $spacing-m:  2lh;
-    $spacing-l:  3lh;
-    $spacing-xl: 4lh;
-
-    //
-    // Type Scale
-    // --------------------------------------------------
-
-    // Suggested ratios
-    // Source: http://type-scale.com/
-    // $_minor-second:     1.067;
-    // $_major-second:     1.125;
-    // $_minor-third:      1.200;
-    // $_major-third:      1.250;
-    // $_perfect-fourth:   1.333;
-    // $_augmented-fourth: 1.414;
-    // $_perfect-fifth:    1.500;
-    // $_golden-ratio:     1.618;
-
-    // Ratio for primary scale
-    $scale-ratio: $_minor-third;
-
-    // Ratio for secondary scale
-    $scale-ratio-secondary: $_perfect-fourth;
-
-    //
-    // Grid
-    // --------------------------------------------------
-
-    // Create x-*, sm-*, md-*, lg-*, xl-* columns and offsets
-    $full-grid: false;
-
-    // Max width for container
-    $container-width: 1200px;
-
-    // Gutter size
-    $gutter: 2em;
-
-    // Number of columns in a row
-    $num-columns: 12;
-
-    // Prefix for attributes
-    $prefix: '';
-
-    // Create columns and offsets above this breakpoint
-    $breakpoint: --small;
-
-    //
-    // Color Palette
-    // --------------------------------------------------
-
-    // Colors
-    $colors: (
-      base: (
-        "primary":   #4591aa,
-        "selection": #d6d6d6,
-        "lines":     #e0e0e0
-      ),
-
-      text: (
-        "primary":   #555,
-        "secondary": #666,
-        "heading":   #222,
-        "ui":        white
-      ),
-
-      background: (
-        "dark":  #282E31,
-        "light": #f5f5f5,
-        "body":  white
-      ),
-
-      state: (
-        "muted":   #aaa,
-        "primary": #4591aa,
-        "success": #45ca69,
-        "warning": #ffb800,
-        "error":   #ca4829
-      ),
-
-      blue: (
-        "darker":  #495b61,
-        "dark":    #447281,
-        "base":    #4591aa,
-        "light":   #5ab0cc,
-        "lighter": #74cbe8
-      ),
-
-      green: (
-        "darker":  #3b6e6e,
-        "dark":    #3b8686,
-        "base":    #37a1a1,
-        "light":   #2dbaba,
-        "lighter": #69d1d1
-      ),
-
-      cream: (
-        "darker":  #c47858,
-        "dark":    #e29372,
-        "base":    #ecac91,
-        "light":   #f9c2ab,
-        "lighter": #fdd5c3
-      ),
-
-      red: (
-        "darker":  #653131,
-        "dark":    #b73333,
-        "base":    #da3c3c,
-        "light":   #f25a5a,
-        "lighter": #fa8181
-      ),
-
-      gray: (
-        "darker":  #333333,
-        "dark":    #4d4d4d,
-        "base":    #666666,
-        "light":   #808080,
-        "lighter": #999999
-      )
-    );
-
-  p You can just copy the previous code block in a #[code _settings.scss] file and include it in your project
-
-  pre.language-scss: code.
-    //
-    // main.scss
-    // ---------
-
-    // Concise Settings
-    @import "settings.scss";
-
-    // Concise Core
-    @import "node_modules/concise.css/concise";
-
-  p The changes are extended to all the Concise CSS styles, after the compilation.
-
   h2#add-ons Using Add-ons
 
   p The core styles of Concise CSS can be extended by using add-ons. They are just separate packages that use the same settings from the core of the framework.
@@ -336,7 +155,7 @@ block content
     &lt;!-- Minified -->
     &lt;link rel="stylesheet" href="https://cdn.concisecss.com/ui/v1.0.0/concise-ui.min.css">
 
-  pre.language-markup: code.
+
     &lt;!-- CONCISE UTILS -->
 
     &lt;!-- Normal -->
@@ -352,15 +171,15 @@ block content
   pre: code.
     npm install concise-utils
 
-  pre: code.
     npm install concise-ui
 
   p Then include them in your main file as the other styles:
 
   pre.language-scss: code.
+    // Concise Utils
     @import "node_modules/concise-utils/concise-utils"
 
-  pre.language-scss: code.
+    // Concise UI
     @import "node_modules/concise-utils/concise-ui"
 
   h3 Downloading the Packages
