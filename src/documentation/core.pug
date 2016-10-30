@@ -1,13 +1,17 @@
 extends _layout
 
 block content
-  h1 Concise Core
+  h1 The Core of Concise CSS
 
-  // What is Concise CSS Core
+  p The Core is composed almost entirely of styles for native HTML elements, the grid system, and the default settings. When you include Concise on your project, you won't have any classes available; it will just provide a foundation to build your website however you like to do it.
 
-  h2 Normalization
-  // Explain that we have some styles to normalize elements across browsers
-  // Also providing a good base to add more styles
+  p Two elements compose the base styles: normalization using a custom version of #[a(href='https://github.com/jonathantneal/sanitize.css') sanitize.scss] and Concise-specific styles for native HTML elements, where we provide better defaults on top of the normalization ones.
+
+  p As in the previous version, the grid system uses attributes instead of classes offering a more intuitive way to build layouts. But if you prefer to use another grid system you can turn off the default one by setting the variable #[code $use-atgrid] to #[code false].
+
+  p Finally, the core of Concise CSS provides a set of settings that will help you to build your website quickly: Font variables, spacing rules, custom media queries, a type scale function, a color palette, and other small things. All the key settings you will need when building any website.
+
+  p The default settings are not only used in the base styles but also in the Concise add-ons. So for example: Suppose you have customized your settings with a new color palette, now if you add the Concise UI add-on, it will use—without any further modifications—your new color palette. The same will happen for all the other settings when you include add-ons, they will use your custom settings without further changes.
 
   h2 Typography
   // Headings
@@ -28,5 +32,3 @@ block content
 
   h2 Print
   // Mention the styles provided for print
-
-  include _includes/_footer
