@@ -19,12 +19,74 @@ block content
 
   h2#language-additions Language additions
 
+  P The Concise CLI is a wrapper for the Sass compiler and PostCSS with some plugins; this allows us to add custom features with ease of use. You can still write usual Sass code plus the following:
 
+  h3 lh Unit
+
+  p The #[code lh] unit in meant to be used for spacing rules. A lh equals the line height of the #[code :root] element and is translated to a rem unit. Example:
+
+  pre.language-scss: code.
+    :root {
+      line-height: 1.5;
+    }
+
+    section {
+      margin-bottom: 1lh;
+      padding-top: .5lh;
+    }
+
+  p In the previous example, #[code section] will have a #[code margin-bottom] with #[code 1] times the line height of the #[code :root] element, and the #[code padding-top] will have half of the size.
+
+  p In this way, we can preserve the vertical rhythm in an easy way. Using a constant that is present in any Concise stylesheet and that provides aesthetic results by its nature.
+
+  p The previous example—after compilation—will turned into the following:
+
+  pre.language-scss: code.
+    :root {
+      line-height: 1.5;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+      padding-top: 0.75rem;
+    }
+
+  h3 Custom Media Queries
+
+  p Usually, when you define media queries, you select a certain breakpoint from predefined sizes. With preprocessors like Sass this can be accomplished with simple variables, but in Concise we have a specific way to define breakpoints, and that is with custom media queries, and in this way, we make explicit that we are dealing with viewport sizes and not other types of variables.
+
+  p The following custom media queries are predefined and ready to use, and this is also the way you define new custom media queries:
+
+  pre.language-scss: code.
+    @custom-media --extra-small (width <= 480px);
+    @custom-media --small (width >= 480px);
+    @custom-media --medium (width >= 768px);
+    @custom-media --large (width >= 960px);
+    @custom-media --extra-large (width >= 1100px);
+    @custom-media --only-small (480px < width <= 768px);
+    @custom-media --only-medium (768px < width <= 980px);
+    @custom-media --only-large (980px < width <= 1100px);
+
+  p Using those media queries is similar to simple variables, but prefixed with #[code --] instead of #[code $]. The following is an example of their use:
+
+  pre.language-scss: code.
+    @media (--medium) {
+      // Styles for medium size devices and up (bigger than 768px)
+    }
+
+    @media ($breakpoint) {
+      // The same as --small (dy default)
+    }
+
+  p Concise also includes a #[code $breakpoint] variable with the value of #[code --small] by default. This variable is used primarily in the #[em grid system], so this is the variable to change if you need to adjust the size where columns are collapsed.
+
+  h3 Min/Max helpers for Media Queries
+
+  p As you saw in the #[em custom media queries] section we saw how we can define new media queries, and you might have noticed the use of comparison symbols (#[code < > >= <=]) instead of the keywords #[code max-width] and #[code min-width]. Well, we have added those to improve the usability of media queries when using viewport sizes. Those can be used both in custom media queries as in normal media queries in your stylesheets.
 
   h2#installation Installation
 
   p There are 3 different options to install Concise CSS in your website, although the recommended way to use NPM.
-
 
   h3 Using the CDN
 
@@ -37,7 +99,6 @@ block content
   pre.language-markup: code.
       /* Minified */
       &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
-
 
   h3 Install with NPM
 
@@ -56,14 +117,11 @@ block content
     // Concise Core
     @import "node_modules/concise.css/concise";
 
-
   h3 Copy the Source Files
 
   p Finally, if you prefer, you can just copy the framework files to your project folder.
 
   p You can download the latest version from Github from #[a(href='https://github.com/ConciseCSS/concise.css/archive/master.zip') this link], and place the files wherever you need them.
-
-
 
   h2#concise-cli The Concise CLI
 
@@ -75,7 +133,7 @@ block content
 
   pre: code concisecss compile input.scss output.css
 
-
+  p When compiling the source code, Autoprefixer will automatically add the required browser prefixers.
 
   h2#configuration Configuration
 
@@ -131,20 +189,20 @@ block content
 
     // Suggested ratios
     // Source: http://type-scale.com/
-    $minor-second:     1.067;
-    $major-second:     1.125;
-    $minor-third:      1.200;
-    $major-third:      1.250;
-    $perfect-fourth:   1.333;
-    $augmented-fourth: 1.414;
-    $perfect-fifth:    1.500;
-    $golden-ratio:     1.618;
+    // $_minor-second:     1.067;
+    // $_major-second:     1.125;
+    // $_minor-third:      1.200;
+    // $_major-third:      1.250;
+    // $_perfect-fourth:   1.333;
+    // $_augmented-fourth: 1.414;
+    // $_perfect-fifth:    1.500;
+    // $_golden-ratio:     1.618;
 
     // Ratio for primary scale
-    $scale-ratio: $minor-third;
+    $scale-ratio: $_minor-third;
 
     // Ratio for secondary scale
-    $scale-ratio-secondary: $perfect-fourth;
+    $scale-ratio-secondary: $_perfect-fourth;
 
     //
     // Grid
@@ -257,8 +315,6 @@ block content
 
   p The changes are extended to all the Concise CSS styles, after the compilation.
 
-
-
   h2#add-ons Using Add-ons
 
   p The core styles of Concise CSS can be extended by using add-ons. They are just separate packages that use the same settings from the core of the framework.
@@ -266,7 +322,6 @@ block content
   p Currently, there are two official add-ons: Concise UI and Concise Utils. The first one includes a series of UI components that can be used directly, as you would with frameworks like Bootstrap or Foundation. The second one contains single-responsibility classes, similar to frameworks like #[a(href='http://www.basscss.com/') BassCSS] or #[a(href='http://tachyons.io/') Tachyons].
 
   p You can check all the styles available in those add-ons in their respective pages: #[a(href='http://concisecss.com/documentation/ui') Concise UI] and #[a(href='http://concisecss.com/documentation/utils') Concise Utils].
-
 
   h3 From the CDN
 
@@ -290,7 +345,6 @@ block content
     &lt;!-- Minified -->
     &lt;link rel="stylesheet" href="https://cdn.concisecss.com/utils/v1.0.0/concise-utils.min.css">
 
-
   h3 With NPM
 
   p You can also install the add-ons with NPM:
@@ -309,12 +363,9 @@ block content
   pre.language-scss: code.
     @import "node_modules/concise-utils/concise-ui"
 
-
   h3 Downloading the Packages
 
   p Those packages are also available to download from Github, using the following links: #[a(href='https://github.com/ConciseCSS/concise-ui/archive/master.zip') Download Concise UI] and #[a(href='https://github.com/ConciseCSS/concise-utils/archive/master.zip') Download Concise Utils]. Then you have to include the files in your project as you need them.
-
-
 
   h2#coding-conventions Coding Conventions
 

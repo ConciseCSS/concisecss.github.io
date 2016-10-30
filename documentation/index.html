@@ -1,8 +1,38 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#configuration">Configuration</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#normalization">Normalization</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid system</a></li><li><a href="/documentation/core#forms">Forms</a></li><li><a href="/documentation/core#buttons">Buttons</a></li><li><a href="/documentation/core#tables">Tables</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typograhy</a></li></ol></li><li><a href="/documentation/ui">UI</a></li></ol></nav></div><div class="main-container"><article container="small"><h1>Introduction</h1><p>Concise CSS provides a solid foundation to stylize your website. It offers an alternative to frameworks like Bootstrap and Foundation, with the difference that Concise only includes the minimum styles required. That does not mean that the features are limited; is possible to use add-ons on top of the core to extend the functionality as required.</p><p>The core of the framework only includes styles for native HTML elements. Components and utilities are provided as optional add-ons, Concise UI and Concise Utils, respectively.</p><p>Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the `lh` unit provided to handle vertical rhythm.</p><h2 id="why">Why Concise CSS</h2><p>Concise CSS is a hybrid of the most common practices in web development. The small core allows the inclusion of custom styles and add-ons without the bloat or excessive overwrites. The UI add-on provides pre-made components as the other well-known frameworks, and the Utils add-on provides utility classes in the same style as <a href="http://basscss.com/">BassCSS</a> or <a href="http://tachyons.io/">Tachyons</a>.</p><p>Also, we have adapted the framework to work with the <a href="http://rscss.io/">RSCSS</a> coding convention which provides a solid foundation to write website styles, separating them into components, elements, variants, and helpers. Both Concise UI and Concise Utils work well with RSCSS.</p><p>The core of the framework doesn't include any classes; it only provides normalization styles and the grid system—which unlike other grid systems—uses attributes instead of classes, providing a cleaner syntax and avoids conflicts in case you need to use a different one.</p><p>Because the current features of CSS are sometimes not enough, we have added some extra features. A worth mentioning addition is the <code>lh</code> unit that is translated to rems using the root line-height as the base value.</p><h2 id="language-additions">Language additions</h2><h2 id="installation">Installation</h2><p>There are 3 different options to install Concise CSS in your website, although the recommended way to use NPM.</p><h3>Using the CDN</h3><p>If you just want to try Concise CSS or of you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.</p><pre class="language-markup"><code>/* Normal */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#configuration">Configuration</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#normalization">Normalization</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid system</a></li><li><a href="/documentation/core#forms">Forms</a></li><li><a href="/documentation/core#buttons">Buttons</a></li><li><a href="/documentation/core#tables">Tables</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typograhy</a></li></ol></li><li><a href="/documentation/ui">UI</a></li></ol></nav></div><div class="main-container"><article container="small"><h1>Introduction</h1><p>Concise CSS provides a solid foundation to stylize your website. It offers an alternative to frameworks like Bootstrap and Foundation, with the difference that Concise only includes the minimum styles required. That does not mean that the features are limited; is possible to use add-ons on top of the core to extend the functionality as required.</p><p>The core of the framework only includes styles for native HTML elements. Components and utilities are provided as optional add-ons, Concise UI and Concise Utils, respectively.</p><p>Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the `lh` unit provided to handle vertical rhythm.</p><h2 id="why">Why Concise CSS</h2><p>Concise CSS is a hybrid of the most common practices in web development. The small core allows the inclusion of custom styles and add-ons without the bloat or excessive overwrites. The UI add-on provides pre-made components as the other well-known frameworks, and the Utils add-on provides utility classes in the same style as <a href="http://basscss.com/">BassCSS</a> or <a href="http://tachyons.io/">Tachyons</a>.</p><p>Also, we have adapted the framework to work with the <a href="http://rscss.io/">RSCSS</a> coding convention which provides a solid foundation to write website styles, separating them into components, elements, variants, and helpers. Both Concise UI and Concise Utils work well with RSCSS.</p><p>The core of the framework doesn't include any classes; it only provides normalization styles and the grid system—which unlike other grid systems—uses attributes instead of classes, providing a cleaner syntax and avoids conflicts in case you need to use a different one.</p><p>Because the current features of CSS are sometimes not enough, we have added some extra features. A worth mentioning addition is the <code>lh</code> unit that is translated to rems using the root line-height as the base value.</p><h2 id="language-additions">Language additions</h2><P>The Concise CLI is a wrapper for the Sass compiler and PostCSS with some plugins; this allows us to add custom features with ease of use. You can still write usual Sass code plus the following:</P><h3>lh Unit</h3><p>The <code>lh</code> unit in meant to be used for spacing rules. A lh equals the line height of the <code>:root</code> element and is translated to a rem unit. Example:</p><pre class="language-scss"><code>:root {
+  line-height: 1.5;
+}
+
+section {
+  margin-bottom: 1lh;
+  padding-top: .5lh;
+}
+</code></pre><p>In the previous example, <code>section</code> will have a <code>margin-bottom</code> with <code>1</code> times the line height of the <code>:root</code> element, and the <code>padding-top</code> will have half of the size.</p><p>In this way, we can preserve the vertical rhythm in an easy way. Using a constant that is present in any Concise stylesheet and that provides aesthetic results by its nature.</p><p>The previous example—after compilation—will turned into the following:</p><pre class="language-scss"><code>:root {
+  line-height: 1.5;
+}
+
+section {
+  margin-bottom: 1.5rem;
+  padding-top: 0.75rem;
+}
+</code></pre><h3>Custom Media Queries</h3><p>Usually, when you define media queries, you select a certain breakpoint from predefined sizes. With preprocessors like Sass this can be accomplished with simple variables, but in Concise we have a specific way to define breakpoints, and that is with custom media queries, and in this way, we make explicit that we are dealing with viewport sizes and not other types of variables.</p><p>The following custom media queries are predefined and ready to use, and this is also the way you define new custom media queries:</p><pre class="language-scss"><code>@custom-media --extra-small (width <= 480px);
+@custom-media --small (width >= 480px);
+@custom-media --medium (width >= 768px);
+@custom-media --large (width >= 960px);
+@custom-media --extra-large (width >= 1100px);
+@custom-media --only-small (480px < width <= 768px);
+@custom-media --only-medium (768px < width <= 980px);
+@custom-media --only-large (980px < width <= 1100px);
+</code></pre><p>Using those media queries is similar to simple variables, but prefixed with <code>--</code> instead of <code>$</code>. The following is an example of their use:</p><pre class="language-scss"><code>@media (--medium) {
+  // Styles for medium size devices and up (bigger than 768px)
+}
+
+@media ($breakpoint) {
+  // The same as --small (dy default)
+}
+</code></pre><p>Concise also includes a <code>$breakpoint</code> variable with the value of <code>--small</code> by default. This variable is used primarily in the <em>grid system</em>, so this is the variable to change if you need to adjust the size where columns are collapsed.</p><h3>Min/Max helpers for Media Queries</h3><p>As you saw in the <em>custom media queries</em> section we saw how we can define new media queries, and you might have noticed the use of comparison symbols (<code>< > >= <=</code>) instead of the keywords <code>max-width</code> and <code>min-width</code>. Well, we have added those to improve the usability of media queries when using viewport sizes. Those can be used both in custom media queries as in normal media queries in your stylesheets.</p><h2 id="installation">Installation</h2><p>There are 3 different options to install Concise CSS in your website, although the recommended way to use NPM.</p><h3>Using the CDN</h3><p>If you just want to try Concise CSS or of you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.</p><pre class="language-markup"><code>/* Normal */
 &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.css">
 </code></pre><pre class="language-markup"><code>/* Minified */
 &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
-
 </code></pre><h3>Install with NPM</h3><p>Execute the following command to install Concise CSS from NPM, in this case. If you are new to NPM, you can check the <a href="https://docs.npmjs.com/">official documentation</a>.</p><pre><code>npm install concise.css
 </code></pre><p>Then you can include the main file inside your project:</p><pre class="language-scss"><code>//
 // main.scss
@@ -10,8 +40,7 @@
 
 // Concise Core
 @import "node_modules/concise.css/concise";
-
-</code></pre><h3>Copy the Source Files</h3><p>Finally, if you prefer, you can just copy the framework files to your project folder.</p><p>You can download the latest version from Github from <a href="https://github.com/ConciseCSS/concise.css/archive/master.zip">this link</a>, and place the files wherever you need them.</p><h2 id="concise-cli">The Concise CLI</h2><p>To build the source files, you need to install the Concise CLI globally:</p><pre><code>npm install -g concise-cli</code></pre><p>Once it is installed, you can compile source files with the <code>concisecss compile</code> command:</p><pre><code>concisecss compile input.scss output.css</code></pre><h2 id="configuration">Configuration</h2><p>Concise CSS provides a series of configuration variables that are used in the core and all of the Concise add-ons.</p><p>Here is the complete file with the default settings:</p><pre class="language-scss"><code>//
+</code></pre><h3>Copy the Source Files</h3><p>Finally, if you prefer, you can just copy the framework files to your project folder.</p><p>You can download the latest version from Github from <a href="https://github.com/ConciseCSS/concise.css/archive/master.zip">this link</a>, and place the files wherever you need them.</p><h2 id="concise-cli">The Concise CLI</h2><p>To build the source files, you need to install the Concise CLI globally:</p><pre><code>npm install -g concise-cli</code></pre><p>Once it is installed, you can compile source files with the <code>concisecss compile</code> command:</p><pre><code>concisecss compile input.scss output.css</code></pre><p>When compiling the source code, Autoprefixer will automatically add the required browser prefixers.</p><h2 id="configuration">Configuration</h2><p>Concise CSS provides a series of configuration variables that are used in the core and all of the Concise add-ons.</p><p>Here is the complete file with the default settings:</p><pre class="language-scss"><code>//
 // Base
 // --------------------------------------------------
 
@@ -58,20 +87,20 @@ $spacing-xl: 4lh;
 
 // Suggested ratios
 // Source: http://type-scale.com/
-$minor-second:     1.067;
-$major-second:     1.125;
-$minor-third:      1.200;
-$major-third:      1.250;
-$perfect-fourth:   1.333;
-$augmented-fourth: 1.414;
-$perfect-fifth:    1.500;
-$golden-ratio:     1.618;
+// $_minor-second:     1.067;
+// $_major-second:     1.125;
+// $_minor-third:      1.200;
+// $_major-third:      1.250;
+// $_perfect-fourth:   1.333;
+// $_augmented-fourth: 1.414;
+// $_perfect-fifth:    1.500;
+// $_golden-ratio:     1.618;
 
 // Ratio for primary scale
-$scale-ratio: $minor-third;
+$scale-ratio: $_minor-third;
 
 // Ratio for secondary scale
-$scale-ratio-secondary: $perfect-fourth;
+$scale-ratio-secondary: $_perfect-fourth;
 
 //
 // Grid
@@ -191,12 +220,10 @@ $colors: (
 
 &lt;!-- Minified -->
 &lt;link rel="stylesheet" href="https://cdn.concisecss.com/utils/v1.0.0/concise-utils.min.css">
-
 </code></pre><h3>With NPM</h3><p>You can also install the add-ons with NPM:</p><pre><code>npm install concise-utils
 </code></pre><pre><code>npm install concise-ui
 </code></pre><p>Then include them in your main file as the other styles:</p><pre class="language-scss"><code>@import "node_modules/concise-utils/concise-utils"
 </code></pre><pre class="language-scss"><code>@import "node_modules/concise-utils/concise-ui"
-
 </code></pre><h3>Downloading the Packages</h3><p>Those packages are also available to download from Github, using the following links: <a href="https://github.com/ConciseCSS/concise-ui/archive/master.zip">Download Concise UI</a> and <a href="https://github.com/ConciseCSS/concise-utils/archive/master.zip">Download Concise Utils</a>. Then you have to include the files in your project as you need them.</p><h2 id="coding-conventions">Coding Conventions</h2><p>Concise CSS uses <a href="http://rscss.io/">RSCSS</a>, <em>a set of simple ideas to guide your process of building maintainable CSS</em>. Although that is not mandatory to follow those rules in your projects, you could get a more predictable code base by using it.</p><p>Is recommended to read those guidelines before working with Concise CSS to understand how this framework itself is organized and to help you to organize your projects.</p><p>Official website of RSCSS: <a href="http://rscss.io/">http://rscss.io/</a></p><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
 <br>
 &copy; <script>document.write(new Date().getFullYear());</script>
