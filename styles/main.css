@@ -1080,7 +1080,8 @@ pre[class*="language-"] {
 h1 {
   margin-top: 4.5rem;
   border-bottom: 1px solid #dcdcdc;
-  padding-bottom: 0.375rem; }
+  padding-bottom: 0.375rem;
+  margin-bottom: 1.5rem; }
 
 h2 {
   margin-top: 3rem; }
