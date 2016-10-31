@@ -1084,7 +1084,8 @@ h1 {
   margin-bottom: 1.5rem; }
 
 h2 {
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  margin-bottom: 0.75rem; }
 
 h3 {
   text-transform: uppercase;
