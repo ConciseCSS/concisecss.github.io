@@ -1137,6 +1137,9 @@ ol ol {
   ol ol a {
     text-transform: capitalize; }
 
+li {
+  list-style-type: circle; }
+
 .index-nav {
   font-family: "sofia-pro", sans-serif;
   font-size: 0.88889rem; }

@@ -23,14 +23,14 @@ $block-margin: 1lh;
 $transition-duration: 150ms;
 
 // Custom media queries
-@custom-media --extra-small (width <= 480px);
+@custom-media --extra-small (width &lt;= 480px);
 @custom-media --small (width >= 480px);
 @custom-media --medium (width >= 768px);
 @custom-media --large (width >= 960px);
 @custom-media --extra-large (width >= 1100px);
-@custom-media --only-small (480px < width <= 768px);
-@custom-media --only-medium (768px < width <= 980px);
-@custom-media --only-large (980px < width <= 1100px);
+@custom-media --only-small (480px &lt; width &lt;= 768px);
+@custom-media --only-medium (768px &lt; width &lt;= 980px);
+@custom-media --only-large (980px &lt; width &lt;= 1100px);
 
 // Spacing
 $spacing-xs: 0.5lh;
@@ -187,7 +187,79 @@ $_golden-ratio:     1.618
 </code></pre><p>We provide a default secondary ratio using <code>$_perfect-fourth</code> by default, which has a value of <code>1.333</code>. However, we recommend sticking to just one scale in a project unless you <em>absolutely</em> need more.</p><p>To customize the secondary scale, you can adjust the ratio in the <code>$scale-ratio-secondary</code> variable with any value you want, however, we recommend to use one of the suggested ratios mentioned previously.</p><h3>Letter spacing</h3><p>We recommend increasing the letter spacing on uppercase text, especially if you like to use small caps between the text, like on this website.</p><p>Concise CSS provides a variable for this, and you can use it like this:</p><pre class="language-scss"><code>.myUppercaseText {
   letter-spacing: $letter-spacing;
 }
-</code></pre><p>The default value is <code>0.05em</code> which will work for most of the cases, but you are free to modify it as you need. Just be careful in adding too much, is all about making uppercases more readable, not to make the text more flashy.</p><p>No, do not increase letter spacing in lowercase text, 99% of the time is a bad idea.</p><h3>Paragraph spacing</h3><p>By default, all the paragraphs—except the first one—will have a top margin of <code>1lh</code>, which is translated to <code>1.5rem</code> after compilation if the line height remains as <code>1.5</code> (default value). If you change the <code>line-height</code> of the <code>:root</code> element, the margin will be adapted automatically, for example, to <code>2rem</code> if you set your line height to <code>2</code>.</p><h2 id="grid-system">Grid System</h2><h2 id="color-palette">Color Palette</h2><h2 id="print">Print</h2><!-- Mention the styles provided for print--><h2 id="examples">Examples</h2><!-- Show some examples so users can see the default styles in action--></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
+</code></pre><p>The default value is <code>0.05em</code> which will work for most of the cases, but you are free to modify it as you need. Just be careful in adding too much, is all about making uppercases more readable, not to make the text more flashy.</p><p>No, do not increase letter spacing in lowercase text, 99% of the time is a bad idea.</p><h3>Paragraph spacing</h3><p>By default, all the paragraphs—except the first one—will have a top margin of <code>1lh</code>, which is translated to <code>1.5rem</code> after compilation if the line height remains as <code>1.5</code> (default value). If you change the <code>line-height</code> of the <code>:root</code> element, the margin will be adapted automatically, for example, to <code>2rem</code> if you set your line height to <code>2</code>.</p><h2 id="grid-system">Grid System</h2><p>A grid system is a tool used to build a webpage layout. With it, you can organize your content into containers and columns. Concise CSS uses a custom version of the <a href="https://github.com/jameskolce/atgrid.css">atGrid.css</a> grid system by <a href="https://jameskolce.com">James Kolce</a>, that focus in the use of custom attribute selectors instead of the usual class selectors in other systems.</p><p>By default, the grid will have 12 columns ready to use.</p><h3>Why Attribute selectors</h3><p>Custom attributes provide more expressiveness when building a layout and without polluting your classes than the conventional approach of using classes.</p><p>For example, take a look at the following comparison:</p><pre class="language-markup"><code>&lt;!-- Common approach -->
+&lt;div class="grid">
+  &lt;div class="col-6 pull-col-4">…&lt;/div>
+&lt;/div>
+
+&lt;!-- Concise CSS -->
+&lt;div grid>
+  &lt;div column="6 +4">…&lt;/div>
+&lt;/div>
+</code></pre><p>As you can see, you can get a cleaner result with Concise CSS, and this is totally okay to use though those attributes are not official. However, if you need HTML validation you can assign <code>data-</code> to the <code>$prefix</code> variable, and you can write your markup with data- attributes instead.</p><h3>Containers</h3><p>When building websites is a good practice to put the content inside a container that will have a limited width. So the content doesn't span across the screen making it hard to read.</p><p>To convert an element into a container you just have to add the <code>container</code> attribute to it.</p><pre class="language-markup"><code>&lt;main container>
+  …
+&lt;/main>
+
+&lt;section container>
+  …
+&lt;/section>
+</code></pre><h3>The grid element</h3><p>To organize your content sometimes you will need to split the site into columns. But columns should be contained in a grid element. The process is similar to containers; you just have to add the <code>grid</code> attribute to it.</p><pre class="language-markup"><code>&lt;section grid>
+  …
+&lt;/section>
+</code></pre><h3>Columns</h3><p>Once you have a grid element, you can proceed to add columns inside of it. The process is, again, the same, but with the <code>column</code> attribute.</p><pre class="language-markup"><code>&lt;section grid>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+&lt;/section>
+</code></pre><p>By default, when you add a column it will take all the space available. In the previous example, each column will have a width of 25% because there are 4.</p><p>If you need one column to be bigger than other, you can put a number from 1 to 12 (by default) as the value of the <code>column</code> attribute, like this:</p><pre class="language-markup"><code>&lt;main grid>
+  &lt;article column='8'>…&lt;/article>
+  &lt;section column='4'>…&lt;/section>
+&lt;/main>
+</code></pre><p>In that example, the <code>article</code> element will have a width of 2/3 (<em>8</em>/12) and the <code>section</code> element will have a width of 1/3, next to the article element.</p><p>Since columns without any value occupy all the space possible, we can omit the value for the <code>section</code> element:</p><pre class="language-markup"><code>&lt;main grid>
+  &lt;article column='8'>…&lt;/article>
+  &lt;section column>…&lt;/section>
+&lt;/main>
+</code></pre><h3>Column offsets</h3><p>There are cases where you need to move a column to the right side without creating an empty column next to it. For this, you can use column offsets, which are pretty simple to use.</p><p>You just have to add a number from <code>1</code> to <code>11</code> prefixed with the plus symbol (<code>+</code>) in the <code>column</code> element.</p><pre class="language-markup"><code>&lt;main grid>
+&lt;article column='8 +2'>…&lt;/article>
+&lt;/main>
+</code></pre><p>In that example, we have created a column with a width of 8/12 and with an offset of 2/12.</p><h3>Columns without gutters</h3><p>You can create columns without gutters by adding a <code>no-gutter</code> value in the <code>grid</code> attribute, like this:</p><pre class="language-markup"><code>&lt;main grid="no-gutter">
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+&lt;/main>
+</code></pre><p>Now we have four columns without space between them.</p><h3>Avoid column collapsing</h3><p>By default, when the viewport in smaller than the <code>$breakpoint</code> variable (<code>--small</code>) each column will have full width. If you want to prevent this behavior you can add a <code>no-collapse</code> value in the <code>grid</code> element.</p><pre class="language-markup"><code>&lt;main grid="no-collapse">
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+  &lt;article column>…&lt;/article>
+&lt;/main>
+</code></pre><p>So the four columns will have a width of 25% no matter the size of the screen.</p><h3>Grid direction</h3><p>You can adjust the direction of the columns in a grid without changing the markup. Concise CSS has available the four Flexbox options for this available as attribute values for the <code>grid</code> element.</p><ul><li><strong>row</strong>: (Default on screens above <code>$breakpoint</code>) This will display the columns side by side in the same order as in the markup.</li><li><strong>row-reverse</strong>: This will display the columns horizontally in the <em>inverse</em> order as in the markup.</li><li><strong>column</strong>: (Default on screens below <code>$breakpoint</code>) This will display the columns vertically in the same order as in the markup.</li><li><strong>row-reverse</strong>: This will display the columns vertically in the <em>inverse</em> order as in the markup.</li></ul><pre class="language-markup"><code>&lt;section grid="row">…&lt;/section>
+&lt;section grid="row-inverse">…&lt;/section>
+&lt;section grid="column">…&lt;/section>
+&lt;section grid="column-inverse">…&lt;/section>
+</code></pre><h3>Grid justification</h3><p>It's possible to adjust how the elements inside a grid will occupy the space available. Concise CSS exposes all the <code>justify-content</code> property values as attribute values in your markup.</p><pre class="language-markup"><code>&lt;section grid="justify-start">…&lt;/section>
+&lt;section grid="justify-end">…&lt;/section>
+&lt;section grid="justify-center">…&lt;/section>
+&lt;section grid="justify-between">…&lt;/section>
+&lt;section grid="justify-around">…&lt;/section>
+</code></pre><p>You can find more detailed information about how justification works in this <a href="https://css-tricks.com/almanac/properties/j/justify-content/">CSS-Tricks article</a>.</p><h3>Grid alignment</h3><p>Vertical alignment of all the columns in a grid is easy and can be done directly in the markup by adding one of the following values in the <code>grid</code> attribute.</p><ul><li><strong>top</strong>: (Default) Aligns all the columns to the upper part of the grid. Equivalent to <code>align-items: flex-start</code></li><li><strong>center</strong>: This vertically centers all the columns within the grid. Equivalent to <code>align-items: center</code></li><li><strong>bottom</strong>: Aligns all the columns to the lower part of the grid. Equivalent to <code>align-items: flex-end</code></li><li><strong>baseline</strong>: Aligns the baselines of all the columns. Equivalent to <code>align-items: baseline</code></li><li><strong>stretch</strong>: This will make the height equal in all the columns inside the grid so that they will fill all the vertical space. Equivalent to <code>align-items: stretch</code></li></ul><pre class="language-markup"><code>&lt;section grid="top">…&lt;/section>
+&lt;section grid="center">…&lt;/section>
+&lt;section grid="bottom">…&lt;/section>
+&lt;section grid="baseline">…&lt;/section>
+&lt;section grid="stretch">…&lt;/section>
+</code></pre><h3>Column alignment</h3><p>Sometimes you won't want to align all the columns in the grid, but just one or two. You can make it happen by adding one of the following values in the <code>column</code> attribute.</p><ul><li><strong>top</strong>: (Default) Aligns the column to the upper part of the grid. Equivalent to <code>align-self: flex-start</code></li><li><strong>center</strong>: This vertically centers the column within the grid. Equivalent to <code>align-self: center</code></li><li><strong>bottom</strong>: Aligns the column to the lower part of the grid. Equivalent to <code>align-self: flex-end</code></li></ul><pre class="language-markup"><code>&lt;main grid>
+  &lt;section column="top">…&lt;/section>
+  &lt;section column="center">…&lt;/section>
+  &lt;section column="bottom">…&lt;/section>
+&lt;/main>
+</code></pre><h3>Enabling the full grid</h3><p>If your website is complex, you can enable a complete grid to have better control over the layout for all the device sizes.</p><p>To enable the this feature you have to set the variable <code>$full-grid</code> to <code>true</code>, and it will produce several new values for the <code>column</code> attribute.</p><p>When it's enabled, you will have the following types of columns available:</p><ul><li>xs-</li><li>sm-</li><li>md-</li><li>lg-</li><li>xl-</li></ul><p>And those can be used like this:</p><pre class="language-markup"><code>&lt;main grid>
+  &lt;section column="2">…&lt;/section>
+  &lt;section column="4 xl-6 md-2">…&lt;/section>
+  &lt;section column="xs-10 sm-8 md-6 lg-4 xl-2">…&lt;/section>
+&lt;/main>
+</code></pre><p>Those attribute values will set the size of the column depending on the size of the viewport. The variables used are the custom media queries defined previously.</p><h3>Other customizations</h3><p>This is the complete list of customizations available in the Concise CSS grid system:</p><ul><li><strong>$full-grid</strong>: Creates new values for the <code>column</code> attribute to allow more control over the size of the columns in different viewport sizes. Default is <code>false</code>.</li><li><strong>$container-width</strong>: Sets the width of the <container></container> element. Default is <code>1200px</code>.</li><li><strong>$gutter</strong>: The size of the space between columns. Default is <code>2em</code>.</li><li><strong>$num-columns</strong>: The maximum numbers of columns inside a grid. Default is <code>12</code>.</li><li><strong>$prefix</strong>: The prefix used for the attributes, you can set it to <code>data-</code> if you need to validate your markup. Default is <code>''</code> (empty string).</li><li><strong>$breakpoint</strong>: Columns are collapsed to 100% below this point. Is recommended to use one of the custom media queries available here. Default is <code>--small</code>.</li></ul><h2 id="color-palette">Color Palette</h2><h2 id="print">Print</h2><!-- Mention the styles provided for print--><h2 id="examples">Examples</h2><!-- Show some examples so users can see the default styles in action--></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
 <br>
 &copy; <script>document.write(new Date().getFullYear());</script>
 <a href="https://jameskolce.com">James Kolce</a>,

@@ -45,14 +45,14 @@ block content
     $transition-duration: 150ms;
 
     // Custom media queries
-    @custom-media --extra-small (width <= 480px);
+    @custom-media --extra-small (width &lt;= 480px);
     @custom-media --small (width >= 480px);
     @custom-media --medium (width >= 768px);
     @custom-media --large (width >= 960px);
     @custom-media --extra-large (width >= 1100px);
-    @custom-media --only-small (480px < width <= 768px);
-    @custom-media --only-medium (768px < width <= 980px);
-    @custom-media --only-large (980px < width <= 1100px);
+    @custom-media --only-small (480px &lt; width &lt;= 768px);
+    @custom-media --only-medium (768px &lt; width &lt;= 980px);
+    @custom-media --only-large (980px &lt; width &lt;= 1100px);
 
     // Spacing
     $spacing-xs: 0.5lh;
@@ -295,7 +295,225 @@ block content
 
   h2#grid-system Grid System
 
+  p A grid system is a tool used to build a webpage layout. With it, you can organize your content into containers and columns. Concise CSS uses a custom version of the #[a(href='https://github.com/jameskolce/atgrid.css') atGrid.css] grid system by #[a(href='https://jameskolce.com') James Kolce], that focus in the use of custom attribute selectors instead of the usual class selectors in other systems.
+  p By default, the grid will have 12 columns ready to use.
 
+  h3 Why Attribute selectors
+
+  p Custom attributes provide more expressiveness when building a layout and without polluting your classes than the conventional approach of using classes.
+
+  p For example, take a look at the following comparison:
+
+  pre.language-markup: code.
+    &lt;!-- Common approach -->
+    &lt;div class="grid">
+      &lt;div class="col-6 pull-col-4">…&lt;/div>
+    &lt;/div>
+
+    &lt;!-- Concise CSS -->
+    &lt;div grid>
+      &lt;div column="6 +4">…&lt;/div>
+    &lt;/div>
+
+  p As you can see, you can get a cleaner result with Concise CSS, and this is totally okay to use though those attributes are not official. However, if you need HTML validation you can assign #[code data-] to the #[code $prefix] variable, and you can write your markup with data- attributes instead.
+
+  h3 Containers
+
+  p When building websites is a good practice to put the content inside a container that will have a limited width. So the content doesn't span across the screen making it hard to read.
+
+  p To convert an element into a container you just have to add the #[code container] attribute to it.
+
+  pre.language-markup: code.
+    &lt;main container>
+      …
+    &lt;/main>
+
+    &lt;section container>
+      …
+    &lt;/section>
+
+  h3 The grid element
+
+  p To organize your content sometimes you will need to split the site into columns. But columns should be contained in a grid element. The process is similar to containers; you just have to add the #[code grid] attribute to it.
+
+  pre.language-markup: code.
+    &lt;section grid>
+      …
+    &lt;/section>
+
+  h3 Columns
+
+  p Once you have a grid element, you can proceed to add columns inside of it. The process is, again, the same, but with the #[code column] attribute.
+
+  pre.language-markup: code.
+    &lt;section grid>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+    &lt;/section>
+
+  p By default, when you add a column it will take all the space available. In the previous example, each column will have a width of 25% because there are 4.
+
+  p If you need one column to be bigger than other, you can put a number from 1 to 12 (by default) as the value of the #[code column] attribute, like this:
+
+  pre.language-markup: code.
+    &lt;main grid>
+      &lt;article column='8'>…&lt;/article>
+      &lt;section column='4'>…&lt;/section>
+    &lt;/main>
+
+  p In that example, the #[code article] element will have a width of 2/3 (#[em 8]/12) and the #[code section] element will have a width of 1/3, next to the article element.
+
+  p Since columns without any value occupy all the space possible, we can omit the value for the #[code section] element:
+
+  pre.language-markup: code.
+    &lt;main grid>
+      &lt;article column='8'>…&lt;/article>
+      &lt;section column>…&lt;/section>
+    &lt;/main>
+
+  h3 Column offsets
+
+  p There are cases where you need to move a column to the right side without creating an empty column next to it. For this, you can use column offsets, which are pretty simple to use.
+
+  p You just have to add a number from #[code 1] to #[code 11] prefixed with the plus symbol (#[code +]) in the #[code column] element.
+
+  pre.language-markup: code.
+    &lt;main grid>
+    &lt;article column='8 +2'>…&lt;/article>
+    &lt;/main>
+
+  p In that example, we have created a column with a width of 8/12 and with an offset of 2/12.
+
+  h3 Columns without gutters
+
+  p You can create columns without gutters by adding a #[code no-gutter] value in the #[code grid] attribute, like this:
+
+  pre.language-markup: code.
+    &lt;main grid="no-gutter">
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+    &lt;/main>
+
+  p Now we have four columns without space between them.
+
+  h3 Avoid column collapsing
+
+  p By default, when the viewport in smaller than the #[code $breakpoint] variable (#[code --small]) each column will have full width. If you want to prevent this behavior you can add a #[code no-collapse] value in the #[code grid] element.
+
+  pre.language-markup: code.
+    &lt;main grid="no-collapse">
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+      &lt;article column>…&lt;/article>
+    &lt;/main>
+
+  p So the four columns will have a width of 25% no matter the size of the screen.
+
+  h3 Grid direction
+
+  p You can adjust the direction of the columns in a grid without changing the markup. Concise CSS has available the four Flexbox options for this available as attribute values for the #[code grid] element.
+
+  ul
+    li #[strong row]: (Default on screens above #[code $breakpoint]) This will display the columns side by side in the same order as in the markup.
+    li #[strong row-reverse]: This will display the columns horizontally in the #[em inverse] order as in the markup.
+    li #[strong column]: (Default on screens below #[code $breakpoint]) This will display the columns vertically in the same order as in the markup.
+    li #[strong row-reverse]: This will display the columns vertically in the #[em inverse] order as in the markup.
+
+  pre.language-markup: code.
+    &lt;section grid="row">…&lt;/section>
+    &lt;section grid="row-inverse">…&lt;/section>
+    &lt;section grid="column">…&lt;/section>
+    &lt;section grid="column-inverse">…&lt;/section>
+
+  h3 Grid justification
+
+  p It's possible to adjust how the elements inside a grid will occupy the space available. Concise CSS exposes all the #[code justify-content] property values as attribute values in your markup.
+
+  pre.language-markup: code.
+    &lt;section grid="justify-start">…&lt;/section>
+    &lt;section grid="justify-end">…&lt;/section>
+    &lt;section grid="justify-center">…&lt;/section>
+    &lt;section grid="justify-between">…&lt;/section>
+    &lt;section grid="justify-around">…&lt;/section>
+
+  p You can find more detailed information about how justification works in this #[a(href='https://css-tricks.com/almanac/properties/j/justify-content/') CSS-Tricks article].
+
+  h3 Grid alignment
+
+  p Vertical alignment of all the columns in a grid is easy and can be done directly in the markup by adding one of the following values in the #[code grid] attribute.
+
+  ul
+    li #[strong top]: (Default) Aligns all the columns to the upper part of the grid. Equivalent to #[code align-items: flex-start]
+    li #[strong center]: This vertically centers all the columns within the grid. Equivalent to #[code align-items: center]
+    li #[strong bottom]: Aligns all the columns to the lower part of the grid. Equivalent to #[code align-items: flex-end]
+    li #[strong baseline]: Aligns the baselines of all the columns. Equivalent to #[code align-items: baseline]
+    li #[strong stretch]: This will make the height equal in all the columns inside the grid so that they will fill all the vertical space. Equivalent to #[code align-items: stretch]
+
+  pre.language-markup: code.
+    &lt;section grid="top">…&lt;/section>
+    &lt;section grid="center">…&lt;/section>
+    &lt;section grid="bottom">…&lt;/section>
+    &lt;section grid="baseline">…&lt;/section>
+    &lt;section grid="stretch">…&lt;/section>
+
+  h3 Column alignment
+
+  p Sometimes you won't want to align all the columns in the grid, but just one or two. You can make it happen by adding one of the following values in the #[code column] attribute.
+
+  ul
+    li #[strong top]: (Default) Aligns the column to the upper part of the grid. Equivalent to #[code align-self: flex-start]
+    li #[strong center]: This vertically centers the column within the grid. Equivalent to #[code align-self: center]
+    li #[strong bottom]: Aligns the column to the lower part of the grid. Equivalent to #[code align-self: flex-end]
+
+  pre.language-markup: code.
+    &lt;main grid>
+      &lt;section column="top">…&lt;/section>
+      &lt;section column="center">…&lt;/section>
+      &lt;section column="bottom">…&lt;/section>
+    &lt;/main>
+
+  h3 Enabling the full grid
+
+  p If your website is complex, you can enable a complete grid to have better control over the layout for all the device sizes.
+
+  p To enable the this feature you have to set the variable #[code $full-grid] to #[code true], and it will produce several new values for the #[code column] attribute.
+
+  p When it's enabled, you will have the following types of columns available:
+
+  ul
+    li xs-
+    li sm-
+    li md-
+    li lg-
+    li xl-
+
+  p And those can be used like this:
+
+  pre.language-markup: code.
+    &lt;main grid>
+      &lt;section column="2">…&lt;/section>
+      &lt;section column="4 xl-6 md-2">…&lt;/section>
+      &lt;section column="xs-10 sm-8 md-6 lg-4 xl-2">…&lt;/section>
+    &lt;/main>
+
+  p Those attribute values will set the size of the column depending on the size of the viewport. The variables used are the custom media queries defined previously.
+
+  h3 Other customizations
+
+  p This is the complete list of customizations available in the Concise CSS grid system:
+
+  ul
+    li #[strong $full-grid]: Creates new values for the #[code column] attribute to allow more control over the size of the columns in different viewport sizes. Default is #[code false].
+    li #[strong $container-width]: Sets the width of the #[container] element. Default is #[code 1200px].
+    li #[strong $gutter]: The size of the space between columns. Default is #[code 2em].
+    li #[strong $num-columns]: The maximum numbers of columns inside a grid. Default is #[code 12].
+    li #[strong $prefix]: The prefix used for the attributes, you can set it to #[code data-] if you need to validate your markup. Default is #[code ''] (empty string).
+    li #[strong $breakpoint]: Columns are collapsed to 100% below this point. Is recommended to use one of the custom media queries available here. Default is #[code --small].
 
   h2#color-palette Color Palette
 
