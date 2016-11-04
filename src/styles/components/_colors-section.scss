@@ -1,0 +1,13 @@
+.colors-section {
+  font-size: typeScale(1);
+  font-family: $font-secondary;
+
+  .color {
+    padding: 1lh 1em;
+    text-align: center;
+
+    &.-inverted {
+      color: getColor(text, ui);
+    }
+  }
+}
