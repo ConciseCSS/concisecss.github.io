@@ -220,8 +220,8 @@ block content
   p You can set two different base sizes for your text. One for large displays and the other for small ones.
 
   ul
-    li #[code $font-size]: The base font size for small displays
-    li #[code $font-size-secondary]: The base font size for large displays
+    li #[code $font-size]: The base font size for small displays.
+    li #[code $font-size-secondary]: The base font size for large displays.
 
   p When the screen size is smaller than the value of the #[code $breakpoint] variable (#[code --small] custom media query), it will use #[code $font-size], and when is bigger it will use #[code $font-size-secondary].
 
@@ -448,11 +448,11 @@ block content
   p Vertical alignment of all the columns in a grid is easy and can be done directly in the markup by adding one of the following values in the #[code grid] attribute.
 
   ul
-    li #[strong top]: (Default) Aligns all the columns to the upper part of the grid. Equivalent to #[code align-items: flex-start]
-    li #[strong center]: This vertically centers all the columns within the grid. Equivalent to #[code align-items: center]
-    li #[strong bottom]: Aligns all the columns to the lower part of the grid. Equivalent to #[code align-items: flex-end]
-    li #[strong baseline]: Aligns the baselines of all the columns. Equivalent to #[code align-items: baseline]
-    li #[strong stretch]: This will make the height equal in all the columns inside the grid so that they will fill all the vertical space. Equivalent to #[code align-items: stretch]
+    li #[strong top]: (Default) Aligns all the columns to the upper part of the grid. Equivalent to #[code align-items: flex-start].
+    li #[strong center]: This vertically centers all the columns within the grid. Equivalent to #[code align-items: center].
+    li #[strong bottom]: Aligns all the columns to the lower part of the grid. Equivalent to #[code align-items: flex-end].
+    li #[strong baseline]: Aligns the baselines of all the columns. Equivalent to #[code align-items: baseline].
+    li #[strong stretch]: This will make the height equal in all the columns inside the grid so that they will fill all the vertical space. Equivalent to #[code align-items: stretch].
 
   pre.language-markup: code.
     &lt;section grid="top">…&lt;/section>
@@ -466,9 +466,9 @@ block content
   p Sometimes you won't want to align all the columns in the grid, but just one or two. You can make it happen by adding one of the following values in the #[code column] attribute.
 
   ul
-    li #[strong top]: (Default) Aligns the column to the upper part of the grid. Equivalent to #[code align-self: flex-start]
-    li #[strong center]: This vertically centers the column within the grid. Equivalent to #[code align-self: center]
-    li #[strong bottom]: Aligns the column to the lower part of the grid. Equivalent to #[code align-self: flex-end]
+    li #[strong top]: (Default) Aligns the column to the upper part of the grid. Equivalent to #[code align-self: flex-start].
+    li #[strong center]: This vertically centers the column within the grid. Equivalent to #[code align-self: center].
+    li #[strong bottom]: Aligns the column to the lower part of the grid. Equivalent to #[code align-self: flex-end].
 
   pre.language-markup: code.
     &lt;main grid>
@@ -486,11 +486,11 @@ block content
   p When it's enabled, you will have the following types of columns available:
 
   ul
-    li xs-
-    li sm-
-    li md-
-    li lg-
-    li xl-
+    li #[strong xs-&lt;size&gt;] Size for extra small devices.
+    li #[strong sm-&lt;size&gt;] Size for small devices.
+    li #[strong md-&lt;size&gt;] Size for medium devices.
+    li #[strong lg-&lt;size&gt;] Size for large devices.
+    li #[strong xl-&lt;size&gt;] Size for extra large devices.
 
   p And those can be used like this:
 
@@ -588,4 +588,5 @@ block content
   // Mention the styles provided for print
 
   h2#examples Examples
-  // Show some examples so users can see the default styles in action
+
+  p Soon…
