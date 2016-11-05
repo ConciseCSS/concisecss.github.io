@@ -1,4 +1,593 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#normalization">Normalization</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typograhy</a></li></ol></li><li><a href="/documentation/ui">UI</a></li></ol></nav></div><div class="main-container"><article container="small"><h1>Concise UI</h1><!-- What is Concise UI--><!-- Show examples of the following--><h2>Alerts</h2><h2>Tags</h2><h2>Breadcrumbs</h2><h2>Buttons</h2><h2>Button groups</h2><h2>Cards</h2><h2>Media object</h2><h2>Collections</h2><h2>Dropdowns</h2><h2>Modals</h2><h2>Progress bars</h2><h2>Spinner</h2><h2>Tooltips</h2><h2>Navbars</h2><h2>Navs</h2><h2>Input group</h2></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#normalization">Normalization</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typograhy</a></li></ol></li><li><a href="/documentation/ui">UI</a></li></ol></nav></div><div class="main-container"><article container="small"><h1>Concise Utils</h1><p>Concise Utils is one of the official add-ons for Concise CSS. It provides utility classes that you can use in your markup for fast prototyping or context-dependent styles.</p><p>Helper classes are prefixed with an underscore (<code>_</code>)To distinguish them from components or elements.</p><h2 id="borders">Borders</h2><h3>Reset</h3><pre class="language-markup"><code>&lt;!-- Reset all the borders -->
+&lt;div class="_b0">…&lt;/div>
+
+&lt;!-- Reset top border -->
+&lt;div class="_bt0">…&lt;/div>
+
+&lt;!-- Reset right border -->
+&lt;div class="_br0">…&lt;/div>
+
+&lt;!-- Reset bottom border -->
+&lt;div class="_bb0">…&lt;/div>
+
+&lt;!-- Reset left border -->
+&lt;div class="_bl0">…&lt;/div>
+</code></pre><h3>1px border</h3><pre class="language-markup"><code>&lt;!-- All the borders -->
+&lt;div class="_b1">…&lt;/div>
+
+&lt;!-- Top border -->
+&lt;div class="_bt1">…&lt;/div>
+
+&lt;!-- Right border -->
+&lt;div class="_br1">…&lt;/div>
+
+&lt;!-- Bottom border -->
+&lt;div class="_bb1">…&lt;/div>
+
+&lt;!-- Left border -->
+&lt;div class="_bl1">…&lt;/div>
+</code></pre><h3>2px border</h3><pre class="language-markup"><code>&lt;!-- All the borders -->
+&lt;div class="_b2">…&lt;/div>
+
+&lt;!-- Top border -->
+&lt;div class="_bt2">…&lt;/div>
+
+&lt;!-- Right border -->
+&lt;div class="_br2">…&lt;/div>
+
+&lt;!-- Bottom border -->
+&lt;div class="_bb2">…&lt;/div>
+
+&lt;!-- Left border -->
+&lt;div class="_bl2">…&lt;/div>
+</code></pre><h3>3px border</h3><pre class="language-markup"><code>&lt;!-- All the borders -->
+&lt;div class="_b3">…&lt;/div>
+
+&lt;!-- Top border -->
+&lt;div class="_bt3">…&lt;/div>
+
+&lt;!-- Right border -->
+&lt;div class="_br3">…&lt;/div>
+
+&lt;!-- Bottom border -->
+&lt;div class="_bb3">…&lt;/div>
+
+&lt;!-- Left border -->
+&lt;div class="_bl3">…&lt;/div>
+</code></pre><h3>4px border</h3><pre class="language-markup"><code>&lt;!-- All the borders -->
+&lt;div class="_b4">…&lt;/div>
+
+&lt;!-- Top border -->
+&lt;div class="_bt4">…&lt;/div>
+
+&lt;!-- Right border -->
+&lt;div class="_br4">…&lt;/div>
+
+&lt;!-- Bottom border -->
+&lt;div class="_bb4">…&lt;/div>
+
+&lt;!-- Left border -->
+&lt;div class="_bl4">…&lt;/div>
+</code></pre><h2 id="colors">Colors</h2><h3>Text Colors</h3><pre class="language-markup"><code>&lt;!-- Equivalent to getColor(base, primary) -->
+&lt;div class="_c-base-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(base, selection) -->
+&lt;div class="_c-base-selection">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(base, lines) -->
+&lt;div class="_c-base-lines">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, primary) -->
+&lt;div class="_c-text-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, secondary) -->
+&lt;div class="_c-text-secondary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, heading) -->
+&lt;div class="_c-text-heading">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, ui) -->
+&lt;div class="_c-text-ui">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, dark) -->
+&lt;div class="_c-background-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, light) -->
+&lt;div class="_c-background-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, body) -->
+&lt;div class="_c-background-body">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, muted) -->
+&lt;div class="_c-state-muted">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, primary) -->
+&lt;div class="_c-state-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, success) -->
+&lt;div class="_c-state-success">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, warning) -->
+&lt;div class="_c-state-warning">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, error) -->
+&lt;div class="_c-state-error">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, darker) -->
+&lt;div class="_c-blue-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, dark) -->
+&lt;div class="_c-blue-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, base) -->
+&lt;div class="_c-blue-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, light) -->
+&lt;div class="_c-blue-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, lighter) -->
+&lt;div class="_c-blue-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, darker) -->
+&lt;div class="_c-green-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, dark) -->
+&lt;div class="_c-green-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, base) -->
+&lt;div class="_c-green-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, light) -->
+&lt;div class="_c-green-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, lighter) -->
+&lt;div class="_c-green-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, darker) -->
+&lt;div class="_c-red-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, dark) -->
+&lt;div class="_c-red-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, base) -->
+&lt;div class="_c-red-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, light) -->
+&lt;div class="_c-red-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, lighter) -->
+&lt;div class="_c-red-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, darker) -->
+&lt;div class="_c-gray-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, dark) -->
+&lt;div class="_c-gray-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, base) -->
+&lt;div class="_c-gray-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, light) -->
+&lt;div class="_c-gray-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, lighter) -->
+&lt;div class="_c-gray-lighter">…&lt;/div>
+</code></pre><h3>Background Colors</h3><pre class="language-markup"><code>&lt;!-- Equivalent to getColor(base, primary) -->
+&lt;div class="_bg-base-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(base, selection) -->
+&lt;div class="_bg-base-selection">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(base, lines) -->
+&lt;div class="_bg-base-lines">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, primary) -->
+&lt;div class="_bg-text-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, secondary) -->
+&lt;div class="_bg-text-secondary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, heading) -->
+&lt;div class="_bg-text-heading">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(text, ui) -->
+&lt;div class="_bg-text-ui">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, dark) -->
+&lt;div class="_bg-background-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, light) -->
+&lt;div class="_bg-background-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(background, body) -->
+&lt;div class="_bg-background-body">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, muted) -->
+&lt;div class="_bg-state-muted">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, primary) -->
+&lt;div class="_bg-state-primary">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, success) -->
+&lt;div class="_bg-state-success">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, warning) -->
+&lt;div class="_bg-state-warning">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(state, error) -->
+&lt;div class="_bg-state-error">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, darker) -->
+&lt;div class="_bg-blue-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, dark) -->
+&lt;div class="_bg-blue-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, base) -->
+&lt;div class="_bg-blue-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, light) -->
+&lt;div class="_bg-blue-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(blue, lighter) -->
+&lt;div class="_bg-blue-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, darker) -->
+&lt;div class="_bg-green-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, dark) -->
+&lt;div class="_bg-green-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, base) -->
+&lt;div class="_bg-green-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, light) -->
+&lt;div class="_bg-green-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(green, lighter) -->
+&lt;div class="_bg-green-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, darker) -->
+&lt;div class="_bg-red-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, dark) -->
+&lt;div class="_bg-red-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, base) -->
+&lt;div class="_bg-red-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, light) -->
+&lt;div class="_bg-red-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(red, lighter) -->
+&lt;div class="_bg-red-lighter">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, darker) -->
+&lt;div class="_bg-gray-darker">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, dark) -->
+&lt;div class="_bg-gray-dark">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, base) -->
+&lt;div class="_bg-gray-base">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, light) -->
+&lt;div class="_bg-gray-light">…&lt;/div>
+
+&lt;!-- Equivalent to getColor(gray, lighter) -->
+&lt;div class="_bg-gray-lighter">…&lt;/div>
+
+</code></pre><h2 id="hide-show">Hide/Show</h2><h3>Show elements</h3><pre class="language-markup"><code>&lt;!-- Show only on extra small devices -->
+&lt;div class="_show-xs">…&lt;/div>
+
+&lt;!-- Show only on small devices -->
+&lt;div class="_show-s">…&lt;/div>
+
+&lt;!-- Show only on medium devices -->
+&lt;div class="_show-m">…&lt;/div>
+
+&lt;!-- Show only on large devices -->
+&lt;div class="_show-l">…&lt;/div>
+
+&lt;!-- Show only on extra large devices -->
+&lt;div class="_show-xl">…&lt;/div>
+
+&lt;!-- Show only on print -->
+&lt;div class="_show-print">…&lt;/div>
+
+&lt;!-- Show only on high density (retina) devices -->
+&lt;div class="_show-hd">…&lt;/div>
+</code></pre><h3>Hide elements</h3><pre class="language-markup"><code>&lt;!-- Hide only on extra small devices -->
+&lt;div class="_hide-xs">…&lt;/div>
+
+&lt;!-- Hide only on small devices -->
+&lt;div class="_hide-s">…&lt;/div>
+
+&lt;!-- Hide only on medium devices -->
+&lt;div class="_hide-m">…&lt;/div>
+
+&lt;!-- Hide only on large devices -->
+&lt;div class="_hide-l">…&lt;/div>
+
+&lt;!-- Hide only on extra large devices -->
+&lt;div class="_hide-xl">…&lt;/div>
+
+&lt;!-- Hide only on print -->
+&lt;div class="_hide-print">…&lt;/div>
+
+&lt;!-- Hide only on high density (retina) devices -->
+&lt;div class="_hide-hd">…&lt;/div>
+</code></pre><h2 id="display">Display</h2><pre class="language-markup"><code>&lt;!-- Equivalent to display: inline-block -->
+&lt;div class="_dis-inline-block">…&lt;/div>
+
+&lt;!-- Equivalent to display: block -->
+&lt;div class="_dis-block">…&lt;/div>
+
+&lt;!-- Equivalent to display: inline -->
+&lt;div class="_dis-inline">…&lt;/div>
+
+&lt;!-- Equivalent to display: flex -->
+&lt;div class="_dis-flex">…&lt;/div>
+</code></pre><h2 id="margins">Margins</h2><h3>Reset margins</h3><pre class="language-markup"><code>&lt;!-- Reset all margins -->
+&lt;div class="_m0">…&lt;/div>
+
+&lt;!-- Reset top margin -->
+&lt;div class="_mt0">…&lt;/div>
+
+&lt;!-- Reset right margin -->
+&lt;div class="_mr0">…&lt;/div>
+
+&lt;!-- Reset bottom margin -->
+&lt;div class="_mb0">…&lt;/div>
+
+&lt;!-- Reset left margin -->
+&lt;div class="_ml0">…&lt;/div>
+</code></pre><h3>Margins on all sides</h3><pre class="language-markup"><code>&lt;!-- Extra small margin on all sides -->
+&lt;div class="_mxs">…&lt;/div>
+
+&lt;!-- Small margin on all sides -->
+&lt;div class="_ms">…&lt;/div>
+
+&lt;!-- Medium margin on all sides -->
+&lt;div class="_mm">…&lt;/div>
+
+&lt;!-- Large margin on all sides -->
+&lt;div class="_ml">…&lt;/div>
+
+&lt;!-- Extra large margin on all sides -->
+&lt;div class="_mxl">…&lt;/div>
+</code></pre><h3>Extra small margins</h3><pre class="language-markup"><code>&lt;!-- Extra small top margin -->
+&lt;div class="_mtxs">…&lt;/div>
+
+&lt;!-- Extra small right margin -->
+&lt;div class="_mrxs">…&lt;/div>
+
+&lt;!-- Extra small bottom margin -->
+&lt;div class="_mbxs">…&lt;/div>
+
+&lt;!-- Extra small left margin -->
+&lt;div class="_mlxs">…&lt;/div>
+</code></pre><h3>Small margins</h3><pre class="language-markup"><code>&lt;!-- Small top margin -->
+&lt;div class="_mts">…&lt;/div>
+
+&lt;!-- Small right margin -->
+&lt;div class="_mrs">…&lt;/div>
+
+&lt;!-- Small bottom margin -->
+&lt;div class="_mbs">…&lt;/div>
+
+&lt;!-- Small left margin -->
+&lt;div class="_mls">…&lt;/div>
+</code></pre><h3>Medium margins</h3><pre class="language-markup"><code>&lt;!-- Medium top margin -->
+&lt;div class="_mtm">…&lt;/div>
+
+&lt;!-- Medium right margin -->
+&lt;div class="_mrm">…&lt;/div>
+
+&lt;!-- Medium bottom margin -->
+&lt;div class="_mbm">…&lt;/div>
+
+&lt;!-- Medium left margin -->
+&lt;div class="_mlm">…&lt;/div>
+</code></pre><h3>Large margins</h3><pre class="language-markup"><code>&lt;!-- Large top margin -->
+&lt;div class="_mtl">…&lt;/div>
+
+&lt;!-- Large right margin -->
+&lt;div class="_mrl">…&lt;/div>
+
+&lt;!-- Large bottom margin -->
+&lt;div class="_mbl">…&lt;/div>
+
+&lt;!-- Large left margin -->
+&lt;div class="_mll">…&lt;/div>
+</code></pre><h3>Extra large margins</h3><pre class="language-markup"><code>&lt;!-- Extra large top margin -->
+&lt;div class="_mtxl">…&lt;/div>
+
+&lt;!-- Extra large right margin -->
+&lt;div class="_mrxl">…&lt;/div>
+
+&lt;!-- Extra large bottom margin -->
+&lt;div class="_mbxl">…&lt;/div>
+
+&lt;!-- Extra large left margin -->
+&lt;div class="_mlxl">…&lt;/div>
+
+</code></pre><h2 id="paddings">Paddings</h2><h3>Reset paddings</h3><pre class="language-markup"><code>&lt;!-- Reset all paddings -->
+&lt;div class="_p0">…&lt;/div>
+
+&lt;!-- Reset top padding -->
+&lt;div class="_pt0">…&lt;/div>
+
+&lt;!-- Reset right padding -->
+&lt;div class="_pr0">…&lt;/div>
+
+&lt;!-- Reset bottom padding -->
+&lt;div class="_pb0">…&lt;/div>
+
+&lt;!-- Reset left padding -->
+&lt;div class="_pl0">…&lt;/div>
+</code></pre><h3>Paddings on all sides</h3><pre class="language-markup"><code>&lt;!-- Extra small padding on all sides -->
+&lt;div class="_pxs">…&lt;/div>
+
+&lt;!-- Small padding on all sides -->
+&lt;div class="_ps">…&lt;/div>
+
+&lt;!-- Medium padding on all sides -->
+&lt;div class="_pm">…&lt;/div>
+
+&lt;!-- Large padding on all sides -->
+&lt;div class="_pl">…&lt;/div>
+
+&lt;!-- Extra large padding on all sides -->
+&lt;div class="_pxl">…&lt;/div>
+</code></pre><h3>Extra small paddings</h3><pre class="language-markup"><code>&lt;!-- Extra small top padding -->
+&lt;div class="_ptxs">…&lt;/div>
+
+&lt;!-- Extra small right padding -->
+&lt;div class="_prxs">…&lt;/div>
+
+&lt;!-- Extra small bottom padding -->
+&lt;div class="_pbxs">…&lt;/div>
+
+&lt;!-- Extra small left padding -->
+&lt;div class="_plxs">…&lt;/div>
+</code></pre><h3>Small paddings</h3><pre class="language-markup"><code>&lt;!-- Small top padding -->
+&lt;div class="_pts">…&lt;/div>
+
+&lt;!-- Small right padding -->
+&lt;div class="_prs">…&lt;/div>
+
+&lt;!-- Small bottom padding -->
+&lt;div class="_pbs">…&lt;/div>
+
+&lt;!-- Small left padding -->
+&lt;div class="_pls">…&lt;/div>
+</code></pre><h3>Medium paddings</h3><pre class="language-markup"><code>&lt;!-- Medium top padding -->
+&lt;div class="_ptm">…&lt;/div>
+
+&lt;!-- Medium right padding -->
+&lt;div class="_prm">…&lt;/div>
+
+&lt;!-- Medium bottom padding -->
+&lt;div class="_pbm">…&lt;/div>
+
+&lt;!-- Medium left padding -->
+&lt;div class="_plm">…&lt;/div>
+</code></pre><h3>Large paddings</h3><pre class="language-markup"><code>&lt;!-- Large top padding -->
+&lt;div class="_ptl">…&lt;/div>
+
+&lt;!-- Large right padding -->
+&lt;div class="_prl">…&lt;/div>
+
+&lt;!-- Large bottom padding -->
+&lt;div class="_pbl">…&lt;/div>
+
+&lt;!-- Large left padding -->
+&lt;div class="_pll">…&lt;/div>
+</code></pre><h3>Extra large paddings</h3><pre class="language-markup"><code>&lt;!-- Extra large top padding -->
+&lt;div class="_ptxl">…&lt;/div>
+
+&lt;!-- Extra large right padding -->
+&lt;div class="_prxl">…&lt;/div>
+
+&lt;!-- Extra large bottom padding -->
+&lt;div class="_pbxl">…&lt;/div>
+
+&lt;!-- Extra large left padding -->
+&lt;div class="_plxl">…&lt;/div>
+</code></pre><h2 id="position">Position</h2><pre class="language-markup"><code>&lt;!-- Equivalent to position: absolute -->
+&lt;div class="_pos-abs">…&lt;/div>
+
+&lt;!-- Equivalent to position: relative -->
+&lt;div class="_pos-rel">…&lt;/div>
+
+&lt;!-- Equivalent to position: static -->
+&lt;div class="_pos-static">…&lt;/div>
+
+&lt;!-- Equivalent to position: fixed -->
+&lt;div class="_pos-fix">…&lt;/div>
+</code></pre><h2 id="type-scale">Type Scale</h2><pre class="language-markup"><code>&lt;!-- Equivalent to typeScale(1) -->
+&lt;div class="_ts1">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(2) -->
+&lt;div class="_ts2">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(3) -->
+&lt;div class="_ts3">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(4) -->
+&lt;div class="_ts4">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(5) -->
+&lt;div class="_ts5">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(6) -->
+&lt;div class="_ts6">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(7) -->
+&lt;div class="_ts7">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(8) -->
+&lt;div class="_ts8">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(9) -->
+&lt;div class="_ts9">…&lt;/div>
+
+&lt;!-- Equivalent to typeScale(10) -->
+&lt;div class="_ts10">…&lt;/div>
+
+</code></pre><h2 id="typography">Typography</h2><pre class="language-markup"><code>&lt;!-- Equivalent to font-weight: bold -->
+&lt;div class="_bold">…&lt;/div>
+
+&lt;!-- Equivalent to text-transform: uppercase -->
+&lt;div class="_caps">…&lt;/div>
+
+&lt;!-- Equivalent to font-size: inherit -->
+&lt;div class="_font-size-inherit">…&lt;/div>
+
+&lt;!-- Equivalent to font-style: italic -->
+&lt;div class="_italic">…&lt;/div>
+
+&lt;!-- Equivalent to text-decoration: none -->
+&lt;div class="_no-decoration">…&lt;/div>
+
+&lt;!-- Equivalent to font-weight: normal -->
+&lt;div class="_regular">…&lt;/div>
+
+&lt;!-- Equivalent to font-feature-settings: "smcp" 1, "c2sc" 1 -->
+&lt;div class="_small-caps">…&lt;/div>
+
+&lt;!-- Equivalent to text-align: center -->
+&lt;div class="_text-center">…&lt;/div>
+
+&lt;!-- Equivalent to text-align: left -->
+&lt;div class="_text-left">…&lt;/div>
+
+&lt;!-- Equivalent to text-align: right -->
+&lt;div class="_text-right">…&lt;/div>
+
+&lt;!-- Equivalent to text-decoration: underline -->
+&lt;div class="_underline">…&lt;/div>
+
+&lt;!-- Equivalent to letter-spacing: $letter-spacing -->
+&lt;div class="_letter-spacing">…&lt;/div>
+</code></pre><h3>Font families</h3><pre class="language-markup"><code>&lt;!-- Equivalent to font-family: inherit -->
+&lt;div class="_font-family-inherit">…&lt;/div>
+
+&lt;!-- Equivalent to font-family: $font-primary -->
+&lt;div class="_font-primary">…&lt;/div>
+
+&lt;!-- Equivalent to font-family: $font-secondary -->
+&lt;div class="_font-secondary">…&lt;/div>
+
+&lt;!-- Equivalent to font-family: $font-mono -->
+&lt;div class="_font-mono">…&lt;/div>
+
+&lt;!-- Equivalent to font-family: $font-print-primary -->
+&lt;div class="_font-print">…&lt;/div>
+
+&lt;!-- Equivalent to font-family: $font-print-secondary -->
+&lt;div class="_font-print-secondary">…&lt;/div></code></pre></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
 <br>
 &copy; <script>document.write(new Date().getFullYear());</script>
 <a href="https://jameskolce.com">James Kolce</a>,
