@@ -71,6 +71,7 @@ pre {
 
 code {
   border: 0;
+  background-color: getColor(background, light);
 }
 
 ol {

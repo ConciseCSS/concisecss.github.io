@@ -1132,7 +1132,8 @@ pre {
   background-color: transparent; }
 
 code {
-  border: 0; }
+  border: 0;
+  background-color: #f5f5f5; }
 
 ol {
   padding: 0; }

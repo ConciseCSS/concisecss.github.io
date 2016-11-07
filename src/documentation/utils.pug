@@ -3,11 +3,15 @@ extends _layout
 block content
   h1 Concise Utils
 
-  p Concise Utils is one of the official add-ons for Concise CSS. It provides utility classes that you can use in your markup for fast prototyping or context-dependent styles.
+  p Concise Utils is one of the official add-ons for Concise CSS. It provides helper classes that you can use in your markup for fast prototyping or context-dependent styles.
 
-  p Helper classes are prefixed with an underscore (#[code _])To distinguish them from components or elements.
+  p Helper classes are prefixed with an underscore (#[code _]) to distinguish them from components or elements.
 
   h2#borders Borders
+
+  p There are several classes available to delete or add borders to elements. Those classes begin with a #[code b], the initial letter of the side where the class works (optional) and the size of the border from #[code 0] to #[code 4].
+
+  p Classes that work on all the sides are composed only of the letter #[code b] and the width, for example, #[code _b1].
 
   h3 Reset
 
@@ -100,6 +104,12 @@ block content
     &lt;div class="_bl4">…&lt;/div>
 
   h2#colors Colors
+
+  p All the colors in the color palette are available as classes to be used directly within your HTML.
+
+  p The classes for text colors are prefixed with #[code _c-] and #[code _bg-] for backrounds.
+
+  p The color follows the same schema in the $colors map. For example, you can use the color obtained with #[code getColor(base, primary)] in HTML as #[code _c-base-primary] for text or #[code _bg-base-primary] for backgrounds.
 
   h3 Text Colors
 
@@ -320,6 +330,8 @@ block content
 
   h2#hide-show Hide/Show
 
+  p You can hide or show elements depending on certain key points, like the device size, resolution, or media (printing or screen).
+
   h3 Show elements
 
   pre.language-markup: code.
@@ -370,6 +382,8 @@ block content
 
   h2#display Display
 
+  p The #[code display] properties are also exposed via HTML classes so you can use them in your markup quickly.
+
   pre.language-markup: code.
     &lt;!-- Equivalent to display: inline-block -->
     &lt;div class="_dis-inline-block">…&lt;/div>
@@ -384,6 +398,10 @@ block content
     &lt;div class="_dis-flex">…&lt;/div>
 
   h2#margins Margins
+
+  p As with the borders, you have predefined classes to reset or add margins. They will use the value in the spacing variables defined in the #[a(href='http://concisecss.com/documentation/core#settings') settings file].
+
+  p These variables can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.
 
   h3 Reset margins
 
@@ -496,8 +514,9 @@ block content
     &lt;!-- Extra large left margin -->
     &lt;div class="_mlxl">…&lt;/div>
 
-
   h2#paddings Paddings
+
+  p The same classes used for margins are also available for paddings with a slightly different syntax, a #[code p] instead of an #[code m].
 
   h3 Reset paddings
 
@@ -612,6 +631,8 @@ block content
 
   h2#position Position
 
+  p Concise Utils also exposes all the values of the #[code position] property so you can use them directly in your HTML.
+
   pre.language-markup: code.
     &lt;!-- Equivalent to position: absolute -->
     &lt;div class="_pos-abs">…&lt;/div>
@@ -626,6 +647,8 @@ block content
     &lt;div class="_pos-fix">…&lt;/div>
 
   h2#type-scale Type Scale
+
+  p The first ten sizes in the primary type scale are available to use in HTML; those are built using the #[code typeScale()] function and are updated depending on your settings.
 
   pre.language-markup: code.
     &lt;!-- Equivalent to typeScale(1) -->
@@ -658,8 +681,9 @@ block content
     &lt;!-- Equivalent to typeScale(10) -->
     &lt;div class="_ts10">…&lt;/div>
 
-
   h2#typography Typography
+
+  p Lastly, Concise Utils offers a variety of helper classes for typography that you can use when prototyping your website or to add styles depending on the context.
 
   pre.language-markup: code.
     &lt;!-- Equivalent to font-weight: bold -->
