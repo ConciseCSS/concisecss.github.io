@@ -93,15 +93,24 @@ block content
   p If you just want to try Concise CSS or of you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.
 
   pre.language-markup: code.
-      &lt;!-- Normal -->
-      &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.css">
+    &lt;!-- Normal - Latest version -->
+    &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
 
-      &lt;!-- Minified -->
-      &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
+    &lt;!-- Minified - Latest version -->
+    &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+
+  p That is for the latest version, if you want to use a specific one you can do something like the following:
+
+  pre.language-markup: code.
+    &lt;!-- Normal - Specific version -->
+    &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.css">
+
+    &lt;!-- Minified - Specific version -->
+    &lt;link rel="stylesheet" href="https://cdn.concisecss.com/v4.0.0/concise.min.css">
 
   h3 Install with NPM
 
-  p Execute the following command to install Concise CSS from NPM, in this case. If you are new to NPM, you can check their #[a(href='https://docs.npmjs.com/') documentation].
+  p Execute the following command to install Concise CSS from NPM. If you are new to NPM, you can check their #[a(href='https://docs.npmjs.com/') documentation].
 
   pre: code.
     npm install concise.css
@@ -132,7 +141,7 @@ block content
 
   pre: code concisecss compile input.scss output.css
 
-  p When compiling the source code, Autoprefixer will automatically add the required browser prefixers.
+  p When compiling the source code, Autoprefixer will automatically add the required browser prefixes.
 
   h2#add-ons Using Add-ons
 
