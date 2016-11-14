@@ -1,0 +1,16 @@
+.links-box {
+  font-style: normal;
+  font-family: $font-secondary;
+
+  .link {
+    font-feature-settings: "smcp" 1, "c2sc" 1;
+    margin: 0.5em;
+    letter-spacing: $letter-spacing;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      color: getColor(base, primary);
+    }
+  }
+}

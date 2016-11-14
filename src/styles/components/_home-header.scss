@@ -1,12 +1,12 @@
 .home-header {
-  padding-top: 1lh;
+  padding-top: 1.5lh;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 25lh;
 
   & > .title {
     position: absolute;
     font-size: typeScale(7);
-    line-height: 1;
     border-bottom: 0;
     max-width: 13em;
     text-align: right;
@@ -22,6 +22,8 @@
 
   small {
     font-size: typeScale(4);
-    font-weight: normal
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 0.25lh;
   }
 }

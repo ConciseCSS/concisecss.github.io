@@ -4,7 +4,7 @@ block content
   header.home-header
     a(href='/'): img(src='/images/logo.svg' title="Concise CSS logo").logo
 
-    h1.title Concise CSS <br>
+    h1.title Concise CSS
       small Give up the bloat. Stop tripping over your classes. Be Concise.
 
     div.version-box
@@ -20,31 +20,40 @@ block content
         span v#{version.ui}
 
   main
-    section
-      h2._mbs Getting started
+    section(grid)._ptm
+      div(column='4')
+        h2._mt0 Getting started
 
-      div(grid)
-        div(column="6")
-          h3 Using NPM
+      div(column='8')
+        h3._mt0 Using NPM
 
-          pre.language-scss: code.
-            // Get the package
-            npm install concise.css
+        p This is the prefered method to install Concise CSS, you will be able to customize and compile the source files with Concise CLI.
 
-            // Import Concise CSS
-            @import "node_modules/concise.css/concise";
+        pre.language-scss: code.
+          // Get Concise CSS
+          npm install concise.css
 
-        div(column="6")
-          h3 Using the CDN
+          // Get Concise CLI
+          npm install -g concise-cli
 
-          pre.language-markup: code.
-            &lt;!-- Normal - Latest version -->
-            &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
+          // Import Concise CSS
+          @import "node_modules/concise.css/concise";
 
-            &lt;!-- Minified - Latest version -->
-            &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+          // Compile files
+          concisecss compile source.scss styles.css
 
-      p: a(href='/documentation') See the Documentation
+        h3._mtm Using the CDN
+
+        p If you just want to try Concise CSS or if you do not have plans to customize the styles from the source code, then you can use our CDN.
+
+        pre.language-markup: code.
+          &lt;!-- Normal - Latest version -->
+          &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
+
+          &lt;!-- Minified - Latest version -->
+          &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+
+    p._text-right: a(href='/documentation') See the Documentation
 
     section._mtl._mbl
       div(grid)
@@ -75,6 +84,18 @@ block content
           h3 Easy to use
           p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
 
-  footer
-    p Sponsored by #[a(href='https://www.keycdn.com/') KeyCDN.com]
-    p &copy; #[script(type='text/javascript') document.write(new Date().getFullYear());] James Kolce, Keenan Payne and ConciseCSS contributors.
+  footer.main-footer
+    p.
+      Sponsored by #[a(href='https://www.keycdn.com/') KeyCDN]
+      #[br]
+      &copy; #[script document.write(new Date().getFullYear());]
+      #[a(href='https://jameskolce.com') James Kolce],
+      #[a(href='http://keenanpayne.com') Keenan Payne] &
+      #[a(href='https://github.com/ConciseCSS/concise.css/graphs/contributors') Concise CSS Contributors].
+
+    p.links-box
+      a(href='https://github.com/ConciseCSS/concise.css/issues').link Support
+      a(href='https://github.com/ConciseCSS/concise.css/releases').link Changelog
+      a(href='https://github.com/concisecss').link Github
+      a(href='http://twitter.com/concisecss').link Twitter
+      a(href='http://facebook.com/concisecss').link Facebook
