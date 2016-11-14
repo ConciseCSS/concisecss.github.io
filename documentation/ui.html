@@ -1,4 +1,183 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#columns">Columns</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typograhy</a></li></ol></li><li><a href="/documentation/ui">UI</a></li></ol></nav></div><div class="main-container"><article container="small"><h1>Concise Utils</h1><h2>Alerts</h2><h2>Tags</h2><h2>Breadcrumbs</h2><h2>Buttons</h2><h2>Button groups</h2><h2>Cards</h2><h2>Media object</h2><h2>Collections</h2><h2>Dropdowns</h2><h2>Modals</h2><h2>Progress bars</h2><h2>Spinner</h2><h2>Tooltips</h2><h2>Navbars</h2><h2>Navs</h2><h2>Input group</h2></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#columns">Columns</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typography</a></li></ol></li><li><a href="/documentation/ui">UI</a><ol><li><a href="/documentation/ui#alert-box">Alert box</a></li><li><a href="/documentation/ui#breadcrumb">Breadcrumb</a></li><li><a href="/documentation/ui#button-group">Button group</a></li><li><a href="/documentation/ui#button">Button</a></li><li><a href="/documentation/ui#card">Card</a></li><li><a href="/documentation/ui#dropdown">Dropdown</a></li><li><a href="/documentation/ui#progress-bar">Progress bar</a></li><li><a href="/documentation/ui#spinner">Spinner</a></li><li><a href="/documentation/ui#tag">Tag</a></li></ol></li></ol></nav></div><div class="main-container"><article container="small"><h1>Concise UI</h1><p>Concise UI is a very basic user interface kit for Concise CSS, meant to be extended with your own styles.</p><h2 id="alert-box">Alert box</h2><pre class="language-markup"><code>&lt;section class="alert-box">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.&lt;/p>
+&lt;/section>
+
+&lt;section class="alert-box">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.&lt;/p>
+  &lt;p>Donec dapibus felis erat, et tincidunt arcu interdum id. Sed commodo quam id lectus porttitor, at gravida justo convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus.&lt;/p>
+  &lt;a class="close" href="#">&times;&lt;/a>
+&lt;/section>
+
+&lt;section class="alert-box -warning">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.&lt;/p>
+  &lt;a class="close" href="#">&times;&lt;/a>
+&lt;/section>
+
+&lt;section class="alert-box -success">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.&lt;/p>
+  &lt;a class="close" href="#">&times;&lt;/a>
+&lt;/section>
+
+&lt;section class="alert-box -error">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non lacus sapien.&lt;/p>
+  &lt;a class="close" href="#">&times;&lt;/a>
+&lt;/section>
+</code></pre><h2 id="breadcrumb">Breadcrumb</h2><pre class="language-markup"><code>&lt;ul class="breadcrumb-nav">
+  &lt;li class="item">&lt;a href="#">Home&lt;/a>&lt;/li>
+  &lt;li class="item">&lt;a href="#">Level 1&lt;/a>&lt;/li>
+  &lt;li class="item">&lt;a href="#">Level 2&lt;/a>&lt;/li>
+  &lt;li class="item -active">Active page&lt;/li>
+&lt;/ul>
+</code></pre><h2 id="button-group">Button group</h2><pre class="language-markup"><code>&lt;ul class="button-group">
+  &lt;li>&lt;a class="item" href="#">1&lt;/a>&lt;/li>
+  &lt;li>&lt;a class="item" href="#">2&lt;/a>&lt;/li>
+  &lt;li>&lt;a class="item -active" href="#">3&lt;/a>&lt;/li>
+  &lt;li>&lt;a class="item" href="#">4&lt;/a>&lt;/li>
+&lt;/ul>
+</code></pre><h2 id="button">Button</h2><pre class="language-markup"><code>&lt;button>Default&lt;/button>
+
+&lt;button class="-bordered">Bordered&lt;/button>
+&lt;button class="-bordered -error">Bordered error&lt;/button>
+&lt;button class="-bordered -warning">Bordered warning&lt;/button>
+&lt;button class="-bordered -success">Bordered success&lt;/button>
+&lt;button class="-bordered -muted">Bordered muted&lt;/button>
+&lt;button class="-bordered" disabled>Bordered disabled&lt;/button>
+
+&lt;button class="-error">Error&lt;/button>
+&lt;button class="-warning">Warning&lt;/button>
+&lt;button class="-success">Success&lt;/button>
+&lt;button class="-muted">Muted&lt;/button>
+&lt;button disabled>Disabled&lt;/button>
+
+&lt;button class="-prefix">
+  &lt;span class="prefix">Prefix&lt;/span>
+  Button
+&lt;/button>
+
+&lt;button class="-affix">
+  Button
+  &lt;span class="affix">Affix&lt;/span>
+&lt;/button>
+
+&lt;button class="-prefix -success">
+  &lt;span class="prefix">Prefix&lt;/span>
+  Button
+&lt;/button>
+
+&lt;button class="-affix -warning">
+  Button
+  &lt;span class="affix -error">Affix&lt;/span>
+&lt;/button>
+
+&lt;button class="-prefix">
+  &lt;span class="prefix">Prefix&lt;/span>
+  Button
+&lt;/button>
+
+&lt;button class="-affix -muted">
+  Button
+  &lt;span class="affix">Affix&lt;/span>
+&lt;/button>
+</code></pre><h2 id="card">Card</h2><pre class="language-markup"><code>&lt;div class="card-box">
+  &lt;img class="image" src="http://onebigphoto.com/uploads/2012/10/stunning-dolomites-mountains-italy.jpg">
+  &lt;div class="card-content">
+    &lt;h3 class="title">Card title&lt;/h3>
+    &lt;p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.&lt;/p>
+  &lt;/div>
+&lt;/div>
+
+&lt;div class="card-box">
+  &lt;img class="image" src="http://onebigphoto.com/uploads/2012/10/stunning-dolomites-mountains-italy.jpg">
+  &lt;div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.&lt;/div>
+&lt;/div>
+
+&lt;div class="card-box">
+  &lt;div class="card-content">
+    &lt;h3 class="title">Card title&lt;/h3>
+    &lt;p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.&lt;/p>
+  &lt;/div>
+&lt;/div>
+
+&lt;div class="card-box">
+  &lt;div class="header">
+    Header
+  &lt;/div>
+  &lt;div class="card-content">
+    &lt;h3 class="title">Card title&lt;/h3>
+    &lt;p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend dapibus nisl eu egestas.&lt;/p>
+  &lt;/div>
+  &lt;div class="footer">
+    Footer
+  &lt;/div>
+&lt;/div>
+</code></pre><h2 id="dropdown">Dropdown</h2><pre class="language-markup"><code>&lt;div tabindex="0" class="dropdown-button">
+  &lt;span>Dropdown&lt;/span>
+  &lt;ul class="dropdown-content">
+    &lt;li class="item">Item&lt;/li>
+    &lt;li class="item">Item&lt;/li>
+    &lt;li class="item">Item&lt;/li>
+  &lt;/ul>
+&lt;/div>
+
+&lt;div tabindex="0" class="dropdown-button -top">
+  &lt;span>Dropdown Top&lt;/span>
+  &lt;ul class="dropdown-content">
+    &lt;li class="item">Item&lt;/li>
+    &lt;li class="item">Item&lt;/li>
+    &lt;li class="item">Item&lt;/li>
+  &lt;/ul>
+&lt;/div>
+
+&lt;div tabindex="0" class="dropdown-button -hover">
+  &lt;span>Dropdown Hover with content&lt;/span>
+  &lt;div class="dropdown-content">
+    &lt;p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.&lt;/p>
+  &lt;/div>
+&lt;/div>
+
+</code></pre><h2 id="progress-bar">Progress bar</h2><pre class="language-markup"><code>&lt;div class="progress-bar -small">
+  &lt;span class="progress" style="width: 25%">&lt;/span>
+&lt;/div>
+
+&lt;div class="progress-bar">
+  &lt;span class="progress" style="width: 50%">&lt;/span>
+&lt;/div>
+
+&lt;div class="progress-bar -large">
+  &lt;span class="progress" style="width: 75%">&lt;/span>
+&lt;/div>
+
+&lt;div class="progress-bar -striped">
+  &lt;span class="progress" style="width: 90%">&lt;/span>
+&lt;/div>
+
+&lt;div class="progress-bar -striped -animated">
+  &lt;span class="progress" style="width: 90%">&lt;/span>
+&lt;/div>
+
+&lt;div class="progress-bar -stacked">
+  &lt;span class="progress" style="width: 25%">&lt;/span>
+  &lt;span class="progress" style="width: 25%; background-color: green">&lt;/span>
+  &lt;span class="progress" style="width: 25%; background-color: blue">&lt;/span>
+  &lt;span class="progress" style="width: 20%; background-color: red">&lt;/span>
+&lt;/div>
+</code></pre><h2 id="spinner">Spinner</h2><pre class="language-markup"><code>&lt;div class="spinner">&lt;/div>
+</code></pre><h2 id="tag">Tag</h2><pre class="language-markup"><code>&lt;span class="tag-box">Lorem&lt;/span>
+&lt;span class="tag-box -success">Lorem&lt;/span>
+&lt;span class="tag-box -warning">Lorem&lt;/span>
+&lt;span class="tag-box -error">Lorem&lt;/span>
+&lt;span class="tag-box -pill">Lorem&lt;/span>
+&lt;span class="tag-box -pill -success">Lorem&lt;/span>
+&lt;span class="tag-box -pill -warning">Lorem&lt;/span>
+&lt;span class="tag-box -pill -error">Lorem&lt;/span>
+
+&lt;h2>Title with a tag
+  &lt;span class="tag-box -success">adaptable&lt;/span>
+&lt;/h2>
+
+&lt;h5>A smaller one
+  &lt;span class="tag-box -success">still adaptable&lt;/span>
+&lt;/h5></code></pre></article><footer class="main-footer"><p>Sponsored by <a href="https://www.keycdn.com/">KeyCDN</a>
 <br>
 &copy; <script>document.write(new Date().getFullYear());</script>
 <a href="https://jameskolce.com">James Kolce</a>,
