@@ -1,0 +1,27 @@
+.home-header {
+  padding-top: 1lh;
+  position: relative;
+  min-height: 100vh;
+
+  & > .title {
+    position: absolute;
+    font-size: typeScale(7);
+    line-height: 1;
+    border-bottom: 0;
+    max-width: 13em;
+    text-align: right;
+    bottom: 2lh;
+    right: 0;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    height: 3lh;
+    width: auto;
+  }
+
+  small {
+    font-size: typeScale(4);
+    font-weight: normal
+  }
+}

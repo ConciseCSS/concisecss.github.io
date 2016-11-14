@@ -52,7 +52,7 @@ a {
 
 pre {
   background-color: transparent;
-  border-radius: 0;
+  border: 1px solid getColor(base, lines);
   border-left: 0;
   border-right: 0;
   padding-left: 0;
@@ -60,6 +60,7 @@ pre {
 
   code {
     color: getColor(text, secondary);
+    background-color: transparent;
     font-size: 100% / $scale-ratio;
   }
 }

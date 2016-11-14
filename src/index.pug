@@ -1,34 +1,80 @@
 extends _layout
 
 block content
-  header
-    nav
+  header.home-header
+    a(href='/'): img(src='/images/logo.svg' title="Concise CSS logo").logo
 
-    h1 Concise CSS
-      small A Better CSS Framework
+    h1.title Concise CSS <br>
+      small Give up the bloat. Stop tripping over your classes. Be Concise.
 
-    p Give up the bloat. Stop tripping over your classes. Be Concise.
-
-    p Current version: #{version}
+    div.version-box
+      h3.title Current versions:
+      p(grid="justify-between").version._m0
+        span Core:
+        span v#{version.core}
+      p(grid="justify-between").version._m0
+        span Utils:
+        span v#{version.utils}
+      p(grid="justify-between").version._m0
+        span UI:
+        span v#{version.ui}
 
   main
     section
-      h2 Getting started
-      // Use the CDN to start using Concise CSS quickly
+      h2._mbs Getting started
 
-    section
-      h2 Features
-      // Highlight the most important features of the framework
-      // Include browser support here
+      div(grid)
+        div(column="6")
+          h3 Using NPM
 
-    section
-      h2 Showcase
-      // A Gallery of websites using ConciseCSS
+          pre.language-scss: code.
+            // Get the package
+            npm install concise.css
 
-    section
-      h2 Examples
-      // Create some simple examples on Github and link them here
+            // Import Concise CSS
+            @import "node_modules/concise.css/concise";
 
-    section
-      h2 Concise Templates
-      // Introduce Concise Market
+        div(column="6")
+          h3 Using the CDN
+
+          pre.language-markup: code.
+            &lt;!-- Normal - Latest version -->
+            &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.css">
+
+            &lt;!-- Minified - Latest version -->
+            &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
+
+      p: a(href='/documentation') See the Documentation
+
+    section._mtl._mbl
+      div(grid)
+        div(column)
+          h3 Bloat-Free
+          p No unnecessary styles are added so you can spend more time building and less time overriding.
+
+        div(column)
+          h3 Concise UI
+          p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
+
+        div(column)
+          h3 Concise Utils
+          p We also provide utility classes for rapid prototyping and context-dependent styles.
+
+      br
+
+      div(grid)
+        div(column)
+          h3 Sass + PostCSS
+          p The usual features from Sass with some custom additions using PostCSS.
+
+        div(column)
+          h3 Design-Oriented
+          p A framework built with design in mind. Get better results from the beginning with less code.
+
+        div(column)
+          h3 Easy to use
+          p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
+
+  footer
+    p Sponsored by #[a(href='https://www.keycdn.com/') KeyCDN.com]
+    p &copy; #[script(type='text/javascript') document.write(new Date().getFullYear());] James Kolce, Keenan Payne and ConciseCSS contributors.

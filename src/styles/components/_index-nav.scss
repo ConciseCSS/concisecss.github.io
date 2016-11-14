@@ -21,7 +21,7 @@
 
     img {
       height: 2lh;
-    }  
+    }
   }
 
   ol ol a {
@@ -31,8 +31,9 @@
     line-height: 1.5;
   }
 
-  ol {
-    counter-reset: item;
+  ol ol {
+    margin-left: 0;
+    padding-left: 1em;
   }
 
   & > ol {
@@ -40,10 +41,7 @@
     margin-top: 0;
   }
 
-  li:before { 
-    content: counters(item, ".") " "; 
-    counter-increment: item;
-    margin-right: 0.25em;
+  li:before {
     color: getColor(base, primary);
   }
 
