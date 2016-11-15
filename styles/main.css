@@ -1903,7 +1903,7 @@ li {
     width: auto; }
   .home-header .docs {
     position: absolute;
-    top: 3rem;
+    top: 1.5rem;
     right: 0;
     -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
             font-feature-settings: "smcp" 1, "c2sc" 1;
