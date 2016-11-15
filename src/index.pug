@@ -6,14 +6,14 @@ block content
 
     a(href='/documentation').docs Documentation
 
-    h1.title Concise CSS
+    h1.title Concise <em>CSS</em>
       small Give up the bloat. Stop tripping over your classes. Be Concise.
 
     div.version-box
       h3.title Current versions:
       p(grid="justify-between").version._m0
         span Core:
-        span v#{version.core}
+        span.js-currentVersion v#{version.core}
       p(grid="justify-between").version._m0
         span Utils:
         span v#{version.utils}
@@ -21,7 +21,7 @@ block content
         span UI:
         span v#{version.ui}
 
-  main
+  main._bt1
     section(grid)._ptm
       div(column='4')
         h2._mt0 Getting started
@@ -59,32 +59,38 @@ block content
 
     section._mtl._mbl
       div(grid)
-        div(column)
-          h3 Bloat-Free
-          p No unnecessary styles are added so you can spend more time building and less time overriding.
+        div(column='4')
+          h2._mtxs Why Concise CSS
 
         div(column)
-          h3 Concise UI
-          p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
+          div(grid)
+            div(column)
+              h3 Bloat-Free
+              p No unnecessary styles are added so you can spend more time building and less time overriding.
 
-        div(column)
-          h3 Concise Utils
-          p We also provide utility classes for rapid prototyping and context-dependent styles.
+            div(column)
+              h3 Concise UI
+              p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
 
-      br
+          div(grid)._mts
+            div(column)
+              h3 Concise Utils
+              p We also provide utility classes for rapid prototyping and context-dependent styles.
 
-      div(grid)
-        div(column)
-          h3 Sass + PostCSS
-          p The usual features from Sass with some custom additions using PostCSS.
+            div(column)
+              h3 Sass + PostCSS
+              p The usual features from Sass with some custom additions using PostCSS.
 
-        div(column)
-          h3 Design-Oriented
-          p A framework built with design in mind. Get better results from the beginning with less code.
+          div(grid)._mts
+            div(column)
+              h3 Design-Oriented
+              p A framework built with design in mind. Get better results from the beginning with less code.
 
-        div(column)
-          h3 Easy to use
-          p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
+            div(column)
+              h3 Easy to use
+              p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
+
+      p._text-right: a(href='documentation/#why') Read the introduction
 
   footer.main-footer
     p.

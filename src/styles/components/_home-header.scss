@@ -6,13 +6,19 @@
 
   & > .title {
     position: absolute;
-    font-size: typeScale(7);
+    font-size: typeScale(11);
     border-bottom: 0;
-    max-width: 13em;
+    max-width: 25rem;
     text-align: right;
     bottom: 2lh;
     right: 0;
     margin-bottom: 0;
+    line-height: 0.5;
+
+    em {
+      color: getColor(base, primary);
+      font-style: normal;
+    }
   }
 
   .logo {
@@ -31,9 +37,9 @@
   }
 
   small {
-    font-size: typeScale(4);
+    font-size: typeScale(3);
     font-weight: normal;
     display: inline-block;
-    margin-top: 0.25lh;
+    line-height: 1.3;
   }
 }
