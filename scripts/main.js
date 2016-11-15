@@ -124,7 +124,7 @@ function notificationUpdate() {
   if (("Notification" in window)) {
     var permission = Notification.permission;
     var currentVersion = returnCurrentVersion(document.getElementsByClassName("js-currentVersion"));
-    var currentVersionText = "v" + currentVersion;
+    var currentVersionText = currentVersion;
 
     if (returnVersionDifference(currentVersion) === true) {
       if (permission === "granted") {
