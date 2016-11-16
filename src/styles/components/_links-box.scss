@@ -8,6 +8,7 @@
     letter-spacing: $letter-spacing;
     font-weight: bold;
     color: getColor(text, primary);
+    display: inline-block;
 
     &:hover,
     &:focus {

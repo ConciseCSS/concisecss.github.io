@@ -56,7 +56,7 @@ template,
   color: #222;
   font-size: 18;
   text-rendering: optimizeLegibility; }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     :root {
       font-size: 22px; } }
 
@@ -491,7 +491,7 @@ input[type="radio"] + label {
 
 table {
   width: 100%; }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     table {
       width: auto; } }
   table thead,
@@ -526,7 +526,7 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     [grid] {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -637,7 +637,7 @@ table {
   -ms-flex-item-align: end;
       align-self: flex-end; }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   [column~="1"] {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 8.33333%;
@@ -1891,15 +1891,22 @@ li {
   height: 100vh;
   max-height: 37.5rem; }
   .home-header > .title {
-    position: absolute;
     font-size: 2.88651rem;
     border-bottom: 0;
-    max-width: 25rem;
-    text-align: right;
-    bottom: 3rem;
-    right: 0;
     margin-bottom: 0;
-    line-height: 0.5; }
+    line-height: 0.5;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .home-header > .title {
+        position: absolute;
+        bottom: 3rem;
+        right: 0;
+        top: auto;
+        text-align: right;
+        max-width: 25rem; } }
     .home-header > .title em {
       color: #D34A28;
       font-style: normal; }
@@ -1921,14 +1928,27 @@ li {
     line-height: 1.3; }
 
 .version-box {
+  font-size: 0.88889rem;
   position: absolute;
   bottom: 3rem;
-  left: 0;
-  font-size: 0.88889rem; }
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  @media (min-width: 768px) {
+    .version-box {
+      left: 0;
+      -webkit-transform: none;
+              transform: none; } }
   .version-box .title {
     margin-bottom: 0; }
   .version-box .version {
-    margin-top: 0; }
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 .links-box {
   font-style: normal;
@@ -1939,7 +1959,8 @@ li {
     margin: 0.5em;
     letter-spacing: 0.05em;
     font-weight: bold;
-    color: #222; }
+    color: #222;
+    display: inline-block; }
     .links-box .link:hover, .links-box .link:focus {
       color: #D34A28; }
 

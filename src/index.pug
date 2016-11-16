@@ -11,23 +11,23 @@ block content
 
     div.version-box
       h3.title Current versions:
-      p(grid="justify-between").version._m0
+      p.version
         span Core:
         span.js-currentVersion v#{version.core}
-      p(grid="justify-between").version._m0
+      p.version
         span Utils:
         span v#{version.utils}
-      p(grid="justify-between").version._m0
+      p.version
         span UI:
         span v#{version.ui}
 
   main._bt1
-    section(grid)._ptm
+    section(grid)
       div(column='4')
-        h2._mt0 Getting started
+        h2._mb0 Getting started
 
       div(column='8')
-        h3._mt0 Using NPM
+        h3 Using NPM
 
         p This is the prefered method to install Concise CSS, you will be able to customize and compile the source files with Concise CLI.
 
@@ -44,7 +44,7 @@ block content
           // Compile files
           concisecss compile source.scss styles.css
 
-        h3._mtm Using the CDN
+        h3 Using the CDN
 
         p If you just want to try Concise CSS or if you do not have plans to customize the styles from the source code, then you can use our CDN.
 
@@ -57,10 +57,10 @@ block content
 
     p._text-right: a(href='/documentation') See the Documentation
 
-    section._mtl._mbl
+    section
       div(grid)
         div(column='4')
-          h2._mtxs Why Concise CSS
+          h2._mb0 Why Concise CSS
 
         div(column)
           div(grid)
@@ -72,7 +72,7 @@ block content
               h3 Concise UI
               p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
 
-          div(grid)._mts
+          div(grid)
             div(column)
               h3 Concise Utils
               p We also provide utility classes for rapid prototyping and context-dependent styles.
@@ -81,7 +81,7 @@ block content
               h3 Sass + PostCSS
               p The usual features from Sass with some custom additions using PostCSS.
 
-          div(grid)._mts
+          div(grid)
             div(column)
               h3 Design-Oriented
               p A framework built with design in mind. Get better results from the beginning with less code.
