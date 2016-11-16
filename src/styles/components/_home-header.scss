@@ -1,5 +1,5 @@
 .home-header {
-  padding-top: 1.5lh;
+  padding-top: 1lh;
   position: relative;
   height: 100vh;
   max-height: 25lh;
@@ -28,7 +28,7 @@
 
   .docs {
     position: absolute;
-    top: 1lh;
+    top: 1.5lh;
     right: 0;
     font-feature-settings: "smcp" 1, "c2sc" 1;
     letter-spacing: $letter-spacing;

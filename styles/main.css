@@ -1881,7 +1881,7 @@ li {
       color: white; }
 
 .home-header {
-  padding-top: 2.25rem;
+  padding-top: 1.5rem;
   position: relative;
   height: 100vh;
   max-height: 37.5rem; }
@@ -1903,7 +1903,7 @@ li {
     width: auto; }
   .home-header .docs {
     position: absolute;
-    top: 1.5rem;
+    top: 2.25rem;
     right: 0;
     -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
             font-feature-settings: "smcp" 1, "c2sc" 1;
