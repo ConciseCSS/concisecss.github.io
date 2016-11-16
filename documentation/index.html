@@ -46,22 +46,22 @@ section {
 
 // Concise Core
 @import "node_modules/concise.css/concise";
-</code></pre><h3>Copy the Source Files</h3><p>Finally, if you prefer, you can just copy the framework files to your project folder.</p><p>You can download the latest version from Github from <a href="https://github.com/ConciseCSS/concise.css/archive/master.zip">this link</a>, and place the files wherever you need them.</p><h2 id="concise-cli">The Concise CLI</h2><p>To build the source files, you need to install the Concise CLI globally:</p><pre><code>npm install -g concise-cli</code></pre><p>Once it is installed, you can compile source files with the <code>concisecss compile</code> command:</p><pre><code>concisecss compile input.scss output.css</code></pre><p>When compiling the source code, Autoprefixer will automatically add the required browser prefixes.</p><h2 id="add-ons">Using Add-ons</h2><p>The core styles of Concise CSS can be extended by using add-ons. They are just separate packages that use the same settings from the core of the framework.</p><p>Currently, there are two official add-ons: Concise UI and Concise Utils. The first one includes a series of UI components that can be used directly, as you would with frameworks like Bootstrap or Foundation. The second one contains single-responsibility classes, similar to frameworks like <a href="http://www.basscss.com/">BassCSS</a> or <a href="http://tachyons.io/">Tachyons</a>.</p><p>You can check all the styles available in those add-ons in their respective pages: <a href="http://concisecss.com/documentation/ui">Concise UI</a> and <a href="http://concisecss.com/documentation/utils">Concise Utils</a>.</p><h3>From the CDN</h3><p>As with the core styles, you can include the styles from the add-ons directly using our CDN.</p><pre class="language-markup"><code>&lt;!-- CONCISE UI -->
+</code></pre><h3>Copy the Source Files</h3><p>Finally, if you prefer, you can just copy the framework files to your project folder.</p><p>You can download the latest version from Github from <a href="https://github.com/ConciseCSS/concise.css/archive/master.zip">this link</a>, and place the files wherever you need them.</p><h2 id="concise-cli">The Concise CLI</h2><p>To build the source files, you need to install the Concise CLI globally:</p><pre><code>npm install -g concise-cli</code></pre><p>Once it is installed, you can compile source files with the <code>concisecss compile</code> command:</p><pre><code>concisecss compile input.scss output.css</code></pre><p>When compiling the source code, Autoprefixer will automatically add the required browser prefixes.</p><h2 id="add-ons">Using Add-ons</h2><p>The core styles of Concise CSS can be extended by using add-ons. They are just separate packages that use the same settings from the core of the framework.</p><p>Currently, there are two official add-ons: Concise UI and Concise Utils. The first one includes a series of UI components that can be used directly, as you would with frameworks like Bootstrap or Foundation. The second one contains single-responsibility classes, similar to frameworks like <a href="http://www.basscss.com/">BassCSS</a> or <a href="http://tachyons.io/">Tachyons</a>.</p><p>You can check all the styles available in those add-ons in their respective pages: <a href="http://concisecss.com/documentation/ui">Concise UI</a> and <a href="http://concisecss.com/documentation/utils">Concise Utils</a>.</p><h3>From the CDN</h3><p>As with the core styles, you can include the styles from the add-ons directly using our CDN.</p><pre class="language-markup"><code>&lt;!-- CONCISE UI - Latest version -->
 
 &lt;!-- Normal -->
-&lt;link rel="stylesheet" href="https://cdn.concisecss.com/ui/v1.0.0/concise-ui.css">
+&lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.css">
 
 &lt;!-- Minified -->
-&lt;link rel="stylesheet" href="https://cdn.concisecss.com/ui/v1.0.0/concise-ui.min.css">
+&lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise-ui/concise-ui.min.css">
 
 
-&lt;!-- CONCISE UTILS -->
+&lt;!-- CONCISE UTILS - Latest version -->
 
 &lt;!-- Normal -->
-&lt;link rel="stylesheet" href="https://cdn.concisecss.com/utils/v1.0.0/concise-utils.css">
+&lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.css">
 
 &lt;!-- Minified -->
-&lt;link rel="stylesheet" href="https://cdn.concisecss.com/utils/v1.0.0/concise-utils.min.css">
+&lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise-utils/concise-utils.min.css">
 </code></pre><h3>With NPM</h3><p>You can also install the add-ons with NPM:</p><pre><code>npm install concise-utils
 
 npm install concise-ui
