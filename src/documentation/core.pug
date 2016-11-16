@@ -1,7 +1,7 @@
 extends _layout
 
 block content
-  h1 The Core of Concise CSS
+  h1 <em>2.</em> The Core of Concise CSS
 
   p The Core is composed almost entirely of styles for native HTML elements, the grid system, and the default settings. When you include Concise on your project, you won't have any classes available; it will just provide a foundation to build your website however you like to do it.
 
@@ -11,7 +11,7 @@ block content
 
   p Finally, the core of Concise CSS provides a set of settings that will help you to build your website quickly: Font variables, spacing rules, custom media queries, a type scale function, a color palette, and other small things. All the key settings you will need when building any website.
 
-  h2#settings Settings
+  h2#settings <em>2.1</em> Settings
 
   p Concise CSS provides a series of configuration variables that are used in the core and in the add-ons.
 
@@ -193,7 +193,7 @@ block content
 
   p The changes are extended to all the Concise CSS styles, after the compilation.
 
-  h2#typography Typography
+  h2#typography <em>2.2</em> Typography
 
   p Typography is probably the most important element in web design, so we have added some features specially designed to get good results in this area.
 
@@ -293,7 +293,7 @@ block content
 
   p By default, all the paragraphs—except the first one—will have a top margin of #[code 1lh], which is translated to #[code 1.5rem] after compilation if the line height remains as #[code 1.5] (default value). If you change the #[code line-height] of the #[code :root] element, the margin will be adapted automatically, for example, to #[code 2rem] if you set your line height to #[code 2].
 
-  h2#grid-system Grid System
+  h2#grid-system <em>2.3</em> Grid System
 
   p A grid system is a tool used to build a webpage layout. With it, you can organize your content into containers and columns. Concise CSS uses a custom version of the #[a(href='https://github.com/jameskolce/atgrid.css') atGrid.css] grid system by #[a(href='https://jameskolce.com') James Kolce], that focus in the use of custom attribute selectors instead of the usual class selectors in other systems.
   p By default, the grid will have 12 columns ready to use.
@@ -515,7 +515,7 @@ block content
     li #[strong $prefix]: The prefix used for the attributes, you can set it to #[code data-] if you need to validate your markup. Default is #[code ''] (empty string).
     li #[strong $breakpoint]: Columns are collapsed to 100% below this point. Is recommended to use one of the custom media queries available here. Default is #[code --small].
 
-  h2#color-palette Color Palette
+  h2#color-palette <em>2.4</em> Color Palette
 
   p Concise CSS provides a color palette ready to use or extend. It contains colors for text, primary colors, backgrounds, colors for states, and other color tones.
 
@@ -584,7 +584,7 @@ block content
 
   p You can customize the color palette by modifying the #[code $colors] map in your settings file, as noted in the #[a(href='http://concisecss.com/documentation/core#settings') Settings] section.
 
-  h2#print Print
+  h2#print <em>2.5</em> Print
 
   p Concise CSS also includes basic styles for print that will normalize your website to make it more print-friendly. However, the default settings might not be optimal for your website; If you want to support printing officially, you should still write your own print styles.
 

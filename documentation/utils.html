@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#columns">Columns</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typography</a></li></ol></li><li><a href="/documentation/ui">UI</a><ol><li><a href="/documentation/ui#alert-box">Alert box</a></li><li><a href="/documentation/ui#breadcrumb">Breadcrumb</a></li><li><a href="/documentation/ui#button-group">Button group</a></li><li><a href="/documentation/ui#button">Button</a></li><li><a href="/documentation/ui#card">Card</a></li><li><a href="/documentation/ui#dropdown">Dropdown</a></li><li><a href="/documentation/ui#progress-bar">Progress bar</a></li><li><a href="/documentation/ui#spinner">Spinner</a></li><li><a href="/documentation/ui#tag">Tag</a></li></ol></li></ol></nav></div><div class="main-container"><article container="small"><h1>Concise Utils</h1><p>Concise Utils is one of the official add-ons for Concise CSS. It provides helper classes that you can use in your markup for fast prototyping or context-dependent styles.</p><p>Helper classes are prefixed with an underscore (<code>_</code>) to distinguish them from components or elements.</p><h2 id="borders">Borders</h2><p>There are several classes available to delete or add borders to elements. Those classes begin with a <code>b</code>, the initial letter of the side where the class works (optional) and the size of the border from <code>0</code> to <code>4</code>.</p><p>Classes that work on all the sides are composed only of the letter <code>b</code> and the width, for example, <code>_b1</code>.</p><h3>Reset</h3><pre class="language-markup"><code>&lt;!-- Reset all the borders -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Concise Framework</title><meta name="description" content="Concise is a lightweight front-end framework that provides a number of great features without the bloat."><meta name="viewport" content="width=device-width, initial-scale=1"><script src="//use.typekit.net/glq4bcp.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script><link rel="stylesheet" href="/styles/main.css"><link rel="icon" href="/favicon.png"></head><body><div class="sidebar-container"><nav class="index-nav"><a class="logo" href="/"><img src="/images/logo.svg" title="Go Home"></a><ol><li><a href="/documentation/">Introduction</a><ol><li><a href="/documentation/#why">Why Concise CSS</a></li><li><a href="/documentation/#language-additions">Language additions</a></li><li><a href="/documentation/#installation">Installation</a></li><li><a href="/documentation/#concise-cli">The Concise CLI</a></li><li><a href="/documentation/#add-ons">Using add-ons</a></li><li><a href="/documentation/#coding-conventions">Coding conventions</a></li><li><a href="/documentation/#examples">Examples</a></li></ol></li><li><a href="/documentation/core">Core</a><ol><li><a href="/documentation/core#settings">Settings</a></li><li><a href="/documentation/core#typography">Typography</a></li><li><a href="/documentation/core#grid-system">Grid System</a></li><li><a href="/documentation/core#color-palette">Color Palette</a></li><li><a href="/documentation/core#print">Print</a></li></ol></li><li><a href="/documentation/utils">Utils</a><ol><li><a href="/documentation/utils#borders">Borders</a></li><li><a href="/documentation/utils#colors">Colors</a></li><li><a href="/documentation/utils#columns">Columns</a></li><li><a href="/documentation/utils#hide-show">Hide/Show</a></li><li><a href="/documentation/utils#display">Display</a></li><li><a href="/documentation/utils#margins">Margins</a></li><li><a href="/documentation/utils#paddings">Paddings</a></li><li><a href="/documentation/utils#position">Position</a></li><li><a href="/documentation/utils#type-scale">Type scale</a></li><li><a href="/documentation/utils#typography">Typography</a></li></ol></li><li><a href="/documentation/ui">UI</a><ol><li><a href="/documentation/ui#alert-box">Alert box</a></li><li><a href="/documentation/ui#breadcrumb">Breadcrumb</a></li><li><a href="/documentation/ui#button-group">Button group</a></li><li><a href="/documentation/ui#button">Button</a></li><li><a href="/documentation/ui#card">Card</a></li><li><a href="/documentation/ui#dropdown">Dropdown</a></li><li><a href="/documentation/ui#progress-bar">Progress bar</a></li><li><a href="/documentation/ui#spinner">Spinner</a></li><li><a href="/documentation/ui#tag">Tag</a></li></ol></li></ol></nav></div><div class="main-container"><article container="small"><h1><em>3.</em> Concise Utils</h1><p>Concise Utils is one of the official add-ons for Concise CSS. It provides helper classes that you can use in your markup for fast prototyping or context-dependent styles.</p><p>Helper classes are prefixed with an underscore (<code>_</code>) to distinguish them from components or elements.</p><h2 id="borders"><em>3.1</em> Borders</h2><p>There are several classes available to delete or add borders to elements. Those classes begin with a <code>b</code>, the initial letter of the side where the class works (optional) and the size of the border from <code>0</code> to <code>4</code>.</p><p>Classes that work on all the sides are composed only of the letter <code>b</code> and the width, for example, <code>_b1</code>.</p><h3>Reset</h3><pre class="language-markup"><code>&lt;!-- Reset all the borders -->
 &lt;div class="_b0">…&lt;/div>
 
 &lt;!-- Reset top border -->
@@ -68,7 +68,7 @@
 
 &lt;!-- Left border -->
 &lt;div class="_bl4">…&lt;/div>
-</code></pre><h2 id="colors">Colors</h2><p>All the colors in the color palette are available as classes to be used directly within your HTML.</p><p>The classes for text colors are prefixed with <code>_c-</code> and <code>_bg-</code> for backrounds.</p><p>The color follows the same schema in the $colors map. For example, you can use the color obtained with <code>getColor(base, primary)</code> in HTML as <code>_c-base-primary</code> for text or <code>_bg-base-primary</code> for backgrounds.</p><h3>Text Colors</h3><pre class="language-markup"><code>&lt;!-- Equivalent to getColor(base, primary) -->
+</code></pre><h2 id="colors"><em>3.2</em> Colors</h2><p>All the colors in the color palette are available as classes to be used directly within your HTML.</p><p>The classes for text colors are prefixed with <code>_c-</code> and <code>_bg-</code> for backrounds.</p><p>The color follows the same schema in the $colors map. For example, you can use the color obtained with <code>getColor(base, primary)</code> in HTML as <code>_c-base-primary</code> for text or <code>_bg-base-primary</code> for backgrounds.</p><h3>Text Colors</h3><pre class="language-markup"><code>&lt;!-- Equivalent to getColor(base, primary) -->
 &lt;div class="_c-base-primary">…&lt;/div>
 
 &lt;!-- Equivalent to getColor(base, selection) -->
@@ -276,14 +276,14 @@
 
 &lt;!-- Equivalent to getColor(gray, lighter) -->
 &lt;div class="_bg-gray-lighter">…&lt;/div>
-</code></pre><h2 id="columns">Columns</h2><p>Is possible to split the content into several columns, up to 12 by default, using the column utilities.</p><p>Those classes use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layoutsare different">Multicolumn layout</a>, so they are distinct from the grid included in the core of Concise CSS.</p><p>Also, there is a class to build masonry-type layouts with pure CSS quickly.</p><h3>Columns</h3><pre class="language-markup"><code>&lt;div class="_cols-1">…&lt;/div>
+</code></pre><h2 id="columns"><em>3.3</em> Columns</h2><p>Is possible to split the content into several columns, up to 12 by default, using the column utilities.</p><p>Those classes use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layoutsare different">Multicolumn layout</a>, so they are distinct from the grid included in the core of Concise CSS.</p><p>Also, there is a class to build masonry-type layouts with pure CSS quickly.</p><h3>Columns</h3><pre class="language-markup"><code>&lt;div class="_cols-1">…&lt;/div>
 &lt;div class="_cols-2">…&lt;/div>
 …
 &lt;div class="_cols-11">…&lt;/div>
 &lt;div class="_cols-12">…&lt;/div>
 </code></pre><h3>Gap between columns</h3><p>You can set the space between the columns, by default it will have the value of the <code>$gutter</code> variable.</p><pre class="language-markup"><code>&lt;div class="_col-gap">…&lt;/div>
 </code></pre><h3>Masonry layout</h3><pre class="language-markup"><code>&lt;div class="_masonry">…&lt;/div>
-</code></pre><h2 id="hide-show">Hide/Show</h2><p>You can hide or show elements depending on certain key points, like the device size, resolution, or media (printing or screen).</p><h3>Show elements</h3><pre class="language-markup"><code>&lt;!-- Show only on extra small devices -->
+</code></pre><h2 id="hide-show"><em>3.4</em> Hide/Show</h2><p>You can hide or show elements depending on certain key points, like the device size, resolution, or media (printing or screen).</p><h3>Show elements</h3><pre class="language-markup"><code>&lt;!-- Show only on extra small devices -->
 &lt;div class="_show-xs">…&lt;/div>
 
 &lt;!-- Show only on small devices -->
@@ -323,7 +323,7 @@
 
 &lt;!-- Hide only on high density (retina) devices -->
 &lt;div class="_hide-hd">…&lt;/div>
-</code></pre><h2 id="display">Display</h2><p>The <code>display</code> properties are also exposed via HTML classes so you can use them in your markup quickly.</p><pre class="language-markup"><code>&lt;!-- Equivalent to display: inline-block -->
+</code></pre><h2 id="display"><em>3.5</em> Display</h2><p>The <code>display</code> properties are also exposed via HTML classes so you can use them in your markup quickly.</p><pre class="language-markup"><code>&lt;!-- Equivalent to display: inline-block -->
 &lt;div class="_inline-block">…&lt;/div>
 
 &lt;!-- Equivalent to display: block -->
@@ -334,7 +334,7 @@
 
 &lt;!-- Equivalent to display: flex -->
 &lt;div class="_flex">…&lt;/div>
-</code></pre><h2 id="margins">Margins</h2><p>As with the borders, you have predefined classes to reset or add margins. They will use the value in the spacing variables defined in the <a href="http://concisecss.com/documentation/core#settings">settings file</a>.</p><p>These variables can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.</p><h3>Reset margins</h3><pre class="language-markup"><code>&lt;!-- Reset all margins -->
+</code></pre><h2 id="margins"><em>3.6</em> Margins</h2><p>As with the borders, you have predefined classes to reset or add margins. They will use the value in the spacing variables defined in the <a href="http://concisecss.com/documentation/core#settings">settings file</a>.</p><p>These variables can be especially useful to keep your CSS clean, by adding margins in your markup depending of the context without having to create extra styles, or a component/element variant.</p><h3>Reset margins</h3><pre class="language-markup"><code>&lt;!-- Reset all margins -->
 &lt;div class="_m0">…&lt;/div>
 
 &lt;!-- Reset top margin -->
@@ -417,7 +417,7 @@
 
 &lt;!-- Extra large left margin -->
 &lt;div class="_mlxl">…&lt;/div>
-</code></pre><h2 id="paddings">Paddings</h2><p>The same classes used for margins are also available for paddings with a slightly different syntax, a <code>p</code> instead of an <code>m</code>.</p><h3>Reset paddings</h3><pre class="language-markup"><code>&lt;!-- Reset all paddings -->
+</code></pre><h2 id="paddings"><em>3.7</em> Paddings</h2><p>The same classes used for margins are also available for paddings with a slightly different syntax, a <code>p</code> instead of an <code>m</code>.</p><h3>Reset paddings</h3><pre class="language-markup"><code>&lt;!-- Reset all paddings -->
 &lt;div class="_p0">…&lt;/div>
 
 &lt;!-- Reset top padding -->
@@ -500,7 +500,7 @@
 
 &lt;!-- Extra large left padding -->
 &lt;div class="_plxl">…&lt;/div>
-</code></pre><h2 id="position">Position</h2><p>Concise Utils also exposes all the values of the <code>position</code> property so you can use them directly in your HTML.</p><pre class="language-markup"><code>&lt;!-- Equivalent to position: absolute -->
+</code></pre><h2 id="position"><em>3.8</em> Position</h2><p>Concise Utils also exposes all the values of the <code>position</code> property so you can use them directly in your HTML.</p><pre class="language-markup"><code>&lt;!-- Equivalent to position: absolute -->
 &lt;div class="_abs">…&lt;/div>
 
 &lt;!-- Equivalent to position: relative -->
@@ -511,7 +511,7 @@
 
 &lt;!-- Equivalent to position: fixed -->
 &lt;div class="_fix">…&lt;/div>
-</code></pre><h2 id="type-scale">Type Scale</h2><p>The first ten sizes in the primary type scale are available to use in HTML; those are built using the <code>typeScale()</code> function and are updated depending on your settings.</p><pre class="language-markup"><code>&lt;!-- Equivalent to typeScale(1) -->
+</code></pre><h2 id="type-scale"><em>3.9</em> Type Scale</h2><p>The first ten sizes in the primary type scale are available to use in HTML; those are built using the <code>typeScale()</code> function and are updated depending on your settings.</p><pre class="language-markup"><code>&lt;!-- Equivalent to typeScale(1) -->
 &lt;div class="_ts1">…&lt;/div>
 
 &lt;!-- Equivalent to typeScale(2) -->
@@ -540,7 +540,7 @@
 
 &lt;!-- Equivalent to typeScale(10) -->
 &lt;div class="_ts10">…&lt;/div>
-</code></pre><h2 id="typography">Typography</h2><p>Lastly, Concise Utils offers a variety of helper classes for typography that you can use when prototyping your website or to add styles depending on the context.</p><pre class="language-markup"><code>&lt;!-- Equivalent to font-weight: bold -->
+</code></pre><h2 id="typography"><em>3.10</em> Typography</h2><p>Lastly, Concise Utils offers a variety of helper classes for typography that you can use when prototyping your website or to add styles depending on the context.</p><pre class="language-markup"><code>&lt;!-- Equivalent to font-weight: bold -->
 &lt;div class="_bold">…&lt;/div>
 
 &lt;!-- Equivalent to text-transform: uppercase -->

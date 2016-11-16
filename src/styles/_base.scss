@@ -13,6 +13,13 @@ h1 {
   margin-bottom: 1lh;
 }
 
+h1, h2 {
+  em {
+    color: getColor(base, primary);
+    font-style: normal;
+  }
+}
+
 h2 {
   margin-top: 1.5lh;
   margin-bottom: 0.5lh;
@@ -23,6 +30,7 @@ h3 {
   letter-spacing: $letter-spacing;
   font-size: typeScale(1);
   margin-bottom: 0.1lh;
+  margin-top: 1.5lh;
 }
 
 main a,
