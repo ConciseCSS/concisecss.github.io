@@ -1907,7 +1907,6 @@ li {
     right: 0;
     -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
             font-feature-settings: "smcp" 1, "c2sc" 1;
-    margin: 0.5em;
     letter-spacing: 0.05em;
     font-family: "sofia-pro", sans-serif; }
   .home-header small {
