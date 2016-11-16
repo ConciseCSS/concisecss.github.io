@@ -13,10 +13,13 @@ html(lang='en')
     link(rel='stylesheet' href='/styles/main.css')
     link(rel='icon' href='/favicon.png')
   body
-    .sidebar-container
+    .sidebar-offcanvas
       include _includes/_index-nav
 
-    .main-container
+    .content-offcanvas
+      button.close-offcanvas Menu
+        span.icon
+
       article(container='small')
         block content
 

@@ -1727,7 +1727,7 @@ span {
   margin-top: 0; }
 
 h1 {
-  margin-top: 4.5rem;
+  margin-top: 6rem;
   border-bottom: 1px solid #dcdcdc;
   padding-bottom: 0.375rem;
   margin-bottom: 1.5rem; }
@@ -1839,28 +1839,6 @@ li {
     padding-bottom: 1.05rem;
     text-transform: uppercase; }
 
-.main-container {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 15em;
-  overflow-y: auto; }
-
-.sidebar-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 15em;
-  overflow-y: auto;
-  opacity: 0.3;
-  -webkit-transition: opacity 700ms;
-  transition: opacity 700ms;
-  border-right: 1px solid #dcdcdc; }
-  .sidebar-container:hover {
-    opacity: 1; }
-
 .main-footer {
   text-align: center;
   padding: 1.5rem 1em;
@@ -1967,3 +1945,104 @@ li {
 .home-page {
   background-color: #f5f5f5;
   border: 1em solid white; }
+
+.-open-offcanvas .sidebar-offcanvas {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+.-open-offcanvas .content-offcanvas {
+  left: 15rem;
+  right: -15rem; }
+  @media (min-width: 768px) {
+    .-open-offcanvas .content-offcanvas {
+      right: 0; } }
+
+.-open-offcanvas .close-offcanvas .icon {
+  background-color: transparent; }
+
+.-open-offcanvas .close-offcanvas > .icon:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.-open-offcanvas .close-offcanvas > .icon:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.-open-offcanvas .close-offcanvas > .icon:before, .-open-offcanvas .close-offcanvas > .icon:after {
+  background-color: #D34A28; }
+
+.sidebar-offcanvas {
+  width: 15rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+  border-right: 1px solid #dcdcdc;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%); }
+
+.content-offcanvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-transition: left 700ms, right 700ms;
+  transition: left 700ms, right 700ms;
+  overflow-x: hidden; }
+
+.close-offcanvas {
+  background-color: white;
+  height: 50px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+  text-indent: -9999px;
+  -webkit-transition: background-color 150ms, -webkit-transform 0.5s;
+  transition: background-color 150ms, -webkit-transform 0.5s;
+  transition: transform 0.5s, background-color 150ms;
+  transition: transform 0.5s, background-color 150ms, -webkit-transform 0.5s;
+  white-space: nowrap;
+  width: 50px;
+  z-index: 3; }
+  .close-offcanvas:focus, .close-offcanvas:hover, .close-offcanvas:active {
+    background-color: white; }
+  .close-offcanvas > .icon {
+    background-color: #211b1b;
+    bottom: auto;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 22px; }
+    .close-offcanvas > .icon:before {
+      -webkit-transform: translateY(-6px);
+              transform: translateY(-6px); }
+    .close-offcanvas > .icon:after {
+      -webkit-transform: translateY(6px);
+              transform: translateY(6px); }
+    .close-offcanvas > .icon:before, .close-offcanvas > .icon:after {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      background-color: inherit;
+      content: '';
+      height: 100%;
+      right: 0;
+      position: absolute;
+      top: 0;
+      /*transform: translateZ(0);*/
+      -webkit-transition: width 0.5s, top 0.3s, -webkit-transform 0.5s;
+      transition: width 0.5s, top 0.3s, -webkit-transform 0.5s;
+      transition: transform 0.5s, width 0.5s, top 0.3s;
+      transition: transform 0.5s, width 0.5s, top 0.3s, -webkit-transform 0.5s;
+      width: 100%; }

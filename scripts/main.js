@@ -21,6 +21,10 @@ $(function() {
     $(".index-nav  .-active").removeClass();
     $(this).addClass("-active");
   });
+
+  $('.close-offcanvas').click(function () {
+    $('body').toggleClass('-open-offcanvas');
+  })
 });
 
 /**
