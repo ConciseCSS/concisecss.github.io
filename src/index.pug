@@ -26,7 +26,7 @@ block content
       div(column='4')
         h2._mb0 Getting started
 
-      div(column='8')
+      div(column)
         h3 Using NPM
 
         p This is the prefered method to install Concise CSS, you will be able to customize and compile the source files with Concise CLI.
@@ -57,40 +57,56 @@ block content
 
     p._text-right: a(href='/documentation') See the Documentation
 
-    section
-      div(grid)
-        div(column='4')
-          h2._mb0 Why Concise CSS
+    section(grid)
+      div(column='4')
+        h2._mb0 Why Concise CSS
 
-        div(column)
-          div(grid)
-            div(column)
-              h3 Bloat-Free
-              p No unnecessary styles are added so you can spend more time building and less time overriding.
+      div(column)
+        div(grid)
+          div(column)
+            h3 Bloat-Free
+            p No unnecessary styles are added so you can spend more time building and less time overriding.
 
-            div(column)
-              h3 Concise UI
-              p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
+          div(column)
+            h3 Concise UI
+            p Do you need CSS components? We provide a basic UI kit for Concise CSS as an add-on.
 
-          div(grid)
-            div(column)
-              h3 Concise Utils
-              p We also provide utility classes for rapid prototyping and context-dependent styles.
+        div(grid)
+          div(column)
+            h3 Concise Utils
+            p We also provide utility classes for rapid prototyping and context-dependent styles.
 
-            div(column)
-              h3 Sass + PostCSS
-              p The usual features from Sass with some custom additions using PostCSS.
+          div(column)
+            h3 Sass + PostCSS
+            p The usual features from Sass with some custom additions using PostCSS.
 
-          div(grid)
-            div(column)
-              h3 Design-Oriented
-              p A framework built with design in mind. Get better results from the beginning with less code.
+        div(grid)
+          div(column)
+            h3 Design-Oriented
+            p A framework built with design in mind. Get better results from the beginning with less code.
 
-            div(column)
-              h3 Easy to use
-              p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
+          div(column)
+            h3 Easy to use
+            p Concise has a small learning curve; the simplicity of the styles helps to get started faster.
 
-      p._text-right: a(href='documentation/#why') Read the introduction
+    p._text-right: a(href='documentation/#why') Read the introduction
+
+    section(grid)._ptm
+      div(column='4')
+        h2._mt0 Showcase
+          small Websites made with Concise CSS
+
+      div(column)
+        div(grid)
+          div(column)
+            a(href='https://jameskolce.com')._clear-link
+              img(src="/images/showcase/jameskolce.com.png", alt="Jameskolce.com")._fluid-img
+
+          div(column)
+            a(href='https://brain.jameskolce.com')._clear-link
+              img(src="/images/showcase/brain.jameskolce.com.png", alt="Brain.jameskolce.com")._fluid-img
+
+    p._text-right: a(href='https://github.com/ConciseCSS/concisecss.github.io/issues/new')._clear-link Submit your website
 
   footer.main-footer
     p.

@@ -1739,6 +1739,11 @@ h1 em, h2 em {
 h2 {
   margin-top: 2.25rem;
   margin-bottom: 0.75rem; }
+  h2 small {
+    font-size: 1rem;
+    display: block;
+    font-weight: normal;
+    line-height: 1.5; }
 
 h3 {
   text-transform: uppercase;
@@ -1798,6 +1803,13 @@ ol ol {
 
 li {
   list-style-type: circle; }
+
+._fluid-img {
+  max-width: 100%;
+  height: auto; }
+
+._clear-link:after {
+  content: '' !important; }
 
 .index-nav {
   font-family: "sofia-pro", sans-serif;

@@ -23,6 +23,13 @@ h1, h2 {
 h2 {
   margin-top: 1.5lh;
   margin-bottom: 0.5lh;
+
+  small {
+    font-size: typeScale(2);
+    display: block;
+    font-weight: normal;
+    line-height: 1.5;
+  }
 }
 
 h3 {
@@ -98,4 +105,13 @@ ol ol {
 
 li {
   list-style-type: circle;
+}
+
+._fluid-img {
+  max-width: 100%;
+  height: auto;
+}
+
+._clear-link:after {
+  content: '' !important;
 }
