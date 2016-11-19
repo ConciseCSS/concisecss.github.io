@@ -1946,30 +1946,29 @@ li {
   background-color: #f5f5f5;
   border: 1em solid white; }
 
-.-open-offcanvas .sidebar-offcanvas {
-  -webkit-transform: translateX(0);
-          transform: translateX(0); }
-
-.-open-offcanvas .content-offcanvas {
-  left: 15rem;
-  right: -15rem; }
-  @media (min-width: 768px) {
-    .-open-offcanvas .content-offcanvas {
-      right: 0; } }
-
-.-open-offcanvas .close-offcanvas .icon {
-  background-color: transparent; }
-
-.-open-offcanvas .close-offcanvas > .icon:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-.-open-offcanvas .close-offcanvas > .icon:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
-.-open-offcanvas .close-offcanvas > .icon:before, .-open-offcanvas .close-offcanvas > .icon:after {
-  background-color: #D34A28; }
+.-open-offcanvas {
+  overflow: hidden; }
+  .-open-offcanvas .sidebar-offcanvas {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  .-open-offcanvas .content-offcanvas {
+    overflow-y: hidden; }
+    @media (min-width: 768px) {
+      .-open-offcanvas .content-offcanvas {
+        -webkit-transform: translateX(7.5rem);
+                transform: translateX(7.5rem);
+        overflow-y: auto; } }
+  .-open-offcanvas .close-offcanvas .icon {
+    background-color: transparent; }
+  .-open-offcanvas .close-offcanvas > .icon:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .-open-offcanvas .close-offcanvas > .icon:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .-open-offcanvas .close-offcanvas > .icon:before,
+  .-open-offcanvas .close-offcanvas > .icon:after {
+    background-color: #D34A28; }
 
 .sidebar-offcanvas {
   width: 15rem;
@@ -1978,11 +1977,15 @@ li {
   left: 0;
   bottom: 0;
   overflow-y: auto;
-  -webkit-transition: 700ms;
-  transition: 700ms;
+  -webkit-transition: -webkit-transform 700ms;
+  transition: -webkit-transform 700ms;
+  transition: transform 700ms;
+  transition: transform 700ms, -webkit-transform 700ms;
   border-right: 1px solid #dcdcdc;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%); }
+          transform: translateX(-100%);
+  background-color: white;
+  z-index: 1; }
 
 .content-offcanvas {
   position: absolute;
@@ -1991,9 +1994,10 @@ li {
   bottom: 0;
   left: 0;
   overflow-y: auto;
-  -webkit-transition: left 700ms, right 700ms;
-  transition: left 700ms, right 700ms;
-  overflow-x: hidden; }
+  -webkit-transition: -webkit-transform 700ms;
+  transition: -webkit-transform 700ms;
+  transition: transform 700ms;
+  transition: transform 700ms, -webkit-transform 700ms; }
 
 .close-offcanvas {
   background-color: white;
@@ -2009,7 +2013,7 @@ li {
   transition: transform 0.5s, background-color 150ms, -webkit-transform 0.5s;
   white-space: nowrap;
   width: 50px;
-  z-index: 3; }
+  z-index: 2; }
   .close-offcanvas:focus, .close-offcanvas:hover, .close-offcanvas:active {
     background-color: white; }
   .close-offcanvas > .icon {

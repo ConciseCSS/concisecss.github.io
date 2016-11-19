@@ -1,34 +1,25 @@
 .-open-offcanvas {
+  overflow: hidden;
+
   .sidebar-offcanvas { transform: translateX(0); }
 
   .content-offcanvas {
-    left: 15rem;
-    right: -15rem;
+    overflow-y: hidden;
 
     @media ($breakpoint) {
-      right: 0;
+      transform: translateX(7.5rem);
+      overflow-y: auto;
     }
   }
 
   .close-offcanvas {
-    .icon {
-      background-color: transparent;
-    }
+    .icon { background-color: transparent; }
 
-    & > .icon:before {
-      transform: rotate(45deg);
-    }
+    & > .icon:before { transform: rotate(45deg); }
+    & > .icon:after { transform: rotate(-45deg); }
 
-    & > .icon:after {
-      transform: rotate(-45deg);
-    }
-
-    & > .icon {
-      &:before,
-      &:after {
-        background-color: getColor(base, primary);
-      }
-    }
+    & > .icon:before,
+    & > .icon:after { background-color: getColor(base, primary); }
   }
 }
 
@@ -39,9 +30,11 @@
   left: 0;
   bottom: 0;
   overflow-y: auto;
-  transition: 700ms;
+  transition: transform 700ms;
   border-right: 1px solid getColor(base, lines);
   transform: translateX(-100%);
+  background-color: getColor(background, body);
+  z-index: 1;
 }
 
 .content-offcanvas {
@@ -51,8 +44,7 @@
   bottom: 0;
   left: 0;
   overflow-y: auto;
-  transition: left 700ms, right 700ms;
-  overflow-x: hidden;
+  transition: transform 700ms;
 }
 
 .close-offcanvas {
@@ -66,13 +58,11 @@
   transition: transform 0.5s, background-color 150ms;
   white-space: nowrap;
   width: 50px;
-  z-index: 3;
+  z-index: 2;
 
   &:focus,
   &:hover,
-  &:active {
-    background-color: getColor(background, body);
-  }
+  &:active { background-color: getColor(background, body); }
 
   & > .icon {
     background-color: getColor(background, dark);
@@ -86,13 +76,8 @@
     transition: 0.5s;
     width: 22px;
 
-    &:before {
-      transform: translateY(-6px);
-    }
-
-    &:after {
-      transform: translateY(6px);
-    }
+    &:before { transform: translateY(-6px); }
+    &:after { transform: translateY(6px); }
 
     &:before,
     &:after {
