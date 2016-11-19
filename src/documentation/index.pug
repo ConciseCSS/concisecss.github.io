@@ -7,21 +7,21 @@ block content
 
   p The core of the framework only includes styles for native HTML elements. Components and utilities are provided as optional add-ons, Concise UI and Concise Utils, respectively.
 
-  p Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy of other custom features, like the #[code lh] unit provided to handle vertical rhythm.
+  p Concise CSS is written using a custom CSS preprocessor, built on top of Sass and some PostCSS plugins; this means that you can still write Sass code as usual, but you can also enjoy other custom features.
 
   h2#why <em>1.1</em> Why Concise CSS
 
-  p Concise CSS is a hybrid of the most common practices in web development. The small core allows the inclusion of custom styles and add-ons without the bloat or excessive overwrites. The UI add-on provides pre-made components as the other well-known frameworks, and the Utils add-on provides utility classes in the same style as #[a(href='http://basscss.com/') BassCSS] or #[a(href='http://tachyons.io/') Tachyons].
+  p Concise CSS is a hybrid of the most common practices in web development. The small core allows the inclusion of custom styles and add-ons without the bloat or excessive overwrites. The UI add-on provides pre-made components as the other well-known frameworks, and the Utils add-on provides utility classes to quickly make prototypes.
 
   p Also, we have adapted the framework to work with the #[a(href='http://rscss.io/') RSCSS] coding convention which provides a solid foundation to write website styles, separating them into components, elements, variants, and helpers. Both Concise UI and Concise Utils work well with RSCSS.
 
   p The core of the framework doesn't include any classes; it only provides normalization styles and the grid system—which unlike other grid systems—uses attributes instead of classes, providing a cleaner syntax and avoids conflicts in case you need to use a different one.
 
-  p Because the current features of CSS are sometimes not enough, we have added some extra features. A worth mentioning addition is the <code>lh</code> unit that is translated to rems using the root line-height as the base value.
+  p Because the current features of CSS are sometimes not enough, we have added more. A worth mentioning addition is the <code>lh</code> unit that is translated to rems using the root line-height as the base value.
 
   h2#language-additions <em>1.2</em> Language additions
 
-  P The Concise CLI is a wrapper for the Sass compiler and PostCSS with some plugins; this allows us to add custom features with ease of use. You can still write usual Sass code plus the following:
+  P The Concise CLI is a wrapper for the Sass compiler and some PostCSS plugins; this allows us to add custom features with ease of use. You can still write usual Sass code plus the following:
 
   h3 lh Unit
 
@@ -39,9 +39,9 @@ block content
 
   p In the previous example, #[code section] will have a #[code margin-bottom] with #[code 1] times the line height of the #[code :root] element, and the #[code padding-top] will have half of the size.
 
-  p In this way, we can preserve the vertical rhythm in an easy way. Using a constant that is present in any Concise stylesheet and that provides aesthetic results by its nature.
+  p In this way, we can preserve the vertical rhythm. Using a constant that is present in any Concise stylesheet and that provides aesthetic results by its nature.
 
-  p The previous example—after compilation—will turned into the following:
+  p The previous example—after compilation—will be turned into the following:
 
   pre.language-scss: code.
     :root {
@@ -55,9 +55,9 @@ block content
 
   h3 Custom Media Queries
 
-  p Usually, when you define media queries, you select a certain breakpoint from predefined sizes. With preprocessors like Sass this can be accomplished with simple variables, but in Concise we have a specific way to define breakpoints, and that is with custom media queries, and in this way, we make explicit that we are dealing with viewport sizes and not other types of variables.
+  p Usually, when you define media queries, you select a certain breakpoint from predefined sizes. With preprocessors like Sass this can be accomplished with simple variables, but in Concise we have a specific way to define breakpoints using custom media queries, making explicit that we are dealing with viewport sizes and not other types of variables.
 
-  p The following custom media queries are predefined and ready to use, and this is also the way you define new custom media queries:
+  p The following custom media queries are predefined and ready to use. This is also the way you define new ones:
 
   pre.language-scss: code.
     @custom-media --extra-small (width <= 480px);
@@ -69,7 +69,7 @@ block content
     @custom-media --only-medium (768px < width <= 980px);
     @custom-media --only-large (980px < width <= 1100px);
 
-  p Using those media queries is similar to simple variables, but prefixed with #[code --] instead of #[code $]. The following is an example of their use:
+  p Their use is similar to simple variables, but prefixed with #[code --] instead of #[code $]. The following is an example:
 
   pre.language-scss: code.
     @media (--medium) {
@@ -80,19 +80,19 @@ block content
       // The same as --small (dy default)
     }
 
-  p Concise also includes a #[code $breakpoint] variable with the value of #[code --small] by default. This variable is used primarily in the #[em grid system], so this is the variable to change if you need to adjust the size where columns are collapsed.
+  p.-note Concise also includes a #[code $breakpoint] variable with the value of #[code --small] by default. It’s used primarily in the #[em grid system], so you can change it if you need to adjust the size where columns are collapsed.
 
   h3 Min/Max helpers for Media Queries
 
-  p As you saw in the #[em custom media queries] section we saw how we can define new media queries, and you might have noticed the use of comparison symbols (#[code < > >= <=]) instead of the keywords #[code max-width] and #[code min-width]. Well, we have added those to improve the usability of media queries when using viewport sizes. Those can be used both in custom media queries as in normal media queries in your stylesheets.
+  p You might have noticed the use of comparison symbols (#[code < > >= <=]) instead of the keywords #[code max-width] and #[code min-width] in the #[em custom media queries] section. Well, we have added those to improve the usability of media queries when using viewport sizes. Those can be used both in custom media queries as in normal media queries in your stylesheets.
 
   h2#installation <em>1.3</em> Installation
 
-  p There are 3 different options to install Concise CSS in your website, although the recommended way is to use NPM.
+  p There are 3 different ways to install Concise CSS in your website, although the recommended one is to use NPM.
 
   h3 Using the CDN
 
-  p If you just want to try Concise CSS or if you do not have plans to customize the styles, you can use our CDN, this is the easier way to get started with the framework—and if you like it—is recommended to switch to NPM so that you can customize the styles.
+  p If you just want to try Concise CSS or if you do not have plans to customize the styles, you can use our CDN. This is the easier way to get started.
 
   pre.language-markup: code.
     &lt;!-- Normal - Latest version -->
@@ -101,7 +101,7 @@ block content
     &lt;!-- Minified - Latest version -->
     &lt;link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
 
-  p That is for the latest version, if you want to use a specific one you can do something like the following:
+  p That is for the latest version, if you want to use a specific one you can add something like the following:
 
   pre.language-markup: code.
     &lt;!-- Normal - Specific version -->
@@ -112,7 +112,7 @@ block content
 
   h3 Install with NPM
 
-  p Execute the following command to install Concise CSS from NPM. If you are new to NPM, you can check their #[a(href='https://docs.npmjs.com/') documentation].
+  p Execute the following command to install Concise CSS from NPM. If you are new to NPM, you can check their #[a(href='https://docs.npmjs.com/') documentation] first.
 
   pre: code.
     npm install concise.css
@@ -139,17 +139,19 @@ block content
 
   pre: code npm install -g concise-cli
 
+  p.-note You won’t need to install the CLI globally if you plan to use it within NPM scripts.
+
   p Once it is installed, you can compile source files with the #[code concisecss compile] command:
 
   pre: code concisecss compile input.scss output.css
 
-  p When compiling the source code, Autoprefixer will automatically add the required browser prefixes.
+  p.-note When compiling the source code, Autoprefixer will automatically add the required browser prefixes.
 
   h2#add-ons <em>1.5</em> Using Add-ons
 
-  p The core styles of Concise CSS can be extended by using add-ons. They are just separate packages that use the same settings from the core of the framework.
+  p The core styles of Concise CSS can be extended using add-ons. They are just separate packages that use the settings from the core.
 
-  p Currently, there are two official add-ons: Concise UI and Concise Utils. The first one includes a series of UI components that can be used directly, as you would with frameworks like Bootstrap or Foundation. The second one contains single-responsibility classes, similar to frameworks like #[a(href='http://www.basscss.com/') BassCSS] or #[a(href='http://tachyons.io/') Tachyons].
+  p Currently, there are two official add-ons: Concise UI and Concise Utils. The first one includes a series of UI components that can be used directly. The second one contains single-responsibility classes that you can use for quick prototyping.
 
   p You can check all the styles available in those add-ons in their respective pages: #[a(href='http://concisecss.com/documentation/ui') Concise UI] and #[a(href='http://concisecss.com/documentation/utils') Concise Utils].
 
@@ -195,7 +197,7 @@ block content
 
   h3 With NPM
 
-  p You can also install the add-ons with NPM:
+  p You can also install the add-ons using NPM:
 
   pre: code.
     npm install concise-utils
@@ -209,7 +211,7 @@ block content
     @import "node_modules/concise-utils/concise-utils"
 
     // Concise UI
-    @import "node_modules/concise-utils/concise-ui"
+    @import "node_modules/concise-ui/concise-ui"
 
   h3 Downloading the Packages
 
@@ -217,11 +219,9 @@ block content
 
   h2#coding-conventions <em>1.6</em>  Coding Conventions
 
-  p Concise CSS uses #[a(href='http://rscss.io/') RSCSS], #[em a set of simple ideas to guide your process of building maintainable CSS]. Although that is not mandatory to follow those rules in your projects, you could get a more predictable code base by using it.
+  p Concise CSS uses #[a(href='http://rscss.io/') RSCSS], #[em a set of simple ideas to guide your process of building maintainable CSS]. Although it’s not mandatory to follow those rules in your projects, you could get a more predictable code base by using it.
 
   p Is recommended to read those guidelines before working with Concise CSS to understand how this framework itself is organized and to help you to organize your projects.
-
-  p Official website of RSCSS: #[a(href='http://rscss.io/') http://rscss.io/]
 
   h2#examples <em>1.7</em> Examples
 

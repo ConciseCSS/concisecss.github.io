@@ -3,7 +3,7 @@ extends _layout
 block content
   h1 <em>2.</em> The Core of Concise CSS
 
-  p The Core is composed almost entirely of styles for native HTML elements, the grid system, and the default settings. When you include Concise on your project, you won't have any classes available; it will just provide a foundation to build your website however you like to do it.
+  p The Core is composed entirely of styles for native HTML elements, the grid system, and the default settings. When you include Concise on your project, you won't have any classes available; it will just provide a foundation to build your website however you like to do it.
 
   p Two elements compose the base styles: normalization using a custom version of #[a(href='https://github.com/jonathantneal/sanitize.css') sanitize.css] and Concise-specific styles for native HTML elements, where we provide better defaults on top of the normalization ones.
 
@@ -15,7 +15,7 @@ block content
 
   p Concise CSS provides a series of configuration variables that are used in the core and in the add-ons.
 
-  p For example: Suppose that you have customized your settings with a new color palette, now if you add the Concise UI add-on, it will use—without any further modifications—your new color palette. The same will happen for all the other settings when you include add-ons, they will use your custom settings without any further changes.
+  p For example, suppose that you have customized your settings with a new color palette, now if you add the Concise UI add-on, it will use—without any further modifications—your new colors. The same will happen for all the other settings when you include add-ons; they will use your custom settings without any further changes.
 
   p Here is the complete file with the default settings:
 
@@ -193,7 +193,7 @@ block content
     // Concise Core
     @import "node_modules/concise.css/concise";
 
-  p The changes are extended to all the Concise CSS styles, after the compilation.
+  p The changes are extended to all the styles, after the compilation.
 
   h2#typography <em>2.2</em> Typography
 
@@ -265,7 +265,7 @@ block content
 
   p We strongly recommend to #[em always] use the scale when setting up font sizes. If you have doubts about what ratio use, ask your designer, and if your designer is not using ratios then recommend him/her to do so.
 
-  p Sometimes just one scale might not be enough. Concise CSS also provides a second scale; you can use it by passing a second argument to the #[code typeScale()] function with anther ratio.
+  p Sometimes just one scale might not be enough. Concise CSS also provides a secondary scale; you can use it by passing a second argument to the #[code typeScale()] function with anther ratio.
 
   pre.language-scss: code.
     .myElement {
@@ -274,7 +274,7 @@ block content
 
   p We provide a default secondary ratio using #[code $_perfect-fourth] by default, which has a value of #[code 1.333]. However, we recommend sticking to just one scale in a project unless you #[em absolutely] need more.
 
-  p To customize the secondary scale, you can adjust the ratio in the #[code $scale-ratio-secondary] variable with any value you want, however, we recommend to use one of the suggested ratios mentioned previously.
+  p To customize the secondary scale, you can adjust the ratio in the #[code $scale-ratio-secondary] variable with any value you want, however, we also recommend to use one of the suggested ratios mentioned previously.
 
   h3 Letter spacing
 
@@ -289,7 +289,7 @@ block content
 
   p The default value is #[code 0.05em] which will work for most of the cases, but you are free to modify it as you need. Just be careful in adding too much, is all about making uppercases more readable, not to make the text more flashy.
 
-  p No, do not increase letter spacing in lowercase text, 99% of the time is a bad idea.
+  p.-note No, do not increase letter spacing in lowercase text, 99% of the time is a bad idea.
 
   h3 Paragraph spacing
 
@@ -298,6 +298,7 @@ block content
   h2#grid-system <em>2.3</em> Grid System
 
   p A grid system is a tool used to build a webpage layout. With it, you can organize your content into containers and columns. Concise CSS uses a custom version of the #[a(href='https://github.com/jameskolce/atgrid.css') atGrid.css] grid system by #[a(href='https://jameskolce.com') James Kolce], that focus in the use of custom attribute selectors instead of the usual class selectors in other systems.
+
   p By default, the grid will have 12 columns ready to use.
 
   h3 Why Attribute selectors
@@ -317,7 +318,7 @@ block content
       &lt;div column="6 +4">…&lt;/div>
     &lt;/div>
 
-  p As you can see, you can get a cleaner result with Concise CSS, and this is totally okay to use though those attributes are not official. However, if you need HTML validation you can assign #[code data-] to the #[code $prefix] variable, and you can write your markup with data- attributes instead.
+  p You can get a cleaner result with Concise CSS, and this is totally okay to use though those attributes are not official. However, if you need HTML validation you can assign #[code data-] to the #[code $prefix] variable, and you can write your markup with data- attributes instead.
 
   h3 Containers
 
@@ -414,7 +415,7 @@ block content
       &lt;article column>…&lt;/article>
     &lt;/main>
 
-  p So the four columns will have a width of 25% no matter the size of the screen.
+  p The four columns will have a width of 25% no matter the size of the screen.
 
   h3 Grid direction
 
@@ -434,7 +435,7 @@ block content
 
   h3 Grid justification
 
-  p It's possible to adjust how the elements inside a grid will occupy the space available. Concise CSS exposes all the #[code justify-content] property values as attribute values in your markup.
+  p It’s possible to adjust how the elements inside a grid will occupy the space available. Concise CSS exposes all the #[code justify-content] property values as attribute values in your markup.
 
   pre.language-markup: code.
     &lt;section grid="justify-start">…&lt;/section>
@@ -465,7 +466,7 @@ block content
 
   h3 Column alignment
 
-  p Sometimes you won't want to align all the columns in the grid, but just one or two. You can make it happen by adding one of the following values in the #[code column] attribute.
+  p Sometimes you won’t want to align all the columns in the grid, but just one or two. You can make it happen by adding one of the following values in the #[code column] attribute.
 
   ul
     li #[strong top]: (Default) Aligns the column to the upper part of the grid. Equivalent to #[code align-self: flex-start].
@@ -485,7 +486,7 @@ block content
 
   p To enable the this feature you have to set the variable #[code $full-grid] to #[code true], and it will produce several new values for the #[code column] attribute.
 
-  p When it's enabled, you will have the following types of columns available:
+  p When it’s enabled, you will have the following types of columns available:
 
   ul
     li #[strong xs-&lt;size&gt;] Size for extra small devices.
@@ -519,7 +520,7 @@ block content
 
   h2#color-palette <em>2.4</em> Color Palette
 
-  p Concise CSS provides a color palette ready to use or extend. It contains colors for text, primary colors, backgrounds, colors for states, and other color tones.
+  p Concise CSS provides a color palette ready to use or extend. It contains colors for text, primary colors, backgrounds, colors for states, and other tones.
 
   p You can use colors from the palette with the #[code getColor()] function. The first argument is the category of the color, and the second argument is the specific tone.
 
@@ -588,6 +589,6 @@ block content
 
   h2#print <em>2.5</em> Print
 
-  p Concise CSS also includes basic styles for print that will normalize your website to make it more print-friendly. However, the default settings might not be optimal for your website; If you want to support printing officially, you should still write your own print styles.
+  p Concise CSS also includes basic styles for print that will normalize your website to make it more print-friendly. However, the default settings might not be optimal for your website; If you want to officially support printing, you should still write your own print styles.
 
   p Take a look at the #[a(href='https://github.com/ConciseCSS/concise.css/blob/master/src/_print.scss') _print.scss] file to see what styles are applied when a Concise CSS website is printed on paper.
