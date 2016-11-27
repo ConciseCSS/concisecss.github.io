@@ -1811,6 +1811,16 @@ li {
 ._clear-link:after {
   content: '' !important; }
 
+p.-note {
+  font-style: italic; }
+  p.-note::before {
+    float: left;
+    content: "❧";
+    margin-right: 0.5em;
+    color: #D34A28;
+    font-size: 1.125rem;
+    line-height: 1.3; }
+
 .index-nav {
   font-family: "sofia-pro", sans-serif;
   font-size: 0.88889rem; }

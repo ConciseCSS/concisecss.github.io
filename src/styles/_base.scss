@@ -115,3 +115,16 @@ li {
 ._clear-link:after {
   content: '' !important;
 }
+
+p.-note {
+  font-style: italic;
+
+  &::before {
+    float: left;
+    content: "❧";
+    margin-right: 0.5em;
+    color: getColor(base, primary);
+    font-size: typeScale(3);
+    line-height: 1.3;
+  }
+}
