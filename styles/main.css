@@ -1891,14 +1891,17 @@ p.-note {
   height: 100vh;
   max-height: 37.5rem; }
   .home-header > .title {
-    font-size: 2.88651rem;
+    font-size: 2.56578rem;
     border-bottom: 0;
     margin-bottom: 0;
-    line-height: 0.5;
+    line-height: 1;
     text-align: center;
     position: absolute;
-    top: 30%;
-    width: 100%; }
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin-top: 0; }
     @media (min-width: 768px) {
       .home-header > .title {
         position: absolute;
@@ -1906,7 +1909,9 @@ p.-note {
         right: 0;
         top: auto;
         text-align: right;
-        max-width: 25rem; } }
+        max-width: 25rem;
+        -webkit-transform: none;
+                transform: none; } }
     .home-header > .title em {
       color: #D34A28;
       font-style: normal; }
@@ -1940,7 +1945,8 @@ p.-note {
       -webkit-transform: none;
               transform: none; } }
   .version-box .title {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    white-space: nowrap; }
   .version-box .version {
     margin-top: 0;
     display: -webkit-box;
