@@ -9,25 +9,27 @@ If you wish to make changes to the source files please make sure you have NodeJS
 
 1. Navigate to the project in the terminal:
 
-```
-cd path/to/concisecss.github.com
-```
+    ```
+    cd path/to/concisecss.github.com
+    ```
 
 2. Install the development dependencies:
 
-```
-npm install
-```
+    ```
+    npm install
+    ```
 
 3. You can now run the following command to start a development server:
 
-```
-npm start
-```
+    ```
+    npm start
+    ```
 
-You can view the website on http://localhost:8080 and if you have [livereload](http://livereload.com/extensions/) installed in your browsers, you will be able to see changes inmediately (well, with a little delay).
+You can view the website on [Localhost:8080](http://localhost:8080) and if you have [livereload](http://livereload.com/extensions/) installed in your browser, you will be able to see changes inmediately (well, with a little delay).
 
-Every time you make a change to a .pug or .scss file, it gets automatically recompiled. So you don’t have to make any build process before submitting changes to the repository. After making your changes—if you had the development server active—you can send them to this repository using a Pull Request.
+Also, every time you make a change to a .pug or .scss file, it gets automatically recompiled. So you don’t have to start any build process before submitting changes to the repository. 
+
+After making your changes—if you had the development server active—you can send them to this repository using a Pull Request.
 
 ## Contributing
 
