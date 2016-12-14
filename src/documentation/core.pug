@@ -612,3 +612,23 @@ block content
   p Concise CSS also includes basic styles for print that will normalize your website to make it more print-friendly. However, the default settings might not be optimal for your website; If you want to officially support printing, you should still write your own print styles.
 
   p Take a look at the #[a(href='https://github.com/ConciseCSS/concise.css/blob/master/src/_print.scss') _print.scss] file to see what styles are applied when a Concise CSS website is printed on paper.
+
+  nav.index-nav.-secondary
+    ol
+      li.section-nav
+        a(href='/documentation/') Introduction
+
+      li.section-nav
+        a(href='/documentation/core') Core
+        ol.list-nav
+          li: a(href='/documentation/core#settings') Settings
+          li: a(href='/documentation/core#typography') Typography
+          li: a(href='/documentation/core#grid-system') Grid System
+          li: a(href='/documentation/core#color-palette') Color Palette
+          li: a(href='/documentation/core#print') Print
+
+      li.section-nav
+        a(href='/documentation/utils') Utils
+
+      li.section-nav
+        a(href='/documentation/ui') UI
