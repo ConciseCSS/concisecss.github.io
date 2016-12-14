@@ -3,6 +3,31 @@ extends _layout
 block content
   h1 <em>3.</em> Concise Utils
 
+  nav.index-nav.-secondary
+    ol
+      li.section-nav
+        a(href='/documentation/') Introduction
+
+      li.section-nav
+        a(href='/documentation/core') Core
+
+      li.section-nav
+        a(href='/documentation/utils') Utils
+        ol.list-nav
+          li: a(href='/documentation/utils#borders') Borders
+          li: a(href='/documentation/utils#colors') Colors
+          li: a(href='/documentation/utils#columns') Columns
+          li: a(href='/documentation/utils#hide-show') Hide/Show
+          li: a(href='/documentation/utils#display') Display
+          li: a(href='/documentation/utils#margins') Margins
+          li: a(href='/documentation/utils#paddings') Paddings
+          li: a(href='/documentation/utils#position') Position
+          li: a(href='/documentation/utils#type-scale') Type scale
+          li: a(href='/documentation/utils#typography') Typography
+        
+      li.section-nav
+        a(href='/documentation/ui') UI
+
   p Concise Utils is one of the official add-ons for Concise CSS. It provides helper classes that you can use in your markup for fast prototyping or context-dependent styles.
 
   p Helper classes are prefixed with an underscore (#[code _]) to distinguish them from components or elements.

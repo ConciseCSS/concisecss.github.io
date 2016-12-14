@@ -3,6 +3,26 @@ extends _layout
 block content
   h1 <em>2.</em> The Core of Concise CSS
 
+  nav.index-nav.-secondary
+    ol
+      li.section-nav
+        a(href='/documentation/') Introduction
+
+      li.section-nav
+        a(href='/documentation/core') Core
+        ol.list-nav
+          li: a(href='/documentation/core#settings') Settings
+          li: a(href='/documentation/core#typography') Typography
+          li: a(href='/documentation/core#grid-system') Grid System
+          li: a(href='/documentation/core#color-palette') Color Palette
+          li: a(href='/documentation/core#print') Print
+
+      li.section-nav
+        a(href='/documentation/utils') Utils
+
+      li.section-nav
+        a(href='/documentation/ui') UI
+
   p The Core is composed entirely of styles for native HTML elements, the grid system, and the default settings. When you include Concise on your project, you won't have any classes available; it will just provide a foundation to build your website however you like to do it.
 
   p Two elements compose the base styles: normalization using a custom version of #[a(href='https://github.com/jonathantneal/sanitize.css') sanitize.css] and Concise-specific styles for native HTML elements, where we provide better defaults on top of the normalization ones.

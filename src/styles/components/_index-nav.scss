@@ -2,14 +2,56 @@
   font-family: $font-secondary;
   font-size: typeScale(1);
 
-  a {
+  &.-secondary {
+    font-size: typeScale(2);
+
+    & > ol {
+      padding: 0;
+    }
+    
+    .section-nav {
+      font-family: $font-secondary;
+
+      &:not(:first-child) {
+        border-top: 1px solid getColor(base, lines);
+      }
+    }
+    
+    .list-nav {
+      column-count: 2;
+      margin-bottom: 0.5lh;
+      font-family: $font-primary;
+
+      a {
+        font-feature-settings: initial;
+        letter-spacing: 0;
+      }
+    }
+  }
+  
+  .section-nav {
     font-weight: bold;
-    font-feature-settings: "smcp" 1, "c2sc" 1;
-    letter-spacing: $letter-spacing;
     line-height: 2;
+
+    a {
+      letter-spacing: 0.05em;
+      font-feature-settings: "smcp" 1, "c2sc" 1;
+    }
   }
 
-  .-active {
+  .list-nav {
+    margin-left: 0;
+    line-height: 1.8;
+    padding-left: 1em;
+
+    a {
+      font-weight: normal;
+      font-feature-settings: initial;
+      letter-spacing: 0;
+    }
+  }
+
+  a.-active {
     color: getColor(base, primary);
   }
 
@@ -22,18 +64,6 @@
     img {
       height: 2lh;
     }
-  }
-
-  ol ol a {
-    font-weight: normal;
-    font-feature-settings: initial;
-    letter-spacing: 0;
-    line-height: 1.5;
-  }
-
-  ol ol {
-    margin-left: 0;
-    padding-left: 1em;
   }
 
   & > ol {

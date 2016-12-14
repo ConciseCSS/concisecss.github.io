@@ -1726,8 +1726,11 @@ pre[class*="language-"] {
 span {
   margin-top: 0; }
 
+article {
+  margin-top: 4.5rem; }
+
 h1 {
-  margin-top: 6rem;
+  margin-top: 4.5rem;
   border-bottom: 1px solid #dcdcdc;
   padding-bottom: 0.375rem;
   margin-bottom: 1.5rem; }
@@ -1824,13 +1827,41 @@ p.-note {
 .index-nav {
   font-family: "sofia-pro", sans-serif;
   font-size: 0.88889rem; }
-  .index-nav a {
+  .index-nav.-secondary {
+    font-size: 1rem; }
+    .index-nav.-secondary > ol {
+      padding: 0; }
+    .index-nav.-secondary .section-nav {
+      font-family: "sofia-pro", sans-serif; }
+      .index-nav.-secondary .section-nav:not(:first-child) {
+        border-top: 1px solid #dcdcdc; }
+    .index-nav.-secondary .list-nav {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2;
+      margin-bottom: 0.75rem;
+      font-family: "ff-tisa-web-pro", serif; }
+      .index-nav.-secondary .list-nav a {
+        -webkit-font-feature-settings: initial;
+                font-feature-settings: initial;
+        letter-spacing: 0; }
+  .index-nav .section-nav {
     font-weight: bold;
-    -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
-            font-feature-settings: "smcp" 1, "c2sc" 1;
-    letter-spacing: 0.05em;
     line-height: 2; }
-  .index-nav .-active {
+    .index-nav .section-nav a {
+      letter-spacing: 0.05em;
+      -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;
+              font-feature-settings: "smcp" 1, "c2sc" 1; }
+  .index-nav .list-nav {
+    margin-left: 0;
+    line-height: 1.8;
+    padding-left: 1em; }
+    .index-nav .list-nav a {
+      font-weight: normal;
+      -webkit-font-feature-settings: initial;
+              font-feature-settings: initial;
+      letter-spacing: 0; }
+  .index-nav a.-active {
     color: #D34A28; }
   .index-nav .logo {
     text-align: center;
@@ -1839,15 +1870,6 @@ p.-note {
     display: block; }
     .index-nav .logo img {
       height: 3rem; }
-  .index-nav ol ol a {
-    font-weight: normal;
-    -webkit-font-feature-settings: initial;
-            font-feature-settings: initial;
-    letter-spacing: 0;
-    line-height: 1.5; }
-  .index-nav ol ol {
-    margin-left: 0;
-    padding-left: 1em; }
   .index-nav > ol {
     padding: 0.75rem 2em;
     margin-top: 0; }
