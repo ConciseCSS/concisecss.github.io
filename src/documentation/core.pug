@@ -513,9 +513,9 @@ block content
 
   ul
     li #[strong xs-&lt;size&gt;] Size for extra small devices.
-    li #[strong sm-&lt;size&gt;] Size for small devices.
-    li #[strong md-&lt;size&gt;] Size for medium devices.
-    li #[strong lg-&lt;size&gt;] Size for large devices.
+    li #[strong s-&lt;size&gt;] Size for small devices.
+    li #[strong m-&lt;size&gt;] Size for medium devices.
+    li #[strong l-&lt;size&gt;] Size for large devices.
     li #[strong xl-&lt;size&gt;] Size for extra large devices.
 
   p And those can be used like this:
@@ -523,8 +523,8 @@ block content
   pre.language-markup: code.
     &lt;main grid>
       &lt;section column="2">…&lt;/section>
-      &lt;section column="4 xl-6 md-2">…&lt;/section>
-      &lt;section column="xs-10 sm-8 md-6 lg-4 xl-2">…&lt;/section>
+      &lt;section column="4 l-6 m-2">…&lt;/section>
+      &lt;section column="xs-10 s-8 m-6 l-4 xl-2">…&lt;/section>
     &lt;/main>
 
   p Those attribute values will set the size of the column depending on the size of the viewport. The variables used are the custom media queries defined previously.
