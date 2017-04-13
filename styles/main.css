@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * ConciseCSS v4.0.1
+ * ConciseCSS v4.1.2
  * https://github.com/ConciseCSS/concise.css
  *
  * Copyright 2016 James Kolce, Keenan Payne and ConciseCSS Contributors
@@ -54,7 +54,7 @@ template,
   -webkit-text-size-adjust: 100%;
   background-color: white;
   color: #222;
-  font-size: 18;
+  font-size: 18px;
   text-rendering: optimizeLegibility; }
   @media (min-width: 768px) {
     :root {
@@ -76,6 +76,8 @@ kbd {
 
 pre {
   padding: 0.75rem 1em; }
+  pre > code  {
+    white-space: pre; }
 
 kbd {
   background-color: transparent;
@@ -89,8 +91,10 @@ hr {
 
 nav ol,
 nav ul {
-  list-style: none;
   padding-left: 0; }
+
+nav li {
+  list-style: none; }
 
 dt {
   font-weight: bold; }
@@ -354,7 +358,8 @@ body,
 span,
 dd,
 code,
-label {
+label,
+[column] {
   margin-top: 0; }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
@@ -514,7 +519,8 @@ table {
   margin-right: auto;
   max-width: 1200px;
   padding-left: 1em;
-  padding-right: 1em; }
+  padding-right: 1em;
+  overflow: auto; }
 
 [grid] {
   display: -webkit-box;
@@ -548,8 +554,22 @@ table {
     padding-right: 0; }
 
 [grid~="no-collapse"] {
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
+[grid~="wrap"] {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+[grid~="no-wrap"] {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+[grid~="wrap-reverse"] {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
 
 [grid~="row"] {
   -webkit-box-orient: horizontal;
