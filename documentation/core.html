@@ -237,10 +237,10 @@ $_golden-ratio:     1.618
   &lt;article column>…&lt;/article>
   &lt;article column>…&lt;/article>
 &lt;/main>
-</code></pre><p>The four columns will have a width of 25% no matter the size of the screen.</p><h3>Grid direction</h3><p>You can adjust the direction of the columns in a grid without changing the markup. Concise CSS has available the four Flexbox options for this available as attribute values for the <code>grid</code> element.</p><ul><li><strong>row</strong>: (Default on screens above <code>$breakpoint</code>) This will display the columns side by side in the same order as in the markup.</li><li><strong>row-reverse</strong>: This will display the columns horizontally in the <em>inverse</em> order as in the markup.</li><li><strong>column</strong>: (Default on screens below <code>$breakpoint</code>) This will display the columns vertically in the same order as in the markup.</li><li><strong>row-reverse</strong>: This will display the columns vertically in the <em>inverse</em> order as in the markup.</li></ul><pre class="language-markup"><code>&lt;section grid="row">…&lt;/section>
-&lt;section grid="row-inverse">…&lt;/section>
+</code></pre><p>The four columns will have a width of 25% no matter the size of the screen.</p><h3>Grid direction</h3><p>You can adjust the direction of the columns in a grid without changing the markup. Concise CSS has available the four Flexbox options for this available as attribute values for the <code>grid</code> element.</p><ul><li><strong>row</strong>: (Default on screens above <code>$breakpoint</code>) This will display the columns side by side in the same order as in the markup.</li><li><strong>row-reverse</strong>: This will display the columns horizontally in the <em>inverse</em> order as in the markup.</li><li><strong>column</strong>: (Default on screens below <code>$breakpoint</code>) This will display the columns vertically in the same order as in the markup.</li><li><strong>column-reverse</strong>: This will display the columns vertically in the <em>inverse</em> order as in the markup.</li></ul><pre class="language-markup"><code>&lt;section grid="row">…&lt;/section>
+&lt;section grid="row-reverse">…&lt;/section>
 &lt;section grid="column">…&lt;/section>
-&lt;section grid="column-inverse">…&lt;/section>
+&lt;section grid="column-reverse">…&lt;/section>
 </code></pre><h3>Grid justification</h3><p>It’s possible to adjust how the elements inside a grid will occupy the space available. Concise CSS exposes all the <code>justify-content</code> property values as attribute values in your markup.</p><pre class="language-markup"><code>&lt;section grid="justify-start">…&lt;/section>
 &lt;section grid="justify-end">…&lt;/section>
 &lt;section grid="justify-center">…&lt;/section>
