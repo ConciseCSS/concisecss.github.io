@@ -1,0 +1,32 @@
+// Carbon Ads
+#carbonads {
+  font-size: 12px;
+  max-width: 300px;
+
+  @media (--large) {
+    position: absolute;
+    right: .5lh;
+    top: .5lh;
+  }
+
+  a {
+    font-feature-settings: unset;
+
+    &:after { display: none; }
+  }
+}
+
+.carbon-wrap {
+  align-items: center;
+  display: flex;
+}
+
+.carbon-img {
+  img { margin-right: .5lh; }
+}
+
+.carbon-poweredby {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
