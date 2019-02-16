@@ -8,6 +8,16 @@ task('pug', () => {
   })
 })
 
+desc('Compile Pug files for production')
+task('pug:production', () => {
+  jake.exec('pug src/ --out . --obj src/_data.json', {
+    printStdout: true,
+    printStderr: true
+  }, () => {
+    complete()
+  })
+})
+
 desc('Compile the files of Concise Framework.')
 task('concise', () => {
   jake.exec('concisecss compile src/styles/main.scss styles/main.css', {
@@ -55,4 +65,10 @@ task('default', () => {
   jake.Task['concise:watch'].invoke()
   jake.Task['http'].invoke()
   jake.Task['livereload'].invoke()
+})
+
+desc('Start the deployment services.')
+task('deploy', () => {
+  jake.Task['concise'].invoke()
+  jake.Task['pug:production'].invoke()
 })
