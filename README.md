@@ -1,5 +1,7 @@
 # [<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
 
+> :warning: &nbsp; **Notice:** This project is not actively maintained. Reach out to [@keenanpayne](https://twitter.com/KeenanPayne_) or [@jaiheravi](https://twitter.com/jaiheravi) if you would like to chat about it ✌🏻
+
 This is the repository that contains the source code for concisecss.com. 
 If you plan to make a change please do it in the corresponding source file located in the `src` directory and before commiting changes make sure the changed files are being compiled (if you are editing Pug or Concise CSS code).
 
